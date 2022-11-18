@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Marin Staff +1", augments={'Path: A',}},
+    sub="Enki Strap",
+    ammo="Sapience Orb",
+    head={ name="Merlinic Hood", augments={'"Fast Cast"+7','CHR+6','Mag. Acc.+6','"Mag.Atk.Bns."+14',}},
+    body="Jhakri Robe +2",
+    hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+28','"Fast Cast"+7','INT+7',}},
+    legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+9','"Fast Cast"+7','MND+1','Mag. Acc.+15',}},
+    feet={ name="Merlinic Crackows", augments={'"Fast Cast"+7',}},
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Fucho-no-Obi",
+    left_ear="Ethereal Earring",
+    right_ear="Infused Earring",
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
+    back="Moonlight Cape",
+}

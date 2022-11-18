@@ -1,0 +1,17 @@
+sets.exported={
+    main="Maxentius",
+    sub={ name="Bunzi's Rod", augments={'Path: A',}},
+    ammo="Aurgelmir Orb +1",
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck={ name="Mirage Stole +1", augments={'Path: A',}},
+    waist="Reiki Yotai",
+    left_ear="Suppanomimi",
+    right_ear="Telos Earring",
+    left_ring="Petrov Ring",
+    right_ring="Epona's Ring",
+    back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
+}

@@ -1,0 +1,17 @@
+sets.exported={
+    main="Maxentius",
+    sub={ name="Bunzi's Rod", augments={'Path: A',}},
+    ammo="Staunch Tathlum +1",
+    head="Rawhide Mask",
+    body={ name="Herculean Vest", augments={'MND+8','Phys. dmg. taken -2%','"Treasure Hunter"+2','Accuracy+15 Attack+15','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
+    hands="Malignance Gloves",
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+    feet="Malignance Boots",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Gishdubar Sash",
+    left_ear="Infused Earring",
+    right_ear="Telos Earring",
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
+    back="Moonlight Cape",
+}

@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Peord Claymore", augments={'Path: C',}},
+    sub={ name="Refined Grip +1", augments={'Path: A',}},
+    ammo="Staunch Tathlum +1",
+    head="Rune. Bandeau +3",
+    body={ name="Taeon Tabard", augments={'"Cure" potency +5%','"Regen" potency+3',}},
+    hands="Regal Gauntlets",
+    legs={ name="Futhark Trousers +3", augments={'Enhances "Inspire" effect',}},
+    feet={ name="Taeon Boots", augments={'"Cure" potency +5%','"Regen" potency+3',}},
+    neck="Sacro Gorget",
+    waist="Sroda Belt",
+    left_ear="Mimir Earring",
+    right_ear={ name="Erilaz Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+8','Mag. Acc.+8',}},
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
+    back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+}

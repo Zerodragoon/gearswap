@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Epeolatry", augments={'Path: A',}},
+    sub={ name="Refined Grip +1", augments={'Path: A',}},
+    ammo="Staunch Tathlum +1",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Taeon Tabard", augments={'"Regen" potency+3',}},
+    hands="Turms Mittens +1",
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+    feet={ name="Taeon Boots", augments={'"Regen" potency+3',}},
+    neck={ name="Futhark Torque +2", augments={'Path: A',}},
+    waist="Flume Belt +1",
+    left_ear="Ethereal Earring",
+    right_ear={ name="Erilaz Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+8','Mag. Acc.+8',}},
+    left_ring="Moonlight Ring",
+    right_ring="Defending Ring",
+    back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
+}
