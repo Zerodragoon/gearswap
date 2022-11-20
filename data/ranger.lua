@@ -36,7 +36,7 @@ function get_sets()
 	sets.precast.Standard.PreShot = { --10 --35
 		--Perun +1 --5 This just assumes this is equipped
 		head={ name="Taeon Chapeau", augments={'"Snapshot"+5','"Snapshot"+5',}}, --10						
-		body="Amini Caban +2",
+		body="Amini Caban +3",
 		hands="Carmine Finger Gauntlets +1", --8 --11
 		--legs="Orion Braccae +3", --15
 		legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}}, --10 --13
@@ -59,7 +59,7 @@ function get_sets()
 	sets.precast.Gastraphetes.PreShot = { --20 --35
 		--Perun +1 --5 This just assumes this is equipped
 		head="Orion Beret +3", --0 --18						
-		body="Amini Caban +2",
+		body="Amini Caban +3",
 		hands="Carmine Finger Gauntlets +1", --8 --11
 		--legs="Orion Braccae +3", --15,
 		legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}}, --10 --13
@@ -83,7 +83,7 @@ function get_sets()
 	sets.precast.Sharanga.PreShot = { --30 --35
 		--Perun +1 --5 This just assumes this is equipped
 		head="Orion Beret +3",	--0 --18							
-		body="Amini Caban +2",
+		body="Amini Caban +3",
 		hands="Carmine Finger Gauntlets +1", --8 --11
 		legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}}, --10 --13
 		feet="Arcadian Socks +3", --0 --10
@@ -749,6 +749,12 @@ function precast(spell)
 
 		if spell.name == "Aeolian Edge" then
             equip(sets.Aeolian)
+		elseif spell.name == "Burning Blade" or spell.name == "Red Lotus Blade" then
+            equip(sets.Aeolian)
+		elseif spell.name == "Seraph Blade" then
+            equip(set_combine(sets.Aeolian, {
+				ring1="Weatherspoon Ring +1"
+			}))
 		elseif spell.name == "Circle Blade" then
             equip(sets.LS[LS_Set_Names[LS_Index]])
 		elseif spell.name == "Evisceration" then

@@ -192,8 +192,7 @@ function get_sets()
 	})
 	
 	sets.midcast.status = set_combine(sets.midcast.cure, set_combine(sets.Hands.Yagrush, {
-		head="Ebers Cap +1",
-		hands="Ebers Mitts +1",
+		hands="Ebers Mitts +2",
 		legs="Ebers Pantaloons +2"
 	}))
 
@@ -234,7 +233,7 @@ function get_sets()
 
 	sets.midcast["Regen IV"] = set_combine(sets.midcast.Enhancing, set_combine(sets.Hands.Bolelabunga, {
 		head="Inyanga Tiara +2",
-		hands="Ebers Mitts +1",
+		hands="Ebers Mitts +2",
 		body="Piety Bliaut +3",
 		feet="Bunzi's Sabots",
 		legs="Theophany Pantaloons +3" --Add in Bunzi Feet Once Auged
@@ -275,7 +274,7 @@ function get_sets()
 	sets.midcast.Barspell = set_combine(sets.midcast.Enhancing,{
 		sub="Ammurapi Shield",
 		body="Ebers Bliaut +2",
-		hands="Ebers Mitts +1",
+		hands="Ebers Mitts +2",
 		legs="Piety Pantaln. +3",
 	})
 	

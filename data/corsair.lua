@@ -569,6 +569,12 @@ function precast(spell)
 
 		if spell.name == "Aeolian Edge" then
                 	equip(sets.Aeolian)
+		elseif spell.name == "Burning Blade" or spell.name == "Red Lotus Blade" then
+            equip(sets.Aeolian)
+		elseif spell.name == "Seraph Blade" then
+            equip(set_combine(sets.Aeolian, {
+				ring1="Weatherspoon Ring +1"
+			}))		
 		elseif spell.name == "Circle Blade" then
                 	equip(sets.LS[LS_Set_Names[LS_Index]])
 		elseif spell.name == "Evisceration" then

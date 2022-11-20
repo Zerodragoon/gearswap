@@ -203,6 +203,7 @@ function get_sets()
 	sets.precast['Blade: Ei'] = set_combine(sets.PWS, sets.Katana)
 	
 	sets.precast['Herculean Slash'] = sets.MWS
+	sets.precast['Burning Blade'] = sets.MWS
 	sets.precast['Red Lotus Blade'] = sets.MWS
 	sets.precast['Seraph Blade'] = sets.MWS
 	sets.precast['Earth Crusher'] = sets.MWS
@@ -331,7 +332,9 @@ function get_sets()
 	sets.Melee.TH = set_combine(sets.Melee.Sakpata, {
 		body="Odyssean Chestplate",
 		ammo="Perfect Lucky Egg",
-		waist="Chaac Belt"})
+		waist="Chaac Belt",
+		ear1="Schere Earring",
+		ear2="Boii Earring"})
 		
 	sets.Melee.Pull = set_combine(sets.Melee.TH, {
 		ranged="Halakaala",
@@ -482,8 +485,10 @@ function self_command(command)
 	elseif command == 'equiptf' then
 		equip(sets.MWS[MWS_Set_Names[MWS_Index]])
 	elseif command == 'gk' then
+		enable('head', 'neck')
 		equip(sets.GK)
 	elseif command == 'katana' then
+		enable('neck')
 		equip(sets.Katana)
 	elseif command == 'fcth' then
 		FellCleaveTH_Flag = not FellCleaveTH_Flag
@@ -493,6 +498,10 @@ function self_command(command)
 		equip(sets.Idle[Idle_Set_Names[Idle_Index]]) 
 	elseif command == 'equipmelee' then
 		equip(sets.Melee[Melee_Set_Names[Melee_Index]])
+	elseif command == 'disable' then
+		disable('head', 'body', 'hands', 'legs', 'feet', 'back', 'waist', 'neck', 'ear1', 'ear2', 'ring1', 'ring2', 'ammo')
+	elseif command == 'enable' then
+		enable('head', 'body', 'hands', 'legs', 'feet', 'back', 'waist', 'neck', 'ear1', 'ear2', 'ring1', 'ring2', 'ammo')
 	elseif command == 'startup' then
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
 		equip(sets.Idle[Idle_Set_Names[Idle_Index]]) 

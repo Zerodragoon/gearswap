@@ -620,8 +620,14 @@ function self_command(command)
 			disable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
 			add_to_chat(66,'>>>>> PDT Set Locked! <<<<<')
 		end
-	elseif command =='element' then
-		Nuke_Index = Nuke_Index +1
+	elseif command:sub(1, 7) =='element' then
+		Temp_Nuke_Index = command:sub(8,9)
+
+		if Temp_Nuke_Index == '' then
+			Nuke_Index = Nuke_Index +1
+		else 
+			Nuke_Index = tonumber(Temp_Nuke_Index)
+		end
 
 		if Nuke_Index > #Nuke_Elements then 
 			Nuke_Index = 1

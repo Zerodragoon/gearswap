@@ -112,7 +112,7 @@ function get_sets()
 	}
 	
 	sets.Instruments.Prime = {
-		ranged="Prime Harp"
+		ranged="Prime Horn"
 	}
 	
 	--Precast

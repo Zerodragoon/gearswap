@@ -103,11 +103,11 @@ function get_sets()
 	})
 	
 	sets.precast['Elemental Sforzo'] = set_combine(sets.magic.MidCastEnmity, {
-		body="Futhark Coat +1"
+		body="Futhark Coat +3"
 	})
 	
 	sets.precast['Liement'] = set_combine(sets.magic.MidCastEnmity, {
-		body="Futhark Coat +1"
+		body="Futhark Coat +3"
 	})
 	
 	sets.midcast['Healing Breeze'] = sets.magic.MidCastCures
