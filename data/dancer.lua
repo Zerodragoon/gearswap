@@ -90,7 +90,10 @@ function get_sets()
 	sets.precast['No Foot Rise'] = {body="Horos Casaque +1"}
 	sets.precast['Climactic Flourish'] = {head = "Maculele Tiara +1"}
 	sets.precast['Striking Flourish'] = {body = "Maculele Casaque +1"}
-	sets.precast['Reverse Flourish'] = {hands = "Maculele Bangles +1"}
+	sets.precast['Reverse Flourish'] = {
+		hands = "Maculele Bangles +1",
+		back="Toetapper Mantle"
+	}
 	sets.precast['Violent Flourish'] = {
 		head="Nyame Helm",							
 		body="Horos Casaque +1",

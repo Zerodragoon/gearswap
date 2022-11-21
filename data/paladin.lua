@@ -20,20 +20,20 @@ function get_sets()
 	}
 	
 	sets.magic.PreCast = {
-	--	main="Sakpata's Sword", --10
 		head="Carmine Mask +1", --14
 		hands="Leyline Gloves", --8
 		body="Sacro Breastplate", --10
+		legs="Eschite Cuisses", --5
 		feet="Odyssean Greaves", --10 --Chevalier's Sabatons +3
-		ammo="Impatiens", --0 --2
+		ammo="Sapience Orb", --2
 		neck="Baetyl Pendant", --4
 		ear1="Loquacious Earring", --2
 		ear2="Enchanter's Earring +1", --2
-		ring1="Weatherspoon Ring +1", --5 --3
+		ring1="Weatherspoon Ring +1", --6 --3
 		ring2="Kishar Ring", --4
 		back={ name="Rudianos's Mantle", augments={'"Fast Cast"+10'}} --10
-	} --69
-
+	} --77
+	
 	sets.magic.MidCast = {
 		ammo="Staunch Tathlum +1", -- 11
 		neck="Loricate Torque +1", --5
@@ -121,8 +121,8 @@ function get_sets()
 	
 	sets.midcast['Flash'] = sets.magic.Enmity
 	sets.midcast['Phalanx'] = set_combine(sets.magic.MidCast, {
-	--	main="Sakpata's Sword",
-	--	sub="Priwen",
+		main="Sakpata's Sword",
+		sub="Priwen",
 		head="Yorium Barbuta",
 		body="Yorium Cuirass",
 		hands="Souveran Handschuhs +1",

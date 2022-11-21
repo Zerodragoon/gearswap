@@ -168,7 +168,7 @@ function get_sets()
 	
 	sets.precast['Evisceration'] = set_combine(sets.PWS, {
 		head="Adhemar Bonnet +1",	
-		body="Gleti's Cuirass",
+		body="Gleti's Cuirass", -- Plunder's Vest +3
 		hands="Adhemar Wristbands +1",
 		legs="Gleti's Breeches",
 		feet="Mummu Gamashes +2",
@@ -243,7 +243,7 @@ function get_sets()
 	
 	sets.hastesambawaist = {waist="Sailfi Belt +1"}
 
-	Melee_Set_Names = {'DT', 'DTTH', 'DblAtt', 'TH', 'Crit'}
+	Melee_Set_Names = {'DT', 'DTTH', 'DblAtt', 'TH', 'Crit', 'MaxTH'}
 
 	sets.Melee = {  
 		head="Adhemar Bonnet +1", --Skulker's Bonnet +3							
@@ -264,6 +264,13 @@ function get_sets()
 	sets.Melee.TH = set_combine(sets.Melee, {
 		hands="Plunderer's Armlets +3",
 		ammo="Perfect Lucky Egg" --Feet Skulker's Poulaines +3
+	})
+	
+	sets.Melee.MaxTH = set_combine(sets.Melee, {
+		hands="Plunderer's Armlets +3",
+		feet="Skulker's Poulaines +1",
+		waist="Chaac Belt",
+		ammo="Perfect Lucky Egg"
 	})
 
 	sets.Melee.DT = set_combine(sets.Melee, {

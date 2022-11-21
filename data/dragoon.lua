@@ -19,7 +19,8 @@ function get_sets()
 	organizer_items = {
 		angon="Angon"
 	}
-
+	
+	sets.precast = {}
 	sets.Hands = {}	
 
 	sets.Hands.Shining = { 
@@ -112,7 +113,7 @@ function get_sets()
 	-- Magical WS Sets Below
 	MWS_Set_Names = {'Normal'}
 
-	sets.MWS  = sets.PWS
+	sets.MWS = sets.PWS
 						
 	sets.MWS.Normal = set_combine(sets.MWS, {})
 	
@@ -196,8 +197,6 @@ function get_sets()
 		ear2="Telos Earring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}
 	})
-
-	sets.precast = {}
 
 	sets.precast['Jump'] = sets.Melee.Jump
 	sets.precast['Super Jump'] = sets.Melee.Jump
