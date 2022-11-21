@@ -71,11 +71,35 @@ function get_sets()
 	}
 	
 	sets.precast["Steal"] = {
-		ammo="Barathrum"
+		ammo="Barathrum",
+		feet="Pillager's Poulaines +3"
 	}
 	
 	sets.precast["Despoil"] = {
-		ammo="Barathrum"
+		ammo="Barathrum",
+		legs="Skulker's Culottes +1",
+		feet="Skulker's Poulaines +1"
+	}
+	
+	sets.precast["Accomplice"] = {
+		head="Skulker's Bonnet +1"
+	}
+	
+	sets.precast["Collaborator"] = {
+		head="Skulker's Bonnet +1"
+	}
+	
+	sets.precast["Sneak Attack"] = {
+		hands="Skulker's Armlets +1"
+	}
+	
+	sets.precast["Sneak Attack"] = {
+		hands="Skulker's Armlets +1"
+	}
+	
+	sets.precast["Trick Attack"] = {
+		--body="Plunder's Vest +3",
+		--hands="Pillager's Armlets +3"
 	}
 
 	Hands_Set_Names = {'Twashtar', 'TwashtarTP', 'Tauret', 'Aeneas', 'AeneasTP'}
@@ -112,15 +136,15 @@ function get_sets()
 	PWS_Set_Names = {'Normal'}
 	sets.PWS = {
 		head="Nyame Helm",							
-		body="Nyame Mail",
+		body="Nyame Mail", --Skulker's Vest +3
 		hands="Nyame Gauntlets",
-		legs="Plunderer's Culottes +3",
+		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck="Assassin's Gorget +2",
 		waist="Fotia Belt",
 		ring1="Regal Ring",
 		ring2="Epaminondas's Ring",
-		back="Sacro Mantle",
+		back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 		ear1="Ishvara Earring",
 		ear2="Moonshade Earring",
 		ammo="Yetshila +1"
@@ -129,7 +153,7 @@ function get_sets()
 	sets.PWS.Normal = set_combine(sets.PWS, {})
 	
 	sets.precast["Rudra's Storm"] = set_combine(sets.PWS, {	
-		head="Nyame Helm",
+		legs="Plunderer's Culottes +3",
 		waist="Kentarch Belt +1",
 		ring1="Ilabrat Ring",
 		ear1="Sherida Earring"
@@ -145,7 +169,7 @@ function get_sets()
 	sets.precast['Evisceration'] = set_combine(sets.PWS, {
 		head="Adhemar Bonnet +1",	
 		body="Gleti's Cuirass",
-		hands="Mummu Wrists +2",
+		hands="Adhemar Wristbands +1",
 		legs="Gleti's Breeches",
 		feet="Mummu Gamashes +2",
 		waist="Fotia Belt",
@@ -153,8 +177,8 @@ function get_sets()
 		ear1="Odr Earring",
 		ear2="Sherida Earring",
 		ring1="Regal Ring",
-		ring2="Mummu Ring",
-		back="Sacro Mantle",
+		ring2="Ilabrat Ring",
+		back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},
 		ammo="Yetshila +1"
 	})
 	
@@ -170,7 +194,7 @@ function get_sets()
 		ear2="Moonshade Earring",
 		ring1="Regal Ring",
 		ring2="Epaminondas's Ring",
-		back="Sacro Mantle",
+		back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 		ammo="Aurgelmir Orb +1"
 	})
 
@@ -189,13 +213,14 @@ function get_sets()
 		ring2="Epaminondas's Ring",
 		back="Sacro Mantle",
 		ear1="Friomisi Earring",
-		ear2="Moonshade Earring"}
+		ear2="Moonshade Earring",
+		ammo="Seething Bomblet +1"}
 						
 	sets.MWS.Normal = set_combine(sets.MWS, {})
 	
 	sets.AeolianTH = set_combine(sets.MWS, {
 		ammo="Perfect Lucky Egg",
-		hands="Plunderer's Armlets +3"})
+		hands="Plunderer's Armlets +3"}) --Feet Skulker's Poulaines +3
 	
 	--Idle Sets Below
 	Idle_Set_Names = {'Normal'}
@@ -221,18 +246,18 @@ function get_sets()
 	Melee_Set_Names = {'DT', 'DTTH', 'DblAtt', 'TH', 'Crit'}
 
 	sets.Melee = {  
-		head="Adhemar Bonnet +1",							
+		head="Adhemar Bonnet +1", --Skulker's Bonnet +3							
 		body="Pillager's Vest +3",
-		hands="Adhemar Wristbands +1",
+		hands="Gleti's Gauntlets",
 		legs="Samnuha Tights",
 		feet="Plunderer's Poulaines +3",
 		neck="Assassin's Gorget +2",
 		waist="Reiki Yotai",
 		ring1="Gere Ring",
-		ring2="Epona's Ring",
+		ring2="Hetairoi Ring",
 		back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
 		ear1="Sherida Earring",
-		ear2="Telos Earring",
+		ear2="Skulker's Earring",
 		ammo="Aurgelmir Orb +1"
 	}
 	
@@ -253,13 +278,14 @@ function get_sets()
 		ammo="Perfect Lucky Egg"}) --Feet Skulker's Poulaines +3
 
 	sets.Melee.Crit = set_combine(sets.Melee, {
-		head="Mummu Bonnet +2",
-		body="Abnoba Kaftan",	
+		head="Gleti's Mask",
+		body="Gleti's Cuirass",	
 		hands="Mummu Wrists +2",
-		legs="Mummu Kecks +2",
+		legs="Mummu Kecks +2", -- Skulker's Culottes
 		feet="Mummu Gamashes +2",
 		ring1="Mummu Ring",
-		ear2="Odr Earring"})
+		ear2="Odr Earring",
+		back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10','Phys. dmg. taken-10%',}}})
 
 	sets.Melee.DblAtt = set_combine(sets.Melee, {})
 
@@ -279,6 +305,14 @@ function precast(spell)
 			end
 		else
 			equip(sets.PWS[PWS_Set_Names[PWS_Index]])
+		end
+		
+		if buffactive['Trick Attack'] then
+			equip(sets.precast["Trick Attack"])
+		end
+		
+		if buffactive['Sneak Attack'] then
+			equip(sets.precast["Sneak Attack"])
 		end
 	elseif spell.type == "Ninjutsu" then
 		if string.find(spell.english,'Utsusemi') then

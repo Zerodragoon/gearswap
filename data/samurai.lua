@@ -85,6 +85,7 @@ function get_sets()
 		--head="Nyame Helm", 
 		body="Nyame Mail", 
 		hands="Nyame Gauntlets", --Kasuga Kote +3
+		--hands="Kasuga Kote +2",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck="Samurai's Nodowa +2",
@@ -121,6 +122,10 @@ function get_sets()
 	sets.precast['Namas Arrow'] = sets.RangedWS
 	sets.precast['Apex Arrow'] = sets.RangedWS
 	sets.precast['Empyreal Arrow'] = sets.RangedWS
+	
+	sets.precast['Sengikori'] = {
+		feet="Kasuga Sune-Ate +2"
+	}
 
 	--Idle Sets Below
 	Idle_Set_Names = {'Normal'}
@@ -225,6 +230,10 @@ end
 function precast(spell)
 	if sets.precast[spell.english] then
         equip(sets.precast[spell.english])
+		
+		if buffactive['Sengikori'] then
+			equip(sets.precast['Sengikori'])
+		end
 	elseif spell.english == 'Meditate' then
 		equip(sets.Meditate)
 	elseif spell.type == 'WeaponSkill' then

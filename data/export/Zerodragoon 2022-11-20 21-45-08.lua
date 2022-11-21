@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Twashtar", augments={'Path: A',}},
+    sub={ name="Aeneas", augments={'Path: A',}},
+    ammo="Staunch Tathlum +1",
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Tandava Crackows",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Gishdubar Sash",
+    left_ear="Infused Earring",
+    right_ear="Telos Earring",
+    left_ring="Warden's Ring",
+    right_ring="Defending Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+}

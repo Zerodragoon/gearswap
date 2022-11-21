@@ -57,11 +57,11 @@ function get_sets()
 	
 	sets.precast['Retaliation'] = {
 		hands="Pummeler's Mufflers +1",
-		feet="Boii Calligae +1"
+		feet="Boii Calligae +2"
 	}
 	
 	sets.precast['Restraint'] = {
-		hands="Boii Mufflers +1"
+		hands="Boii Mufflers +2"
 	}
 	
 	sets.precast['Blood Rage'] = {

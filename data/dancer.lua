@@ -78,7 +78,9 @@ function get_sets()
 	sets.precast['Quickstep'] = sets.precast.Step
 	sets.precast['Box Step'] = sets.precast.Step
 	sets.precast['Stutter Step'] = sets.precast.Step
-	sets.precast['Feather Step'] = sets.precast.Step
+	sets.precast['Feather Step'] = set_combine(sets.precast.Step, {
+		feet="Maculele Toe Shoes +1"
+	})
 	sets.precast['Haste Samba'] = sets.precast.Samba
 	sets.precast['Drain Samba'] = sets.precast.Samba
 	sets.precast['Drain Samba II'] = sets.precast.Samba
@@ -86,8 +88,25 @@ function get_sets()
 	sets.precast['Aspir Samba'] = sets.precast.Samba
 	sets.precast['Aspir Samba II'] = sets.precast.Samba
 	sets.precast['No Foot Rise'] = {body="Horos Casaque +1"}
-	
-	Hands_Set_Names = {'Tauret', 'Aeneas', 'AeneasTP', 'Twashtar', 'TwashtarTP'}
+	sets.precast['Climactic Flourish'] = {head = "Maculele Tiara +1"}
+	sets.precast['Striking Flourish'] = {body = "Maculele Casaque +1"}
+	sets.precast['Reverse Flourish'] = {hands = "Maculele Bangles +1"}
+	sets.precast['Violent Flourish'] = {
+		head="Nyame Helm",							
+		body="Horos Casaque +1",
+		hands="Nyame Gauntlets",
+		legs="Horos Tights +3",
+		feet="Nyame Sollerets",
+		neck="Nefarious Collar +1",
+		waist="Eschan Stone",
+		ring1="Stikini Ring +1",
+		ring2="Stikini Ring +1",
+		ammo="Yamarang",
+		back="Sacro Mantle",
+		ear1="Dignitary's Earring",
+		ear2="Crepuscular Earring"}
+
+	Hands_Set_Names = {'Twashtar', 'TwashtarTP', 'Tauret', 'Aeneas', 'AeneasTP'}
 
 	sets.Hands = {}	
 
@@ -120,17 +139,17 @@ function get_sets()
 
 	PWS_Set_Names = {'Normal'}
 	sets.PWS = {
-		head="Nyame Helm",							
+		head="Nyame Helm", --Maculele Tiara +3				 			
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
-		legs="Horos Tights +3",
+		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck="Anu Torque",
 		waist="Fotia Belt",
 		ring1="Regal Ring",
 		ring2="Epaminondas's Ring",
 		ammo="Aurgelmir Orb +1",
-		back="Sacro Mantle",
+		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 		ear1="Ishvara Earring",
 		ear2="Moonshade Earring"}
 
@@ -149,7 +168,7 @@ function get_sets()
 		waist="Eschan Stone",
 		ring1="Dingir Ring",
 		ring2="Epaminondas's Ring",
-		back="Sacro Mantle",
+		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 		ear1="Friomisi Earring",
 		ear2="Ishvara Earring"}
 						
@@ -168,7 +187,7 @@ function get_sets()
 		ammo="Aurgelmir Orb +1",
 		ring1="Regal Ring",
 		ring2="Mummu Ring",
-		back="Sacro Mantle",
+		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10','Phys. dmg. taken-10%',}},
 	}
 	
 	--Idle Sets Below
@@ -197,7 +216,7 @@ function get_sets()
 
 	sets.Melee = {  
 		head="Adhemar Bonnet +1",							
-		body="Adhemar Jacket +1",
+		body="Adhemar Jacket +1", --Horos Casque +3
 		hands="Adhemar Wristbands +1",
 		legs="Samnuha Tights",
 		feet="Horos Toe Shoes +3",
@@ -216,7 +235,7 @@ function get_sets()
 		body="Malignance Tabard",	
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
-		feet="Malignance Boots"})
+		feet="Malignance Boots"}) --Maculele Toe Shoes +3
 
 	sets.Melee.Crit = set_combine(sets.Melee, {
 		head="Mummu Bonnet +2",
@@ -224,7 +243,8 @@ function get_sets()
 		hands="Mummu Wrists +2",
 		legs="Mummu Kecks +2",
 		feet="Mummu Gamashes +2",
-		ring1="Mummu Ring"})
+		ring1="Mummu Ring",
+		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10','Phys. dmg. taken-10%',}}})
 
 	sets.Melee.DblAtt = set_combine(sets.Melee, {})
 
@@ -241,6 +261,14 @@ function precast(spell)
             equip(sets.Evis)
 		else
 			equip(sets.PWS[PWS_Set_Names[PWS_Index]])
+		end
+		
+		if buffactive['Striking Flourish'] then
+			equip(sets.precast['Striking Flourish'])
+		end
+		
+		if buffactive['Climactic Flourish'] then
+			equip(sets.precast['Climactic Flourish'])
 		end
 	elseif spell.type == "Ninjutsu" then
 		if string.find(spell.english,'Utsusemi') then

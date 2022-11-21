@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Twashtar", augments={'Path: A',}},
+    sub={ name="Aeneas", augments={'Path: A',}},
+    ammo="Aurgelmir Orb +1",
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck={ name="Asn. Gorget +2", augments={'Path: A',}},
+    waist="Reiki Yotai",
+    left_ear="Sherida Earring",
+    right_ear={ name="Skulker's Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+9','Mag. Acc.+9',}},
+    left_ring="Gere Ring",
+    right_ring="Hetairoi Ring",
+    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},
+}

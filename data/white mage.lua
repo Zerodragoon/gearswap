@@ -268,7 +268,7 @@ function get_sets()
 		ring1="Sheltered Ring"
 	})
 	sets.midcast["Auspice"] = set_combine(sets.midcast.Enhancing, {
-		feet="Ebers Duckbills +1"
+		feet="Ebers Duckbills +2"
 	})
 	
 	sets.midcast.Barspell = set_combine(sets.midcast.Enhancing,{
