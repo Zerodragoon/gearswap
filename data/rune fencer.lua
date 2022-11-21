@@ -45,6 +45,13 @@ function get_sets()
 		back={ name="Ogma's Cape", augments={'"Fast Cast"+10'}}  --10
 	} --111
 	
+	sets.magic.MidCastFullDT = set_combine(sets.magic.MidCast, {
+		head="Nyame Helm",								
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		feet="Nyame Sollerets",
+	})	
+	
 	sets.magic.MidCastEnmity = set_combine(sets.magic.MidCast, {
 		ammo="Staunch Tathlum +1",
 		--head={ name="Nyame Helm", augments={'Path: B',}},
@@ -147,12 +154,22 @@ function get_sets()
 		waist="Siegel Sash"
 	})
 	
-	sets.midcast["Protect IV"] = set_combine(sets.midcast.Enhancing, {
-		ring1="Sheltered Ring"
+	sets.midcast["Protect IV"] = set_combine(sets.magic.MidCast, {
+		ring1="Sheltered Ring",
+		head="Nyame Helm",								
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 	})
 	
-	sets.midcast["Shell V"] = set_combine(sets.midcast.Enhancing, {
-		ring1="Sheltered Ring"
+	sets.midcast["Shell V"] = set_combine(sets.magic.MidCast, {
+		ring1="Sheltered Ring",
+		head="Nyame Helm",								
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 	})
 	
 	sets.midcast["Regen IV"] = set_combine(sets.midcast.Enhancing, {
@@ -334,10 +351,14 @@ end
 function midcast(spell)
 	if sets.midcast[spell.english] then
         equip(sets.midcast[spell.english])
+		
+		if spell.skill == 'Enhancing Magic' and Engaged_Flag then
+			equip(sets.magic.MidCastFullDT)
+		end
 	elseif spell.skill == 'Enhancing Magic' then
 		equip(sets.midcast.Enhancing)
 		if Engaged_Flag then
-			equip(sets.magic.MidCast)
+			equip(sets.magic.MidCastFullDT)
 		end
 	elseif spell.type == "WhiteMagic" or spell.type == "BlueMagic" then
 		equip(sets.magic.MidCast)   
