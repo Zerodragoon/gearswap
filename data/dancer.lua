@@ -244,6 +244,7 @@ function get_sets()
 		legs="Mummu Kecks +2",
 		feet="Mummu Gamashes +2",
 		ring1="Mummu Ring",
+		ear2="Odr Earring",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10','Phys. dmg. taken-10%',}}})
 
 	sets.Melee.DblAtt = set_combine(sets.Melee, {})

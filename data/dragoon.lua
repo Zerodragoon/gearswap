@@ -54,8 +54,8 @@ function get_sets()
 		feet="Nyame Sollerets",
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
-		ring1="Sroda Ring",
-		ring2="Niqmaddu Ring",
+		ring1="Niqmaddu Ring",
+		ring2="Regal Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 		ear1="Thrud Earring",
 		ear2="Moonshade Earring",
@@ -64,7 +64,7 @@ function get_sets()
 	sets.PWS.Normal = set_combine(sets.PWS, {})
 
 	sets.PWS.Impulse = set_combine(sets.PWS, {
-		head="Blistering Sallet +1",
+		head="Blistering Sallet +1", --Peltast Mezail +3
 		neck="Dragoon's Collar +2",
 		body="Gleti's Cuirass",
 		waist="Sailfi Belt +1" --Legs Peltast's Cuissots +3?
@@ -77,7 +77,8 @@ function get_sets()
 	
 	sets.PWS.Savage = set_combine(sets.PWS, {
 		neck="Dragoon's Collar +2",
-		ring2="Epaminondas's Ring",
+		ring1="Epaminondas's Ring",
+		ring2="Sroda Ring",
 		waist="Sailfi Belt +1"
 	})
 	
@@ -91,6 +92,21 @@ function get_sets()
 		hands="Gleti's Gauntlets",
 		--body="Gleti's Cuirass",
 		--ammo="Crepuscular Pebble"
+	})
+	
+	sets.precast["Camlann's Torment"] = set_combine(sets.PWS, {
+		ear2="Ishvara Earring",
+		neck="Dragoon's Collar +2",
+	})
+	
+	sets.precast["Drakesbane"] = set_combine(sets.PWS, {
+		ehead="Blistering Sallet +1",
+		neck="Dragoon's Collar +2",
+		body="Gleti's Cuirass",
+		hands="Gleti's Gauntlets",
+		legs="Gleti's Breeches",  --Legs Peltast's Cuissots +3?
+		feet="Gleti's Boots",
+		waist="Sailfi Belt +1"
 	})
 
 	-- Magical WS Sets Below

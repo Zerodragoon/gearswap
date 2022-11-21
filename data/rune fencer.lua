@@ -222,7 +222,7 @@ function get_sets()
 		body="Runeist's Coat +3",
 		feet="Erilaz Greaves +2",
 		waist="Engraved Belt",
-		ring1="Archon Ring"
+	--	ring1="Archon Ring"
 	})
 	
 	sets.TP.Hybrid = set_combine(sets.TP, {
