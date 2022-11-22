@@ -244,6 +244,10 @@ function get_sets()
 	sets.Gandiva = {
 		ranged="Gandiva"
 	}
+	
+	sets.Prime = {
+		ranged="Earp"
+	}
 
 	Ammo_Set_Names = {
 		bullet = {'Chrono', 'Eradicating', 'Devastating'},

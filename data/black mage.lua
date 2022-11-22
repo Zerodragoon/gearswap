@@ -154,7 +154,7 @@ function get_sets()
 	
 	--AF Body Set
 	sets.midcast.afbody = {
-		body="Spaekona's Coat +2"
+		body="Spaekona's Coat +3"
 	}
 	
 	sets.midcast.Occult = set_combine(sets.midcast.elemental, {

@@ -99,7 +99,7 @@ function get_sets()
 	
 	sets.precast["Trick Attack"] = {
 		--body="Plunder's Vest +3",
-		--hands="Pillager's Armlets +3"
+		hands="Pillager's Armlets +2"
 	}
 
 	Hands_Set_Names = {'Twashtar', 'TwashtarTP', 'Tauret', 'Aeneas', 'AeneasTP'}

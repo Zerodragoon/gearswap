@@ -165,6 +165,10 @@ function get_sets()
 			ammo="Chrono Bullet"
 		}
 	}
+	
+	sets.Prime = {
+		ranged="Earp"
+	}
 
 	Hands_Set_Names = {'NaeglingBlurred', 'NaeglingGleti', 'NaeglingCrep', 'RangedShield', 'RangedDual', 'Tauret', 'RostamMelee', 'RostamTauret', 'RostamGleti', 'RostamCrep'}
 
