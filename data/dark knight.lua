@@ -231,7 +231,7 @@ function get_sets()
 	sets.Idle.Normal = set_combine(sets.Idle, {})
 
 
-	Melee_Set_Names = {'DT', 'DTAcc', 'DblAtt', 'TH'}
+	Melee_Set_Names = {'DT', 'DTAcc', 'DblAtt', 'SB', 'TH'}
 
 	sets.Melee = {  
 		head="Sakpata's Helm",
@@ -261,11 +261,25 @@ function get_sets()
 		feet="Flamma Gambieras +2"
 	})
 	
+	sets.Melee.SB = set_combine(sets.Melee, { --33
+		head="Sakpata's Helm",
+   		body="Dagon Breastplate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
+		neck="Warrior's Bead Necklace +2",
+		waist="Sailfi Belt +1",
+		ring1="Niqmaddu Ring",
+		ring2="Chirich Ring +1",
+		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		ear1="Dignitary's Earring",
+		ammo="Coiste Bodhar"
+	})
+	
 	sets.Melee.TH = set_combine(sets.Melee, {
-		head="White Rarab Cap +1",
+		body="Odyssean Chestplate",
 		ammo="Perfect Lucky Egg",
-		legs="Volte Hose",
-		waist="Chaac Belt"
+		waist="Chaac Belt",
 	})
 	
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')

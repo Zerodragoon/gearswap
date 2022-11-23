@@ -14,11 +14,11 @@ function get_sets()
 	--Precast
 	sets.precast = {}
 	
-	sets.precast['Futae'] = {legs="Hattori Tekko +1"}
+	sets.precast['Futae'] = {hands="Hattori Tekko +1"}
 	sets.precast['Mijin Gakure'] = {legs="Mochizuki Hakama +1"}
-	sets.precast['Sange'] = {legs="Mochizuki Chainmail +1"}
-	sets.precast['Innin'] = {legs="Mochizuki Hatsuburi +3"}
-	sets.precast['Yonin'] = {legs="Mochizuki Hatsuburi +3"}
+	sets.precast['Sange'] = {body="Mochizuki Chainmail +1"}
+	sets.precast['Innin'] = {head="Mochizuki Hatsuburi +3"}
+	sets.precast['Yonin'] = {head="Mochizuki Hatsuburi +3"}
 
 		
 	-- Magic Sets Below		
@@ -31,10 +31,8 @@ function get_sets()
 		neck="Baetyl Pendant", --4
 		ear1="Loquacious Earring", --2
 		ear2="Enchanter's Earring +1", --2
-		ring1="Weatherspoon Ring +1", --5
+		ring1="Weatherspoon Ring +1", --6
 		ring2="Prolix Ring", --2
-		ear1="Loquacious Earring", --2
-		ring1="Weatherspoon Ring +1", --5
 		ammo="Sapience Orb", --2
 		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}
 	} --55
@@ -219,7 +217,7 @@ function get_sets()
 		right_ear="Cryptic Earring",
 		left_ring="Petrov Ring",
 		right_ring="Supershear Ring",
-		back="Earthcry Mantle",
+		back={ name="Andartia's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Enmity+10','Phys. dmg. taken-8%',}},
 	}
 
 	sets.precast.Provoke = sets.Enmity
@@ -314,10 +312,10 @@ function get_sets()
 		waist="Eschan Stone",
 		ring1="Dingir Ring",
 		ring2="Acumen Ring",
-		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 		ear1="Friomisi Earring",
 		ear2="Hecate's Earring",
-		ammo="Pemphredo Tathlum"
+		ammo="Ghastly Tathlum +1"
     }
 	
 	sets.midcast.NinjutsuBuff = set_combine(sets.Melee.MixedDT, {

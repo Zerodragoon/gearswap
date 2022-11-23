@@ -215,11 +215,11 @@ function get_sets()
 	})
 	
 	sets.PWS.SavageCap = set_combine(sets.PWS.Savage, {
-		feet="Sakpata's Leggings"
+		legs="Boii Cuisses +2"
 	})
 	
 	sets.PWS.SavageCapHigh = set_combine(sets.PWS.SavageCap, {
-		hands="Sakpata's Gauntlets"	--Replace As Legs Boii Cuisses +3	
+		hands="Sakpata's Gauntlets"
 	})
 	
 	sets.PWS.Normal = set_combine(sets.PWS, {})
@@ -284,7 +284,7 @@ function get_sets()
 		
 	sets.Melee.SB = set_combine(sets.Melee, { --33
 		head="Sakpata's Helm",
-   		body="Sakpata's Breastplate",
+   		body="Dagon Breastplate",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
@@ -294,6 +294,7 @@ function get_sets()
 		ring2="Chirich Ring +1",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --10
 		ear1="Dignitary's Earring",
+		ear2="Boii Earring",
 		ammo="Coiste Bodhar"
 	})
 	
@@ -356,6 +357,16 @@ function precast(spell)
 		if (spell.name == "Fell Cleave" or spell.name == "Shockwave") and FellCleaveTH_Flag then
             equip(sets.FellCleaveTH)
 		elseif spell.name == "Savage Blade" then
+			if ATT_Cap_Flag then
+				if ATT_Cap_High then
+					equip(sets.PWS.SavageCapHigh)
+				else 
+					equip(sets.PWS.SavageCap)
+				end
+			else 
+				equip(sets.PWS.Savage)
+			end
+		elseif spell.name == "Judgment" then
 			if ATT_Cap_Flag then
 				if ATT_Cap_High then
 					equip(sets.PWS.SavageCapHigh)
