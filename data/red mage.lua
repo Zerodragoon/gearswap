@@ -81,6 +81,11 @@ function get_sets()
 
 	sets.precast.Cursna = sets.precast.FastCast
 	
+	sets.precast['Impact'] = set_combine(sets.FastCast, {
+		head=empty,
+		body="Twilight Cloak"
+	})
+	
 	sets.precast.Saboteur = {
 		hands="Lethargy Gantherots +2"
 	}
@@ -169,6 +174,11 @@ function get_sets()
 		ring1="Kishar Ring",
 		ring2={name="Stikini Ring +1", bag="wardrobe6"},
 		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
+	})
+	
+	sets.midcast.Impact = set_combine(sets.midcast.enfeeb, {
+		head=empty,
+		body="Twilight Cloak"
 	})
 	
 	sets.midcast['Dia'] = set_combine(sets.midcast.enfeeb, {

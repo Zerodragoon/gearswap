@@ -15,7 +15,7 @@ function get_sets()
 	sets.precast = {}
 	
 	sets.precast.Diffusion = {
-		feet="Luhlaza Charuqs"
+		feet="Luhlaza Charuqs +1"
 	}
 		
 	-- Magic Sets Below		
@@ -92,6 +92,17 @@ function get_sets()
 		ring2="Stikini Ring +1",
     	back="Cornflower Cape"
 	}
+	
+	sets.midcast.Healing = set_combine(sets.midcast.Enhancing, {
+		waist="Gishdubar Sash",
+		neck="Mirage Stole +1",
+		hands="Hashishin Bazubands +1",
+		legs="Hashishin Tayt +1",
+		feet="Medium's Sabots",
+		ring1="Asklepian Ring",
+		ring2="Stikini Ring +1",
+		back="Oretania's Cape +1" --Hashishin Earring +2
+	})
 
 	sets.midcast["Battery Charge"] = set_combine(sets.midcast.Enhancing, {
 		head="Amalric Coif +1",
@@ -107,28 +118,11 @@ function get_sets()
 		waist="Emphatikos Rope"
 	})
 
-	sets.midcast["Magic Fruit"] = set_combine(sets.midcast.Enhancing, {
-		waist="Gishdubar Sash",
-		neck="Incanter's Torque",
-		hands="Hashishin Bazubands +1",
-		legs="Hashishin Tayt +1",
-		feet="Medium's Sabots",
-		ring1="Asklepian Ring",
-		ring2="Stikini Ring +1",
-		back="Oretania's Cape +1" --Hashishin Earring +2
-	})
-	
-	sets.midcast["White Wind"] = set_combine(sets.midcast.Enhancing, {
-		waist="Gishdubar Sash",
-		neck="Mirage Stole +1",
-		hands="Hashishin Bazubands +1",
-		legs="Hashishin Tayt +1",
-		feet="Medium's Sabots",
-		ring1="Asklepian Ring",
-		ring2="Stikini Ring +1",
-		back="Oretania's Cape +1" --Hashishin Earring +2
-	})
-	
+	sets.midcast["Magic Fruit"] = sets.midcast.Healing
+	sets.midcast["Wild Carrot"] = sets.midcast.Healing
+	sets.midcast["White Wind"] = sets.midcast.Healing
+	sets.midcast["Healing Breeze"] = sets.midcast.Healing
+
 	sets.midcast["Stoneskin"] = set_combine(sets.midcast.Enhancing, {
 		legs="Shedir Seraweels",
 		ear1="Earthcry Earring",
@@ -143,12 +137,21 @@ function get_sets()
 		legs={ name="Taeon Tights", augments={'Phalanx +3',}},
 		feet={ name="Taeon Boots", augments={'Phalanx +3',}}
 	})
+
+	sets.midcast['Occultation'] = set_combine(sets.midcast.Enhancing, {
+		head="Nyame Helm",
+		body="Assimilator's Jubbah +1",
+		hands="Nyame Gauntlets",
+		legs="Hashishin Tayt +1",
+		feet="Luhlaza Charuqs +1",
+		ear1="Odnowa Earring +1",
+		waist="Flume Belt +1"
+	})
 	
+	sets.midcast['Diamondhide'] = sets.midcast.Enhancing
 	sets.midcast['Erratic Flutter'] = sets.midcast.Enhancing
-	sets.midcast['Occultation'] = sets.midcast.Enhancing
 	sets.midcast['Cocoon'] = sets.midcast.Enhancing
 	sets.midcast['Reactor Cool'] = sets.midcast.Enhancing
-	sets.midcast['Diamondhide'] = sets.midcast.Enhancing
 	sets.midcast['Barrier Tusk'] = sets.midcast.Enhancing
 	sets.midcast['Fantod'] = sets.midcast.Enhancing
 	sets.midcast['Nat. Meditation'] = sets.midcast.Enhancing
@@ -157,7 +160,7 @@ function get_sets()
 	sets.midcast['Silent Storm'] = sets.midcast.MACC
 	
 	sets.midcast['Mighty Guard'] = set_combine(sets.midcast.Enhancing, {
-		feet="Luhlaza Charuqs"
+		feet="Luhlaza Charuqs +1"
 	})
 	
 	sets.midcast['Dia'] = set_combine(sets.midcast, {
@@ -432,7 +435,7 @@ function self_command(command)
 	elseif command == 'cleavebuffblm' then
 		send_command('input /ma "Battery Charge" <me>;wait 5;input /ma "Diamondhide" <me>;wait 5;input /ma "Barrier Tusk" <me>;wait 5;input /ma "Occultation" <me>;wait 5;input /ma "Erratic Flutter" <me>;wait 5;input /ma "Reactor Cool" <me>;wait 5;input /ja "Unbridled Learning" <me>;wait 2;input /ma "Mighty Guard" <me>;')
 	elseif command == 'meleebuff' then
-		send_command('input /ma "Nat. Meditation" <me>;wait 5;input /ma "Barrier Tusk" <me>;wait 7;input /ma "Erratic Flutter" <me>;wait 5;input /ma "Cocoon" <me>;wait 5;input /ja "Unbridled Learning" <me>;wait 2;input /ma "Mighty Guard" <me>;')
+		send_command('input /ma "Barrier Tusk" <me>;wait 7;input /ma "Erratic Flutter" <me>;wait 5;input /ma "Cocoon" <me>;wait 5;input /ma "Nat. Meditation" <me>;wait 5;input /ja "Unbridled Learning" <me>;wait 2;input /ma "Mighty Guard" <me>;')
 	elseif command == 'blm' then
 		send_command('input /macro book 14;');
 	elseif command == 'whm' then

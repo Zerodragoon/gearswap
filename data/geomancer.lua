@@ -92,6 +92,11 @@ function get_sets()
 		main="Daybreak",
 		sub="Genmei Shield"
 	})
+
+	sets.precast['Impact'] = set_combine(sets.FastCast, {
+		head=empty,
+		body="Twilight Cloak"
+	})
 	
 	sets.precast['Full Circle'] = {
 		head="Azimuth Hood +2"
@@ -193,6 +198,11 @@ function get_sets()
 		ear2="Regal Earring",
 		ring1="Kishar Ring",
 		ring2="Stikini Ring +1",
+	})
+	
+	sets.midcast.Impact = set_combine(sets.midcast.enfeeb, {
+		head=empty,
+		body="Twilight Cloak"
 	})
 	
 	sets.midcast['Dispelga'] = set_combine(sets.midcast.enfeeb, {

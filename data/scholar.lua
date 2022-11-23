@@ -107,6 +107,10 @@ function get_sets()
 		sub="Genmei Shield"
 	})
 	
+	sets.precast['Impact'] = set_combine(sets.FastCast, {
+		head=empty,
+		body="Twilight Cloak"
+	})
 
 	--Midcast Sets
 	sets.midcast = {
@@ -217,6 +221,11 @@ function get_sets()
 		ring1="Kishar Ring",
 		ring2="Stikini Ring +1",
 		back="Lugh's Cape"
+	})
+	
+	sets.midcast.Impact = set_combine(sets.midcast.enfeeb, {
+		head=empty,
+		body="Twilight Cloak"
 	})
 	
 	sets.midcast.Occult = set_combine(sets.midcast.elemental, {

@@ -72,7 +72,7 @@ function getNukeString(element, tier)
 end
 
 function getNinjaNukeString(element, tier)
-	temptier = ': Inchi'
+	temptier = ': Ichi'
 	
 	if tier == '2' then
 		temptier = ': Ni'

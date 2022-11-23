@@ -84,7 +84,8 @@ function get_sets()
 	}
 	
 	sets.precast['Impact'] = set_combine(sets.FastCast, {
-	--	body="Crepuscular Cloak"
+		head=empty,
+		body="Twilight Cloak"
 	})
 
 	--Midcast Sets
@@ -188,6 +189,11 @@ function get_sets()
 		ring1="Kishar Ring",
 		ring2="Stikini Ring +1",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10'}}
+	})
+	
+	sets.midcast.Impact = set_combine(sets.midcast.enfeeb, {
+		head=empty,
+		body="Twilight Cloak"
 	})
 	
 	sets.midcast.dark = set_combine(sets.midcast.enfeeb, {
