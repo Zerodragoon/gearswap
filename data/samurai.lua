@@ -82,10 +82,8 @@ function get_sets()
 	PWS_Set_Names = {'Normal', 'AccMid', 'AccMax'}
 	sets.PWS = {
 		head="Mpaca's Cap",							
-		--head="Nyame Helm", 
 		body="Nyame Mail", 
 		hands="Nyame Gauntlets", --Kasuga Kote +3
-		--hands="Kasuga Kote +2",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck="Samurai's Nodowa +2",
@@ -93,8 +91,8 @@ function get_sets()
 		ring1="Epaminondas's Ring",
 		ring2="Niqmaddu Ring",
 		back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
-		ear1="Thrud Earring", --Kasuga Earring +2
-		ear2="Moonshade Earring",
+		ear1="Moonshade Earring", 
+		ear2="Thrud Earring", --Kasuga Earring +2
 		ammo="Knobkierrie"}
 
 	sets.PWS.Normal = set_combine(sets.PWS, {})
@@ -122,10 +120,39 @@ function get_sets()
 	sets.precast['Namas Arrow'] = sets.RangedWS
 	sets.precast['Apex Arrow'] = sets.RangedWS
 	sets.precast['Empyreal Arrow'] = sets.RangedWS
+	sets.precast['Tachi: Ageha'] = {
+		head="Kasuga Kabuto +2",
+		body="Kasuga Domaru +2",
+		hands="Kasuga Kote +2",
+		legs="Kasuga Haidate +2",
+		feet="Kasuga Sune-Ate +2",
+		waist="Eschan Stone",
+		neck="Samurai's Nodowa +2",
+		ear1="Dignitary's Earring",
+		ear2="Crep. Earring",
+		ring1="Stikini Ring +1",
+		ring2="Metamor. Ring +1",
+		back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+	}
 	
 	sets.precast['Sengikori'] = {
 		feet="Kasuga Sune-Ate +2"
 	}
+	
+	sets.MWS = set_combine(sets.PWS, {
+		head="Nyame Helm", 
+		body="Nyame Mail", 
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		ear2="Friomisi Earring",
+		waist="Orpheus's Sash"
+	})
+	
+	sets.precast['Tachi: Jinpu'] = sets.MWS
+	sets.precast['Tachi: Kagero'] = sets.MWS
+	sets.precast['Tachi: Goten'] = sets.MWS
+	sets.precast['Tachi: Koki'] = sets.MWS
 
 	--Idle Sets Below
 	Idle_Set_Names = {'Normal'}

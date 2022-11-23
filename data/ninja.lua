@@ -31,7 +31,7 @@ function get_sets()
 		neck="Baetyl Pendant", --4
 		ear1="Loquacious Earring", --2
 		ear2="Enchanter's Earring +1", --2
-		ring1="Weatherspoon Ring +1", --6
+		ring1="Weatherspoon Ring +1", --6 
 		ring2="Prolix Ring", --2
 		ammo="Sapience Orb", --2
 		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}
@@ -55,7 +55,7 @@ function get_sets()
 		ammo="Yamarang"
 	}
 
-	Hands_Set_Names = {'DD', 'Naegling'}
+	Hands_Set_Names = {'DD', 'Naegling', 'Crep', 'Tauret', 'Malev'}
 
 	sets.Hands = {}	
 
@@ -67,6 +67,21 @@ function get_sets()
 	sets.Hands.Naegling = { 
 		main="Naegling",
 		sub="Uzura +2"
+	}
+	
+	sets.Hands.Crep = { 
+		main="Crepuscular Knife",
+		sub="Kunimitsu"
+	}
+	
+	sets.Hands.Tauret = { 
+		main="Tauret",
+		sub="Kunimitsu"
+	}
+	
+	sets.Hands.Malev = { 
+		main="Malevolence",
+		sub="Malevolence"
 	}
 	
 	--sets.Hands.Tank = { 
@@ -203,6 +218,7 @@ function get_sets()
 		ring2="Archon Ring"
 	})
 	sets.precast['Blade: Yu'] = set_combine(sets.MWS, {})
+	sets.precast['Aeolian Edge'] = set_combine(sets.MWS, {})
 	
 	sets.Enmity = {
 		ammo="Sapience Orb",
@@ -446,6 +462,18 @@ function self_command(command)
 		MWS_Index = MWS_Index +1
 		if MWS_Index > #MWS_Set_Names then MWS_Index = 1 end
 		add_to_chat(207,'Magical WS Set Changed to: '..MWS_Set_Names[MWS_Index]..'')
+	elseif command =='element' then
+		Nuke_Index = Nuke_Index +1
+
+		if Nuke_Index > #Nuke_Elements then 
+			Nuke_Index = 1
+		end
+		
+		add_to_chat(207,'Element Changed to: '..Nuke_Elements[Nuke_Index]..'')
+	elseif command:sub(1, 4) == 'nuke' then
+		Nuke_Tier = command:sub(5,6)
+		
+		send_command('input /ma "'..getNinjaNukeString(Nin_Nuke_Elements[Nuke_Index], Nuke_Tier)..'" <t> ')
 	elseif command == 'update' then
 		status_change(player.status)
 		add_to_chat(207,'Update player status...')

@@ -14,6 +14,7 @@ Nuke_Ja_Elements = {'Stoneja', 'Waterja', 'Firaja', 'Aeroja', 'Thundaja', 'Blizz
 Geo_Aoe_Elements = {'Stonera', 'Watera', 'Fira', 'Aera', 'Thundera', 'Blizzara'}
 Blm_Aoe_Elements = {'Stonega', 'Waterga', 'Firaga', 'Aeroga', 'Thundaga', 'Blizzaga'}
 Anc_Nuke_Elements = {'Quake', 'Flood', 'Flare', 'Tornado', 'Burst', 'Freeze'}
+Nin_Nuke_Elements = {'Doton', 'Suiton', 'Katon','Huton', 'Raiton', 'Hyoton'}
 
 
 function buff_change(name,gain,buff_details) 
@@ -65,6 +66,18 @@ function getNukeString(element, tier)
 		temptier = ' V'	
 	elseif tier == '6' then
 		temptier = ' VI'	
+	end
+	
+	return element..temptier
+end
+
+function getNinjaNukeString(element, tier)
+	temptier = ': Inchi'
+	
+	if tier == '2' then
+		temptier = ': Ni'
+	elseif tier == '3' then
+		temptier = ': San'		
 	end
 	
 	return element..temptier

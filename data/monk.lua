@@ -78,7 +78,7 @@ function get_sets()
 	}
 	
 	sets.Impetus = {
-		body="Bhikku Cyclas +1"
+		body="Bhikku Cyclas +2"
 	}
 
 	Hands_Set_Names = {'Vere', 'Pole', 'Godhands'}
@@ -179,7 +179,7 @@ function get_sets()
 		head="Malignance Chapeau",
 		body="Malignance Tabard",	
 		hands="Malignance Gloves",
-		legs="Malignance Tights", --Bhikku Hose +3
+		legs="Bhikku Hose +2",
 		feet="Malignance Boots"})
 		
 	sets.Melee.DTTH = set_combine(sets.Melee.DT, {
