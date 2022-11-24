@@ -218,7 +218,7 @@ function get_sets()
 	
 	sets.precast['Angon'] = {
 		ammo="Angon",
-		head="Ptero. Fin. G. +3"
+		hands="Ptero. Fin. G. +3"
 	}
 	
 	sets.precast['Ancient Circle'] = {

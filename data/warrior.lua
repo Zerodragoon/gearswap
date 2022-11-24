@@ -16,6 +16,10 @@ function get_sets()
 	--Default Macro Set for WAR
 	send_command('input /macro book 5;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 11')
 	
+	organizer_items = {
+		tomahawk="Throwing Tomahawk"
+	}
+	
 	--Precast
 	sets.precast = {}
 		
@@ -40,7 +44,8 @@ function get_sets()
 	}
 		
 	sets.precast['Berserk'] = {
-		main="Firangi",
+		main="Instigator",
+		sub="Utu Grip",
 		body="Pummeler's Lorica +1",
 		feet="Agoge Calligae +1",
 		back="Cichol's Mantle" 
@@ -70,6 +75,11 @@ function get_sets()
 	
 	sets.precast['Mighty Strikes'] = {
 		hands="Agoge Mufflers"
+	}
+	
+	sets.precast['Tomahawk'] = {
+		ammo="Throwing Tomahawk",
+		feet="Agoge Calligae +1",
 	}
 
 	Hands_Set_Names = {'Sword', 'GAxe', 'Spear', 'GSword', 'Mace', 'Knife', 'Staff'}
@@ -502,6 +512,8 @@ function self_command(command)
 	elseif command == 'katana' then
 		enable('neck')
 		equip(sets.Katana)
+	elseif command == 'tomahawk' then
+		equip(sets.precast.Tomahawk)
 	elseif command == 'fcth' then
 		FellCleaveTH_Flag = not FellCleaveTH_Flag
 	elseif command == 'equipws' then
