@@ -55,13 +55,23 @@ function get_sets()
 	}
 	
 	sets.precast.Step = {
-		head="Maxixi Tiara +1",
-		hands="Maxixi Bangles +1",
-		feet="Horos Toe Shoes +3"
+		head="Maxixi Tiara +2",
+		body="Maxixi Casaque +3",
+		hands="Maxixi Bangles +2",
+		legs="Horos Tights +3",
+		feet="Horos Toe Shoes +3",
+		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
+		ammo="Yamarang",
+		neck="Lissome Necklace",
+		waist="Olseni Belt",
+		ring1="Regal Ring",
+		ring2="Chirich Ring +1",
+		ear1="Mache Earring +1",
+		ear2="Telos Earring"
 	}
 
 	sets.precast.Samba = {
-		head="Maxixi Tiara +1",
+		head="Maxixi Tiara +2",
 		back="Senuna's Mantle"
 	}
 
@@ -87,7 +97,7 @@ function get_sets()
 	sets.precast['Drain Samba III'] = sets.precast.Samba
 	sets.precast['Aspir Samba'] = sets.precast.Samba
 	sets.precast['Aspir Samba II'] = sets.precast.Samba
-	sets.precast['No Foot Rise'] = {body="Horos Casaque +1"}
+	sets.precast['No Foot Rise'] = {body="Horos Casaque +3"}
 	sets.precast['Climactic Flourish'] = {head = "Maculele Tiara +1"}
 	sets.precast['Striking Flourish'] = {body = "Maculele Casaque +1"}
 	sets.precast['Reverse Flourish'] = {
@@ -96,7 +106,7 @@ function get_sets()
 	}
 	sets.precast['Violent Flourish'] = {
 		head="Nyame Helm",							
-		body="Horos Casaque +1",
+		body="Horos Casaque +3",
 		hands="Nyame Gauntlets",
 		legs="Horos Tights +3",
 		feet="Nyame Sollerets",
@@ -109,7 +119,7 @@ function get_sets()
 		ear1="Dignitary's Earring",
 		ear2="Crepuscular Earring"}
 
-	Hands_Set_Names = {'Twashtar', 'TwashtarTP', 'Tauret', 'Aeneas', 'AeneasTP'}
+	Hands_Set_Names = {'Twashtar', 'TwashtarTP', 'Tauret', 'Aeneas', 'AeneasTP', 'TwashtarFencer'}
 
 	sets.Hands = {}	
 
@@ -131,6 +141,11 @@ function get_sets()
 	sets.Hands.TwashtarTP = { 
 		main="Twashtar",
 		sub="Fusetto +2"
+	}
+	
+	sets.Hands.TwashtarTP = { 
+		main="Twashtar",
+		sub="Airy Buckler"
 	}
 	
 	sets.Hands.Tauret = { 
@@ -219,7 +234,7 @@ function get_sets()
 
 	sets.Melee = {  
 		head="Adhemar Bonnet +1",							
-		body="Adhemar Jacket +1", --Horos Casque +3
+		body="Horos Casaque +3",
 		hands="Adhemar Wristbands +1",
 		legs="Samnuha Tights",
 		feet="Horos Toe Shoes +3",

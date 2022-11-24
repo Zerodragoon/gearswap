@@ -73,8 +73,14 @@ function get_sets()
 	
 	sets.Footwork = {
 		neck="Monk's Nodowa +1",
-		legs="Hesychast's Hose +3", --Bhikku Hose +3
+		legs="Bhikku Hose +2",
 		feet="Anchorite's Gaiters +3"
+	}
+	
+	sets.FootworkDT = {
+		neck="Monk's Nodowa +1",
+		legs="Bhikku Hose +2", --Bhikku Hose +3
+		feet="Bhikku Gaiters +2"
 	}
 	
 	sets.Impetus = {
@@ -111,7 +117,7 @@ function get_sets()
 		hands="Mpaca's Gloves",
 		legs="Ken. Hakama +1",
 		feet="Ken. Sune-Ate +1",
-		neck="Monk's Nodowa +1",
+		neck="Fotia Gorget",
 		waist="Moonbow Belt +1",
 		left_ear="Moonshade Earring",
 		right_ear="Schere Earring",
@@ -124,11 +130,18 @@ function get_sets()
 	sets.precast['Howling Fist']    = set_combine(sets.PWS, {hands="Anchorite's Gloves +3",head="Hes. Crown +3",back="Sacro Mantle"})
 	sets.precast['Asuran Fists']    = set_combine(sets.PWS, {neck="Fotia Gorget",})
 	sets.precast["Ascetic's Fury"]  = set_combine(sets.PWS, {})
-	sets.precast["Victory Smite"]   = set_combine(sets.PWS, {})
+	sets.precast["Victory Smite"]   = set_combine(sets.PWS, {head="Adhemar Bonnet +1", ear1="Sherida Earring"})
 	sets.precast['Shijin Spiral']   = set_combine(sets.PWS, {ammo="Aurgelmir Orb +1"})
-	sets.precast['Dragon Kick']     = set_combine(sets.PWS, {legs = "Hesychast's Hose +3", feet="Anchorite's Gaiters +3", back="Sacro Mantle"}) --Bhikku Hose +3
-	sets.precast['Tornado Kick']    = set_combine(sets.PWS, {legs = "Hesychast's Hose +3", feet="Anchorite's Gaiters +3"}) --Bhikku Hose +3
+	sets.precast['Dragon Kick']     = set_combine(sets.PWS, {neck="Monk's Nodowa +1", legs = "Hesychast's Hose +3", feet="Anchorite's Gaiters +3", back="Sacro Mantle"}) --Bhikku Hose +3
+	sets.precast['Tornado Kick']    = set_combine(sets.PWS, {neck="Monk's Nodowa +1", legs = "Hesychast's Hose +3", feet="Anchorite's Gaiters +3"}) --Bhikku Hose +3
 	sets.precast['Spinning Attack'] = set_combine(sets.PWS, {hands="Anchorite's Gloves +3",head="Hes. Crown +3",back="Sacro Mantle"})
+	sets.precast['Final Heaven'] = set_combine(sets.PWS, {
+		head="Hes. Crown +3",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		back="Sacro Mantle"})
 
 	sets.PWS.Normal = set_combine(sets.PWS, {})
 						
@@ -177,16 +190,11 @@ function get_sets()
 
 	sets.Melee.DT = set_combine(sets.Melee, {
 		head="Malignance Chapeau",
-		body="Malignance Tabard",	
+		body="Mpaca's Doublet",	
 		hands="Malignance Gloves",
 		legs="Bhikku Hose +2",
 		feet="Malignance Boots"})
 		
-	sets.Melee.DTTH = set_combine(sets.Melee.DT, {
-		ammo="Perfect Lucky Egg",
-		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
-		waist="Chaac Belt"})
-
 	sets.Melee.DTAcc = set_combine(sets.Melee.DT, {
 		waist="Kentarch Belt +1",
 		ear1="Mache Earring +1",
@@ -207,7 +215,11 @@ function get_sets()
 		feet="Mpaca's Boots",
 		ear2="Schere Earring",
 		ammo="Coiste Bodhar"})
-	
+		
+	sets.Melee.DTTH = set_combine(sets.Melee.DT, {
+		ammo="Perfect Lucky Egg",
+		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
+		waist="Chaac Belt"})
 
 	sets.Melee.Crit = set_combine(sets.Melee, {
 		head="Kendatsuba jinpachi +1",
