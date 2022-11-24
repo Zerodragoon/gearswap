@@ -44,10 +44,10 @@ function get_sets()
 		feet="Amalric Nails +1",
 		neck="Baetyl Pendant",
 		waist="Eschan Stone",
-		left_ear="Hecate's Earring",
+		left_ear="Regal Earring",
 		right_ear="Friomisi Earring",
 		left_ring="Jhakri Ring",
-		right_ring="Weatherspoon Ring +1",
+		right_ring="Metamorph Ring +1",
 		back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}}
 	}
 
@@ -81,10 +81,10 @@ function get_sets()
 	sets.midcast.Enhancing = {
 		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
 		body={ name="Telchine Chasuble", augments={'Enh. Mag. eff. dur. +10',}},
+		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
 		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
 		feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
 		neck="Mirage Stole +1",
-		hands="Hashishin Bazubands +1",
 		waist="Olympus Sash",
 		ear1="Mimir Earring",
 		ear2="Andoaa Earring",
@@ -106,8 +106,6 @@ function get_sets()
 
 	sets.midcast["Battery Charge"] = set_combine(sets.midcast.Enhancing, {
 		head="Amalric Coif +1",
-		hands="Hashishin Bazubands +1",
-		legs="Hashishin Tayt +1",
 		waist="Gishdubar Sash",
 		back="Grapevine Cape" --Hashishin Earring +2
 	})
@@ -145,6 +143,7 @@ function get_sets()
 		legs="Hashishin Tayt +1",
 		feet="Luhlaza Charuqs +1",
 		ear1="Odnowa Earring +1",
+		ear2="Hashi. Earring +1",
 		waist="Flume Belt +1"
 	})
 	

@@ -219,7 +219,8 @@ function get_sets()
 	})
 	
 	sets.PWS.SavageCapHigh = set_combine(sets.PWS.SavageCap, {
-		hands="Sakpata's Gauntlets"
+		hands="Sakpata's Gauntlets",
+		feet="Sakpata's Leggings"
 	})
 	
 	sets.PWS.Normal = set_combine(sets.PWS, {})
