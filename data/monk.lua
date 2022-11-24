@@ -117,7 +117,7 @@ function get_sets()
 		hands="Mpaca's Gloves",
 		legs="Ken. Hakama +1",
 		feet="Ken. Sune-Ate +1",
-		neck="Fotia Gorget",
+		neck="Monk's Nodowa +1",
 		waist="Moonbow Belt +1",
 		left_ear="Moonshade Earring",
 		right_ear="Schere Earring",
@@ -132,8 +132,8 @@ function get_sets()
 	sets.precast["Ascetic's Fury"]  = set_combine(sets.PWS, {})
 	sets.precast["Victory Smite"]   = set_combine(sets.PWS, {head="Adhemar Bonnet +1", ear1="Sherida Earring"})
 	sets.precast['Shijin Spiral']   = set_combine(sets.PWS, {ammo="Aurgelmir Orb +1"})
-	sets.precast['Dragon Kick']     = set_combine(sets.PWS, {neck="Monk's Nodowa +1", legs = "Hesychast's Hose +3", feet="Anchorite's Gaiters +3", back="Sacro Mantle"}) --Bhikku Hose +3
-	sets.precast['Tornado Kick']    = set_combine(sets.PWS, {neck="Monk's Nodowa +1", legs = "Hesychast's Hose +3", feet="Anchorite's Gaiters +3"}) --Bhikku Hose +3
+	sets.precast['Dragon Kick']     = set_combine(sets.PWS, {legs = "Hesychast's Hose +3", feet="Anchorite's Gaiters +3", back="Sacro Mantle"}) --Bhikku Hose +3
+	sets.precast['Tornado Kick']    = set_combine(sets.PWS, {legs = "Hesychast's Hose +3", feet="Anchorite's Gaiters +3"}) --Bhikku Hose +3
 	sets.precast['Spinning Attack'] = set_combine(sets.PWS, {hands="Anchorite's Gloves +3",head="Hes. Crown +3",back="Sacro Mantle"})
 	sets.precast['Final Heaven'] = set_combine(sets.PWS, {
 		head="Hes. Crown +3",
@@ -292,7 +292,11 @@ function aftercast(spell)
 		
 		if Buff_Swaps_flag then
 			if spell.name == 'Footwork' or buffactive['Footwork'] then
-				equip(sets.Footwork)
+				if Melee_Set_Names[Melee_Index]:contains('DT') then
+					equip(sets.FootworkDT)
+				else
+					equip(sets.Footwork)
+				end
 			end
 			
 			if spell.name == 'Impetus' or buffactive['Impetus'] then
@@ -318,7 +322,11 @@ function status_change(new,old)
 		
 		if Buff_Swaps_flag then
 			if buffactive['Footwork'] then
-				equip(sets.Footwork)
+				if Melee_Set_Names[Melee_Index]:contains('DT') then
+					equip(sets.FootworkDT)
+				else
+					equip(sets.Footwork)
+				end
 			end
 			
 			if buffactive['Impetus'] then
