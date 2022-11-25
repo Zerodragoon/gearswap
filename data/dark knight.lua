@@ -10,7 +10,9 @@ function get_sets()
 
 	FellCleaveTH_Flag = false
 	--Default Macro Set for DRK
-	send_command('input /macro book 4;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 11')
+	send_command('input /macro book 4;wait .1;input /macro set 1;wait 0.5;input //gs org')
+	
+	set_style_lock()
 	
 	--Precast
 	sets.precast = {}

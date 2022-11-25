@@ -7,9 +7,12 @@ function get_sets()
 	Hands_Index = 1
 	PWS_Index = 1
 	MWS_Index = 1
+	Style_Lock_Id = 31
 
 	--Default Macro Set for DRG
-	send_command('input /macro book 7;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 31')
+	send_command('input /macro book 7;wait .1;input /macro set 1;wait 0.5;input //gs org')
+	
+	set_style_lock()
 	
 	ready_moves_to_check = S{'Sic','Whirl Claws','Dust Cloud','Foot Kick','Sheep Song','Sheep Charge','Lamb Chop',
     'Rage','Head Butt','Scream','Dream Flower','Wild Oats','Leaf Dagger','Claw Cyclone','Razor Fang',

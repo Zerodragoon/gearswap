@@ -20,9 +20,12 @@ function get_sets()
 	RollRange_Flag = true
 	DI_flag = false
 	ATT_Cap_Flag = false
+	Style_Lock_Id = 4
 
 	--Default Macro Set for RNG
-	send_command('input /macro book 12;wait .1;input /macro set 1;wait .1;wait .1;input //dp Gun;wait 0.1;input //lua load roller;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 4;wait 1.0;input //lua l ar')
+	send_command('input /macro book 12;wait .1;input /macro set 1;wait .1;wait .1;input //dp Gun;wait 0.1;input //lua load roller;wait 0.5;input //gs org;wait 1.0;input //lua l ar')
+	
+	set_style_lock()
 	
 	--PreSets Below (Snapshot/JA's)
 	sets.precast = {}

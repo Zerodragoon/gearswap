@@ -8,9 +8,12 @@ function get_sets()
 	PWS_Index = 1
 	MWS_Index = 1
 	Ranged_Flag = false
+	Style_Lock_Id = 18
 
 	--Default Macro Set for DRG
-	send_command('input /macro book 6;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 18')
+	send_command('input /macro book 6;wait .1;input /macro set 1;wait 0.5;input //gs org')
+	
+	set_style_lock()
 
 	sets.Meditate = {
 		head="Wakido Kabuto +3",

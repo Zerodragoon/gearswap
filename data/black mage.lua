@@ -11,9 +11,12 @@ function get_sets()
 	BURST_Flag = false
 	AFBody_Flag = false
 	Occult_Flag = false
+	Style_Lock_Id = 13
 	
 	--Default Macro Set for RNG
-	send_command('input /macro book 14;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 13')
+	send_command('input /macro book 14;wait .1;input /macro set 1;wait 0.5;input //gs org')
+	
+	set_style_lock()
 	
 	--Hands Sets
 	Hands_Set_Names = {'Marin', 'Lathi', 'Mpaca', 'Xoanon'}
@@ -379,7 +382,7 @@ function get_sets()
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",
 		left_ring="Freke Ring",
-		right_ring="Weatherspoon Ring +1",
+		right_ring="Metamorph Ring +1",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10'}}
 	})
 	

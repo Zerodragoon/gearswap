@@ -45,6 +45,7 @@ function get_sets()
 	GrandFall = 1
 
 	StartLockStyle = '13'
+	Style_Lock_Id = 13
 	IdleMode = 'Refresh'
 	AccMode = false
 	ImpactDebuff = false
@@ -76,7 +77,7 @@ function get_sets()
 		back="Moonlight Cape",
 		waist="Lucidity Sash",
 		left_ear="Ethereal Earring",
-    	right_ear="Infused Earring",
+    	right_ear="Beckoner's Earring +1",
 		ammo="Sancus Sachet +1"
 	}
 
@@ -249,13 +250,14 @@ function get_sets()
 		left_ear="Malignance Earring",
 		right_ear="Hecate's Earring",
 		left_ring="Freke Ring",
-		right_ring="Weatherspoon Ring +1",
+		right_ring="Metamorph Ring +1",
 		back="Izdubar Mantle",
 	}
 
     sets.midcast["Refresh"] = set_combine(sets.midcast.Enhancing, {
 		head="Amalric Coif +1",
-		waist="Gishdubar Sash"
+		waist="Gishdubar Sash",
+		back="Grapevine Cape"
 	})
 
     sets.midcast["Aquaveil"] = set_combine(sets.midcast.Enhancing, {
@@ -272,13 +274,38 @@ function get_sets()
 
 	-- I stack magic accuracy here to land the defense down effect, rather than MAB for damage.
 	-- It's a personal preference, use whatever you prefer.
+	sets.precast["Garland of Bliss"] = sets.midcast.Nuke
 	sets.midcast["Garland of Bliss"] = sets.midcast.Nuke
 
 	-- My set focuses on accuracy here to make skillchains with Ifrit
 	-- Just like Garland, it's not hard to improve on the damage from this set if that's what you're after.
-	sets.midcast["Shattersoul"] =sets.midcast.Nuke
+	sets.precast.WS = {
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",	
+		neck="Baetyl Pendant",		
+		waist="Orpheus's Sash",
+		left_ear="Malignance Earring",
+		right_ear="Regal Earring",
+		left_ring="Freke Ring",
+		right_ring="Metamorph Ring +1",
+		back="Izdubar Mantle",
+	}
+	
+	sets.precast.WSEarth = set_combine(sets.precast.WS, {
+		neck="Quanpur Necklace"
+	})
 
-	sets.midcast["Cataclysm"] = sets.midcast.Nuke
+	sets.precast["Shattersoul"] =sets.precast.WS 
+	sets.midcast["Shattersoul"] =sets.precast.WS 
+	sets.precast["Cataclysm"] = sets.precast.WS 
+	sets.midcast["Cataclysm"] = sets.precast.WS 
+	sets.precast["Earth Crusher"] = sets.precast.WSEarth 
+	sets.midcast["Earth Crusher"] = sets.precast.WSEarth 
+	sets.precast["Rock Crusher"] = sets.precast.WSEarth 
+	sets.midcast["Rock Crusher"] = sets.precast.WSEarth 
 
 	sets.pet_midcast = {}
 
@@ -307,7 +334,7 @@ function get_sets()
 	-- Physical Pact AM3 set, less emphasis on Pet:DA
 	sets.pet_midcast.Physical_BP_AM3 = set_combine(sets.pet_midcast.Physical_BP, {
 		ring1="Varar Ring +1",
-		body="Apogee Dalmatica +1", -- AF Body +3
+		body="Convoker's Doublet +2", -- AF Body +3
 		ear2="Beckoner's Earring +1", --Beckoner's Earring +2
 		feet={ name="Apogee Pumps +1", augments={'MP+80','Pet: Attack+35','Blood Pact Dmg.+8',}} --Convert to full Melee
 	})
@@ -353,7 +380,6 @@ function get_sets()
 	-- Note: This set will only be used on merit pacts if you have less than 4 merits.
 	--       Make sure to update your merit values at the top of this Lua.
 	sets.pet_midcast.Magic_BP_TP = set_combine(sets.pet_midcast.Magic_BP_Base, {
-		--Enticer's Pants
 	})
 
 	-- NoTP set used when you don't need Enticer's
@@ -474,7 +500,7 @@ function get_sets()
 		head="Convoker's Horn +3",
 		neck="Loricate Torque +1",
 		ear1="Cath Palug Earring",
-		ear2="Moonshade Earring",
+		ear2="Beckoner's Earring +1",
 		body="Apogee Dalmatica +1",
 		hands="Nyame Gauntlets",
 		ring1="Stikini Ring +1",
@@ -511,7 +537,7 @@ function get_sets()
 		back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 		waist="Lucidity Sash",
 		legs="Assiduity Pants +1",
-		feet="Baayami Sabots +1"
+		feet="Baayami Sabots +1" --Beckoner's Pigaches +3
 	}
 
 	-- Avatar Melee set. Equipped when IdleMode is "DD" and MeleeMode is OFF.
@@ -522,6 +548,7 @@ function get_sets()
 
 	-- Refresh set with avatar out. Equipped when IdleMode is "Refresh".
 	sets.aftercast.Perp_Refresh = set_combine(sets.aftercast.Perp_Base, {
+		ear2="Beckoner's Earring +1"
 	})
 
 	-- Refresh set when MP is under 50%
@@ -550,16 +577,17 @@ function get_sets()
 
 	-- TP set. Equipped when IdleMode is "DD" and MeleeMode is ON.
 	sets.aftercast.Perp_Melee = set_combine(sets.aftercast.Perp_Refresh, {
-		head="Nyame Helm",								
+		head="Blistering Sallet +1",
 		body="Nyame Mail",
-		hands="Nyame Gauntlets",
+		hands="Gazu Bracelet +1",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
-		neck="Shulmanu Collar",
-		ear1="Telos Earring",
-		ear2="Sroda Earring",
-		ring1="Crepuscular Ring",
-		ring2="Petrov Ring",
+		neck="Lissome Necklace",
+		waist="Windbuffet Belt +1",
+		left_ear="Crepuscular Earring",
+		right_ear="Telos Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
 		waist="Windbuffet Belt +1"
 	})
 

@@ -7,9 +7,12 @@ function get_sets()
 	Hands_Index = 1
 	PWS_Index = 1
 	MWS_Index = 1
+	Style_Lock_Id = 28
 
 	--Default Macro Set for RNG
-	send_command('input /macro book 10;wait .1;input /macro set 3;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 28;wait 1.0;lua l autocontrol;wait .5; autocontrol show')
+	send_command('input /macro book 10;wait .1;input /macro set 3;wait 0.5;input //gs org;wait 1.0;lua l autocontrol;wait .5; autocontrol show')
+	
+	set_style_lock()
 	
 	--Precast
 	sets.precast = {}

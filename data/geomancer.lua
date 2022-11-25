@@ -10,9 +10,12 @@ function get_sets()
 	SIRD_Flag = false
 	BURST_FLAG = false
 	Loupan_Flag = false
+	Style_Lock_Id = 13
 	
 	--Default Macro Set for RNG
-	send_command('input /macro book 20;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 13;wait 1;input //lua l nostrum; wait 1;input //nos profile redmage')
+	send_command('input /macro book 20;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 1;input //lua l nostrum; wait 1;input //nos profile geomancer')
+	
+	set_style_lock()
 	
 	--Hands Sets
 	Hands_Set_Names = {'Idris', 'Bunzi', 'Max', 'Xoanon'}

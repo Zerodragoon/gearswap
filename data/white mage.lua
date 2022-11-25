@@ -11,9 +11,12 @@ function get_sets()
 	SIRD_Flag = false
 	BURST_Flag = false
 	CUREDT_Flag = false
+	Style_Lock_Id = 13
 
 	--Default Macro Set for RNG
-	send_command('input /macro book 15;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 13;wait 1;input //lua l nostrum; wait 1;input //nos profile default')
+	send_command('input /macro book 15;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 1;input //lua l nostrum; wait 1;input //nos profile default')
+	
+	set_style_lock()
 	
 	--Hands Sets
 	Hands_Set_Names = {'Daybreak', 'Chatoyant', 'Yagrush', 'Raetic'}

@@ -9,9 +9,12 @@ function get_sets()
 	MWS_Index = 1
 	SIRD_Flag = false
 	BURST_Flag = false
+	Style_Lock_Id = 17
 
 	--Default Macro Set for RNG
-	send_command('input /macro book 16;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 17;wait 1;input //lua l nostrum; wait 1;input //nos profile redmage')
+	send_command('input /macro book 16;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 1;input //lua l nostrum; wait 1;input //nos profile redmage')
+	
+	set_style_lock()
 	
 	--Hands Sets
 	Hands_Set_Names = {'Standard', 'Enspell', 'Naegling', 'Tauret'}

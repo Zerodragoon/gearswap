@@ -12,9 +12,12 @@ function get_sets()
 	SIRD_Flag = false
 	BURST_Flag = false
 	Dummy_Flag = false
+	Style_Lock_Id = 20
 
 	--Default Macro Set for RNG
 	send_command('input /macro book 18;wait .1;input /macro set 1;wait .1;input //lua load singer;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 20')
+	
+	set_style_lock()
 	
 	--Hands Sets
 	Hands_Set_Names = {'CarnShield', 'CarnDual', 'NaeglingCrep', 'NaeglingTP', 'NaeglingShield', 'Twashtar', 'TwashtarCrep', 'TwashtarTP', 'TwashtarShield', 'NaeglingKraken', 'CarnKraken', 'TwashKraken', 'AeneasKraken'}

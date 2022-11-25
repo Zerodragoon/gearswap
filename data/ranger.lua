@@ -14,10 +14,13 @@ function get_sets()
 	TrueFlight_Index = 1
 	Ammo_Index = 1
 	ATT_Cap_Flag = false
+	Style_Lock_Id = 3
 
 	--Default Macro Set for RNG
-	send_command('input /macro book 1;wait .1;input /macro set 1;wait .1;wait .1;input //dp Gun;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 3;input //lua l ar')
+	send_command('input /macro book 1;wait .1;input /macro set 1;wait .1;wait .1;input //dp Gun;wait 0.5;input //gs org;input //lua l ar')
 	
+	set_style_lock()
+
 	--PreSets Below (Snapshot/JA's)
 	sets.precast = {}
 	sets.precast.Standard = {}

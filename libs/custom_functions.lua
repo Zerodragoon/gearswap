@@ -8,7 +8,7 @@ doomed = false
 sets.HolyWater = {neck="Nicander's Necklace",waist="Gishdubar Sash", ring1="Blenmot's Ring +1", ring2="Purity Ring"}
 
 Nuke_Index = 1
-
+Style_Lock_Id = 11
 Nuke_Elements = {'Stone', 'Water', 'Fire', 'Aero', 'Thunder', 'Blizzard'}
 Nuke_Ja_Elements = {'Stoneja', 'Waterja', 'Firaja', 'Aeroja', 'Thundaja', 'Blizzaja'}
 Geo_Aoe_Elements = {'Stonera', 'Watera', 'Fira', 'Aera', 'Thundera', 'Blizzara'}
@@ -16,6 +16,13 @@ Blm_Aoe_Elements = {'Stonega', 'Waterga', 'Firaga', 'Aeroga', 'Thundaga', 'Blizz
 Anc_Nuke_Elements = {'Quake', 'Flood', 'Flare', 'Tornado', 'Burst', 'Freeze'}
 Nin_Nuke_Elements = {'Doton', 'Suiton', 'Katon','Huton', 'Raiton', 'Hyoton'}
 
+function set_style_lock()
+	send_command('wait 2.0; input /lockstyleset '..Style_Lock_Id..'')
+end
+
+function sub_job_change(new,old) 
+	set_style_lock()
+end
 
 function buff_change(name,gain,buff_details) 
     if name == "doom" or name == "Doom" then

@@ -9,9 +9,12 @@ function get_sets()
 	MWS_Index = 1
 	ATT_Cap_High = false
 	ATT_Cap_Flag = false
+	Style_Lock_Id = 10
 
 	--Default Macro Set for DRG
-	send_command('input /macro book 7;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 10')
+	send_command('input /macro book 7;wait .1;input /macro set 1;wait 0.5;input //gs org')
+
+	set_style_lock()
 
 	-- Hands Sets
 	Hands_Set_Names = {'Trishula', 'Shining', 'Naegling', 'Malig'}

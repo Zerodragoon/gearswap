@@ -9,7 +9,9 @@ function get_sets()
 	MWS_Index = 1
 
 	--Default Macro Set for RNG
-	send_command('input /macro book 17;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 11')
+	send_command('input /macro book 17;wait .1;input /macro set 1;wait 0.5;input //gs org')
+	
+	set_style_lock()
 	
 	--Precast
 	sets.precast = {}

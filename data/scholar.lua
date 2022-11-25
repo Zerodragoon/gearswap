@@ -11,9 +11,12 @@ function get_sets()
 	BURST_Flag = false
 	Weak_Helix_Flag = false
 	Occult_Flag = false
+	Style_Lock_Id = 13
 	
 	--Default Macro Set for RNG
-	send_command('input /macro book 19;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 13;wait 1;input //lua l nostrum; wait 1;input //nos profile scholar')
+	send_command('input /macro book 19;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 1;input //lua l nostrum; wait 1;input //nos profile scholar')
+	
+	set_style_lock()
 	
 	--Hands Sets
 	Hands_Set_Names = {'Daybreak', 'Bunzi', 'Marin', 'Xoanon'}
