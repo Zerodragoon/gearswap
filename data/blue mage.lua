@@ -37,7 +37,7 @@ function get_sets()
 
 	sets.midcast = { 
 		ammo="Pemphredo Tathlum",
-		head="Jhakri Coronal +2", --Hashishin Set +3
+		head="Hashishin Kavuk +2", --Hashishin Set +3
 		body="Amalric Doublet +1",
 		hands="Amalric Gages +1",
 		legs="Amalric Slops +1",
@@ -57,7 +57,7 @@ function get_sets()
 	
 	sets.midcast.MACC = set_combine(sets.midcast, {
 		ammo="Pemphredo Tathlum",
-		head="Malignance Chapeau", --Hashishin Set +3
+		head="Hashishin Kavuk +2", --Hashishin Set +3
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
@@ -101,13 +101,13 @@ function get_sets()
 		feet="Medium's Sabots",
 		ring1="Asklepian Ring",
 		ring2="Stikini Ring +1",
-		back="Oretania's Cape +1" --Hashishin Earring +2
+		back="Oretania's Cape +1"
 	})
 
 	sets.midcast["Battery Charge"] = set_combine(sets.midcast.Enhancing, {
 		head="Amalric Coif +1",
 		waist="Gishdubar Sash",
-		back="Grapevine Cape" --Hashishin Earring +2
+		back="Grapevine Cape"
 	})
 
 	sets.midcast["Aquaveil"] = set_combine(sets.midcast.Enhancing, {
