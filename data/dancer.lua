@@ -275,6 +275,10 @@ end
 function precast(spell)	
 	if sets.precast[spell.english] then
                 equip(sets.precast[spell.english])
+		if spell.english == 'Spectral Jig' and buffactive.Sneak then
+			cast_delay(0.2)
+			send_command('cancel Sneak')        
+		end
 	elseif spell.type == 'WeaponSkill' then
 		if spell.name == "Aeolian Edge" then
             equip(sets.MWS[MWS_Set_Names[MWS_Index]])
