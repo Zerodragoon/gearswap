@@ -98,7 +98,7 @@ function get_sets()
 
 	sets.precast['Impact'] = set_combine(sets.FastCast, {
 		head=empty,
-		body="Twilight Cloak"
+		body="Crepuscular Cloak"
 	})
 	
 	sets.precast['Full Circle'] = {
@@ -195,7 +195,7 @@ function get_sets()
 		legs="Geomancy Pants +3",
 		feet="Geomancy Sandals +3",
 		neck="Bagua Charm +2",
-		waist="Luminary Sash",
+		waist="Acuity Belt +1",
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 		ear1="Malignance Earring",
 		ear2="Regal Earring",
@@ -205,7 +205,7 @@ function get_sets()
 	
 	sets.midcast.Impact = set_combine(sets.midcast.enfeeb, {
 		head=empty,
-		body="Twilight Cloak"
+		body="Crepuscular Cloak"
 	})
 	
 	sets.midcast['Dispelga'] = set_combine(sets.midcast.enfeeb, {

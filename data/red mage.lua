@@ -86,7 +86,7 @@ function get_sets()
 	
 	sets.precast['Impact'] = set_combine(sets.FastCast, {
 		head=empty,
-		body="Twilight Cloak"
+		body="Crepuscular Cloak"
 	})
 	
 	sets.precast.Saboteur = {
@@ -181,7 +181,7 @@ function get_sets()
 	
 	sets.midcast.Impact = set_combine(sets.midcast.enfeeb, {
 		head=empty,
-		body="Twilight Cloak"
+		body="Crepuscular Cloak"
 	})
 	
 	sets.midcast['Dia'] = set_combine(sets.midcast.enfeeb, {

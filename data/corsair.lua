@@ -433,7 +433,7 @@ function get_sets()
 		head="Rawhide Mask",							
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
-		legs="Rawhide Trousers",
+		legs="Carmine Cuisses +1",
 		feet="Malignance Boots",
 		neck="Loricate Torque +1",
 		waist="Gishdubar Sash",

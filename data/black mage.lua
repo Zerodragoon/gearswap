@@ -88,7 +88,7 @@ function get_sets()
 	
 	sets.precast['Impact'] = set_combine(sets.FastCast, {
 		head=empty,
-		body="Twilight Cloak"
+		body="Crepuscular Cloak"
 	})
 
 	--Midcast Sets
@@ -127,7 +127,7 @@ function get_sets()
 	--Black Magic Sets
 	sets.midcast.elemental = {
 		ammo="Pemphredo Tathlum",
-		head="Agwu's Cap",
+		head="Agwu's Cap", 
 		body="Amalric Doublet +1",
 		hands="Amalric Gages +1",
 		legs="Amalric Slops +1",
@@ -143,12 +143,13 @@ function get_sets()
 
 	sets.midcast.Burst = set_combine(sets.midcast.elemental, {
 		head="Ea Hat +1",
-    	body="Ea Houppe. +1",
-		hands="Amalric Gages +1",
+    	body="Ea Houppe. +1", --Wicce Coat
+		hands="Amalric Gages +1", --Agwu's
     	--hands="Ea Cuffs +1",
     	legs="Ea Slops +1",
     	feet="Agwu's Pigaches",
-		right_ring="Mujin Band"
+		right_ring="Mujin Band", --Drop
+		ammo="Ghastly Tathlum +1"
 	})
 	
 	--Ja Spells Sets
@@ -183,27 +184,27 @@ function get_sets()
 		ammo="Pemphredo Tathlum",
 		body="Cohort Cloak +1",
 		hands="Regal Cuffs",
-		legs="Psycloth Lappas", 
-		feet="Medium's Sabots",
+		legs="Spaekona's Tonban +3", 
+		feet="Archmage's Sabots +3",
 		neck="Sorcerer's Stole +1",
-		waist="Sacro Cord",
+		waist="Acuity Belt +1",
 		ear1="Malignance Earring",
 		ear2="Regal Earring",
 		ring1="Kishar Ring",
-		ring2="Stikini Ring +1",
+		ring2="Metamorph Ring +1",
 		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10'}}
 	})
 	
 	sets.midcast.Impact = set_combine(sets.midcast.enfeeb, {
 		head=empty,
-		body="Twilight Cloak"
+		body="Crepuscular Cloak"
 	})
 	
 	sets.midcast.dark = set_combine(sets.midcast.enfeeb, {
 		neck="Erra Pendant",
 		hands="Archmage's Gloves +3",
-		legs="Spaekona's Tonban +3",
-		feet="Archmage's Sabots +3"
+		feet="Archmage's Sabots +3",
+		ring1="Archon Ring"
 	})
 	
 	sets.midcast.Drain = set_combine(sets.midcast.dark, {
@@ -212,8 +213,7 @@ function get_sets()
 		feet="Agwu's Pigaches",
 		left_ear="Hirudinea Earring",
         right_ring="Evanescence Ring",
-        waist="Fucho-no-obi",
-	})
+        waist="Fucho-no-obi",	})
 	
 	sets.midcast['Drain II'] = sets.midcast.Drain
 	sets.midcast['Drain III'] = sets.midcast.Drain
@@ -224,8 +224,7 @@ function get_sets()
 
 	sets.midcast.elementaldebuff = set_combine(sets.midcast.enfeeb, {
 		hands="Archmage's Gloves +3",
-		legs="Archmage's Tonban +3",
-		feet="Archmage's Sabots +3"
+		legs="Archmage's Tonban +3"
 	})
 	
 	sets.midcast.Shock = sets.midcast.elementaldebuff
@@ -300,10 +299,25 @@ function get_sets()
 		waist="Siegel Sash"
 	})
 	
-	sets.midcast["Death"] = set_combine(sets.midcast.elemental, {
+	sets.midcast.Death = set_combine(sets.midcast.elemental, {
 		head="Pixie Hairpin +1",
-		ring2="Archon Ring"
+		body="Amalric Doublet +1",
+		hands="Amalric Gages +1",
+		legs="Amalric Slops +1",
+		feet="Amalric Nails +1",
+		ring2="Archon Ring",
+		waist="Acuity Belt +1",
+		neck="Sanctity Necklace",
+		ear1="Barkarole Earring",
+		ring1="Mephitas's Ring +1"
 	})
+	
+	sets.midcast.DeathBurst = set_combine(sets.midcast.Death, {
+		--Wicce Coat +3
+		--Agwu's Hands
+		--Wicce Legs +3
+	})
+
 
 	--Idle Sets Below
 	Idle_Set_Names = {'Normal', 'DT'}
@@ -407,12 +421,12 @@ function get_sets()
 		hands="Regal Cuffs",
 		legs="Amalric Slops +1",
 		feet="Amalric Nails +1",
-		neck="Nodens Gorget",
+		neck="Sanctity Necklace",
 		waist="Luminary Sash",
-		left_ear="Regal Earring",
-		right_ear="Loquacious Earring", 
-		left_ring="Supershear Ring",
-		right_ring="Prolix Ring",
+		left_ear="Loquacious Earring",
+		right_ear="Regal Earring", 
+		left_ring="Mephitas's Ring",
+		right_ring="Mephitas's Ring +1",
 		back="Fi Follet Cape +1"
 	} 
 
@@ -447,6 +461,10 @@ function midcast(spell)
 		
 		if spell.english:find("Refresh") and spell.target.name == "Zerodragoon" then
 			equip(sets.midcast.RefreshRec)
+		end
+		
+		if spell.english:find("Death") then
+			equip(sets.midcast.DeathBurst)
 		end
 	elseif spell.skill == 'Enhancing Magic' then
 		equip(sets.midcast.Enhancing)

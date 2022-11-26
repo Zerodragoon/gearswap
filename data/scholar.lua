@@ -112,7 +112,7 @@ function get_sets()
 	
 	sets.precast['Impact'] = set_combine(sets.FastCast, {
 		head=empty,
-		body="Twilight Cloak"
+		body="Crepuscular Cloak"
 	})
 
 	--Midcast Sets
@@ -228,7 +228,7 @@ function get_sets()
 	
 	sets.midcast.Impact = set_combine(sets.midcast.enfeeb, {
 		head=empty,
-		body="Twilight Cloak"
+		body="Crepuscular Cloak"
 	})
 	
 	sets.midcast.Occult = set_combine(sets.midcast.elemental, {
@@ -431,12 +431,12 @@ function get_sets()
 		hands="Regal Cuffs",
 		legs="Amalric Slops +1",
 		feet="Amalric Nails +1",
-		neck="Nodens Gorget",
+		neck="Sanctity Necklace",
 		waist="Luminary Sash",
-		left_ear="Regal Earring",
-		right_ear="Loquacious Earring", 
-		left_ring="Supershear Ring",
-		right_ring="Prolix Ring",
+		left_ear="Loquacious Earring",
+		right_ear="Regal Earring", 
+		left_ring="Mephitas's Ring",
+		right_ring="Mephitas's Ring +1",
 		back="Fi Follet Cape +1"
 	} 
 
