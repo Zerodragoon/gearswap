@@ -401,7 +401,7 @@ function get_sets()
 	-- Keraunos, Grioavolr, Espiritus, Was, Apogee Crown, Apogee Dalmatica, Adad Amulet
 	sets.pet_midcast.FlamingCrush = set_combine(sets.pet_midcast.Magic_BP_Base, {
 		main="Nirvana",
-		--Body AF+3
+		body="Convoker's Doublet +2"
 		--Nirvana
 	})
 		
