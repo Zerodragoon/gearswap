@@ -7,6 +7,7 @@ function get_sets()
 	Hands_Index = 1
 	PWS_Index = 1
 	MWS_Index = 1
+	Full_Mab = false
 
 	--Default Macro Set for RNG
 	send_command('input /macro book 17;wait .1;input /macro set 1;wait 0.5;input //gs org')
@@ -23,7 +24,7 @@ function get_sets()
 	-- Magic Sets Below		
 	sets.precast.FastCast = { --5% Cleave
 		head="Carmine Mask +1", --14
-		body="Hashishin Mintan +1", --14
+		body="Hashishin Mintan +2", --14
 		hands="Leyline Gloves", --6
 		waist="Witful Belt", --3 --3
 		legs="Pinga Pants", --11
@@ -40,7 +41,7 @@ function get_sets()
 	sets.midcast = { 
 		ammo="Pemphredo Tathlum",
 		head="Hashishin Kavuk +2", --Hashishin Set +3
-		body="Amalric Doublet +1",
+		body="Hashishin Mintan +2",
 		hands="Amalric Gages +1",
 		legs="Amalric Slops +1",
 		feet="Amalric Nails +1",
@@ -54,13 +55,17 @@ function get_sets()
 	}
 
 	sets.midcast.MAB = set_combine(sets.midcast, {
+		body="Amalric Doublet +1",
+		hands="Amalric Gages +1",
+		legs="Amalric Slops +1",
+		feet="Amalric Nails +1",
 		neck="Baetyl Pendant" 
 	}) 
 	
 	sets.midcast.MACC = set_combine(sets.midcast, {
 		ammo="Pemphredo Tathlum",
 		head="Hashishin Kavuk +2", --Hashishin Set +3
-		body="Malignance Tabard",
+		body="Hashishin Mintan +2",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
 		feet="Malignance Boots",
@@ -74,11 +79,12 @@ function get_sets()
 	})
 	
 	sets.midcast['Fire II'] = sets.midcast.MAB
+	sets.midcast['Stone III'] = sets.midcast.MAB
 	
-	sets.midcast["Tenebral Crush"] = set_combine(sets.midcast.MAB, {
+	sets.midcast.Tenebral = {
 		head = "Pixie Hairpin +1",
 		right_ring = "Archon Ring"
-	}) 
+	}
 
 	sets.midcast.Enhancing = {
 		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
@@ -341,7 +347,15 @@ function midcast(spell)
 	elseif spell.skill == 'Enhancing Magic' then
 		equip(sets.midcast.Enhancing)
 	else
-		equip(sets.midcast)
+		if full_mab then
+			equip(sets.midcast.MAB)
+		else
+			equip(sets.midcast)
+		end
+		
+		if spell.english:find("Tenebral") then
+			equip(sets.midcast.Tenebral)
+		end
 
 		if spell.target.distance < 5.0 then
 			equip(sets.midcast.Orepheus)
@@ -395,20 +409,6 @@ function self_command(command)
 		if Hands_Index > #Hands_Set_Names then Hands_Index = 1 end
 		add_to_chat(207,'Hands Set Changed to: '..Hands_Set_Names[Hands_Index]..'')
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-	elseif command == 'pdt' then
-		if sets.pdt == pdt.on then
-			equip(pdt.off)
-			equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-			sets.pdt = pdt.off
-			enable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
-			status_change(player.status)
-			add_to_chat(207,'>>>>> PDT Set Unlocked! <<<<<')
-		else				
-			equip(pdt.on)
-			sets.pdt = pdt.on
-			disable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
-			add_to_chat(66,'>>>>> PDT Set Locked! <<<<<')
-		end
 	elseif command == 'pws' then
 		PWS_Index = PWS_Index +1
 		if PWS_Index > #PWS_Set_Names then PWS_Index = 1 end
@@ -420,6 +420,10 @@ function self_command(command)
 	elseif command == 'update' then
 		status_change(player.status)
 		add_to_chat(207,'Update player status...')
+	elseif command == 'mab' then
+		add_to_chat(207,'Mab Set: '..tostring(not Full_Mab)..'')
+
+		Full_Mab = not Full_Mab
 	elseif command == 'equiptf' then
 		equip(sets.MWS[MWS_Set_Names[MWS_Index]])
 	elseif command == 'equipws' then

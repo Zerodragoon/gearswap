@@ -100,7 +100,7 @@ function get_sets()
 	}
 	
 	sets.precast["Trick Attack"] = {
-		--body="Plunder's Vest +3",
+		body="Plunderer's Vest +3",
 		hands="Pillager's Armlets +2"
 	}
 
@@ -157,7 +157,7 @@ function get_sets()
 	sets.precast["Rudra's Storm"] = set_combine(sets.PWS, {	
 		legs="Plunderer's Culottes +3",
 		waist="Kentarch Belt +1",
-		ring1="Ilabrat Ring",
+		ring1="Ilabrat Ring", 
 		ear1="Sherida Earring"
 	})
 	
@@ -170,7 +170,7 @@ function get_sets()
 	
 	sets.precast['Evisceration'] = set_combine(sets.PWS, {
 		head="Adhemar Bonnet +1",	
-		body="Gleti's Cuirass", -- Plunder's Vest +3
+		body="Plunderer's Vest +3",
 		hands="Adhemar Wristbands +1",
 		legs="Gleti's Breeches",
 		feet="Mummu Gamashes +2",
@@ -245,7 +245,7 @@ function get_sets()
 	
 	sets.hastesambawaist = {waist="Sailfi Belt +1"}
 
-	Melee_Set_Names = {'DT', 'DTTH', 'DblAtt', 'TH', 'Crit', 'MaxTH'}
+	Melee_Set_Names = {'DT', 'DTTH', 'DblAtt', 'Ambush', 'Crit', 'MaxTH'}
 
 	sets.Melee = {  
 		head="Adhemar Bonnet +1", --Skulker's Bonnet +3							
@@ -263,9 +263,8 @@ function get_sets()
 		ammo="Aurgelmir Orb +1"
 	}
 	
-	sets.Melee.TH = set_combine(sets.Melee, {
-		hands="Plunderer's Armlets +3",
-		ammo="Perfect Lucky Egg" --Feet Skulker's Poulaines +3
+	sets.Melee.Ambush = set_combine(sets.Melee, {
+		body="Plunderer's Vest +3"
 	})
 	
 	sets.Melee.MaxTH = set_combine(sets.Melee, {

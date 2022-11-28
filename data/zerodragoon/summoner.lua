@@ -67,7 +67,7 @@ function get_sets()
 		main="Nirvana",
 		sub="Khonsu",
 		head="Beckoner's Horn +2", --Beckoner's Horn +3
-		body="Inyanga Jubbah +2", --Beckoner's Doublet +3
+		body="Beckoner's Doublet +2", --Beckoner's Doublet +3
 		hands="Inyanga Dastanas +2",
 		legs="Assiduity Pants +1",
 		feet="Inyanga Crackows +2",
@@ -530,7 +530,7 @@ function get_sets()
 		neck="Caller's Pendant", 
 		ear1="Cath Palug Earring", 
 		ear2="Enmerkar Earring", 
-		body="Apogee Dalmatica +1", --Beckoner's Doublet +3
+		body="Beckoner's Doublet +2", --Beckoner's Doublet +3
 		hands="Apogee Mitts +1",
 		ring1="Stikini Ring +1",
 		ring2="Evoker's Ring",
