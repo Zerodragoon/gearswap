@@ -187,7 +187,8 @@ function get_sets()
 	--	neck="Debilis Medallion",
 	--	ring1="Haoma's Ring",
 	--	ring2="Haoma's Ring",
-		back="Oretania's Cape +1"
+		back="Oretania's Cape +1",
+		ring2="Menelaus's Ring"
 	})
 	
 	-- Just a standard set for spells that have no set
@@ -334,7 +335,7 @@ function get_sets()
 	-- Physical Pact AM3 set, less emphasis on Pet:DA
 	sets.pet_midcast.Physical_BP_AM3 = set_combine(sets.pet_midcast.Physical_BP, {
 		ring1="Varar Ring +1",
-		body="Convoker's Doublet +2", -- AF Body +3
+		body="Convoker's Doublet +3", -- AF Body +3
 		ear2="Beckoner's Earring +1", --Beckoner's Earring +2
 		feet={ name="Apogee Pumps +1", augments={'MP+80','Pet: Attack+35','Blood Pact Dmg.+8',}} --Convert to full Melee
 	})
@@ -401,7 +402,7 @@ function get_sets()
 	-- Keraunos, Grioavolr, Espiritus, Was, Apogee Crown, Apogee Dalmatica, Adad Amulet
 	sets.pet_midcast.FlamingCrush = set_combine(sets.pet_midcast.Magic_BP_Base, {
 		main="Nirvana",
-		body="Convoker's Doublet +2"
+		body="Convoker's Doublet +3"
 		--Nirvana
 	})
 		
@@ -548,6 +549,8 @@ function get_sets()
 
 	-- Refresh set with avatar out. Equipped when IdleMode is "Refresh".
 	sets.aftercast.Perp_Refresh = set_combine(sets.aftercast.Perp_Base, {
+		body="Apogee Dalmatica +1",
+		--Legs Beckoner's Spats +2
 		ear2="Beckoner's Earring +1"
 	})
 
@@ -563,8 +566,9 @@ function get_sets()
 		main={ name="Espiritus", augments={'Summoning magic skill +15','Pet: Mag. Acc.+30','Pet: Damage taken -4%',}},
 		sub="Vox Grip",
 		head="Beckoner's Horn +2", --Horn +3
+		body="Beckoner's Doublet +2",
 		hands="Baayami Cuffs +1",
-		feet="Baayami Sabots +1", --Legs Beckoner's Spats +3
+		feet="Baayami Sabots +1", --Legs Beckoner's Spats +2
         ear2="Lodurr Earring",
         ring1="Stikini Ring +1",
         ring2="Evoker's Ring",

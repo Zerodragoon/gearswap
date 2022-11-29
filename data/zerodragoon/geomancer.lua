@@ -264,7 +264,7 @@ function get_sets()
 		back="Oretania's Cape +1",
 		neck="Debilis Medallion",
 		ring1="Haoma's Ring",
-		ring2="Haoma's Ring"
+		ring2="Menelaus's Ring"
 	}
 
 	sets.midcast.Enhancing = set_combine(sets.Hands.Gada, {

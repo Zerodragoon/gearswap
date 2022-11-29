@@ -206,7 +206,7 @@ function get_sets()
 		feet="Vanya Clogs", --5
 		neck="Debilis Medallion", --15
 		ring1="Haoma's Ring", --15
-		ring2="Haoma's Ring" --15
+		ring2="Menelaus's Ring" --20
 	})
 	
 	sets.midcast.Erase = sets.midcast.status
@@ -276,25 +276,36 @@ function get_sets()
 	
 	sets.midcast.Barspell = set_combine(sets.midcast.Enhancing,{
 		sub="Ammurapi Shield",
+		head="Ebers Cap +1",
 		body="Ebers Bliaut +2",
 		hands="Ebers Mitts +2",
 		legs="Piety Pantaln. +3",
+		feet="Ebers Duckbills +2"
+	})
+	
+	sets.midcast.BarspellDebuff = set_combine(sets.midcast.Barspell ,{
+		neck="Sroda Necklace",
+		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+		body={ name="Telchine Chasuble", augments={'Enh. Mag. eff. dur. +10',}},
+		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
+		feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
 	})
 	
 	sets.midcast.Barstonra = sets.midcast.Barspell
-	sets.midcast.Barsleepra = sets.midcast.Barspell
 	sets.midcast.Barwatera = sets.midcast.Barspell
-	sets.midcast.Barpoisonra = sets.midcast.Barspell
-	sets.midcast.Barparalyzra = sets.midcast.Barspell
 	sets.midcast.Baraera = sets.midcast.Barspell
 	sets.midcast.Barfira = sets.midcast.Barspell
-	sets.midcast.Barblindra = sets.midcast.Barspell
 	sets.midcast.Barblizzara = sets.midcast.Barspell
-	sets.midcast.Barsilencera = sets.midcast.Barspell
 	sets.midcast.Barthundra = sets.midcast.Barspell
-	sets.midcast.Barvira = sets.midcast.Barspell
-	sets.midcast.Barpetra = sets.midcast.Barspell
-	sets.midcast.Baramnesra = sets.midcast.Barspell
+
+	sets.midcast.Barvira = sets.midcast.BarspellDebuff
+	sets.midcast.Barpetra = sets.midcast.BarspellDebuff
+	sets.midcast.Baramnesra = sets.midcast.BarspellDebuff
+	sets.midcast.Barpoisonra = sets.midcast.BarspellDebuff
+	sets.midcast.Barparalyzra = sets.midcast.BarspellDebuff
+	sets.midcast.Barsilencera = sets.midcast.BarspellDebuff
+	sets.midcast.Barsleepra = sets.midcast.BarspellDebuff
+	sets.midcast.Barblindra = sets.midcast.BarspellDebuff
 
 	--Idle Sets Below
 	Idle_Set_Names = {'Normal', 'Move', 'Sublimation', 'DT'}

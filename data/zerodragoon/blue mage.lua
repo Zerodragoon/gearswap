@@ -436,11 +436,11 @@ function self_command(command)
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
 		equip(sets.Idle[Idle_Set_Names[Idle_Index]]) 
 	elseif command == 'cleavebuff' then
-		send_command('input /ma "Shell II" <me>;wait 5;input /ma "Battery Charge" <me>;wait 5;input /ma "Phalanx" <me>;wait 5;input /ma "Stoneskin" <me>;wait 5;input /ma "Aquaveil" <me>;wait 5;input /ma "Occultation" <me>;wait 5;input /ma "Erratic Flutter" <me>;wait 5;input /ma "Reactor Cool" <me>;wait 5;input /ja "Unbridled Learning" <me>;wait 2;input /ma "Mighty Guard" <me>;')
+		send_command('input /ma "Shell II" <me>;wait 5;input /ma "Battery Charge" <me>;wait 5;input /ma "Phalanx" <me>;wait 5;input /ma "Stoneskin" <me>;wait 5;input /ma "Aquaveil" <me>;wait 5;input /ma "Occultation" <me>;wait 5;input /ma "Erratic Flutter" <me>;wait 5;input /ma "Reactor Cool" <me>;wait 5;input /ja "Diffusion" <me>;wait 2;input /ja "Unbridled Learning" <me>;wait 2;input /ma "Mighty Guard" <me>;')
 	elseif command == 'cleavebuffblm' then
-		send_command('input /ma "Battery Charge" <me>;wait 5;input /ma "Diamondhide" <me>;wait 5;input /ma "Barrier Tusk" <me>;wait 5;input /ma "Occultation" <me>;wait 5;input /ma "Erratic Flutter" <me>;wait 5;input /ma "Reactor Cool" <me>;wait 5;input /ja "Unbridled Learning" <me>;wait 2;input /ma "Mighty Guard" <me>;')
+		send_command('input /ma "Battery Charge" <me>;wait 5;input /ma "Diamondhide" <me>;wait 5;input /ma "Barrier Tusk" <me>;wait 5;input /ma "Occultation" <me>;wait 5;input /ma "Erratic Flutter" <me>;wait 5;input /ma "Reactor Cool" <me>;wait 5;wait 5;input /ja "Diffusion" <me>;wait 2;input /ja "Unbridled Learning" <me>;wait 2;input /ma "Mighty Guard" <me>;')
 	elseif command == 'meleebuff' then
-		send_command('input /ma "Barrier Tusk" <me>;wait 7;input /ma "Erratic Flutter" <me>;wait 5;input /ma "Cocoon" <me>;wait 5;input /ma "Nat. Meditation" <me>;wait 5;input /ja "Unbridled Learning" <me>;wait 2;input /ma "Mighty Guard" <me>;')
+		send_command('input /ma "Barrier Tusk" <me>;wait 7;input /ma "Erratic Flutter" <me>;wait 5;input /ma "Cocoon" <me>;wait 5;input /ma "Nat. Meditation" <me>;wait 5;wait 5;input /ja "Diffusion" <me>;wait 2;input /ja "Unbridled Learning" <me>;wait 2;input /ma "Mighty Guard" <me>;')
 	elseif command == 'blm' then
 		send_command('input /macro book 14;');
 	elseif command == 'whm' then

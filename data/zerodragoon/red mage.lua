@@ -271,7 +271,7 @@ function get_sets()
 		main="Daybreak",
 		sub="Genmei Shield"
 	})
-
+	
 	--Cure Sets
 
 	sets.midcast.cure = set_combine(sets.Hands.Daybreak, {
@@ -295,7 +295,7 @@ function get_sets()
 		back="Oretania's Cape +1",
 		neck="Debilis Medallion",
 		ring1="Haoma's Ring",
-		ring2="Haoma's Ring"
+		ring2="Menelaus's Ring"
 	}
 
 	sets.midcast.Enhancing = set_combine(sets.Hands.Gada, {
@@ -423,6 +423,19 @@ function get_sets()
 	sets.midcast['Gain-INT'] = sets.magic.Gain
 	sets.midcast['Gain-DEX'] = sets.magic.Gain
 	
+	sets.midcast.BarspellDebuff = set_combine(sets.midcast.Barspell ,{
+		neck="Sroda Necklace"
+	})
+	
+	sets.midcast.Barvirus = sets.midcast.BarspellDebuff
+	sets.midcast.Barpetrify = sets.midcast.BarspellDebuff
+	sets.midcast.Baramnesia = sets.midcast.BarspellDebuff
+	sets.midcast.Barpoison = sets.midcast.BarspellDebuff
+	sets.midcast.Barparalyze = sets.midcast.BarspellDebuff
+	sets.midcast.Barsilence = sets.midcast.BarspellDebuff
+	sets.midcast.Barsleep = sets.midcast.BarspellDebuff
+	sets.midcast.Barblind = sets.midcast.BarspellDebuff
+
 	sets.Composure = {
 		head="Lethargy Chappel +2",
 		body="Lethargy Sayon +2",

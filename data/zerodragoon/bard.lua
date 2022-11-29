@@ -321,7 +321,8 @@ function get_sets()
 
 	sets.midcast.Cursna = {
 		feet="Vanya Clogs",
-		back="Oretania's Cape +1"
+		back="Oretania's Cape +1",
+		ring2="Menelaus's Ring"
 	}
 
 	sets.midcast.Enhancing = {
