@@ -48,7 +48,7 @@ function get_sets()
 	sets.precast['Berserk'] = {
 		main="Instigator",
 		sub="Utu Grip",
-		body="Pummeler's Lorica +1",
+		body="Pummeler's Lorica +2",
 		feet="Agoge Calligae +1",
 		back="Cichol's Mantle" 
 	} 

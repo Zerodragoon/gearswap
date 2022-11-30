@@ -316,7 +316,7 @@ function get_sets()
 	sets.Idle = {
 		ranged="Dunna",
 		head="Azimuth Hood +2",
-		body="Jhakri Robe +2",
+		body="Shamash Robe",
 		hands="Geomancy Mitaines +3",
 		legs="Nyame Flanchard",
 		feet="Geomancy Sandals +3",
@@ -324,7 +324,7 @@ function get_sets()
 		waist="Isa Belt",
 		left_ear="Ethereal Earring",
 		right_ear="Handler's Earring +1",
-		left_ring="Warden's Ring",
+		left_ring="Stikini Ring +1",
 		right_ring="Defending Ring",
 		back={ name="Nantosuelta's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: "Regen"+5',}}
 	}
@@ -340,6 +340,7 @@ function get_sets()
 	})
 
 	sets.Idle.Refresh = set_combine(sets.Idle, {
+		body="Jhakri Robe +2",
 		head="Volte Beret", 
 		legs="Lengo Pants",
 		left_ring="Stikini Ring +1",

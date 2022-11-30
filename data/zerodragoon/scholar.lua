@@ -355,19 +355,19 @@ function get_sets()
 	--Idle Sets Below
 	Idle_Set_Names = {'Normal', 'Sublimation', 'DT'}
 	sets.Idle = {
-    		ammo="Homiliary",
-    		head="Volte Beret",
-    		body="Jhakri Robe +2", --Arbatel Gown +3
-    		hands="Nyame Gauntlets",
-    		legs="Lengo Pants",
-    		feet="Herald's Gaiters",
-    		neck="Loricate Torque +1",
-    		waist="Fucho-no-obi",
-    		left_ear="Ethereal Earring",
-    		right_ear="Infused Earring",
-    		left_ring="Stikini Ring +1",
-    		right_ring="Stikini Ring +1",
-    		back="Moonlight Cape",
+		ammo="Homiliary",
+		head="Volte Beret",
+		body="Shamash Robe", --Arbatel Gown +3
+		hands="Nyame Gauntlets",
+		legs="Lengo Pants",
+		feet="Herald's Gaiters",
+		neck="Loricate Torque +1",
+		waist="Fucho-no-obi",
+		left_ear="Ethereal Earring",
+		right_ear="Infused Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
+		back="Moonlight Cape",
 	}
 
 	sets.Idle.Normal = set_combine(sets.Idle, {})

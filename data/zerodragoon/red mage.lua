@@ -185,9 +185,8 @@ function get_sets()
 	})
 	
 	sets.midcast['Dia'] = set_combine(sets.midcast.enfeeb, {
-		head="White Rarab Cap +1",
 		ammo="Perfect Lucky Egg",
-		legs="Volte Hose",
+		body="Volte Jupon",
 		waist="Chaac Belt"
 	})
 	
@@ -487,7 +486,7 @@ function get_sets()
 	sets.Idle = {
 		ammo="Homiliary",
 		head="Vitiation Chapeau +3",
-		body="Jhakri Robe +2",
+		body="Lethargy Sayon +2",
 		hands="Malignance Gloves",
 		legs="Lengo Pants",
 		feet="Malignance Boots",

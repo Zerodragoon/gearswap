@@ -191,9 +191,8 @@ function get_sets()
 	})
 	
 	sets.precast['Shockwave'] = set_combine(sets.PWS, {
-		head="White Rarab Cap +1",
 		ammo="Perfect Lucky Egg",
-		legs="Volte Hose",
+		body="Odyssean Chestplate",
 		waist="Chaac Belt"
 	})
 	

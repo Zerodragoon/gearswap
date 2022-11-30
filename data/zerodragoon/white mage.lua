@@ -310,20 +310,20 @@ function get_sets()
 	--Idle Sets Below
 	Idle_Set_Names = {'Normal', 'Move', 'Sublimation', 'DT'}
 	sets.Idle = {
-    		ammo="Homiliary",
-			sub="Genmei Shield",
-    		head="Inyanga Tiara +2",
-    		body="Kaykaus Bliaut +1",
-    		hands="Inyanga Dastanas +2",
-    		legs="Inyanga Shalwar +2",
-    		feet="Inyanga Crackows +2",
-    		neck="Loricate Torque +1",
-    		waist="Fucho-no-obi",
-    		left_ear="Ethereal Earring",
-    		right_ear="Infused Earring",
-    		left_ring="Stikini Ring +1",
-    		right_ring="Stikini Ring +1",
-    		back="Moonlight Cape",
+		ammo="Homiliary",
+		sub="Genmei Shield",
+		head="Inyanga Tiara +2",
+		body="Shamash Robe",
+		hands="Inyanga Dastanas +2",
+		legs="Inyanga Shalwar +2",
+		feet="Inyanga Crackows +2",
+		neck="Loricate Torque +1",
+		waist="Fucho-no-obi",
+		left_ear="Ethereal Earring",
+		right_ear="Infused Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
+		back="Moonlight Cape",
 	}
 
 	sets.Idle.Normal = set_combine(sets.Idle, {})
@@ -337,7 +337,6 @@ function get_sets()
 	})
 
 	sets.Idle.DT = set_combine(sets.Idle, {
-		body="Nyame Mail",
 		ammo="Staunch Tathlum +1",
 		neck="Loricate Torque +1",
 		left_ring="Warden's Ring",

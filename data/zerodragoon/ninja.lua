@@ -275,7 +275,7 @@ function get_sets()
 	sets.Idle.Normal = set_combine(sets.Idle, {})
 	
 	sets.Idle.Night = {
-		feet="Hachiya kyahan +1"
+		feet="Hachiya kyahan +2"
 	}
 
 	Melee_Set_Names = {'DblAtt', 'MixedDT', 'DT', 'Mpaca', 'Tank',}
