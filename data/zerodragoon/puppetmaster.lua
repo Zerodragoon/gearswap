@@ -8,9 +8,11 @@ function get_sets()
 	PWS_Index = 1
 	MWS_Index = 1
 	Style_Lock_Id = 28
+	Auto_Deploy = true
+	Auto_Pup = true
 
-	--Default Macro Set for RNG
-	send_command('input /macro book 10;wait .1;input /macro set 3;wait 0.5;input //gs org;wait 1.0;lua l autocontrol;wait .5; autocontrol show')
+	--Default Macro Set for RN
+	send_command('input /macro book 21;wait .1;input /macro set 1;wait 0.5;input //gs org;wait 1.0;lua l autocontrol;wait .5; autocontrol show;wait 1;lua l autopup')
 	
 	set_style_lock()
 	
@@ -278,7 +280,23 @@ function status_change(new,old)
 		equip(sets.Idle[Idle_Set_Names[Idle_Index]]) 
 	elseif new == 'Engaged' then
 		equip(sets.Melee[Melee_Set_Names[Melee_Index]]) 
+		
+		if Auto_Deploy then
+			send_command('input /pet Deploy <t> ')
+		end
 	end
+end
+
+function clear_manus() 
+	send_command('pup dark 0')
+	send_command('pup light 0')
+	send_command('pup fire 0')
+	send_command('pup water 0')
+	send_command('pup earth 0')
+	send_command('pup thunder 0')
+	send_command('pup ice 0')
+	send_command('pup wind 0')
+
 end
 
 --Toggle Self Commands with //gs c [command name] 
@@ -323,12 +341,35 @@ function self_command(command)
 		end
 	elseif command == 'petws' then
 		equip(sets.PupWS)
+	elseif command == 'autodeploy' then
+		add_to_chat(207,'Auto Deploy: '..tostring(not Auto_Deploy)..'')
+
+		Auto_Deploy = not Auto_Deploy
+	elseif command == 'clearmanus' then
+		clear_manus()
+	elseif command == 'automanus' then
+		if Auto_Pup then
+			send_command('pup off')
+		else
+			send_command('pup on')
+		end
+		
+		Auto_Pup = not Auto_Pup
 	elseif command == 'startup' then
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-		equip(sets.Idle[Idle_Set_Names[Idle_Index]]) 
+		equip(sets.Idle[Idle_Set_Names[Idle_Index]])
+		
+		clear_manus()
+		
+		if Auto_Pup then
+			send_command('pup on')
+		else
+			send_command('pup off')
+		end
 	end
 end
 
 function file_unload()
 	send_command('lua u autocontrol')
+	send_command('lua u autopup')
 end
