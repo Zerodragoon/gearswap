@@ -95,7 +95,8 @@ function get_sets()
 		ring2="Niqmaddu Ring",
 		back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 		ear1="Moonshade Earring", 
-		ear2="Thrud Earring", --Kasuga Earring +2
+		--ear2="Thrud Earring",
+		ear2="Kasuga Earring +1",
 		ammo="Knobkierrie"}
 
 	sets.PWS.Normal = set_combine(sets.PWS, {})
@@ -171,7 +172,7 @@ function get_sets()
 		ring2="Warden's Ring",
 		back="Moonlight Cape",
 		ear1="Telos Earring",
-		ear2="Dedition Earring",
+		ear2="Kasuga Earring +1",
 		ammo="Staunch Tathlum +1"}
 
 	sets.Idle.Normal = set_combine(sets.Idle, {})
@@ -191,7 +192,7 @@ function get_sets()
 		ring2="Niqmaddu Ring",
 		back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 		ear1="Telos Earring",
-		ear2="Dedition Earring", --Kasuga Earring +2
+		ear2="Kasuga Earring +1",
 		ammo="Aurgelmir Orb +1"
 	}
 
@@ -200,7 +201,6 @@ function get_sets()
 	sets.Melee.AccMax = set_combine(sets.Melee.AccMid, {
 		head="Kendatsuba jinpachi +1",
 		hands="Tatenashi Gote +1",
-		ear2="Crepuscular Earring",
 		waist="Kentarch Belt +1"
 	})
 	
@@ -225,8 +225,8 @@ function get_sets()
 	})
 	
 	sets.Melee.TH = set_combine(sets.Melee.DblAtt, {
+		body="Volte Jupon",
 		ammo="Perfect Lucky Egg",
-		legs="Volte Hose",
 		waist="Chaac Belt"})
 
 	sets.precast.Ranged = {
