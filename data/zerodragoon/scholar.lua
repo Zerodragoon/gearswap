@@ -215,7 +215,7 @@ function get_sets()
 		ammo="Pemphredo Tathlum",
 		body="Cohort Cloak +1",
 		hands="Pedagogy Bracers +3", 
-		legs="Psycloth Lappas", --Arbatel Pants +3
+		legs="Arbatel Pants +2",
 		feet="Medium's Sabots",
 		neck="Argute Stole +2",
 		waist="Obstinate Sash",
@@ -357,7 +357,7 @@ function get_sets()
 	sets.Idle = {
 		ammo="Homiliary",
 		head="Volte Beret",
-		body="Shamash Robe", --Arbatel Gown +3
+		body="Arbatel Gown +2", --Arbatel Gown +3
 		hands="Nyame Gauntlets",
 		legs="Lengo Pants",
 		feet="Herald's Gaiters",
