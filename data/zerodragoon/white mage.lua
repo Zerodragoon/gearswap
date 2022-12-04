@@ -276,7 +276,7 @@ function get_sets()
 	
 	sets.midcast.Barspell = set_combine(sets.midcast.Enhancing,{
 		sub="Ammurapi Shield",
-		head="Ebers Cap +1",
+		head="Ebers Cap +2",
 		body="Ebers Bliaut +2",
 		hands="Ebers Mitts +2",
 		legs="Piety Pantaln. +3",

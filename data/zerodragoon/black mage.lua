@@ -324,9 +324,9 @@ function get_sets()
 	sets.Idle = {
 		ammo="Homiliary",
 		head="Volte Beret",
-		--body="Jhakri Robe +2",
+		--body="Jhakri Robe +2",Glo
 		body="Shamash Robe",
-		hands="Nyame Gauntlets",
+		hands="Volte Gloves",
 		legs="Lengo Pants",
 		feet="Herald's Gaiters",
 		neck="Loricate Torque +1",
@@ -347,6 +347,7 @@ function get_sets()
 	sets.Idle.DT = set_combine(sets.Idle, {
 		head="Nyame Helm",
 		feet="Nyame Sollerets",
+		hands="Nyame Gauntlets",
     	right_ring="Defending Ring"
 	})
 	

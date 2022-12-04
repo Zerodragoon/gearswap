@@ -358,7 +358,7 @@ function get_sets()
 		ammo="Homiliary",
 		head="Volte Beret",
 		body="Arbatel Gown +2", --Arbatel Gown +3
-		hands="Nyame Gauntlets",
+		hands="Volte Gloves",
 		legs="Lengo Pants",
 		feet="Herald's Gaiters",
 		neck="Loricate Torque +1",

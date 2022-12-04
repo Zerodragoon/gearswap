@@ -503,7 +503,7 @@ function get_sets()
 		ear1="Cath Palug Earring",
 		ear2="Beckoner's Earring +1",
 		body="Apogee Dalmatica +1",
-		hands="Nyame Gauntlets",
+		hands="Volte Gloves",
 		ring1="Stikini Ring +1",
 		ring2="Defending Ring",
 		back="Moonlight Cape",
@@ -532,7 +532,7 @@ function get_sets()
 		ear1="Cath Palug Earring", 
 		ear2="Enmerkar Earring", 
 		body="Beckoner's Doublet +2", --Beckoner's Doublet +3
-		hands="Apogee Mitts +1",
+		hands="Volte Gloves",
 		ring1="Stikini Ring +1",
 		ring2="Evoker's Ring",
 		back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
@@ -551,6 +551,7 @@ function get_sets()
 	sets.aftercast.Perp_Refresh = set_combine(sets.aftercast.Perp_Base, {
 		body="Apogee Dalmatica +1",
 		--Legs Beckoner's Spats +2
+		hands="Volte Gloves",
 		ear2="Beckoner's Earring +1"
 	})
 
