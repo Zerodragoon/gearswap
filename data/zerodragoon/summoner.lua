@@ -150,7 +150,7 @@ function get_sets()
 		back="Conveyance Cape",
 		waist="Kobo Obi",
 		legs="Baayami Slops +1",
-		feet="Beckoner's Pigaches +1"
+		feet="Beckoner's Pigaches +2"
 	}
 
 	sets.midcast.SiphonZodiac = set_combine(sets.midcast.Siphon, {})
@@ -265,7 +265,7 @@ function get_sets()
 		head="Amalric Coif +1"
 	})
 
-	sets.midcast["Mana Cede"] = { hands = "Beckoner's Bracers +1" }
+	sets.midcast["Mana Cede"] = { hands = "Beckoner's Bracers +2" }
 
     sets.midcast["Astral Flow"] = { head="Glyphic Horn +1" }
 	
