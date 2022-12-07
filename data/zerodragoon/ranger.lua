@@ -54,7 +54,7 @@ function get_sets()
 	}) --75 --82
 
 	sets.precast.Standard.PreShotF2  = set_combine(sets.precast.Standard.PreShotF1, { --40 --35
-		legs="Pursuer's Pants" --0 --19
+		legs="Pursuer's Pants", --0 --19
 		feet="Arcadian Socks +3", --0 --10
 	}) --70 --98
 

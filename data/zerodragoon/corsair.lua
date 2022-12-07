@@ -228,11 +228,11 @@ function get_sets()
 	}
 		
 	--Midshot Sets Below
-	Midshot_Set_Names = {'True', 'Ikenga', 'Malig', 'Acc', 'Crit'}
+	Midshot_Set_Names = {'Midshot', 'Ikenga', 'Malig', 'Acc', 'Crit'}
 	sets.Midshot = { 
 		head="Ikenga's Hat",
-		hands="Ikenga's Gloves",
 		body="Ikenga's Vest",
+		hands="Ikenga's Gloves",
 		legs="Chasseur's Culottes +2",
 		feet="Ikenga's Clogs",
 		neck="Iskur Gorget",
@@ -243,6 +243,11 @@ function get_sets()
 		ear1="Enervating Earring",
 		ear2="Telos Earring"  
 	}
+	
+	sets.Midshot.Midshot = set_combine(sets.Midshot, {
+		hands="Malignance Gloves",
+		feet="Malignance Boots"
+	})
 
 	sets.Midshot.Malig = set_combine(sets.Midshot, {
 		head="Malignance Chapeau",							
@@ -251,16 +256,19 @@ function get_sets()
 		feet="Malignance Boots"
 	})
 
-	sets.Midshot.Acc =  set_combine(sets.Midshot, {
+	sets.Midshot.Acc =  set_combine(sets.Midshot.Malig, {
 		neck="Commodore Charm +2",
 		waist="Kwahu Kachina Belt +1",	
-		ring1="Regal Ring",
-		ring2="Longshot Ring",			 
+		ring1="Longshot Ring",	 
 		ear1="Beyla Earring",
 		ear2="Telos Earring"})
 		
-	sets.Midshot.Ikenga = set_combine(sets.Midshot, { 
-		legs="Ikenga's Trousers"
+	sets.Midshot.Ikenga = set_combine(sets.Midshot, {
+		head="Ikenga's Hat",
+		body="Ikenga's Vest",
+		hands="Ikenga's Gloves",
+		legs="Ikenga's Trousers",
+		feet="Ikenga's Clogs",
 	})
 
 	sets.Midshot.Crit =  set_combine(sets.Midshot, {
