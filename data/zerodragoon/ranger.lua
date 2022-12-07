@@ -736,6 +736,12 @@ function precast(spell)
 			end
 		elseif spell.name == "Flaming Arrow" then
             equip(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]])
+			
+			if buffactive['Firestorm'] then
+				equip(sets.TrueFlight.Hachi)
+			elseif spell.target.distance < 3.0 then
+				equip(sets.TrueFlight.Orpheus)
+			end
 		elseif spell.name == "Coronach" then
             equip(set_combine(sets.LS[LS_Set_Names[LS_Index]], sets.Coronach))
 		elseif spell.name == "Jishnu's Radiance" then

@@ -323,16 +323,8 @@ function get_sets()
 		ring2="Longshot Ring",
 		ear1="Telos Earring",
 		ear2="Beyla Earring"})
-		
-	sets.LS.Nyame = set_combine(sets.LS, {
-		head="Nyame Helm",								
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets"
-	})
 
-	LeadenSalute_Set_Names = {'Normal','Hachi', 'Orpheus'}
+	LeadenSalute_Set_Names = {'Normal', 'Hachi', 'Orpheus'}
 
 	sets.LeadenSalute  = {
 		head="Pixie Hairpin +1",						
@@ -388,7 +380,7 @@ function get_sets()
 	sets.Savage = {	
 		head="Nyame Helm",						
 		body="Nyame Mail",
-		hands="Nyame Gauntlets",
+		hands="Nyame Gauntlets", --Chasseur's Gants +3
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		waist="Sailfi Belt +1",
@@ -406,8 +398,12 @@ function get_sets()
 	
 	sets.QuickDraw = set_combine(sets.LeadenSalute, {
 		head="Nyame Helm",
-		ring1="Epaminondas's Ring",
-		feet="Chasseur's Bottes +2"
+		body="Lanun Frac +3",
+		hands="Carmine Finger Gauntlets +1",
+		feet="Chasseur's Bottes +2",
+		neck="Baetyl Pendant",
+		ring1="Crepuscular Ring",
+		ear2="Hecate's Earring"
 	})
 	
 	sets.precast['Dark Shot'] = sets.QuickDraw
@@ -548,7 +544,7 @@ function precast(spell)
             		cancel_spell()
             		return			
 		elseif spell.name == "Leaden Salute" then
-                	equip(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]])
+            equip(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]])
 
 			if buffactive['Voidstorm'] or 
 				spell.element == world.weather_element or
@@ -558,7 +554,7 @@ function precast(spell)
 				equip(sets.LeadenSalute.Orpheus)
 			end
 		elseif spell.name == "Wildfire" then
-                	equip(set_combine(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]], sets.Wildfire))
+            equip(set_combine(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]], sets.Wildfire))
 
 			if buffactive['Firestorm'] then
 				equip(sets.LeadenSalute.Hachi)
@@ -566,7 +562,7 @@ function precast(spell)
 				equip(sets.LeadenSalute.Orpheus)
 			end
 		elseif spell.name == "Hot Shot" then
-                	equip(set_combine(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]], sets.Wildfire))
+            equip(set_combine(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]], sets.Wildfire))
 
 			if buffactive['Firestorm'] then
 				equip(sets.LeadenSalute.Hachi)
