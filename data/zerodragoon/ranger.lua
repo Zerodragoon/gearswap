@@ -41,7 +41,6 @@ function get_sets()
 		head={ name="Taeon Chapeau", augments={'"Snapshot"+5','"Snapshot"+5',}}, --10						
 		body="Amini Caban +3",
 		hands="Carmine Finger Gauntlets +1", --8 --11
-		--legs="Orion Braccae +3", --15
 		legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}}, --10 --13
 		feet="Meghanada Jambeaux +2",--10
 		neck="Scout's Gorget +2", --4
@@ -52,19 +51,18 @@ function get_sets()
 
 	sets.precast.Standard.PreShotF1 = set_combine(sets.precast.Standard.PreShot, { --25 --35
 		head="Orion Beret +3", --0 --18
-		
-	}) --72 --82
+	}) --75 --82
 
 	sets.precast.Standard.PreShotF2  = set_combine(sets.precast.Standard.PreShotF1, { --40 --35
+		legs="Pursuer's Pants" --0 --19
 		feet="Arcadian Socks +3", --0 --10
-	}) --77 --92
+	}) --70 --98
 
 	sets.precast.Gastraphetes.PreShot = { --20 --35
 		--Perun +1 --5 This just assumes this is equipped
 		head="Orion Beret +3", --0 --18						
 		body="Amini Caban +3",
 		hands="Carmine Finger Gauntlets +1", --8 --11
-		--legs="Orion Braccae +3", --15,
 		legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}}, --10 --13
 		feet="Meghanada Jambeaux +2", --10
 		neck="Scout's Gorget +2", --4
@@ -74,14 +72,13 @@ function get_sets()
 	} --70 --82
 
 	sets.precast.Gastraphetes.PreShotF1 = set_combine(sets.precast.Gastraphetes.PreShot, { --35 --30
-		waist="Yemaya Belt", --0 --5,
 		feet="Arcadian Socks +3" --0 --10
-	}) --72 --92
+	}) --75 --92
 
 	sets.precast.Gastraphetes.PreShotF2  = set_combine(sets.precast.Gastraphetes.PreShotF1, { --50 --30
 		hands="Mrigavyadha Gloves", --0 --15
 		legs="Pursuer's Pants" --0 --19		
-	}) --74 --99
+	}) --72 --99
 	
 	sets.precast.Sharanga.PreShot = { --30 --35
 		--Perun +1 --5 This just assumes this is equipped
@@ -101,8 +98,7 @@ function get_sets()
 	}) --75 --98
 
 	sets.precast.Sharanga.PreShotF2  = set_combine(sets.precast.Sharanga.PreShotF1, {
-		hands="Mrigavyadha Gloves", --0 --15
-		legs="Pursuer's Pants" --0 --19
+		hands="Mrigavyadha Gloves" --0 --15
 	}) --74 --99
 		
 	-- Magic Sets Below		
@@ -117,7 +113,6 @@ function get_sets()
 		ear2="Enchanter's Earring +1", --2
 		ring1="Weatherspoon Ring +1", --5
 		ring2="Prolix Ring", --2
-		--ammo="Sapience Orb", --2
 		back={ name="Belenus's Cape", augments={'"Fast Cast"+10',}} --10
 	} --57
 	

@@ -38,26 +38,26 @@ function get_sets()
 
 	Flurry_Set_Names = {'PreShotF2', 'PreShotF1'}
 			
-	sets.precast.Standard.PreShot = { --10
-		head={ name="Taeon Chapeau", augments={'"Snapshot"+5','"Snapshot"+5',}}, --10
+	sets.precast.Standard.PreShot = { --10 --30
+		head="Chasseur's Tricorne +2", --0 --14
 		neck="Commodore Charm +2", --4
 		body="Oshosi Vest +1", --14						
-		hands="Carmine Finger Gauntlets +1", --8 --11
+		hands="Lanun Gants +3", --13
 		legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}}, --10 --13
-		feet="Meghanada Jambeaux +2",--10ww
+		feet="Meghanada Jambeaux +2",--10
 		waist="Yemaya Belt", --0 --5
 		ring1="Crepuscular Ring", --3
 		back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','"Snapshot"+10','Damage taken-5%',}} -- 10
-	} --79 --33
+	} --74 --62
 
-	sets.precast.Standard.PreShotF1 = set_combine(sets.precast.Standard.PreShot, { --25
-		head="Chasseur's Tricorne +2", --14,
-		body="Laksamana's Frac +3" --18
-	}) --70 --65
+	sets.precast.Standard.PreShotF1 = set_combine(sets.precast.Standard.PreShot, { --25 --30
+		hands="Carmine Finger Gauntlets +1", --8 --11
+		body="Laksamana's Frac +3" --0 --20
+	}) --70 --93
 
 	sets.precast.Standard.PreShotF2  = set_combine(sets.precast.Standard.PreShotF1, { --40
 		feet="Pursuer's Gaiters" --10
-	}) --75 --75
+	}) --75 --103
 
 	-- Magic Sets Below		
 	sets.precast.FastCast = {
@@ -393,7 +393,7 @@ function get_sets()
 	}
 	
 	sets.SavageCap = set_combine(sets.Savage, {	
-		feet="Ikenga's Clogs", --Amini Earring +2
+		feet="Ikenga's Clogs",
 	})
 	
 	sets.QuickDraw = set_combine(sets.LeadenSalute, {
