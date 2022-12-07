@@ -150,7 +150,7 @@ function get_sets()
 		back="Conveyance Cape",
 		waist="Kobo Obi",
 		legs="Baayami Slops +1",
-		feet="Beckoner's Pigaches +1"
+		feet="Beckoner's Pigaches +2"
 	}
 
 	sets.midcast.SiphonZodiac = set_combine(sets.midcast.Siphon, {})
@@ -265,7 +265,7 @@ function get_sets()
 		head="Amalric Coif +1"
 	})
 
-	sets.midcast["Mana Cede"] = { hands = "Beckoner's Bracers +1" }
+	sets.midcast["Mana Cede"] = { hands = "Beckoner's Bracers +2" }
 
     sets.midcast["Astral Flow"] = { head="Glyphic Horn +1" }
 	
@@ -569,8 +569,9 @@ function get_sets()
 		head="Beckoner's Horn +2", --Horn +3
 		body="Beckoner's Doublet +2",
 		hands="Baayami Cuffs +1",
-		feet="Baayami Sabots +1", --Legs Beckoner's Spats +2
-        ear2="Lodurr Earring",
+		legs="Beckoner's Spats +2",
+		feet="Baayami Sabots +1",
+        ear2="Beckoner's Earring +1",
         ring1="Stikini Ring +1",
         ring2="Evoker's Ring",
         

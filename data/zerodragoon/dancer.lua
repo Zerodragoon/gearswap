@@ -145,7 +145,7 @@ function get_sets()
 		sub="Fusetto +2"
 	}
 	
-	sets.Hands.TwashtarTP = { 
+	sets.Hands.TwashtarFencer = { 
 		main="Twashtar",
 		sub="Airy Buckler"
 	}
@@ -193,6 +193,8 @@ function get_sets()
 		ear2="Ishvara Earring"}
 						
 	sets.MWS.Normal = set_combine(sets.MWS, {})
+	
+	sets.precast['Aeolian Edge'] = set_combine(sets.MWS, {body="Volte Jupon", ammo="Perfect Lucky Egg", waist="Chaac Belt"})
 
 	sets.Evis = {
 		head="Adhemar Bonnet +1",

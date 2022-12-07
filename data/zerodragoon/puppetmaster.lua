@@ -106,7 +106,8 @@ function get_sets()
 	sets.precast['Shijin Spiral']   = set_combine(sets.PWS, {})
 	sets.precast['Dragon Kick']     = set_combine(sets.PWS, {})
 	sets.precast['Tornado Kick']    = set_combine(sets.PWS, {})
-	sets.precast['Spinning Attack'] = set_combine(sets.PWS, {})
+--	sets.precast['Spinning Attack'] = set_combine(sets.PWS, {})
+	sets.precast['Spinning Attack'] = set_combine(sets.PWS, {body="Volte Jupon", ammo="Perfect Lucky Egg", waist="Chaac Belt"})
 
 	sets.PWS.Normal = set_combine(sets.PWS, {})
 	
