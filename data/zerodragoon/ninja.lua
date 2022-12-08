@@ -8,6 +8,7 @@ function get_sets()
 	PWS_Index = 1
 	MWS_Index = 1
 	Style_Lock_Id = 19
+	BURST_Flag = false
 
 	--Default Macro Set for RNG
 	send_command('input /macro book 8;wait .1;input /macro set 1;wait 0.5;input //gs org')
@@ -325,9 +326,9 @@ function get_sets()
 	
 	sets.midcast.Ninjutsu = {
 		head="Mochizuki Hatsuburi +3",						
-		body="Nyame Mail",
-		hands="Hattori Tekko +1",
-		legs="Nyame Flanchard",
+		body="Gyve Doublet",
+		hands="Nyame Gauntlets",
+		legs="Gyve Trousers",
 		feet="Mochizuki Kyahan +3",
 		neck="Baetyl Pendant",
 		waist="Eschan Stone",
@@ -339,6 +340,13 @@ function get_sets()
 		ammo="Ghastly Tathlum +1"
     }
 	
+	sets.midcast.NinjutsuBurst = set_combine(sets.midcast.Ninjutsu, {
+		body="Nyame Mail",
+		hands="Hattori Tekko +1",
+		legs="Nyame Flanchard",
+		ring2="Mujin Band"
+	})
+	
 	sets.midcast.NinjutsuBuff = set_combine(sets.Melee.MixedDT, {
 		hands="Mochizuki Tekko +3",
 		ring1="Defending Ring",
@@ -349,6 +357,10 @@ function get_sets()
 		feet="Hattori Kyahan +1",
 		back="Andartia's Mantle"
 	})
+	
+	sets.midcast.NinjutsuFutae = {
+		hands="Hattori Tekko +1",
+	}
 	
 	sets.midcast['Tonko: Ichi'] = sets.midcast.NinjutsuBuff
 	sets.midcast['Tonko: Ni'] = sets.midcast.NinjutsuBuff
@@ -392,8 +404,16 @@ function midcast(spell)
 	
 	if sets.midcast[spell.english] then
         equip(sets.midcast[spell.english])
-	elseif spell.type == 'Ninjutsu' then
-		equip(sets.midcast.Ninjutsu)
+	elseif spell.type == 'Ninjutsu' then		
+		if BURST_Flag then
+			equip(sets.midcast.NinjutsuBurst)
+		else 
+			equip(sets.midcast.Ninjutsu)
+		end
+		
+		if buffactive.Futae then
+			equip(sets.midcast.NinjutsuFutae)
+		end
 
 		if spell.target.distance < 5.0 then
 			equip(sets.midcast.Orepheus)
@@ -467,6 +487,9 @@ function self_command(command)
 		MWS_Index = MWS_Index +1
 		if MWS_Index > #MWS_Set_Names then MWS_Index = 1 end
 		add_to_chat(207,'Magical WS Set Changed to: '..MWS_Set_Names[MWS_Index]..'')
+	elseif command == 'burst' then
+		add_to_chat(207,'Burst Set: '..tostring(not BURST_Flag)..'')
+		BURST_Flag = not BURST_Flag
 	elseif command =='element' then
 		Nuke_Index = Nuke_Index +1
 

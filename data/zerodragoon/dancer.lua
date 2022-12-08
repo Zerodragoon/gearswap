@@ -234,7 +234,7 @@ function get_sets()
 		ranged="Halakaala"
 	})
 
-	Melee_Set_Names = {'DblAtt', 'DT', 'Crit'}
+	Melee_Set_Names = {'DT', 'DblAtt', 'Crit'}
 
 	sets.Melee = {  
 		head="Adhemar Bonnet +1",							
