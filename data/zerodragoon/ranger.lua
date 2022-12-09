@@ -29,7 +29,7 @@ function get_sets()
 
 	sets.precast['Camouflage'] = {body="Orion Jerkin +3"}
 	sets.precast['Scavenge'] = {feet="Orion Socks +3"}
-	sets.precast['Shadow Bind'] = {hands="Orion Bracers +3"}
+	sets.precast['Shadowbind'] = {hands="Orion Bracers +3"}
 	sets.precast['Bounty Shot'] = {
 		hands="Amini Glovelettes +3"
 	}
