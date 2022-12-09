@@ -34,8 +34,8 @@ function get_sets()
 
 	sets.magic.MidCast = { --10
 		ammo="Staunch Tathlum +1", -- 11
-		neck="Moonlight Necklace", --15
-		head="Erilaz Galea +2", --15
+		neck="Loricate Torque +1", --5
+		head="Erilaz Galea +3", --20
 		body="Nyame Mail",
 		hands="Regal Gauntlets", --10
 		legs="Carmine Cuisses +1", --20
@@ -46,7 +46,7 @@ function get_sets()
 		ear1="Trux Earring",
 		ear2="Cryptic Earring",
 		back={ name="Ogma's Cape", augments={'"Fast Cast"+10'}}  --10
-	} --111
+	} --106
 	
 	sets.magic.MidCastFullDT = set_combine(sets.magic.MidCast, {
 		head="Nyame Helm",								
@@ -83,7 +83,7 @@ function get_sets()
 	
 	sets.precast['Vivacious Pulse'] = set_combine(sets.magic.MidCastEnmity, {
 		main="Peord claymore",
-		head="Erilaz Galea +2",
+		head="Erilaz Galea +3",
 		legs="Runeist's Trousers +2",
 		neck="Incanter's Torque",
 		ring1="Stikini Ring +1",
@@ -129,10 +129,10 @@ function get_sets()
 	sets.midcast['Jettatura'] = sets.magic.MidCastEnmity
 	sets.midcast['Geist Wall'] = sets.magic.MidCastEnmity
 	sets.midcast['Sandspin'] = sets.magic.MidCastEnmity
-	--sets.midcast['Sheep Song'] = sets.magic.MidCastEnmity
+	sets.midcast['Sheep Song'] = sets.magic.MidCast
 	
 	sets.midcast.Enhancing = set_combine(sets.magic.MidCast, {
-		head="Erilaz Galea +2",
+		head="Erilaz Galea +3",
 		hands="Regal Gauntlets",
 		legs="Futhark Trousers +3",
 		neck="Incanter's Torque",
