@@ -706,7 +706,7 @@ function precast(spell)
 	if sets.precast[spell.english] then
         equip(sets.precast[spell.english])
 
-		if spell.name == 'Bounty Shot' or spell.name == 'Eagle Eye Shot' then
+		if spell.name == 'Shadowbind' or spell.name == 'Bounty Shot' or spell.name == 'Eagle Eye Shot' then
 			if player.equipment.ammo == 'Hauksbok Bullet' or player.equipment.ammo == 'Hauksbok Arrow' then
 				add_to_chat(167,''..player.equipment.ammo..' equipped, canceling shot')                           
             			cancel_spell()
