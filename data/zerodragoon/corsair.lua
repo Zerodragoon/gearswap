@@ -88,7 +88,7 @@ function get_sets()
 		feet="Rawhide Boots", --8 
         ring1="Asklepian Ring",
 		ring2="Valseur's Ring",
-		ear1="Handler's Earring",
+		ear1="Enchanter's Earring +1",
 		ear2="Handler's Earring +1",
         waist="Gishdubar Sash"
     }

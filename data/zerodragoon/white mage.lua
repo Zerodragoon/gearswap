@@ -8,7 +8,6 @@ function get_sets()
 	Cure_Hands_Index = 1
 	PWS_Index = 1
 	MWS_Index = 1
-	SIRD_Flag = false
 	BURST_Flag = false
 	CUREDT_Flag = false
 	Style_Lock_Id = 13
@@ -83,18 +82,6 @@ function get_sets()
 	sets.midcast = {
 		
 	}
-
-	sets.midcast.SIRD = {
-		ammo="Staunch Tathlum +1", --11
-		head="Kaykaus Mitra +1", --12
-		body="Kaykaus Bliaut +1", --12
-		hands="Telchine Gloves" , --10
-		legs="Querkening Brais", --15
-		feet="Vanya Clogs", --15
-		waist="Rumination Sash", --10
-		left_ring="Freke Ring", --10
-		back="Fi Follet Cape +1" --5
-	} --100
 
 	sets.midcast.Gishdubar = {
 		waist="Gishdubar Sash"
@@ -509,8 +496,6 @@ function self_command(command)
 		
 		if Cure_Hands_Index > #Cure_Hands_Set_Names then Cure_Hands_Index = 1 end
 		add_to_chat(207,'Cure Hands Set Changed to: '..Cure_Hands_Set_Names[Cure_Hands_Index]..'')
-	elseif command == 'sird' then
-		SIRD_Flag = not SIRD_Flag
 	elseif command == 'burst' then
 		add_to_chat(207,'Burst Set: '..tostring(not BURST_Flag)..'')
 		BURST_Flag = not BURST_Flag

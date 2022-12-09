@@ -7,7 +7,6 @@ function get_sets()
 	Hands_Index = 1
 	PWS_Index = 1
 	MWS_Index = 1
-	SIRD_Flag = false
 	BURST_Flag = false
 	Style_Lock_Id = 17
 
@@ -103,18 +102,6 @@ function get_sets()
 	
 	sets.magic = {}
 
-	sets.midcast.SIRD = {
-		ammo="Staunch Tathlum +1", --11
-		head="Kaykaus Mitra +1", --12
-		body="Kaykaus Bliaut +1", --12
-		hands="Amalric Gages +1" , --11
-		legs="Querkening Brais", --15
-		feet="Amalric Nails +1", --16
-		waist="Rumination Sash", --10
-		left_ring="Freke Ring", --10
-		back="Fi Follet Cape +1" --5
-	} --102
-
 	sets.midcast.Orepheus = {
 		waist="Orpheus's Sash"
 	}
@@ -168,7 +155,7 @@ function get_sets()
 		head="Vitiation Chapeau +3",
 		body="Atrophy Tabard +3",
 		hands="Regal Cuffs",
-		legs="Psycloth Lappas", 
+		legs="Lethargy Fuseau +2", 
 		feet="Vitiation Boots +3",
 		neck="Duelist's Torque +2",
 		waist="Obstinate Sash",
@@ -714,8 +701,6 @@ function self_command(command)
 			disable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
 			add_to_chat(66,'>>>>> PDT Set Locked! <<<<<')
 		end
-	elseif command == 'sird' then
-		SIRD_Flag = not SIRD_Flag
 	elseif command == 'burst' then
 		add_to_chat(207,'Burst Set: '..tostring(not BURST_Flag)..'')
 		BURST_Flag = not BURST_Flag

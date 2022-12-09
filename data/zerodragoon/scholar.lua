@@ -7,7 +7,6 @@ function get_sets()
 	Hands_Index = 1
 	PWS_Index = 1
 	MWS_Index = 1
-	SIRD_Flag = false
 	BURST_Flag = false
 	Weak_Helix_Flag = false
 	Occult_Flag = false
@@ -66,9 +65,9 @@ function get_sets()
 		sub="Enki Strap",
 		ammo="Sapience Orb", --2
 		head="Pedagogy mortarboard +3", --13
-		body="Shango Robe", --8 --Pinga Tunic +1
+		body="Pinga Tunic +1", --15
 		hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+28','"Fast Cast"+7','INT+7',}}, --7
-		legs="Pinga Pants", --11  --Ping Pants +1
+		legs="Pinga Pants +1", --11
 		feet="Academic's Loafers +3", --12
 		waist="Witful Belt", --3 --3
 		neck="Baetyl Pendant", --4
@@ -119,18 +118,6 @@ function get_sets()
 	sets.midcast = {
 		
 	}
-
-	sets.midcast.SIRD = {
-		ammo="Staunch Tathlum +1", --11
-		head="Kaykaus Mitra +1", --12
-		body="Kaykaus Bliaut +1", --12
-		hands="Amalric Gages +1" , --11
-		legs="Querkening Brais", --15
-		feet="Amalric Nails +1", --16
-		waist="Rumination Sash", --10
-		left_ring="Freke Ring", --10
-		back="Fi Follet Cape +1" --5
-	} --102
 
 	sets.midcast.Orepheus = {
 		waist="Orpheus's Sash"
@@ -189,7 +176,7 @@ function get_sets()
 		head="Telchine Cap",
 		body="Shango Robe",
 		hands="Telchine Gloves",
-		legs="Psycloth Lappas",
+		legs="Pinga Pants",
 		feet="Telchine Pigaches",
 		waist="Witful Belt",
 		neck="Incanter's Torque",
@@ -216,7 +203,7 @@ function get_sets()
 		body="Cohort Cloak +1",
 		hands="Pedagogy Bracers +3", 
 		legs="Arbatel Pants +2",
-		feet="Medium's Sabots",
+		feet="Arbatel Loafers +3",
 		neck="Argute Stole +2",
 		waist="Obstinate Sash",
 		ear1="Regal Earring",
@@ -650,8 +637,6 @@ function self_command(command)
 		Nuke_Tier = command:sub(5,6)
 		
 		send_command('input /ma "'..getNukeString(Nuke_Elements[Nuke_Index], Nuke_Tier)..'" <t> ')
-	elseif command == 'sird' then
-		SIRD_Flag = not SIRD_Flag
 	elseif command == 'burst' then
 		add_to_chat(207,'Burst Set: '..tostring(not BURST_Flag)..'')
 		BURST_Flag = not BURST_Flag

@@ -9,7 +9,6 @@ function get_sets()
 	PWS_Index = 1
 	MWS_Index = 1
 	Lullaby_Short = false
-	SIRD_Flag = false
 	BURST_Flag = false
 	Dummy_Flag = false
 	Style_Lock_Id = 20
@@ -125,7 +124,7 @@ function get_sets()
 		legs="Dashing Subligar",
 		ring1="Asklepian Ring",
 		ring2="Valseur's Ring", --3
-		ear1="Handler's Earring",
+		ear1="Enchanter's Earring +1",
 		ear2="Handler's Earring +1",
 		waist="Gishdubar Sash"
 	}
@@ -188,18 +187,6 @@ function get_sets()
 	}
 	
 	sets.midcast['Curing Waltz III'] = sets.Waltz
-
-	sets.midcast.SIRD = {
-		ammo="Staunch Tathlum +1", --11
-		head="Kaykaus Mitra +1", --12
-		body="Kaykaus Bliaut +1", --12
-		hands="Telchine Gloves" , --10
-		legs="Querkening Brais", --15
-		feet="Vanya Clogs", --15
-		waist="Rumination Sash", --10
-		left_ring="Freke Ring", --10
-		back="Fi Follet Cape +1" --5
-	} --100
 
 	sets.midcast.Gishdubar = {
 		waist="Gishdubar Sash"
@@ -286,7 +273,7 @@ function get_sets()
 		body="Cohort Cloak +1",
 		hands="Inyanga Dastanas +2",
 		legs="Inyanga Shalwar +2",
-		feet="Medium's Sabots",
+		feet="Brioso Slippers +3",
 		neck="Incanter's Torque",  
 		waist="Luminary Sash",
 		ear1="Regal Earring",
@@ -630,8 +617,6 @@ function self_command(command)
 			disable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
 			add_to_chat(66,'>>>>> PDT Set Locked! <<<<<')
 		end
-	elseif command == 'sird' then
-		SIRD_Flag = not SIRD_Flag
 	elseif command == 'burst' then
 		BURST_Flag = not BURST_Flag
 	elseif command == 'dummy' then

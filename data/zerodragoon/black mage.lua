@@ -7,7 +7,6 @@ function get_sets()
 	Hands_Index = 1
 	PWS_Index = 1
 	MWS_Index = 1
-	SIRD_Flag = false
 	BURST_Flag = false
 	AFBody_Flag = false
 	Occult_Flag = false
@@ -95,16 +94,6 @@ function get_sets()
 	sets.midcast = {
 		
 	}
-
-	sets.midcast.SIRD = {
-		ammo="Staunch Tathlum +1", --11
-		hands="Amalric Gages +1" , --11
-		legs="Querkening Brais", --15
-		feet="Amalric Nails +1", --16
-		waist="Rumination Sash", --10
-		left_ring="Freke Ring", --10
-		back="Fi Follet Cape +1" --5
-	} --102
 
 	sets.midcast.Orepheus = {
 		waist="Orpheus's Sash"
@@ -250,7 +239,6 @@ function get_sets()
 		ammo="Staunch Tathlum +1",
 		neck="Incanter's Torque",
 		feet="Vanya Clogs",
-		legs="Psycloth Lappas",
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",
 		waist="Rumination Sash",
@@ -601,8 +589,6 @@ function self_command(command)
 		if Hands_Index > #Hands_Set_Names then Hands_Index = 1 end
 		add_to_chat(207,'Hands Set Changed to: '..Hands_Set_Names[Hands_Index]..'')
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-	elseif command == 'sird' then
-		SIRD_Flag = not SIRD_Flag
 	elseif command == 'burst' then
 		add_to_chat(207,'Burst Set: '..tostring(not BURST_Flag)..'')
 		BURST_Flag = not BURST_Flag

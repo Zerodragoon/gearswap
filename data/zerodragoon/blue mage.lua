@@ -104,12 +104,13 @@ function get_sets()
 	sets.midcast.Healing = set_combine(sets.midcast.Enhancing, {
 		waist="Gishdubar Sash",
 		neck="Mirage Stole +1",
+		body="Pinga Tunic +1", --15
 		hands="Hashishin Bazubands +2",
-		legs="Hashishin Tayt +2",
-		feet="Medium's Sabots",
+		legs="Pinga Pants +1", --13
+		feet="Medium's Sabots", --11
 		ring1="Asklepian Ring",
 		ring2="Stikini Ring +1",
-		back="Oretania's Cape +1"
+		back="Oretania's Cape +1" --6
 	})
 
 	sets.midcast["Battery Charge"] = set_combine(sets.midcast.Enhancing, {
@@ -128,6 +129,10 @@ function get_sets()
 	sets.midcast["Wild Carrot"] = sets.midcast.Healing
 	sets.midcast["White Wind"] = sets.midcast.Healing
 	sets.midcast["Healing Breeze"] = sets.midcast.Healing
+	sets.midcast["Cure"] = sets.midcast.Healing
+	sets.midcast["Cure II"] = sets.midcast.Healing
+	sets.midcast["Cure III"] = sets.midcast.Healing
+	sets.midcast["Cure IV"] = sets.midcast.Healing
 
 	sets.midcast["Stoneskin"] = set_combine(sets.midcast.Enhancing, {
 		legs="Shedir Seraweels",

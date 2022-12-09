@@ -213,7 +213,7 @@ function get_sets()
 		back="Izdubar Mantle",
 		waist="Luminary Sash",
 		legs="Inyanga Shalwar +2",
-		feet="Medium's Sabots"
+		feet="Beckoner's Pigaches +2"
 	}
 
 	sets.midcast.Enhancing = {
