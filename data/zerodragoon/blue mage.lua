@@ -27,7 +27,7 @@ function get_sets()
 		body="Hashishin Mintan +2", --14
 		hands="Leyline Gloves", --6
 		waist="Witful Belt", --3 --3
-		legs="Pinga Pants", --11
+		legs="Pinga Pants +1", --13
 		feet="Carmine Greaves +1", --8
 		neck="Baetyl Pendant", --4
 		ear1="Loquacious Earring", --2
@@ -36,7 +36,7 @@ function get_sets()
 		ring2="Weatherspoon Ring +1", --5 --3
 		back="Fi Follet Cape +1", --10
 		ammo="Sapience Orb" --2
-	} --79 --6
+	} --81 --6
 
 	sets.midcast = { 
 		ammo="Pemphredo Tathlum",
