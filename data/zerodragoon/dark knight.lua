@@ -46,7 +46,7 @@ function get_sets()
 	}
 
 	sets.precast['Dark Seal'] = {
-		legs="Fallen's Burgeonet +2"
+		legs="Fallen's Burgeonet +3"
 	} 	
 	
 	sets.precast['Weapon Bash'] = {
@@ -169,8 +169,8 @@ function get_sets()
 		ring1="Niqmaddu Ring",
 		ring2="Epaminondas's Ring",
 		back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
-		ear1="Thrud Earring", --Heathen's Earring +2
-		ear2="Moonshade Earring",
+		ear1="Moonshade Earring", --Heathen's Earring +2
+		ear2="Heathen's Earring +1",
 		ammo="Knobkierrie"}
 		
 	sets.PWS.Normal = set_combine(sets.PWS, {})
@@ -186,7 +186,7 @@ function get_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		ear1="Schere Earring",
+		ear2="Schere Earring",
 		ammo="Coiste Bodhar"
 	})
 	
@@ -306,7 +306,7 @@ function midcast(spell)
         equip(sets.midcast[spell.english])
 		
 		if buffactive['Dark Seal'] then
-			equip({head="Fallen's Burgeonet +2"})						
+			equip({head="Fallen's Burgeonet +3"})						
 		end
 	elseif spell.type == "Ninjutsu" or spell.type == "BlackMagic" then
 		equip(sets.midcast.Magic)

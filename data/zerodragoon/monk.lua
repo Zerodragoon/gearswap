@@ -54,7 +54,7 @@ function get_sets()
 	
 	sets.precast['Chakra'] = {
 		hands="Hesychast's Gloves +1",
-		body="Anchorite's Cyclas +1"
+		body="Anchorite's Cyclas +2"
 	}
 	
 	sets.precast['Dodge'] =  {

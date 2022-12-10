@@ -170,7 +170,7 @@ function get_sets()
 	sets.midcast.Cure = {
 		main="Daybreak",
 		sub="Sors Shield",
-		head="Convoker's Horn +3",
+		head="Beckoner's Horn +2",
 		body="Inyanga Jubbah +2", 
 		legs="Assiduity Pants +1",
 		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10'}},
@@ -487,7 +487,7 @@ function get_sets()
 	-- This set is safe to ignore.
 	sets.pet_midcast.Impact = set_combine(sets.pet_midcast.SummoningMagic, {
 		main="Nirvana",
-		head="Convoker's Horn +3",
+		head="Beckoner's Horn +2",
 		ear1="Lugalbanda Earring"
 	})
 
@@ -498,7 +498,7 @@ function get_sets()
 		main="Nirvana",
 		sub="Elan Strap +1",
 		ammo="Sancus Sachet +1",
-		head="Convoker's Horn +3",
+		head="Beckoner's Horn +2",
 		neck="Loricate Torque +1",
 		ear1="Cath Palug Earring",
 		ear2="Beckoner's Earring +1",
@@ -625,7 +625,7 @@ function get_sets()
 		main="Nirvana",
 		sub="Vox Grip",
 		ammo="Sancus Sachet +1",
-		head="Convoker's Horn +3",
+		head="Beckoner's Horn +2",
 		neck="Incanter's Torque",
 		ear1="Cath Palug Earring",
 		body="Baayami Robe +1",

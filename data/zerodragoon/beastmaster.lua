@@ -10,7 +10,7 @@ function get_sets()
 	Style_Lock_Id = 31
 
 	--Default Macro Set for DRG
-	send_command('input /macro book 7;wait .1;input /macro set 1;wait 0.5;input //gs org')
+	send_command('input /macro book 22;wait .1;input /macro set 1;wait 0.5;input //gs org')
 	
 	set_style_lock()
 	
@@ -38,7 +38,7 @@ function get_sets()
 	sets.precast = {}
 
 	-- Hands Sets
-	Hands_Set_Names = {'Dual', 'Main', 'Naegling'}
+	Hands_Set_Names = {'Dual', 'Main', 'Naegling', 'Dagger'}
 
 	sets.Hands = {}	
 
@@ -54,6 +54,11 @@ function get_sets()
 	
 	sets.Hands.Naegling = { 
 		main="Naegling",
+		sub="Agwu's Axe"
+	}
+	
+	sets.Hands.Dagger = { 
+		main="Malevolence",
 		sub="Agwu's Axe"
 	}
 					
@@ -131,6 +136,14 @@ function get_sets()
 		ring1="Sroda Ring",
 		ring2="Epaminondas's Ring",
 		ear1="Nukumi Earring +1"
+	})
+	
+	sets.precast['Aeolian Edge'] = set_combine(sets.PWS.Normal, {
+		waist="Orpheus's Sash",
+		neck="Baetyl Pendant",
+		ear1="Friomisi Earring",
+		ring1="Beithir Ring",
+		ring2="Epaminondas's Ring",
 	})
 
 	-- Magical WS Sets Below
@@ -237,11 +250,15 @@ function get_sets()
 	}
 	
 	sets.precast["Call Beast"] = {
-		hands="Ankusa Gloves"
+		hands="Ankusa Gloves +1"
 	}
 	
 	sets.precast["Bestial Loyalty"] = {
-		hands="Ankusa Gloves"
+		hands="Ankusa Gloves +1"
+	}
+	
+	sets.precast["Killer Instinct"] = {
+		head="Ankusa Helm +1"
 	}
 	
 	sets.PetReady = {

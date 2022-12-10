@@ -273,7 +273,7 @@ function get_sets()
 	sets.Idle.Normal = set_combine(sets.Idle, {})
 	
 	sets.Idle.Learn = set_combine(sets.Idle, {
-		hands="Assimilator's Bazubands +1"
+		hands="Assimilator's Bazubands +2"
 	})
 
 	Melee_Set_Names = {'DT', 'DTRefresh', 'Learn'}
@@ -307,7 +307,7 @@ function get_sets()
 		ammo="Staunch Tathlum +1"})
 	
 	sets.Melee.Learn = set_combine(sets.Melee.DT, {
-		hands="Assimilator's Bazubands +1"
+		hands="Assimilator's Bazubands +2"
 	})
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')

@@ -58,7 +58,7 @@ function get_sets()
 	}
 	
 	sets.precast['Aggressor'] = {
-		head="Pummeler's Mask +1",
+		head="Pummeler's Mask +2",
 		hands="Agoge Lorica +1"
 	}
 	
