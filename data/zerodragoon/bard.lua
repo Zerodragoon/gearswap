@@ -370,20 +370,20 @@ function get_sets()
 	})
 
 	--Melee Sets
-	Melee_Set_Names = {'Standard', 'Single', 'TH', 'Kraken'}
+	Melee_Set_Names = {'Standard', 'Single', 'TH', 'Kraken', 'KrakenAcc'}
 
 	sets.Melee = {
 		head="Ayanmo Zucchetto +2",
 		body="Ashera Harness",
 		hands="Bunzi's Gloves",
-		legs="Nyame Flanchard",
+		legs="Volte Tights",
 		feet="Nyame Sollerets",
 		neck="Bard's Charm +2",
 		waist="Sailfi Belt +1",
 		left_ear="Telos Earring",
 		right_ear="Dedition Earring",
 		left_ring="Moonlight Ring",
-		right_ring="Chirich Ring +1",
+		right_ring="Moonlight Ring",
 		range={ name="Linos", augments={'Accuracy+19','"Store TP"+4','Quadruple Attack +3',}},
 		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
 	}
@@ -403,6 +403,10 @@ function get_sets()
 		waist="Olseni Belt",
 		ear1="Crepuscular Earring",
 		hands="Gazu Bracelet +1"
+	})
+	
+	sets.Melee.KrakenAcc = set_combine(sets.Melee.Kraken, {  
+		ear2="Dignitary's Earring"
 	})
 	
 	sets.WS = {

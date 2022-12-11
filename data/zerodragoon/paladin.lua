@@ -225,7 +225,7 @@ function get_sets()
 		neck="Loricate Torque +1",
 		waist="Flume Belt +1",
 		ring1="Moonlight Ring",
-		ring2="Warden's Ring",
+		ring2="Moonlight Ring",
 		back={ name="Rudianos's Mantle", augments={'"Fast Cast"+10'}},
 		ear1="Ethereal Earring",
 		ear2="Thureous Earring"

@@ -180,7 +180,7 @@ function get_sets()
 		head="Anwig Salade",
 		ear2="Handler's Earring +1",
 		body={ name="Taeon Tabard", augments={'Pet: Accuracy+17 Pet: Rng. Acc.+17','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
-		legs={ name="Taeon Tights", augments={'Pet: Accuracy+22 Pet: Rng. Acc.+22','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+		legs="Nukumi Quijotes +2",
 		feet={ name="Taeon Boots", augments={'Pet: Accuracy+17 Pet: Rng. Acc.+17','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
 		back={ name="Artio's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}
 	})

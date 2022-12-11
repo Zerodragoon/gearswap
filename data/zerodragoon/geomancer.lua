@@ -161,11 +161,11 @@ function get_sets()
 	--Black Magic Sets
 	sets.midcast.elemental = set_combine(sets.Hands.Bunzi, {
 		ammo="Pemphredo Tathlum",
-		head="Cath Palug Crown",
-		body="Amalric Doublet +1",
-		hands="Amalric Gages +1",
-		legs="Amalric Slops +1",
-		feet="Amalric Nails +1",
+		head="Cath Palug Crown", --Azimuth Hood +3
+		body="Amalric Doublet +1", --Azimuth Coat +3
+		hands="Amalric Gages +1", --Azimuth Hands +3
+		legs="Amalric Slops +1", --Azimuth Tights +3
+		feet="Amalric Nails +1", --Azimuth Feet +3 or Agwu's?
 		neck="Baetyl Pendant",
 		waist="Sacro Cord",
 		left_ear="Malignance Earring",
@@ -177,12 +177,10 @@ function get_sets()
 
 	sets.midcast.Burst = set_combine(sets.midcast.elemental, {
 		head="Ea Hat +1",
-		body="Ea Houppe. +1",
-		--hands="Ea Cuffs +1",
-		hands="Amalric Gages +1",
-		legs="Ea Slops +1",
-		feet="Ea Pigaches +1",
-		neck="Mizukage-no-Kubikazari",
+		body="Ea Houppe. +1", --Azimuth Body?
+		hands="Amalric Gages +1", --Awgus Gages
+		legs="Ea Slops +1", --Azimuth legs?
+		feet="Agwu's Pigaches",
 		right_ring="Mujin Band"
 	})
 
@@ -191,7 +189,7 @@ function get_sets()
 		sub="Enki Strap",
 		ammo="Pemphredo Tathlum",
 		body="Cohort Cloak +1",
-		hands="Geomancy Mitaines +3",
+		hands="Regal Cuffs",
 		legs="Geomancy Pants +3",
 		feet="Geomancy Sandals +3",
 		neck="Bagua Charm +2",

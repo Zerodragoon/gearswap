@@ -147,7 +147,7 @@ function get_sets()
 		neck="Unmoving Collar +1",
 		ear1="Tuisto Earring",
 		ear2="Odnowa Earring +1",
-		ring1="Eihwaz Ring",
+		ring1="Moonlight Ring",
 		ring2="Moonlight Ring",
 		back="Moonlight Cape"
 	})

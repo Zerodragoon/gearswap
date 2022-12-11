@@ -139,11 +139,9 @@ function get_sets()
 	sets.midcast.Burst = set_combine(sets.midcast.elemental, {
 		head="Ea Hat +1",
     	body="Ea Houppe. +1",
-    	--hands="Ea Cuffs +1",
     	hands="Amalric Gages +1",
 		legs="Ea Slops +1",
-    	feet="Ea Pigaches +1",
-		neck="Mizukage-no-Kubikazari",		
+    	feet="Bunzi's Sabots",
 		right_ring="Mujin Band"
 	})
 

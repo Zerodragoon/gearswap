@@ -190,7 +190,7 @@ function get_sets()
 	sets.midcast.Burst = set_combine(sets.midcast.elemental, {
 		head="Pedagogy Mortarboard +3",
 		body="Agwu's Robe",
-		hands="Amalric Gages +1",
+		hands="Amalric Gages +1", --Agwu's Gages
 		legs="Agwu's Slops",
 		feet="Arbatel Loafers +3",	
 		right_ring="Mujin Band"
@@ -482,7 +482,7 @@ function midcast(spell)
 		equip(sets.midcast.enfeeb)
 	elseif spell.type == "BlackMagic" then
 		if spell.english:find("helix") then
-			if Weak_Helix_Flag then
+			if Weak_Helix_Flag or not spell.english:find("II") then
 				equip(sets.midcast.HelixWeak)
 				return
 			else 

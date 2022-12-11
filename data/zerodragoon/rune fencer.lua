@@ -63,7 +63,7 @@ function get_sets()
 		--hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		hands="Kurys Gloves",
 		legs="Eri. Leg Guards +2",
-		feet="Erilaz Greaves +2",
+		feet="Erilaz Greaves +3",
 		neck={ name="Futhark Torque +2", augments={'Path: A',}},
 		waist="Kasiri Belt",
 		left_ear="Trux Earring",
@@ -130,7 +130,8 @@ function get_sets()
 	sets.midcast['Geist Wall'] = sets.magic.MidCastEnmity
 	sets.midcast['Sandspin'] = sets.magic.MidCastEnmity
 	sets.midcast['Sheep Song'] = sets.magic.MidCast
-	
+	sets.midcast['Poisonga'] = sets.magic.MidCast
+
 	sets.midcast.Enhancing = set_combine(sets.magic.MidCast, {
 		head="Erilaz Galea +3",
 		hands="Regal Gauntlets",
@@ -223,7 +224,7 @@ function get_sets()
 		neck="Futhark Torque +2",
 		waist="Flume Belt +1",
 		ring1="Moonlight Ring",
-		ring2="Defending Ring",
+		ring2="Moonlight Ring",
 		ear1="Ethereal Earring",
 		ear2="Erilaz Earring",
 		back={ name="Ogma's Cape", augments={'"Enmity"+10'}} -- HP +60, M.Eva. +20, Eva. +20, Enmity +10, M.Eva +10, Phys. dmg. taken -10
@@ -233,14 +234,14 @@ function get_sets()
 	
 	sets.TP.Magic = set_combine(sets.TP, {
 		hands="Nyame Gauntlets",
-		feet="Erilaz Greaves +2",
+		feet="Erilaz Greaves +3",
 		ring2="Shadow Ring"
 	})
 	
 	sets.TP.Resistance = set_combine(sets.TP.Magic, {
 		neck="Warder's Charm +1",
 		body="Runeist's Coat +3",
-		feet="Erilaz Greaves +2",
+		feet="Erilaz Greaves +3",
 		waist="Engraved Belt",
 	--	ring1="Archon Ring"
 	})
@@ -317,7 +318,8 @@ function get_sets()
 	sets.Idle.DTMagic = sets.TP.Magic
 	sets.Idle.DTResistance = sets.TP.Resistance
 	sets.Idle.DTMove  = set_combine(sets.TP.Standard, {
-		legs="Carmine Cuisses +1"
+		legs="Carmine Cuisses +1",
+		ring2="Defending Ring"
 	})
 	
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate;input //shield on')
