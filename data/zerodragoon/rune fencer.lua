@@ -84,14 +84,14 @@ function get_sets()
 	sets.precast['Vivacious Pulse'] = set_combine(sets.magic.MidCastEnmity, {
 		main="Peord claymore",
 		head="Erilaz Galea +3",
-		legs="Runeist's Trousers +2",
+		legs="Runeist Trousers +2",
 		neck="Incanter's Torque",
 		ring1="Stikini Ring +1",
 		ring2="Stikini Ring +1"
 	})
 	
 	sets.precast['Gambit'] = set_combine(sets.magic.MidCastEnmity, {
-		hands="Runeist's Mitons +3"
+		hands="Runeist Mitons +3"
 	})
 	
 	sets.precast['Rayke'] = set_combine(sets.magic.MidCastEnmity, {
@@ -99,12 +99,12 @@ function get_sets()
 	})
 	
 	sets.precast['Valiance'] = set_combine(sets.magic.MidCastEnmity, {
-		body="Runeist's Coat +3",
+		body="Runeist Coat +3",
 		legs="Futhark Trousers +3"
 	})
 	
 	sets.precast['Vallation'] = set_combine(sets.magic.MidCastEnmity, {
-		body="Runeist's Coat +3",
+		body="Runeist Coat +3",
 		legs="Futhark Trousers +3"
 	})
 	
@@ -179,7 +179,7 @@ function get_sets()
 	sets.midcast["Regen IV"] = set_combine(sets.midcast.Enhancing, {
 		main="Peord claymore",
 		body={ name="Taeon Tabard", augments={'"Cure" potency +5%','"Regen" potency+3',}},
-		head="Runeist's Bandeau +3",
+		head="Runeist Bandeau +3",
 		feet={ name="Taeon Boots", augments={'"Cure" potency +5%','"Regen" potency+3',}},
 		ear2="Erilaz Earring",
 		neck="Sacro Gorget",
@@ -188,7 +188,7 @@ function get_sets()
 	
 	sets.midcast["Temper"] = set_combine(sets.midcast.Enhancing, {
 		head="Carmine Mask +1",
-		hands="Runeist's Mitons +3",
+		hands="Runeist Mitons +3",
 		legs="Carmine Cuisses +1"
 	})
 
@@ -240,7 +240,7 @@ function get_sets()
 	
 	sets.TP.Resistance = set_combine(sets.TP.Magic, {
 		neck="Warder's Charm +1",
-		body="Runeist's Coat +3",
+		body="Runeist Coat +3",
 		feet="Erilaz Greaves +3",
 		waist="Engraved Belt",
 	--	ring1="Archon Ring"

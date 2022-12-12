@@ -258,7 +258,7 @@ function get_sets()
 		ring2="Hetairoi Ring",
 		back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
 		ear1="Sherida Earring",
-		ear2="Skulker's Earring",
+		ear2="Skulker's Earring +1",
 		ammo="Aurgelmir Orb +1"
 	}
 	
