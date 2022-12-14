@@ -77,7 +77,7 @@ function get_sets()
 	})
 	
 	sets.precast['Mana Wall'] = {
-		feet="Wicce Sabots +1",
+		feet="Wicce Sabots +2",
 		back="Taranus's Cape"
 	}
 	

@@ -305,7 +305,7 @@ function get_sets()
 		}
 	}
 
-	Hands_Set_Names = {'PhysicalShield', 'Physical', 'Magical', 'KrakenP', 'KrakenM', 'KrakenT', 'CrepGletis'}
+	Hands_Set_Names = {'PhysicalShield', 'Physical', 'Magical', 'KrakenP', 'KrakenM', 'KrakenT', 'CrepGletis', 'NaegGletis', 'NaegCrep', 'MalevGletis'}
 
 	sets.Hands = {}	
 
@@ -341,6 +341,21 @@ function get_sets()
 	
 	sets.Hands.CrepGletis = { 
 		main="Crepuscular Knife",
+		sub="Gleti's Knife",
+	}
+	
+	sets.Hands.NaegGletis = { 
+		main="Naegling",
+		sub="Gleti's Knife",
+	}
+	
+	sets.Hands.NaegCrep = { 
+		main="Naegling",
+		sub="Crepuscular Knife",
+	}
+	
+	sets.Hands.MalevGletis = { 
+		main={ name="Malevolence", augments={'INT+9','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
 		sub="Gleti's Knife",
 	}
 						
