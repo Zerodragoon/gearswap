@@ -62,7 +62,7 @@ function get_sets()
 		body="Emet Harness +1",
 		--hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		hands="Kurys Gloves",
-		legs="Eri. Leg Guards +2",
+		legs="Eri. Leg Guards +3",
 		feet="Erilaz Greaves +3",
 		neck={ name="Futhark Torque +2", augments={'Path: A',}},
 		waist="Kasiri Belt",
@@ -219,7 +219,7 @@ function get_sets()
 		head="Nyame Helm",							
 		body="Nyame Mail",
 		hands="Turms Mittens +1",
-		legs="Erilaz Leg Guards +2", --Erilaz Leg Guards +3
+		legs="Erilaz Leg Guards +3",
 		feet="Turms Leggings +1",
 		neck="Futhark Torque +2",
 		waist="Flume Belt +1",

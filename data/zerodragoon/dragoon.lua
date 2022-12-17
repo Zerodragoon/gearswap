@@ -228,7 +228,7 @@ function get_sets()
 	
 	sets.precast['Spirit Link'] = {
 		head="Vishap Armet +2",
-		hands="Peltast's Vambraces +1",
+		hands="Peltast's Vambraces +2",
 		ear1="Pratik Earring"
 	}
 	

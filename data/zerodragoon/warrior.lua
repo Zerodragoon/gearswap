@@ -274,7 +274,7 @@ function get_sets()
 		ammo=""
 	})
 
-	Melee_Set_Names = {'Sakpata', 'Boii', 'SB', 'TripleAtt', 'TH'}
+	Melee_Set_Names = {'Sakpata', 'Boii', 'SB', 'TripleAtt', 'TH', 'DoubleAttackDamage'}
 
 	sets.Melee = {  
 		
@@ -333,6 +333,22 @@ function get_sets()
 		hands="Sakpata's Gauntlets", --6
 		legs="Sakpata's Cuisses", --7
 		feet="Flamma Gambieras +2", --6
+		neck="Warrior's Bead Necklace +2", --7 
+		waist="Ioskeha Belt +1", --9
+		ring1="Niqmaddu Ring",
+		ring2="Chirich Ring +1",
+		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --10
+		ear1="Schere Earring", --6
+		ear2="Boii Earring", --7
+		ammo="Coiste Bodhar" --3
+	})
+	
+	sets.Melee.DoubleAttackDamage = set_combine(sets.Melee.Sakpata, { --33
+		head="Sakpata's Helm", --5
+   		body="Sakpata's Breastplate", --8
+		hands="Sakpata's Gauntlets", --6
+		legs="Sakpata's Cuisses", --7 --Agoge Cuisses +3 --5
+		feet="Boii Calligae +2",
 		neck="Warrior's Bead Necklace +2", --7 
 		waist="Ioskeha Belt +1", --9
 		ring1="Niqmaddu Ring",
