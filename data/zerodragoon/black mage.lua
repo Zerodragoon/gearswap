@@ -142,7 +142,7 @@ function get_sets()
 	
 	--Ja Spells Sets
 	sets.midcast.ja = {
-		legs="Wicce Chausses +1"
+		legs="Wicce Chausses +2"
 	}
 	
 	--AF Body Set
@@ -346,7 +346,7 @@ function get_sets()
 	sets.Melee = {
 		head="Blistering Sallet +1",
 		body="Nyame Mail",
-		hands="Gazu Bracelet +1",
+		hands="Gazu Bracelets +1",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck="Lissome Necklace",

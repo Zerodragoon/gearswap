@@ -151,7 +151,7 @@ function get_sets()
 
 	sets.midcast['Occultation'] = set_combine(sets.midcast.Enhancing, {
 		head="Nyame Helm",
-		body="Assimilator's Jubbah +1",
+		body="Assimilator's Jubbah +2",
 		hands="Nyame Gauntlets",
 		legs="Hashishin Tayt +2",
 		feet="Luhlaza Charuqs +1",

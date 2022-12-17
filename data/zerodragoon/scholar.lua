@@ -381,7 +381,7 @@ function get_sets()
 		ammo="Oshasha's Treatise",
 		head={ name="Blistering Sallet +1", augments={'Path: A',}},
 		body={ name="Nyame Mail", augments={'Path: B',}},
-		hands="Gazu Bracelet +1",
+		hands="Gazu Bracelets +1",
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 		neck="Lissome Necklace",

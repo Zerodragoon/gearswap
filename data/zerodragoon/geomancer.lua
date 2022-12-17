@@ -161,11 +161,11 @@ function get_sets()
 	--Black Magic Sets
 	sets.midcast.elemental = set_combine(sets.Hands.Bunzi, {
 		ammo="Pemphredo Tathlum",
-		head="Cath Palug Crown", --Azimuth Hood +3
-		body="Amalric Doublet +1", --Azimuth Coat +3
-		hands="Amalric Gages +1", --Azimuth Hands +3
-		legs="Amalric Slops +1", --Azimuth Tights +3
-		feet="Amalric Nails +1", --Azimuth Feet +3 or Agwu's?
+		head="Azimuth Hood +2",
+		body="Azimuth Coat +2",
+		hands="Azimuth Gloves +2",
+		legs="Azimuth Tights +2",
+		feet="Azimuth Gaiters +2",
 		neck="Baetyl Pendant",
 		waist="Sacro Cord",
 		left_ear="Malignance Earring",
@@ -352,7 +352,7 @@ function get_sets()
 		ranged="Dunna",
 		head="Blistering Sallet +1",
 		body="Nyame Mail",
-		hands="Gazu Bracelet +1",
+		hands="Gazu Bracelets +1",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck="Lissome Necklace",

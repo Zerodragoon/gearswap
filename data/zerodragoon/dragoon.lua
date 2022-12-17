@@ -61,8 +61,8 @@ function get_sets()
 		ring1="Niqmaddu Ring",
 		ring2="Regal Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-		ear1="Thrud Earring",
-		ear2="Moonshade Earring",
+		ear1="Moonshade Earring",
+		ear2="Thrud Earring",
 		ammo="Knobkierrie"}
 
 	sets.PWS.Normal = set_combine(sets.PWS, {})
@@ -72,6 +72,7 @@ function get_sets()
 		neck="Dragoon's Collar +2",
 		body="Gleti's Cuirass",
 		waist="Sailfi Belt +1" --Legs Peltast's Cuissots +3?
+		ring2="Epaminondas's Ring",
 	})
 	
 	sets.PWS.ImpulseCap = set_combine(sets.PWS.Impulse, {
@@ -87,15 +88,12 @@ function get_sets()
 	})
 	
 	sets.PWS.SavageCap = set_combine(sets.PWS.Savage, {
-		--feet="Gleti's Boots"
 		ear2="Peltast's Earring"
 	})
 	
 	sets.PWS.SavageCapHigh = set_combine(sets.PWS.SavageCap, {
-		head="Gleti's Mask",
 		hands="Gleti's Gauntlets",
-		--body="Gleti's Cuirass",
-		--ammo="Crepuscular Pebble"
+		body="Gleti's Cuirass",
 	})
 	
 	sets.precast["Camlann's Torment"] = set_combine(sets.PWS, {
@@ -130,8 +128,8 @@ function get_sets()
 		feet="Gleti's Boots",
 		neck="Loricate Torque +1",
 		waist="Gishdubar Sash",
-		ring1="Warden's Ring",
-		ring2="Defending Ring",
+		ring1="Moonlight Ring",
+		ring2="Moonlight Ring",
 		back="Moonlight Cape",
 		ear1="Infused Earring",
 		ear2="Telos Earring",
@@ -139,22 +137,22 @@ function get_sets()
 
 	sets.Idle.Normal = set_combine(sets.Idle, {})
 
-	Melee_Set_Names = {'DT', 'PetDT', 'Acc', 'DblAtt', 'Kraken'}
+	Melee_Set_Names = {'DT', 'PetDT', 'Acc', 'DblAtt', 'Kraken', 'KrakenDT'}
 
 	sets.Melee = {  
 		head="Flamma Zucchetto +2",							
-		body="Gleti's Cuirass",
-		hands="Sulevia's Gauntlets +2",
-		legs={ name="Valorous Hose", augments={'"Dbl.Atk."+5','AGI+9','Accuracy+10','Attack+8',}},
+		body="Gleti's Cuirass", -- Peltast's Plackart +3
+		hands="Gleti's Gauntlets", 
+		legs="Ptero. Brais +3",
 		feet="Flamma Gambieras +2",
-		neck="Anu Torque",
+		neck="Vim Torque +1",
 		waist="Sailfi Belt +1",
-		ring1="Niqmaddu Ring",
-		ring2="Petrov Ring",
-		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
+		ring1="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%'}},
 		ear1="Sherida Earring",
-		ear2="Schere Earring",
-		ammo="Aurgelmir Orb +1"
+		ear2="Brutal Earring",
+		ammo="Coiste Bodhar"
 	}
 
 	sets.Melee.DblAtt = set_combine(sets.Melee, {})
@@ -163,32 +161,47 @@ function get_sets()
 		head="Hjarrandi Helm",							
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		legs="Gleti's Breeches",
-		feet="Gleti's Boots",})
+		legs="Ptero. Brais +3",
+		feet="Flamma Gambieras +2",
+		neck="Anu Torque",
+		ring1="Moonlight Ring",
+		ring2="Moonlight Ring"})
 	
 	sets.Melee.PetDT = set_combine(sets.Melee.DT, {
 		neck="Dragoon's Collar +2"
 	})
 	
 	sets.Melee.Acc = set_combine(sets.Melee.DT, {
-		neck="Shulmanu Collar",
-		ring1="Regal Ring",
-		ring2="Chirich Ring +1",
-		ear1="Mache Earring +1",
-		ear2="Telos Earring"
+		neck="Vim Torque +1",
+		ear1="Crepuscular Earring",
+		ear2="Telos Earring",
+		waist="Ioskeha Belt +1",
 	})
 	
 	sets.Melee.Kraken = set_combine(sets.Melee.DT, {
 		head="Sulevia's Mask +2",
 		body="Hjarrandi Breastplate",
+		hands="Gleti's Gauntlets",
+		legs="Pteroslaver Brais +3", 
+		feet="Flamma Gambieras +2", --Volte Spats
 		neck="Vim Torque +1",
-		legs="Pteroslaver Brais +3",
 		waist="Klouskap Sash +1",
 		ring1="Chirich Ring +1",
 		ring2="Chirich Ring +1",
 		ear1="Crep. Earring",
 		ear2="Digni. Earring",
-		back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}}
+		back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+		ammo="Aurgelmir Orb +1"
+	})
+	
+	sets.Melee.KrakenDT = set_combine(sets.Melee.Kraken, {
+		ring1="Moonlight Ring",
+		ring2="Moonlight Ring"
+	})
+	
+	sets.Melee.KrakenNoDT = set_combine(sets.Melee.Kraken, {
+		--Peltast's Plackart +3?
+		waist="Olseni Belt"
 	})
  
 	sets.Melee.Jump = set_combine(sets.Melee, {
@@ -210,13 +223,13 @@ function get_sets()
 	})
 	
 	sets.precast['Spirit Jump'] = set_combine(sets.Melee.Jump, {
-		feet="Peltast's Schynbalds +1",
+		feet="Peltast's Schynbalds +2",
 	})
 	
 	sets.precast['Spirit Link'] = {
-			head="Vishap Armet +2",
-			hands="Peltast's Vambraces +1",
-			ear1="Pratik Earring"
+		head="Vishap Armet +2",
+		hands="Peltast's Vambraces +1",
+		ear1="Pratik Earring"
 	}
 	
 	sets.precast['Angon'] = {

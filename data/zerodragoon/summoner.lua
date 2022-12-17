@@ -585,7 +585,7 @@ function get_sets()
 	sets.aftercast.Perp_Melee = set_combine(sets.aftercast.Perp_Refresh, {
 		head="Blistering Sallet +1",
 		body="Nyame Mail",
-		hands="Gazu Bracelet +1",
+		hands="Gazu Bracelets +1",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck="Lissome Necklace",

@@ -184,7 +184,7 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
-		neck="Baetyl Pendaent",
+		neck="Baetyl Pendant",
 		waist="Orpheus's Sash",
 		ring1="Metamorph Ring +1",
 		ring2="Epaminondas's Ring",
@@ -234,7 +234,7 @@ function get_sets()
 		ranged="Halakaala"
 	})
 
-	Melee_Set_Names = {'DT', 'DblAtt', 'Crit'}
+	Melee_Set_Names = {'DT', 'DblAtt', 'Crit', 'DTFull'}
 
 	sets.Melee = {  
 		head="Adhemar Bonnet +1",							
@@ -258,6 +258,16 @@ function get_sets()
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
 		feet="Malignance Boots"}) --Maculele Toe Shoes +3
+		
+	sets.Melee.DTFull = set_combine(sets.Melee, {
+		head="Malignance Chapeau",
+		body="Malignance Tabard",	
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		ring1="Moonlight Ring",
+		ring2="Moonlight Ring",
+		neck="Loricate Torque +1"}) --Maculele Toe Shoes +3
 
 	sets.Melee.Crit = set_combine(sets.Melee, {
 		head="Mummu Bonnet +2",
