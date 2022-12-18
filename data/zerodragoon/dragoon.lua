@@ -71,13 +71,14 @@ function get_sets()
 		head="Blistering Sallet +1", --Peltast Mezail +3
 		neck="Dragoon's Collar +2",
 		body="Gleti's Cuirass",
-		waist="Sailfi Belt +1" --Legs Peltast's Cuissots +3?
+		waist="Sailfi Belt +1", --Legs Peltast's Cuissots +3?
 		ring2="Epaminondas's Ring",
 	})
 	
 	sets.PWS.ImpulseCap = set_combine(sets.PWS.Impulse, {
 		hands="Gleti's Gauntlets",
-		feet="Gleti's Boots"
+		feet="Gleti's Boots",
+		ear2="Peltast's Earring"
 	})
 	
 	sets.PWS.Savage = set_combine(sets.PWS, {
