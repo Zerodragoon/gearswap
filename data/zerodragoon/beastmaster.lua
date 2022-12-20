@@ -234,6 +234,10 @@ function get_sets()
 	sets.RabbitJug = {
 		ammo="Swirling Broth"
 	}
+	
+	sets.PlantJug = {
+		ammo="Saline Broth"
+	}
 
 	sets.Melee.DT = sets.Melee
 	sets.Melee.PetLevel = set_combine(sets.Melee, {

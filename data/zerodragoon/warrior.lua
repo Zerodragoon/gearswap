@@ -49,7 +49,7 @@ function get_sets()
 		main="Instigator",
 		sub="Utu Grip",
 		body="Pummeler's Lorica +2",
-		feet="Agoge Calligae +1",
+		feet="Agoge Calligae +3",
 		back="Cichol's Mantle" 
 	} 
 	
@@ -81,7 +81,7 @@ function get_sets()
 	
 	sets.precast['Tomahawk'] = {
 		ammo="Throwing Tomahawk",
-		feet="Agoge Calligae +1",
+		feet="Agoge Calligae +3",
 	}
 
 	Hands_Set_Names = {'Sword', 'GAxe', 'Spear', 'GSword', 'Mace', 'Knife', 'Staff'}
@@ -227,12 +227,12 @@ function get_sets()
 	})
 	
 	sets.PWS.SavageCap = set_combine(sets.PWS.Savage, {
-		legs="Boii Cuisses +2"
+		legs="Boii Cuisses +3"
 	})
 	
 	sets.PWS.SavageCapHigh = set_combine(sets.PWS.SavageCap, {
+		body="Sakpata's Breastplate",
 		hands="Sakpata's Gauntlets",
-		feet="Sakpata's Leggings"
 	})
 	
 	sets.PWS.Normal = set_combine(sets.PWS, {})
@@ -306,7 +306,7 @@ function get_sets()
 		ring1="Niqmaddu Ring",
 		ring2="Chirich Ring +1",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --10
-		ear1="Dignitary's Earring",
+		ear1="Schere Earring",
 		ear2="Boii Earring",
 		ammo="Coiste Bodhar"
 	})

@@ -169,7 +169,7 @@ function get_sets()
 		ring1="Niqmaddu Ring",
 		ring2="Epaminondas's Ring",
 		back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
-		ear1="Moonshade Earring", --Heathen's Earring +2
+		ear1="Moonshade Earring",
 		ear2="Heathen's Earring +1",
 		ammo="Knobkierrie"}
 		
@@ -197,6 +197,11 @@ function get_sets()
 	})
 	
 	sets.precast['Savage Blade'] = set_combine(sets.PWS, {
+		ring1="Sroda Ring",
+		waist="Sailfi Belt +1"
+	})
+	
+	sets.precast['Judgment'] = set_combine(sets.PWS, {
 		ring1="Sroda Ring",
 		waist="Sailfi Belt +1"
 	})

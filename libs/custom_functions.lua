@@ -37,7 +37,7 @@ function buff_change(name,gain,buff_details)
         end
     end
 	
-	if name == "sleep" or name == "sleep" then
+	if name == "sleep" or name == "Sleep" then
         if gain then
             equip({sub = "Duban"})
 			equip({ranged = "Earp"})

@@ -83,19 +83,15 @@ function get_sets()
 	}
 	
 	sets.precast["Accomplice"] = {
-		head="Skulker's Bonnet +1"
+		head="Skulker's Bonnet +2"
 	}
 	
 	sets.precast["Collaborator"] = {
-		head="Skulker's Bonnet +1"
+		head="Skulker's Bonnet +2"
 	}
 	
 	sets.precast["Sneak Attack"] = {
-		hands="Skulker's Armlets +1"
-	}
-	
-	sets.precast["Sneak Attack"] = {
-		hands="Skulker's Armlets +1"
+		hands="Skulker's Armlets +2"
 	}
 	
 	sets.precast["Trick Attack"] = {
@@ -247,7 +243,7 @@ function get_sets()
 	Melee_Set_Names = {'DT', 'DTTH', 'DblAtt', 'Ambush', 'Crit', 'MaxTH'}
 
 	sets.Melee = {  
-		head="Adhemar Bonnet +1", --Skulker's Bonnet +3							
+		head="Skulker's Bonnet +2", --Skulker's Bonnet +3							
 		body="Pillager's Vest +3",
 		hands="Gleti's Gauntlets",
 		legs="Samnuha Tights",

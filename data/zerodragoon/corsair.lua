@@ -236,7 +236,7 @@ function get_sets()
 		legs="Chasseur's Culottes +2",
 		feet="Ikenga's Clogs",
 		neck="Iskur Gorget",
-		waist="Yemaya Belt",
+		waist="Tellen Belt",
 		ring1="Ilabrat Ring",
 		ring2="Crepuscular Ring",
 		back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','"Store TP"+10','Damage taken-5%',}},

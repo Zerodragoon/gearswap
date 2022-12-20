@@ -368,7 +368,7 @@ function get_sets()
 		legs="Malignance Tights",
 		feet="Malignance Boots",
 		neck="Scout's Gorget +2",
-		waist="Yemaya Belt", --Tellen Belt
+		waist="Tellen Belt",
 		ring1="Ilabrat Ring",
 		ring2="Crepuscular Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10',}},
@@ -487,6 +487,14 @@ function get_sets()
 		ring2="Longshot Ring",
 		ear1="Telos Earring",
 		ear2="Beyla Earring"})
+		
+	sets.precast['Split Shot'] = sets.LS.Acc
+	sets.precast['Sniper Shot'] = sets.LS.Acc
+	sets.precast['Slug Shot'] = sets.LS.Acc
+	sets.precast['Blast Shot'] = sets.LS.Acc
+	sets.precast['Heavy Shot'] = sets.LS.Acc
+	sets.precast['Detonator'] = sets.LS.Acc
+	sets.precast['Numbling Shot'] = sets.LS.Acc
 
 	TrueFlight_Set_Names = {'Normal','Acc', 'Hachi', 'Orpheus'}
 
@@ -750,6 +758,14 @@ function precast(spell)
 				equip(sets.TrueFlight.Orpheus)
 			end
 		elseif spell.name == "Flaming Arrow" then
+            equip(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]])
+			
+			if buffactive['Firestorm'] then
+				equip(sets.TrueFlight.Hachi)
+			elseif spell.target.distance < 3.0 then
+				equip(sets.TrueFlight.Orpheus)
+			end
+		elseif spell.name == "Hot Shot" then
             equip(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]])
 			
 			if buffactive['Firestorm'] then

@@ -735,4 +735,5 @@ function self_command(command)
 end
 
 function file_unload()
+	send_command('input //lua u nostrum')
  end
