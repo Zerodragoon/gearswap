@@ -116,8 +116,7 @@ function get_sets()
 		ring2="Epaminondas's Ring",
 		back="Sacro Mantle",
 		body="Volte Jupon",
-		ammo="Perfect Lucky Egg", 
-		waist="Chaac Belt"
+		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
 	})
 
 	sets.PWS.Normal = set_combine(sets.PWS, {})
@@ -268,6 +267,8 @@ function precast(spell)
 			equip(sets.precast.FastCast)
 		end
 	elseif spell.type == "Trust" then
+		equip(sets.precast.FastCast)
+	elseif spell.type == "White Magic" then
 		equip(sets.precast.FastCast)
 	elseif spell.english == 'Spectral Jig' and buffactive.Sneak then
 		cast_delay(0.2)
