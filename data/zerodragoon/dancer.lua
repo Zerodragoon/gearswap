@@ -42,7 +42,7 @@ function get_sets()
 		body="Maxixi Casaque +3", --17
 		hands="Slither Gloves +1", --5
 		legs="Dashing Subligar", --10
-		feet="Maxixi Toe Shoes +2", --12
+		feet="Maxixi Toe Shoes +3", --14
 		ring1="Asklepian Ring",
 		ring2="Valseur's Ring", --3
 		ear1="Sjofn Earring", --10
@@ -53,7 +53,7 @@ function get_sets()
 		
 	sets.precast.Jig = {
 		legs="Horos Tights +3",
-		feet="Maxixi Toe Shoes +2"
+		feet="Maxixi Toe Shoes +3"
 	}
 	
 	sets.precast.Step = {

@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Verethragna", augments={'Path: A',}},
+    range={ name="Neo Animator", augments={'Path: A',}},
+    ammo="Automat. Oil +3",
+    head={ name="Mpaca's Cap", augments={'Path: A',}},
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    hands={ name="Mpaca's Gloves", augments={'Path: A',}},
+    legs={ name="Mpaca's Hose", augments={'Path: A',}},
+    feet="Mpaca's Boots",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Gishdubar Sash",
+    left_ear="Infused Earring",
+    right_ear={ name="Kara. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','"Store TP"+3',}},
+    left_ring="Warden's Ring",
+    right_ring="Defending Ring",
+    back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: Haste+10','Pet: Damage taken -5%',}},
+}

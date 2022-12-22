@@ -31,7 +31,7 @@ function get_sets()
 		ear2="Enchanter's Earring +1", --2
 		ring1="Weatherspoon Ring +1", --5
 		ring2="Prolix Ring", --2
-		ammo="Sapience Orb" --2
+		--ammo="Sapience Orb" --2
 	}
 	
 	sets.precast.Utsusemi = set_combine(sets.precast.FastCast,{})
@@ -45,7 +45,7 @@ function get_sets()
 		body="Kara. Farsetto +1",
 		hands="Foire Dastanas +2",
 		neck="Bfn. Collar +1",
-		back="Visucius's Mantle"
+        back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: Haste+10','Pet: Damage taken -5%',}},
 	}
 	
 	sets.precast['Dark Maneuver'] = sets.precast.Maneuver
@@ -67,7 +67,7 @@ function get_sets()
 		ear1="Pratik Earring",
 		ear2="Guignol Earring",
 		ring1="Overbearing Ring",
-		back="Visucius's Mantle"
+        back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: Haste+10','Pet: Damage taken -5%',}},
 	}
 	
 	sets.precast.Maintenance = sets.precast.Repair
@@ -95,7 +95,7 @@ function get_sets()
 		right_ear="Brutal Earring",
 		ring1="Gere Ring",
 		ring2="Niqmaddu Ring",
-		back="Sacro Mantle"
+		back={ name="Visucius's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-8%',}},
 	}
 	
 	sets.precast['Raging Fists']    = set_combine(sets.PWS, {})
@@ -106,8 +106,19 @@ function get_sets()
 	sets.precast['Shijin Spiral']   = set_combine(sets.PWS, {})
 	sets.precast['Dragon Kick']     = set_combine(sets.PWS, {})
 	sets.precast['Tornado Kick']    = set_combine(sets.PWS, {})
---	sets.precast['Spinning Attack'] = set_combine(sets.PWS, {})
-	sets.precast['Spinning Attack'] = set_combine(sets.PWS, {body="Volte Jupon", ammo="Perfect Lucky Egg", waist="Chaac Belt"})
+	sets.precast['Spinning Attack'] = set_combine(sets.PWS, {
+		head="Nyame Helm",							
+		--body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		ring1="Regal Ring",
+		ring2="Epaminondas's Ring",
+		back="Sacro Mantle",
+		body="Volte Jupon",
+		ammo="Perfect Lucky Egg", 
+		waist="Chaac Belt"
+	})
 
 	sets.PWS.Normal = set_combine(sets.PWS, {})
 	
@@ -124,7 +135,7 @@ function get_sets()
 		ring2="C. Palug Ring",
 		ear1="Rimeice Earring",
 		ear2="Enmerkar Earring",
-		back="Visucius's Mantle",
+        back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: Haste+10','Pet: Damage taken -5%',}},
 		ranged="Animator P +1",
 		ammo="Automat. Oil +3"
 	}
@@ -178,7 +189,7 @@ function get_sets()
 		feet="Hermes' Sandals",
 		neck="Loricate Torque +1",
 		waist="Gishdubar Sash",
-		ring1="Warden's Ring",
+		ring1="Moonlight Ring",
 		ring2="Defending Ring",
 		back="Moonlight Cape",
 		ear1="Infused Earring",
@@ -215,12 +226,12 @@ function get_sets()
 		feet="Mpaca's Boots",
 		neck="Shulmanu Collar",
 		waist="Moonbow Belt +1",
-		left_ear="Crepuscular Earring",
+		left_ear="Telos Earring",
 		right_ear="Karagoz Earring +1",
 		ring1="Gere Ring",
 		ring2="Niqmaddu Ring",
 		ranged="Neo Animator",
-		back="Visucius's Mantle",
+		back={ name="Visucius's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-8%',}},
 		ammo="Automat. Oil +3"
 	}
 
