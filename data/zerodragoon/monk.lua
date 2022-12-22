@@ -35,7 +35,6 @@ function get_sets()
 	sets.precast.Utsusemi = set_combine(sets.precast.FastCast,{})
 
 	sets.precast['Curing Waltz III'] = {
-		--head="Mummu Bonnet +2",'
 		head="Anwig Salade",
         body="Passion Jacket", --13
 		hands="Slither Gloves +1", --5
@@ -81,7 +80,7 @@ function get_sets()
 	
 	sets.FootworkDT = {
 		neck="Monk's Nodowa +1",
-		legs="Bhikku Hose +2", --Bhikku Hose +3
+		legs="Bhikku Hose +2",
 		feet="Bhikku Gaiters +2"
 	}
 	

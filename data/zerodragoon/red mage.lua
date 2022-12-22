@@ -423,7 +423,7 @@ function get_sets()
 	sets.Composure = {
 		head="Lethargy Chappel +2",
 		body="Lethargy Sayon +2",
-		--hands="Lethargy Gantherots +1",
+		--hands="Lethargy Gantherots +2",
 		legs="Lethargy Fuseau +2",
 		feet="Lethargy Houseaux +2"
 	}
@@ -434,7 +434,7 @@ function get_sets()
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+		feet="Nyame Sollerets", --Lethargy Houseaux +3
 		neck="Anu Torque",
 		waist="Fotia Belt",
 		ring1="Ilabrat Ring",

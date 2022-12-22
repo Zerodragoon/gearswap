@@ -78,8 +78,8 @@ function get_sets()
 	
 	sets.precast["Despoil"] = {
 		ammo="Barathrum",
-		legs="Skulker's Culottes +1",
-		feet="Skulker's Poulaines +1"
+		legs="Skulker's Culottes +2",
+		feet="Skulker's Poulaines +2"
 	}
 	
 	sets.precast["Accomplice"] = {
@@ -264,7 +264,7 @@ function get_sets()
 	
 	sets.Melee.MaxTH = set_combine(sets.Melee, {
 		hands="Plunderer's Armlets +3",
-		feet="Skulker's Poulaines +1",
+		feet="Skulker's Poulaines +2",
 		waist="Chaac Belt",
 		ammo="Perfect Lucky Egg"
 	})
@@ -284,7 +284,7 @@ function get_sets()
 		head="Gleti's Mask",
 		body="Gleti's Cuirass",	
 		hands="Mummu Wrists +2",
-		legs="Mummu Kecks +2", -- Skulker's Culottes
+		legs="Mummu Kecks +2", -- Skulker's Culottes +3
 		feet="Mummu Gamashes +2",
 		ring1="Mummu Ring",
 		ear2="Odr Earring",
