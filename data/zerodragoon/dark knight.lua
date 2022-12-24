@@ -7,6 +7,7 @@ function get_sets()
 	Hands_Index = 1
 	PWS_Index = 1
 	MWS_Index = 1
+	ATT_Cap_Flag = false
 
 	FellCleaveTH_Flag = false
 	--Default Macro Set for DRK
@@ -31,6 +32,11 @@ function get_sets()
 		neck="Baetyl Pendant",
 		ammo="Sapience Orb" --2
 	}
+	
+	sets.precast['Impact'] = set_combine(sets.FastCast, {
+		head=empty,
+		body="Crepuscular Cloak"
+	})
 	
 	sets.precast['Souleater'] = {
 		head="Ignominy Burgeonet +3"
@@ -105,6 +111,17 @@ function get_sets()
 		back="Izdubar Mantle",
 	}
 	
+	sets.midcast.Impact = set_combine(sets.midcast.enfeeb, {
+		sub="Khonsu",
+		head=empty,
+		body="Crepuscular Cloak",
+		neck="Erra Pendant",
+		ring1="Stikini Ring +1",
+		ring2="Metamorph Ring +1",
+		ear2="Heathen's Earring +1",
+		ranged="Ullr"
+	})
+	
 	sets.midcast.MagicDark = set_combine(sets.midcast.Magic, {
 		head="Ignominy Burgeonet +3",
 		body="Carmine Scale Mail +1",
@@ -122,10 +139,22 @@ function get_sets()
 		ring2="Stikini Ring +1"
 	})
 	
+	sets.midcast['Absorb-MND'] = sets.midcast.Absorb
+	sets.midcast['Absorb-VIT'] = sets.midcast.Absorb
+	sets.midcast['Absorb-CHR'] = sets.midcast.Absorb
+	sets.midcast['Absorb-INT'] = sets.midcast.Absorb
+	sets.midcast['Absorb-DEX'] = sets.midcast.Absorb
+	sets.midcast['Absorb-STR'] = sets.midcast.Absorb
+	sets.midcast['Absorb-ACC'] = sets.midcast.Absorb
+	sets.midcast['Absorb-Attri'] = sets.midcast.Absorb
+	sets.midcast['Absorb-TP'] = set_combine(sets.midcast.Absorb, {
+		hands="Heathen's Gauntlets +1"
+	})
+
+
 	sets.midcast.Drain = set_combine(sets.midcast.MagicDark, {
 		waist="Orpheus's Sash",
-		ear1="Hirudinea Earring",
-		ranged="Ullr"
+		ear1="Hirudinea Earring"
 	})
 	
 	sets.midcast['Aspir'] = sets.midcast.Drain
@@ -133,7 +162,7 @@ function get_sets()
 	sets.midcast['Drain II'] = sets.midcast.Drain
 	sets.midcast['Drain III'] = sets.midcast.Drain
 	
-	sets.midcast.Endark = set_combine(sets.midcast.Magic, {
+	sets.midcast.Endark = set_combine(sets.midcast.MagicDark, {
 		ring2="Evanescence Ring"
 	})
 	
@@ -163,7 +192,7 @@ function get_sets()
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+		feet="Nyame Sollerets", --Heathen's Sollerts +3
 		neck="Abyssal Beads +2",
 		waist="Fotia Belt",
 		ring1="Niqmaddu Ring",
@@ -187,23 +216,31 @@ function get_sets()
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
 		ear2="Schere Earring",
-		ammo="Coiste Bodhar"
+		ammo="Coiste Bodhar",
+		waist="Fotia Belt",
+	})
+
+	
+	sets.PWS.Savage = set_combine(sets.PWS, {
+		ring1="Sroda Ring",
+		waist="Sailfi Belt +1"
+	})
+	
+	sets.PWS.SavageCap = set_combine(sets.PWS.Savage, {
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses"
+	})
+	
+	sets.PWS.TorcleaverCap = set_combine(sets.PWS.Savage, {
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		waist="Sailfi Belt +1"
 	})
 	
 	sets.precast['Shockwave'] = set_combine(sets.PWS, {
 		ammo="Perfect Lucky Egg",
 		body="Odyssean Chestplate",
 		waist="Chaac Belt"
-	})
-	
-	sets.precast['Savage Blade'] = set_combine(sets.PWS, {
-		ring1="Sroda Ring",
-		waist="Sailfi Belt +1"
-	})
-	
-	sets.precast['Judgment'] = set_combine(sets.PWS, {
-		ring1="Sroda Ring",
-		waist="Sailfi Belt +1"
 	})
 
 	sets.precast['Resolution'] = sets.PWS.MultiHit
@@ -295,7 +332,21 @@ function precast(spell)
 	if sets.precast[spell.english] then
         equip(sets.precast[spell.english])
 	elseif spell.type == 'WeaponSkill' then
-		equip(sets.PWS)	
+		if spell.name == "Torcleaver" then
+			if ATT_Cap_Flag then
+				equip(sets.PWS.TorcleaverCap)
+			else 
+				equip(sets.PWS)
+			end
+		elseif spell.name == "Savage Blade" or spell.name == "Judgment" or spell.name == "Black Halo" then
+			if ATT_Cap_Flag then
+				equip(sets.PWS.SavageCap)
+			else 
+				equip(sets.PWS.Savage)
+			end
+		else
+			equip(sets.PWS)	
+		end
 	elseif spell.type == "Ninjutsu" or spell.type == "BlackMagic" then
 		equip(sets.precast.FastCast)
 	elseif spell.type == "Trust" then
@@ -384,6 +435,10 @@ function self_command(command)
 		MWS_Index = MWS_Index +1
 		if MWS_Index > #MWS_Set_Names then MWS_Index = 1 end
 		add_to_chat(207,'Magical WS Set Changed to: '..MWS_Set_Names[MWS_Index]..'')
+	elseif command == 'attcap' then
+		add_to_chat(207,'Attack Cap Set: '..tostring(not ATT_Cap_Flag)..'')
+
+		ATT_Cap_Flag = not ATT_Cap_Flag
 	elseif command == 'update' then
 		status_change(player.status)
 		add_to_chat(207,'Update player status...')

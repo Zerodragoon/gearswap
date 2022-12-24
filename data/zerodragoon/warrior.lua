@@ -385,17 +385,7 @@ function precast(spell)
 	elseif spell.type == 'WeaponSkill' then
 		if (spell.name == "Fell Cleave" or spell.name == "Shockwave") and FellCleaveTH_Flag then
             equip(sets.FellCleaveTH)
-		elseif spell.name == "Savage Blade" then
-			if ATT_Cap_Flag then
-				if ATT_Cap_High then
-					equip(sets.PWS.SavageCapHigh)
-				else 
-					equip(sets.PWS.SavageCap)
-				end
-			else 
-				equip(sets.PWS.Savage)
-			end
-		elseif spell.name == "Judgment" then
+		elseif spell.name == "Savage Blade" or spell.name == "Judgment" or spell.name == "Black Halo" then
 			if ATT_Cap_Flag then
 				if ATT_Cap_High then
 					equip(sets.PWS.SavageCapHigh)

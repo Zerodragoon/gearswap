@@ -58,12 +58,11 @@ function get_sets()
 	sets.precast['Thunder Maneuver'] = sets.precast.Maneuver
 	
 	sets.precast.Repair = {
-		--main="Nibiru Sainti",
 		head={ name="Taeon Chapeau", augments={'"Repair" potency +5%','Phalanx +3',}},
 		body={ name="Taeon Tabard", augments={'"Repair" potency +5%','Phalanx +3',}},
 		hands={ name="Taeon Gloves", augments={'"Repair" potency +5%','Phalanx +3',}},
 		legs={ name="Taeon Tights", augments={'"Repair" potency +5%','Phalanx +3',}},
-		feet="Foire Babouches +2",
+		feet="Foire Babouches +3",
 		ear1="Pratik Earring",
 		ear2="Guignol Earring",
 		ring1="Overbearing Ring",
