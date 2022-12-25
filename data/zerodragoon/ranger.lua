@@ -122,7 +122,6 @@ function get_sets()
 	}) --73
 
 	sets.precast['Curing Waltz III'] = {
-		--head="Mummu Bonnet +2",
 		head="Anwig Salade",
 		body="Passion Jacket", --13
 		hands="Slither Gloves +1", --5
@@ -135,7 +134,7 @@ function get_sets()
 		back={ name="Belenus's Cape", augments={'"Waltz" potency +10%',}} --10
 	}
 
-	Weapon_Set_Names = {'Fomalhaut', 'Gastraphetes', 'Annihilator', 'Armageddon', 'FailNot', 'Sparrowhawk', 'Anarchy', 'Sharanga', 'Yoichinoyumi', 'Gandiva'}
+	Weapon_Set_Names = {'Fomalhaut', 'Gastraphetes', 'Annihilator', 'Armageddon', 'FailNot', 'Sparrowhawk', 'Anarchy', 'Sharanga', 'Yoichinoyumi', 'Gandiva', 'Ullr'}
 
 	set.Weapon = {}	
 
@@ -222,6 +221,14 @@ function get_sets()
 	set.Weapon.Gandiva = {
 		set={ 
 			ranged="Gandiva"
+		},
+		ammoType="arrow",
+		preshot="Standard"
+	}
+	
+	set.Weapon.Ullr = {
+		set={ 
+			ranged="Ullr"
 		},
 		ammoType="arrow",
 		preshot="Standard"

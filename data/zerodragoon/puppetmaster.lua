@@ -107,14 +107,14 @@ function get_sets()
 	sets.precast['Tornado Kick']    = set_combine(sets.PWS, {})
 	sets.precast['Spinning Attack'] = set_combine(sets.PWS, {
 		head="Nyame Helm",							
-		--body="Nyame Mail",
+		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		ring1="Regal Ring",
 		ring2="Epaminondas's Ring",
-		back="Sacro Mantle",
-		body="Volte Jupon",
+		--back="Sacro Mantle",
+		--body="Volte Jupon",
 		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
 	})
 
@@ -177,7 +177,7 @@ function get_sets()
 	}
 						
 	--Idle Sets Below
-	Idle_Set_Names = {'Normal', 'NormalMpaca', 'PupTank', 'PupTankBruiser', 'PupDD', 'PupMagic'}
+	Idle_Set_Names = {'Normal', 'NormalMpaca', 'PupTank', 'PupTankBruiser', 'PupDD', 'PupMagic', 'TH'}
 	sets.Idle = {
 		main="Verethragna",
 		head="Malignance Chapeau",							
@@ -212,8 +212,10 @@ function get_sets()
 	sets.Idle.PupDD = set_combine(sets.Idle, sets.PupDD)
 	
 	sets.Idle.PupMagic = set_combine(sets.Idle, sets.PupMagic)
+	
+	sets.Idle.TH = set_combine(sets.Idle, {})
 
-	Melee_Set_Names = {'MasterDT', 'MasterMelee', 'PupTank', 'PupTankBruiser', 'PupDD', 'PupMagic'}
+	Melee_Set_Names = {'MasterDT', 'MasterMelee', 'PupTank', 'PupTankBruiser', 'PupDD', 'PupMagic', 'TH'}
 
 	sets.Melee = {  
 		main="Verethragna",
@@ -249,6 +251,11 @@ function get_sets()
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
 		feet="Malignance Boots",
+	})
+	
+	sets.Melee.TH = set_combine(sets.Melee, {
+		body="Volte Jupon",
+		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
 	})
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')

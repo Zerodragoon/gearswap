@@ -222,6 +222,12 @@ function get_sets()
 	sets.precast['Cataclysm'] = sets.MWS
 	sets.precast['Aeolian Edge'] = sets.MWS
 	
+	sets.PWS.UpheavalCap = set_combine(sets.PWS, {
+		body="Sakpata's Breastplate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses"
+	})
+	
 	sets.PWS.Savage = set_combine(sets.PWS, {
 		ring1="Sroda Ring"
 	})
@@ -385,6 +391,12 @@ function precast(spell)
 	elseif spell.type == 'WeaponSkill' then
 		if (spell.name == "Fell Cleave" or spell.name == "Shockwave") and FellCleaveTH_Flag then
             equip(sets.FellCleaveTH)
+		elseif spell.name == "Upheaval" then
+			if ATT_Cap_Flag then
+				equip(sets.PWS.UpheavalCap)
+			else 
+				equip(sets.PWS)
+			end
 		elseif spell.name == "Savage Blade" or spell.name == "Judgment" or spell.name == "Black Halo" then
 			if ATT_Cap_Flag then
 				if ATT_Cap_High then
