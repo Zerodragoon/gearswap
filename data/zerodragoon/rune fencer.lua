@@ -327,6 +327,11 @@ function get_sets()
 end
 
 function precast(spell)	
+	if spell.english == 'Valiance' and buffactive.Vallation then
+		cast_delay(0.2)
+		send_command('cancel Vallation')  
+	end
+
 	if sets.precast[spell.english] then
         equip(sets.precast[spell.english])
 		

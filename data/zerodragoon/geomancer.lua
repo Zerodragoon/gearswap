@@ -121,7 +121,7 @@ function get_sets()
 	}
 	
 	sets.precast['Bolster'] = {
-		feet="Bagua Tunic +3"
+		body="Bagua Tunic +3"
 	}
 	
 	--Midcast Sets

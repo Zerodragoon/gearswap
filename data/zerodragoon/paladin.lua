@@ -264,6 +264,22 @@ function get_sets()
 		right_ring="Epaminondas's Ring",
 		back={ name="Rudianos's Mantle", augments={'"Weapon Skill Damage "+10'}}
 	}
+	
+	sets.WSMagic = {
+		ammo="Aurgelmir Orb +1",
+		head="Nyame Helm",								
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Republican Platinum Medal",
+		waist="Windbuffet Belt +1",
+		left_ear="Thrud Earring",
+		right_ear="Ishvara Earring",
+		left_ring="Beithir Ring",
+		right_ring="Epaminondas's Ring",
+		back={ name="Rudianos's Mantle", augments={'"Weapon Skill Damage "+10'}}
+	}
 
 	--Idle Sets Below
 	Idle_Set_Names = {'StandardMove', 'Standard', 'Sakpata'}
@@ -294,9 +310,9 @@ end
 
 function precast(spell)	
 	if sets.precast[spell.english] then
-                equip(sets.precast[spell.english])
+         equip(sets.precast[spell.english])
 	elseif spell.type == 'WeaponSkill' then
-                equip(sets.WS)
+        equip(sets.WS)
 	elseif spell.english == 'Spectral Jig' and buffactive.Sneak then
 		cast_delay(0.2)
 		send_command('cancel Sneak')        

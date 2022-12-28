@@ -335,7 +335,7 @@ function get_sets()
 	
 	sets.Melee.Boii = set_combine(sets.Melee.Sakpata, { --33
 		head="Boii Mask +2", --6
-   		body="Boii Lorica +2", 
+   		body="Boii Lorica +3", 
 		hands="Sakpata's Gauntlets", --6
 		legs="Sakpata's Cuisses", --7
 		feet="Flamma Gambieras +2", --6

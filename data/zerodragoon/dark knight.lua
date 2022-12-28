@@ -48,7 +48,7 @@ function get_sets()
 	} 
 	
 	sets.precast['Nether Void'] = {
-		legs="Heathen's Flanchard +1"
+		legs="Heathen's Flanchard +2"
 	}
 
 	sets.precast['Dark Seal'] = {
@@ -126,7 +126,7 @@ function get_sets()
 		head="Ignominy Burgeonet +3",
 		body="Carmine Scale Mail +1",
 		hands="Fallen's Finger Gauntlets +3",
-		legs="Heathen's Flanchard +1",
+		legs="Heathen's Flanchard +2",
 		feet="Ratri Sollerets +1",
 		neck="Erra Pendant",
 		ear2="Enchanter's Earring +1",
@@ -170,7 +170,7 @@ function get_sets()
 
 	sets.midcast['Dread Spikes'] = set_combine(sets.midcast.MagicDark, {
 		head="Nyame Helm",	
-		body="Heathen's Cuirass +1",
+		body="Heathen's Cuirass +2",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		neck="Unmoving Collar +1",

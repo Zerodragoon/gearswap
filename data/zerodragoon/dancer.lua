@@ -7,7 +7,8 @@ function get_sets()
 	Hands_Index = 1
 	PWS_Index = 1
 	MWS_Index = 1
-	
+	ATT_Cap_Flag = false
+
 	--Default Macro Set for RNG
 	send_command('input /macro book 3;wait .1;input /macro set 1;wait 0.5;input //gs org')
 	
@@ -37,18 +38,18 @@ function get_sets()
 	})
 
 	sets.precast.Waltz = {
-		--head="Mummu Bonnet +2",
 		head="Anwig Salade",
 		body="Maxixi Casaque +3", --17
-		hands="Slither Gloves +1", --5
+		hands="Nyame Gauntlets",
 		legs="Dashing Subligar", --10
 		feet="Maxixi Toe Shoes +3", --14
-		ring1="Asklepian Ring",
-		ring2="Valseur's Ring", --3
+		ring1="Moonlight Ring",
+		ring2="Defending Ring",
 		ear1="Sjofn Earring", --10
 		ear2="Handler's Earring +1",
-		waist="Gishdubar Sash",
-		ammo="Yamarang" --5
+		back="Moonlight Cape",
+		waist="Flume Belt +1",
+		ammo="Staunch Tathlum +1"
 	} --67
 		
 	sets.precast.Jig = {
@@ -170,10 +171,37 @@ function get_sets()
 		ring2="Epaminondas's Ring",
 		ammo="Aurgelmir Orb +1",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
-		ear1="Ishvara Earring",
-		ear2="Moonshade Earring"}
+		ear1="Moonshade Earring",
+		ear2="Ishvara Earring"}
 
 	sets.PWS.Normal = set_combine(sets.PWS, {})
+	
+	sets.Rudras = set_combine(sets.PWS, {
+		waist="Kentarch Belt +1"
+	})
+	
+	sets.RudrasCap = set_combine(sets.Rudras, {
+		body="Gleti's Cuirass",
+		ear2="Maculele Earring",
+		ammo="Crepuscular Pebble"
+	})
+	
+	sets.Pyrrhic = set_combine(sets.PWS, {
+		body="Gleti's Cuirass",
+		hands="Gleti's Gauntlets",
+		legs="Gleti's Breeches",
+		feet="Gleti's Boots",
+		ammo="Coiste Bodhar",
+		ring2="Gere Ring",
+		ear1="Sherida Earring",
+		ear2="Mache Earring +1"
+	})
+	
+	sets.PyrrhicCap = set_combine(sets.Rudras, {
+		head="Gleti's Mask",
+		ear2="Maculele Earring",
+		ammo="Crepuscular Pebble"
+	})
 
 	-- Magical WS Sets Below
 	MWS_Set_Names = {'Normal'}
@@ -294,18 +322,30 @@ function precast(spell)
 	elseif spell.type == 'WeaponSkill' then
 		if spell.name == "Aeolian Edge" then
             equip(sets.MWS[MWS_Set_Names[MWS_Index]])
-		elseif spell.name == "Evisceration" then
+		elseif spell.name == "Rudra's Storm" then
+			if ATT_Cap_Flag then
+				equip(sets.RudrasCap)
+			else 
+				equip(sets.Rudras)
+			end
+			
+			if buffactive['Climactic Flourish'] then
+				equip(sets.precast['Climactic Flourish'])
+			end
+		elseif spell.name == "Pyrrhic Kleos" then
+			if ATT_Cap_Flag then
+				equip(sets.PyrrhicCap)
+			else 
+				equip(sets.Pyrrhic)
+			end
+
+			if buffactive['Striking Flourish'] then
+				equip(sets.precast['Striking Flourish'])
+			end
+		elseif spell.name == "Evisceration" or spell.name == 'Dancing Edge' then
             equip(sets.Evis)
 		else
 			equip(sets.PWS[PWS_Set_Names[PWS_Index]])
-		end
-		
-		if buffactive['Striking Flourish'] then
-			equip(sets.precast['Striking Flourish'])
-		end
-		
-		if buffactive['Climactic Flourish'] then
-			equip(sets.precast['Climactic Flourish'])
 		end
 	elseif spell.type == "Ninjutsu" then
 		if string.find(spell.english,'Utsusemi') then
@@ -350,8 +390,15 @@ function self_command(command)
 		if Idle_Index > #Idle_Set_Names then Idle_Index = 1 end
 		add_to_chat(207,'Idle Set Changed to: '..Idle_Set_Names[Idle_Index]..'')
 		equip(sets.Idle[Idle_Set_Names[Idle_Index]])
-	elseif command == 'melee' then
-		Melee_Index = Melee_Index +1
+	elseif command:sub(1, 5) == 'melee' then
+		Temp_Melee_Index = command:sub(6,8)
+
+		if Temp_Melee_Index == '' then
+			Melee_Index = Melee_Index +1
+		else 
+			Melee_Index = tonumber(Temp_Melee_Index)
+		end
+	
 		if Melee_Index > #Melee_Set_Names then Melee_Index = 1 end
 		add_to_chat(207,'Melee Set Changed to: '..Melee_Set_Names[Melee_Index]..'')
 		equip(sets.Melee[Melee_Set_Names[Melee_Index]])
@@ -385,6 +432,10 @@ function self_command(command)
 		PWS_Index = PWS_Index +1
 		if PWS_Index > #PWS_Set_Names then PWS_Index = 1 end
 		add_to_chat(207,'Physical WS Set Changed to: '..PWS_Set_Names[PWS_Index]..'')
+	elseif command == 'attcap' then
+		add_to_chat(207,'Attack Cap Set: '..tostring(not ATT_Cap_Flag)..'')
+
+		ATT_Cap_Flag = not ATT_Cap_Flag
 	elseif command == 'mws' then
 		MWS_Index = MWS_Index +1
 		if MWS_Index > #MWS_Set_Names then MWS_Index = 1 end
