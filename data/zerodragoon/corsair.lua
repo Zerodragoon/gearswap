@@ -397,7 +397,7 @@ function get_sets()
 	})
 	
 	sets.QuickDraw = set_combine(sets.LeadenSalute, {
-		head="Nyame Helm",
+		head="Ikenga's Hat",
 		body="Lanun Frac +3",
 		hands="Carmine Finger Gauntlets +1",
 		feet="Chasseur's Bottes +2",

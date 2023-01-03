@@ -92,7 +92,7 @@ function get_sets()
 	sets.precast['Box Step'] = sets.precast.Step
 	sets.precast['Stutter Step'] = sets.precast.Step
 	sets.precast['Feather Step'] = set_combine(sets.precast.Step, {
-		feet="Maculele Toe Shoes +1"
+		feet="Maculele Toe Shoes +2"
 	})
 	sets.precast['Haste Samba'] = sets.precast.Samba
 	sets.precast['Drain Samba'] = sets.precast.Samba
@@ -102,9 +102,9 @@ function get_sets()
 	sets.precast['Aspir Samba II'] = sets.precast.Samba
 	sets.precast['No Foot Rise'] = {body="Horos Casaque +3"}
 	sets.precast['Climactic Flourish'] = {head = "Maculele Tiara +2"}
-	sets.precast['Striking Flourish'] = {body = "Maculele Casaque +1"}
+	sets.precast['Striking Flourish'] = {body = "Maculele Casaque +2"}
 	sets.precast['Reverse Flourish'] = {
-		hands = "Maculele Bangles +1",
+		hands = "Maculele Bangles +2",
 		back="Toetapper Mantle"
 	}
 	sets.precast['Violent Flourish'] = {
@@ -121,6 +121,13 @@ function get_sets()
 		back="Sacro Mantle",
 		ear1="Dignitary's Earring",
 		ear2="Crepuscular Earring"}
+		
+	sets.precast.ranged = {
+		head={ name="Taeon Chapeau", augments={'"Snapshot"+5','"Snapshot"+5',}}, --10		
+		feet="Meghanada Jambeaux +2",--10		
+		ring1="Crepuscular Ring", --3
+		waist="Yemaya Belt"
+	}
 
 	Hands_Set_Names = {'Twashtar', 'TwashtarTP', 'Tauret', 'Aeneas', 'AeneasTP', 'TwashtarFencer'}
 
@@ -153,7 +160,8 @@ function get_sets()
 	
 	sets.Hands.Tauret = { 
 		main="Tauret",
-		sub="Gleti's Knife",
+		sub="Fusetto +2"
+	--	sub="Gleti's Knife",
 	}
 						
 	-- Physical WS Sets Below
@@ -165,7 +173,7 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
-		neck="Anu Torque",
+		neck="Etoile Gorget +2",
 		waist="Fotia Belt",
 		ring1="Regal Ring",
 		ring2="Epaminondas's Ring",
@@ -222,7 +230,11 @@ function get_sets()
 						
 	sets.MWS.Normal = set_combine(sets.MWS, {})
 	
-	sets.precast['Aeolian Edge'] = set_combine(sets.MWS, {body="Volte Jupon", ammo="Perfect Lucky Egg", waist="Chaac Belt"})
+	sets.precast['Aeolian Edge'] = set_combine(sets.MWS, {
+	--	body="Volte Jupon", 
+	--	ammo="Perfect Lucky Egg", 
+	--	waist="Chaac Belt"
+	})
 
 	sets.Evis = {
 		head="Adhemar Bonnet +1",
@@ -270,7 +282,7 @@ function get_sets()
 		hands="Adhemar Wristbands +1",
 		legs="Samnuha Tights",
 		feet="Horos Toe Shoes +3",
-		neck="Anu Torque",
+		neck="Etoile Gorget +2",
 		waist="Sailfi Belt +1",
 		ring1="Gere Ring",
 		ring2="Epona's Ring",
@@ -285,17 +297,11 @@ function get_sets()
 		body="Malignance Tabard",	
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
-		feet="Malignance Boots"}) --Maculele Toe Shoes +3
+		feet="Maculele Toe Shoes +2"})
 		
-	sets.Melee.DTFull = set_combine(sets.Melee, {
-		head="Malignance Chapeau",
-		body="Malignance Tabard",	
-		hands="Malignance Gloves",
-		legs="Malignance Tights",
-		feet="Malignance Boots",
+	sets.Melee.DTFull = set_combine(sets.Melee.DT, {
 		ring1="Moonlight Ring",
-		ring2="Moonlight Ring",
-		neck="Loricate Torque +1"}) --Maculele Toe Shoes +3
+		ring2="Moonlight Ring"})
 
 	sets.Melee.Crit = set_combine(sets.Melee, {
 		head="Mummu Bonnet +2",
@@ -353,6 +359,8 @@ function precast(spell)
 		else
 			equip(sets.precast.FastCast)
 		end
+	elseif spell.name == "Ranged" then
+		equip(sets.precast.ranged)
 	elseif spell.type == "Trust" then
 		equip(sets.precast.FastCast)		
 	elseif spell.english == 'Spectral Jig' and buffactive.Sneak then

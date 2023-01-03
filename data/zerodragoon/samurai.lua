@@ -178,7 +178,7 @@ function get_sets()
 	sets.Idle.Normal = set_combine(sets.Idle, {})
 
 
-	Melee_Set_Names = {'DblAtt', 'DT', 'AccMax', 'Tate', 'Zanshin'}
+	Melee_Set_Names = {'DblAtt', 'DT', 'AccMax', 'Tate', 'Zanshin', 'SB'}
 
 	sets.Melee = {  
 		head="Flamma Zucchetto +2",							
@@ -228,6 +228,11 @@ function get_sets()
 		body="Volte Jupon",
 		ammo="Perfect Lucky Egg",
 		waist="Chaac Belt"})
+		
+	sets.Melee.SB = set_combine(sets.Melee.DT, {
+		body="Dagon Breastplate",
+		legs="Mpaca's Leg"
+	})
 
 	sets.precast.Ranged = {
 		head="Sakonji Kabuto +3",

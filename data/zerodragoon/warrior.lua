@@ -72,7 +72,7 @@ function get_sets()
 	}
 	
 	sets.precast['Blood Rage'] = {
-		body="Boii Lorica +2"
+		body="Boii Lorica +3"
 	}
 	
 	sets.precast['Mighty Strikes'] = {

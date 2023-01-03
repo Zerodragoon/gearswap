@@ -46,6 +46,12 @@ function buff_change(name,gain,buff_details)
 			windower.send_command('gs c startup')
         end
     end
+	
+	if name == "scherzo" or name == "Scherzo" then
+		if not gain then
+			windower.send_command("input /p Scherzo Lost <call15>")
+		end
+	end
 end
 
 function use_holywater()

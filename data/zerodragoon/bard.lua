@@ -241,22 +241,26 @@ function get_sets()
 		head="Mousai Turban +1"
 	})
 	
-	sets.midcast.Lullaby = set_combine(sets.midcast.Song, {
-		head="Bihu Roundlet +3",
-		hands="Brioso Cuffs +3"
-	})
-	
 	sets.midcast.SongEnfeeb = set_combine(sets.midcast.Song, {
 		head="Brioso Roundlet +3",
 		body="Brioso Justaucorps +3",
 		hands="Brioso Cuffs +3",
 		legs="Brioso Cannions +3",
-		waist="Luminary Sash",
+		waist="Acuity Belt +1"
+	})
+	
+	sets.midcast.Lullaby = set_combine(sets.midcast.SongEnfeeb, {
+		legs="Inyanga Shalwar +2",
+		hands="Brioso Cuffs +3",
+		feet="Bihu Slippers +3",
+		waist="Acuity Belt +1"
 	})
 	
 	sets.midcast['Foe Requiem VII'] = sets.midcast.SongEnfeeb
 	sets.midcast['Pining Nocturne'] = sets.midcast.SongEnfeeb
 	sets.midcast['Carnage Elegy'] = sets.midcast.SongEnfeeb
+	sets.midcast['Battlefield Elegy'] = sets.midcast.SongEnfeeb
+	sets.midcast['Magic Finale'] = sets.midcast.SongEnfeeb
 	sets.midcast['Light Threnody II'] = sets.midcast.SongEnfeeb
 	sets.midcast['Dark Threnody II'] = sets.midcast.SongEnfeeb
 	sets.midcast['Earth Threnody II'] = sets.midcast.SongEnfeeb

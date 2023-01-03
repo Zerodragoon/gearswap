@@ -148,7 +148,7 @@ function get_sets()
 	sets.midcast['Absorb-ACC'] = sets.midcast.Absorb
 	sets.midcast['Absorb-Attri'] = sets.midcast.Absorb
 	sets.midcast['Absorb-TP'] = set_combine(sets.midcast.Absorb, {
-		hands="Heathen's Gauntlets +1"
+		hands="Heathen's Gauntlets +2"
 	})
 
 
@@ -215,7 +215,8 @@ function get_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		ear2="Schere Earring",
+		--ear2="Schere Earring",
+		ear2="Brutal Earring",
 		ammo="Coiste Bodhar",
 		waist="Fotia Belt",
 	})
