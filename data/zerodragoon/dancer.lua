@@ -101,7 +101,7 @@ function get_sets()
 	sets.precast['Aspir Samba'] = sets.precast.Samba
 	sets.precast['Aspir Samba II'] = sets.precast.Samba
 	sets.precast['No Foot Rise'] = {body="Horos Casaque +3"}
-	sets.precast['Climactic Flourish'] = {head = "Maculele Tiara +2"}
+	sets.precast['Climactic Flourish'] = {head = "Maculele Tiara +3"}
 	sets.precast['Striking Flourish'] = {body = "Maculele Casaque +2"}
 	sets.precast['Reverse Flourish'] = {
 		hands = "Maculele Bangles +2",
@@ -168,7 +168,7 @@ function get_sets()
 
 	PWS_Set_Names = {'Normal'}
 	sets.PWS = {
-		head="Nyame Helm", --Maculele Tiara +3				 			
+		head="Maculele Tiara +3",		 			
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",

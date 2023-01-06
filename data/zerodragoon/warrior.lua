@@ -68,7 +68,7 @@ function get_sets()
 	}
 	
 	sets.precast['Restraint'] = {
-		hands="Boii Mufflers +2"
+		hands="Boii Mufflers +3"
 	}
 	
 	sets.precast['Blood Rage'] = {
@@ -189,7 +189,7 @@ function get_sets()
 	sets.PWS = {
 		head="Agoge Mask +3",							
 		body="Nyame Mail",
-		hands="Nyame Gauntlets", --Boii Mufflers +3
+		hands="Boii Mufflers +3",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck="Warrior's Bead Necklace +2",
@@ -491,20 +491,6 @@ function self_command(command)
 		if Hands_Index > #Hands_Set_Names then Hands_Index = 1 end
 		add_to_chat(207,'Hands Set Changed to: '..Hands_Set_Names[Hands_Index]..'')
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-	elseif command == 'pdt' then
-		if sets.pdt == pdt.on then
-			equip(pdt.off)
-			equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-			sets.pdt = pdt.off
-			enable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
-			status_change(player.status)
-			add_to_chat(207,'>>>>> PDT Set Unlocked! <<<<<')
-		else				
-			equip(pdt.on)
-			sets.pdt = pdt.on
-			disable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
-			add_to_chat(66,'>>>>> PDT Set Locked! <<<<<')
-		end
 	elseif command == 'pws' then
 		PWS_Index = PWS_Index +1
 		if PWS_Index > #PWS_Set_Names then PWS_Index = 1 end

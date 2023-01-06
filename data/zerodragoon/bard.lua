@@ -200,7 +200,7 @@ function get_sets()
 		main="Carnwenhan",
 		sub="Kali",
 		head="Fili Calot +1",
-		body="Fili Hongreline +1",
+		body="Fili Hongreline +2",
 		hands="Fili Manchettes +1",
 		legs="Inyanga Shalwar +2",
 		feet="Brioso Slippers +3",
@@ -242,6 +242,7 @@ function get_sets()
 	})
 	
 	sets.midcast.SongEnfeeb = set_combine(sets.midcast.Song, {
+		sub="Ammurapi Shield",
 		head="Brioso Roundlet +3",
 		body="Brioso Justaucorps +3",
 		hands="Brioso Cuffs +3",

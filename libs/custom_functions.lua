@@ -48,7 +48,7 @@ function buff_change(name,gain,buff_details)
     end
 	
 	if name == "scherzo" or name == "Scherzo" then
-		if not gain then
+		if not gain and player.status == 'Engaged' then
 			windower.send_command("input /p Scherzo Lost <call15>")
 		end
 	end
@@ -233,5 +233,9 @@ function parent_self_command(command)
 		add_to_chat(207,'Attack Cap Set: '..tostring(not ATT_Cap_Flag)..'')
 
 		ATT_Cap_Flag = not ATT_Cap_Flag
+	elseif command == 'attcaphigh' then
+		add_to_chat(207,'Attack Cap High Set: '..tostring(not ATT_Cap_High)..'')
+
+		ATT_Cap_High = not ATT_Cap_High
 	end
 end

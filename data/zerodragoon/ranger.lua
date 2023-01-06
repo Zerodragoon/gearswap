@@ -13,6 +13,7 @@ function get_sets()
 	LS_Index = 1
 	TrueFlight_Index = 1
 	Ammo_Index = 1
+	ATT_Cap_High = false
 	ATT_Cap_Flag = false
 	Style_Lock_Id = 3
 
@@ -603,6 +604,11 @@ function get_sets()
 		ear2="Amini Earring", --Amini Earring +2
 	})
 	
+	sets.SavageCapHigh = set_combine(sets.SavageCap, {	
+		body="Ikenga's Vest",
+		hands="Ikenga's Gloves"
+	})
+	
 	--Idle Sets Below
 	Idle_Set_Names = {'DT', 'Normal'}
 	sets.Idle = {
@@ -808,7 +814,11 @@ function precast(spell)
             equip(sets.Evis)
 		elseif spell.name == "Savage Blade" then
 			if ATT_Cap_Flag then
-				equip(sets.SavageCap)
+				if ATT_Cap_High then
+					equip(sets.SavageCapHigh)
+				else 
+					equip(sets.SavageCap)
+				end
 			else 
 				equip(sets.Savage)
 			end

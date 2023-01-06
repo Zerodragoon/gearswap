@@ -213,7 +213,8 @@ function get_sets()
 	
 	sets.midcast.Aspir = set_combine(sets.midcast.enfeeb, {
 		head="Bagua Galero +3",
-		body="Amalric Doublet +1",
+		body="Geomancy Tunic +2",
+		legs="Azimuth Tights +2",
 		feet="Agwu's Pigaches",
 		left_ear="Hirudinea Earring",
         right_ring="Evanescence Ring",
@@ -223,6 +224,18 @@ function get_sets()
 
 	sets.midcast['Aspir II'] = sets.midcast.Aspir
 	sets.midcast['Aspir III'] = sets.midcast.Aspir
+	
+	sets.midcast['Absorb-TP'] = set_combine(set_combine(sets.midcast.enfeeb, {
+		head="Azimuth Hood +2",
+		body="Geomancy Tunic +2",
+		hands="Geomancy Mitaines +3",
+		legs="Azimuth Tights +2",
+		feet="Geomancy Sandals +3",
+		left_ring="Stikini Ring +1",
+        right_ring="Evanescence Ring",
+		neck="Erra Pendant",
+        waist="Acuity Belt +1",
+	}), sets.Hands.Bunzi)
 
 	--Cure Sets
 	sets.midcast.cure = set_combine(sets.Hands.Daybreak, {
