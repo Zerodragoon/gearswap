@@ -178,7 +178,7 @@ function get_sets()
 	sets.Idle.Normal = set_combine(sets.Idle, {})
 
 
-	Melee_Set_Names = {'DblAtt', 'DT', 'AccMax', 'Tate', 'Zanshin', 'SB'}
+	Melee_Set_Names = {'DblAtt', 'DT', 'AccMax', 'Tate', 'Zanshin'}
 
 	sets.Melee = {  
 		head="Flamma Zucchetto +2",							
@@ -231,7 +231,7 @@ function get_sets()
 		
 	sets.Melee.SB = set_combine(sets.Melee.DT, {
 		body="Dagon Breastplate",
-		legs="Mpaca's Leg"
+		legs="Mpaca's Hose"
 	})
 
 	sets.precast.Ranged = {

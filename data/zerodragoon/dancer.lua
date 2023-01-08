@@ -190,7 +190,7 @@ function get_sets()
 	
 	sets.RudrasCap = set_combine(sets.Rudras, {
 		body="Gleti's Cuirass",
-		ear2="Maculele Earring",
+		ear2="Maculele Earring +1",
 		ammo="Crepuscular Pebble"
 	})
 	
@@ -207,7 +207,7 @@ function get_sets()
 	
 	sets.PyrrhicCap = set_combine(sets.Rudras, {
 		head="Gleti's Mask",
-		ear2="Maculele Earring",
+		ear2="Maculele Earring +1",
 		ammo="Crepuscular Pebble"
 	})
 
