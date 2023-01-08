@@ -213,7 +213,7 @@ function get_sets()
 	}
 			
 	--TP Sets Below
-	TP_Set_Names = {'Standard', 'TP', 'Sakpata'}
+	TP_Set_Names = {'Standard', 'TP', 'Sakpata', 'Magic'}
 
 	sets.TP = { 
 		ammo="Staunch Tathlum +1",
@@ -236,6 +236,15 @@ function get_sets()
 	sets.TP.Sakpata = set_combine(sets.TP, {
 		head="Sakpata's Helm",
 		legs="Sakpata's Cuisses",
+	})
+	
+	sets.TP.Magic = set_combine(sets.TP.Sakpata, {
+		neck="Warder's Charm +1",
+		waist="Asklepian Belt",
+		ring1="Shadow Ring",
+		ring2="Apeile Ring +1",
+		ear1="Sanare Earring",
+		ear2="Chevalier's Earring +1"
 	})
 	
 	sets.TP.TP = set_combine(sets.TP.Sakpata, {

@@ -605,8 +605,7 @@ function get_sets()
 	})
 	
 	sets.SavageCapHigh = set_combine(sets.SavageCap, {	
-		body="Ikenga's Vest",
-		hands="Ikenga's Gloves"
+		body="Ikenga's Vest"
 	})
 	
 	--Idle Sets Below

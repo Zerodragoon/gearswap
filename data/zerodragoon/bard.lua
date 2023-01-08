@@ -199,7 +199,7 @@ function get_sets()
 	sets.midcast.Song = {
 		main="Carnwenhan",
 		sub="Kali",
-		head="Fili Calot +1",
+		head="Fili Calot +2",
 		body="Fili Hongreline +2",
 		hands="Fili Manchettes +1",
 		legs="Inyanga Shalwar +2",
