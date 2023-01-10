@@ -80,7 +80,7 @@ function get_sets()
 		hands="Gleti's Gauntlets",
 		legs="Gleti's Breeches",
 		feet="Gleti's Boots",
-		ear2="Peltast's Earring"
+		ear2="Peltast's Earring +1"
 	})
 	
 	sets.PWS.Savage = set_combine(sets.PWS, {
@@ -91,7 +91,7 @@ function get_sets()
 	})
 	
 	sets.PWS.SavageCap = set_combine(sets.PWS.Savage, {
-		ear2="Peltast's Earring"
+		ear2="Peltast's Earring +1"
 	})
 	
 	sets.PWS.SavageCapHigh = set_combine(sets.PWS.SavageCap, {

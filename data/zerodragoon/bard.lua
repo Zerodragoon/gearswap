@@ -222,7 +222,7 @@ function get_sets()
 	})
 	
 	sets.midcast.Scherzo = set_combine(sets.midcast.Song, {
-		feet="Fili Cothurnes +1"
+		feet="Fili Cothurnes +2"
 	})
 	
 	sets.midcast.Carol = set_combine(sets.midcast.Song, {
@@ -354,7 +354,7 @@ function get_sets()
 	sets.Idle.Normal = set_combine(sets.Idle, {})
 	
 	sets.Idle.Move = set_combine(sets.Idle, {
-		feet="Fili Cothurnes +1"
+		feet="Fili Cothurnes +2"
 	})
 
 	sets.Idle.DT = set_combine(sets.Idle, {
@@ -371,7 +371,7 @@ function get_sets()
 	})
 	
 	sets.Idle.DTMove = set_combine(sets.Idle.DT, {
-		feet="Fili Cothurnes +1"
+		feet="Fili Cothurnes +2"
 	})
 
 	--Melee Sets
