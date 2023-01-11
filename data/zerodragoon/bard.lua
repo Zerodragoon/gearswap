@@ -201,7 +201,7 @@ function get_sets()
 		sub="Kali",
 		head="Fili Calot +2",
 		body="Fili Hongreline +2",
-		hands="Fili Manchettes +1",
+		hands="Fili Manchettes +2",
 		legs="Inyanga Shalwar +2",
 		feet="Brioso Slippers +3",
 		neck="Moonbow Whistle +1",
@@ -214,7 +214,7 @@ function get_sets()
 	}
 	
 	sets.midcast.Ballad = set_combine(sets.midcast.Song, {
-		legs="Fili Rhingrave +1"
+		legs="Fili Rhingrave +2"
 	})
 	
 	sets.midcast.Minne = set_combine(sets.midcast.Song, {
