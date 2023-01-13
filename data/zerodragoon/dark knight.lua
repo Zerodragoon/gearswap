@@ -305,7 +305,7 @@ function get_sets()
 		feet="Flamma Gambieras +2"
 	})
 	
-	sets.Melee.SB = set_combine(sets.Melee, { --33
+	sets.Melee.SB = set_combine(sets.Melee, { --Assumes Auspice ~25-29 SB
 		head="Sakpata's Helm",
    		body="Dagon Breastplate", --SB II 10
 		hands="Sakpata's Gauntlets", --SB 8
@@ -318,7 +318,7 @@ function get_sets()
 		ammo="Coiste Bodhar"
 	})
 	
-	sets.Melee.FullSB = set_combine(sets.Melee, { --33
+	sets.Melee.FullSB = set_combine(sets.Melee, {
 		head="Sakpata's Helm",
    		body="Dagon Breastplate", --SB II 10
 		hands="Sakpata's Gauntlets", --SB 8

@@ -437,8 +437,7 @@ function get_sets()
 	sets.Midshot.CritTrue =  set_combine(sets.Midshot.CritPDL, {
 		body="Nisroch Jerkin",
 		legs="Amini Bragues +3",
-		feet="Ikenga's Clogs",
-		--waist="Tellen Belt"
+		feet="Ikenga's Clogs"
 	})
 
 	sets.Midshot.double = {
@@ -454,8 +453,8 @@ function get_sets()
 	Barrage_Set_Names = {'BarrageAcc', 'BarrageSTP'}
 	sets.Barrage = set_combine(sets.Midshot.Acc, {
 			hands="Orion Bracers +3",
-			legs="Ikenga's Trousers" --Amini Bragues +3
-			--Tellen Belt
+			legs="Amini Bragues +3",
+			waist="Tellen Belt"
 			})
 
 	sets.Barrage.BarrageSTP = set_combine(sets.Barrage, sets.Midshot.Standard)
@@ -564,7 +563,7 @@ function get_sets()
 		waist="Fotia Belt",
 		neck="Fotia Gorget",
 		ring1="Regal Ring",
-		ring2="Mummu Ring",
+		ring2="Begrudging Ring",
 		ear1="Odr Earring",
 		ear2="Sherida Earring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}}
