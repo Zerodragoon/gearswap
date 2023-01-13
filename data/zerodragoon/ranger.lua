@@ -556,7 +556,7 @@ function get_sets()
 
 	sets.Jishnu =  {
 		head="Adhemar Bonnet +1",
-		body="Abnoba Kaftan",
+		body="Meghanada Cuirie +2",
 		hands="Mummu Wrists +2",
 		legs="Mummu Kecks +2",
 		feet="Thereoid Greaves",
