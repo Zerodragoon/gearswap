@@ -20,7 +20,7 @@ function get_sets()
 	--Precast
 	sets.precast = {}
 	
-	sets.precast['Futae'] = {hands="Hattori Tekko +1"}
+	sets.precast['Futae'] = {hands="Hattori Tekko +2"}
 	sets.precast['Mijin Gakure'] = {legs="Mochizuki Hakama +1"}
 	sets.precast['Sange'] = {body="Mochizuki Chainmail +1"}
 	sets.precast['Innin'] = {head="Mochizuki Hatsuburi +3"}
@@ -342,7 +342,7 @@ function get_sets()
 	
 	sets.midcast.NinjutsuBurst = set_combine(sets.midcast.Ninjutsu, {
 		body="Nyame Mail",
-		hands="Hattori Tekko +1",
+		hands="Hattori Tekko +2",
 		legs="Nyame Flanchard",
 		ring2="Mujin Band"
 	})
@@ -359,7 +359,7 @@ function get_sets()
 	})
 	
 	sets.midcast.NinjutsuFutae = {
-		hands="Hattori Tekko +1",
+		hands="Hattori Tekko +2",
 	}
 	
 	sets.midcast['Tonko: Ichi'] = sets.midcast.NinjutsuBuff

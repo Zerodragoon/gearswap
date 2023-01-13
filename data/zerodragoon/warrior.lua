@@ -353,7 +353,7 @@ function get_sets()
 		head="Sakpata's Helm", --5
    		body="Sakpata's Breastplate", --8
 		hands="Sakpata's Gauntlets", --6
-		legs="Sakpata's Cuisses", --7 --Agoge Cuisses +3 --5
+		legs="Agoge Cuisses +3", --5
 		feet="Boii Calligae +2",
 		neck="Warrior's Bead Necklace +2", --7 
 		waist="Ioskeha Belt +1", --9

@@ -126,7 +126,7 @@ function get_sets()
 	sets.precast['Empyreal Arrow'] = sets.RangedWS
 	sets.precast['Tachi: Ageha'] = {
 		head="Kasuga Kabuto +2",
-		body="Kasuga Domaru +2",
+		body="Kasuga Domaru +3",
 		hands="Kasuga Kote +2",
 		legs="Kasuga Haidate +2",
 		feet="Kasuga Sune-Ate +2",
@@ -162,7 +162,7 @@ function get_sets()
 	Idle_Set_Names = {'Normal'}
 	sets.Idle = {
 		head="Kasuga Kabuto +2",
-		body="Kasuga Domaru +2",
+		body="Kasuga Domaru +3",
 		hands="Sakonji Kote +3",
 		legs="Kasuga Haidate +2",
 		feet="Danzo Sune-ate",
@@ -206,7 +206,7 @@ function get_sets()
 	
 	sets.Melee.DT = set_combine(sets.Melee, {
 		head="Kasuga Kabuto +2",
-		body="Kasuga Domaru +2",
+		body="Kasuga Domaru +3",
 		hands="Mpaca's Gloves",
 		legs="Kasuga Haidate +2"
 	})
@@ -219,7 +219,7 @@ function get_sets()
 	})
 	
 	sets.Melee.Zanshin = set_combine(sets.Melee.Tate, {
-		body="Kasuga Domaru +2",
+		body="Kasuga Domaru +3",
 		neck="Moonlight Nodowa",
 		back="Takaha Mantle"
 	})
@@ -229,10 +229,21 @@ function get_sets()
 		ammo="Perfect Lucky Egg",
 		waist="Chaac Belt"})
 		
-	sets.Melee.SB = set_combine(sets.Melee.DT, {
-		body="Dagon Breastplate",
-		legs="Mpaca's Hose"
-	})
+	--[[sets.Melee.SB = set_combine(sets.Melee.DT, {
+		head="Kendatsuba Jinpachi +1", --SB 8
+		body="Dagon Breastplate", --SB II 10
+		hands="Kendatsuba Tekko +1", --SB 8,
+		legs="Mpaca's Hose", --SB II 5 PDT 9
+		feet="Ken. Sune-Ate +1", --SB 8
+		neck="Defiant Collar", --SB 3
+		waist="Sarissaphori Belt", --SB 5
+		ring1="Chirich Ring +1", --SB 10
+		ring2="Niqmaddu Ring", --SB II 5
+		back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --PDT 10
+		ear1="Digni. Earring", --SB 5
+		ear2="Schere Earring", --SB 3
+		ammo="Aurgelmir Orb +1"
+	})--SB 50 --SB II 20 --PDT 19]]--
 
 	sets.precast.Ranged = {
 		head="Sakonji Kabuto +3",

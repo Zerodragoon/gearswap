@@ -307,16 +307,29 @@ function get_sets()
 	
 	sets.Melee.SB = set_combine(sets.Melee, { --33
 		head="Sakpata's Helm",
-   		body="Dagon Breastplate",
-		hands="Sakpata's Gauntlets",
+   		body="Dagon Breastplate", --SB II 10
+		hands="Sakpata's Gauntlets", --SB 8
 		legs="Sakpata's Cuisses",
-		feet="Sakpata's Leggings",
-		neck="Warrior's Bead Necklace +2",
+		feet="Sakpata's Leggings", --SB 13 R25 15 R30
 		waist="Sailfi Belt +1",
-		ring1="Niqmaddu Ring",
-		ring2="Chirich Ring +1",
+		ring1="Niqmaddu Ring", --SB II 5
+		ring2="Chirich Ring +1", --SB 10
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
-		ear1="Dignitary's Earring",
+		ammo="Coiste Bodhar"
+	})
+	
+	sets.Melee.FullSB = set_combine(sets.Melee, { --33
+		head="Sakpata's Helm",
+   		body="Dagon Breastplate", --SB II 10
+		hands="Sakpata's Gauntlets", --SB 8
+		legs="Volte Tights", --SB 8
+		feet="Sakpata's Leggings", --SB 13 R25 15 R30
+		waist="Sailfi Belt +1",
+		--waist="Sarissaphori Belt", --SB 5
+		ring1="Niqmaddu Ring", --SB II 5
+		ring2="Chirich Ring +1", --SB 10
+		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		ear1="Dignitary's Earring", --SB 5
 		ammo="Coiste Bodhar"
 	})
 	

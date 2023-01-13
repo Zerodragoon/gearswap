@@ -106,9 +106,8 @@ function get_sets()
 	}
 	
 	sets.precast['Life Cycle'] = {
-		body="Geomancy Tunic +2"
+		body="Geomancy Tunic +3"
 	}
-
 
 	sets.precast.Cursna = sets.precast.FastCast
 
@@ -211,9 +210,15 @@ function get_sets()
 		sub="Genmei Shield"
 	})
 	
+	sets.midcast['Dia II'] = set_combine(sets.midcast.enfeeb, {
+		ammo="Perfect Lucky Egg",
+		waist="Chaac Belt",
+		body="Volte Jupon"
+	})
+	
 	sets.midcast.Aspir = set_combine(sets.midcast.enfeeb, {
 		head="Bagua Galero +3",
-		body="Geomancy Tunic +2",
+		body="Geomancy Tunic +3",
 		legs="Azimuth Tights +2",
 		feet="Agwu's Pigaches",
 		left_ear="Hirudinea Earring",
@@ -227,7 +232,7 @@ function get_sets()
 	
 	sets.midcast['Absorb-TP'] = set_combine(set_combine(sets.midcast.enfeeb, {
 		head="Azimuth Hood +2",
-		body="Geomancy Tunic +2",
+		body="Geomancy Tunic +3",
 		hands="Geomancy Mitaines +3",
 		legs="Azimuth Tights +2",
 		feet="Geomancy Sandals +3",

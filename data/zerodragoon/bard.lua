@@ -130,7 +130,7 @@ function get_sets()
 	}
 		
 	sets.precast.SongCast = { --5
-		head="Fili Calot +1", --14
+		head="Fili Calot +2", --14
 		body="Inyanga Jubbah +2", --14
 		hands="Leyline Gloves", --8
 		legs="Ayanmo Cosciales +2", --6
