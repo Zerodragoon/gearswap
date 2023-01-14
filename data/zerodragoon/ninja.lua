@@ -89,12 +89,7 @@ function get_sets()
 		main="Malevolence",
 		sub="Malevolence"
 	}
-	
-	--sets.Hands.Tank = { 
-	--	main="Fudo Masamune",
-	--	sub="Tsuru"
-	--}
-						
+			
 	-- Physical WS Sets Below
 
 	PWS_Set_Names = {'Normal'}
@@ -103,7 +98,7 @@ function get_sets()
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+		feet="Nyame Sollerets", -- Hattori Kyahan +3
 		neck="Ninja Nodowa +2",
 		waist="Fotia Belt",
 		ring1="Regal Ring",
@@ -354,7 +349,7 @@ function get_sets()
 	})
 	
 	sets.midcast.Utsusemi = set_combine(sets.Melee.NinjutsuBuff, {
-		feet="Hattori Kyahan +1",
+		feet="Hattori Kyahan +2",
 		back="Andartia's Mantle"
 	})
 	

@@ -14,7 +14,7 @@ function get_sets()
 	Style_Lock_Id = 20
 
 	--Default Macro Set for RNG
-	send_command('input /macro book 18;wait .1;input /macro set 1;wait .1;input //lua load singer;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 20')
+	send_command('input /macro book 18;wait .1;input /macro set 1;wait .1;wait 0.5;input //gs org;wait 2.0; input /lockstyleset 20')
 	
 	set_style_lock()
 	
@@ -89,8 +89,8 @@ function get_sets()
 	}
 	
 	sets.Hands.Staff = { 
-		main="Xanon",
-		sub="Enki Strap"
+		main="Xoanon",
+		sub="Ultio Grip"
 	}
 
 	sets.Hands.Daybreak = {
@@ -380,7 +380,7 @@ function get_sets()
 	})
 
 	--Melee Sets
-	Melee_Set_Names = {'Standard', 'Single', 'TH', 'Kraken', 'KrakenAcc'}
+	Melee_Set_Names = {'Standard', 'Single', 'TH', 'Kraken', 'KrakenAcc', 'SingleDT'}
 
 	sets.Melee = {
 		head="Ayanmo Zucchetto +2",
@@ -407,6 +407,10 @@ function get_sets()
 	
 	sets.Melee.Single = set_combine(sets.Melee, {  
 		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
+	})
+	
+	sets.Melee.SingleDT = set_combine(sets.Melee.Single, {  
+		legs="Nyame Flanchard"
 	})
 	
 	sets.Melee.Kraken = set_combine(sets.Melee, {  
@@ -440,15 +444,15 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
-		left_ring="Sroda Ring"
+		left_ring="Sroda Ring",
+		back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 	})
 	
 	sets.precast["Rudra's Storm"] = set_combine(sets.WS, {
 		head="Nyame Helm",								
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
-		left_ring="Sroda Ring"
+		feet="Nyame Sollerets"
 	})
 	
 	sets.precast['Aeolian Edge'] = set_combine(sets.WS, {
@@ -462,13 +466,13 @@ function get_sets()
 		right_ear="Friomisi Earring"
 	})
 
-
 	sets.precast['Retribution'] = set_combine(sets.WS, {
 		head="Nyame Helm",								
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
+		back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 	})
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')
@@ -670,7 +674,7 @@ function self_command(command)
 end
 
 function file_unload()
-	send_command('lua u singer')
+	
 end
 
 include('organizer-lib')
