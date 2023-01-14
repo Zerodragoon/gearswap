@@ -468,10 +468,10 @@ function get_sets()
 	sets.Barrage.BarrageAcc = sets.Barrage
 						
 	-- Last Stand Sets Below
-	LS_Set_Names = {'Normal', 'Ikenga', 'Acc'}
+	LS_Set_Names = {'Normal', 'Ikenga', 'Nyame', 'Acc'}
 	sets.LS = {
-		head="Orion Beret +3",							
-		body="Nyame Mail",
+		head="Orion Beret +3",	
+		body="Amini Caban +3",		
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Amini Bottillons +3",
@@ -483,12 +483,28 @@ function get_sets()
 		ear1="Moonshade Earring",
 		ear2="Ishvara Earring"}
 
-	sets.LS.Normal = set_combine(sets.LS, {})
+	sets.LS.Normal = sets.LS
+	
+	sets.LS.Cap = {
+		body="Ikenga's Vest",
+		hands="Ikenga's Gloves",
+		ring1="Sroda Ring",
+		ear2="Amini Earring"
+	}
+	
+	sets.LS.Normal.Cap = set_combine(sets.LS, sets.LS.Cap)
+	
+	sets.LS.Nyame =  set_combine(sets.LS, {
+		body="Nyame Mail"
+	})
+	
+	sets.LS.Nyame.Cap = set_combine(sets.LS.Nyame, sets.LS.Cap)
 	
 	sets.LS.Ikenga = set_combine(sets.LS, {
-		body="Ikenga's Vest",
-		ear2="Amini Earring"
+		body="Ikenga's Vest"
 	})
+	
+	sets.LS.Ikenga.Cap = set_combine(sets.LS.Ikenga, sets.LS.Cap)
 
 	sets.LS.Acc = set_combine(sets.LS, {
 		hands="Orion Bracers +3",
@@ -500,6 +516,8 @@ function get_sets()
 		ring2="Longshot Ring",
 		ear1="Telos Earring",
 		ear2="Beyla Earring"})
+		
+	sets.LS.Acc.Cap = sets.LS.Acc
 		
 	sets.precast['Split Shot'] = sets.LS.Acc
 	sets.precast['Sniper Shot'] = sets.LS.Acc
@@ -547,7 +565,8 @@ function get_sets()
 
 	sets.Coronach = {
 		head="Orion Beret +3",							
-		body="Nyame Mail",
+		body="Amini Caban +3",
+		--body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Amini Bottillons +3",
@@ -561,7 +580,6 @@ function get_sets()
 	}
 	
 	sets.CoronachCap = set_combine(sets.Coronach, {
-		body="Amini Caban +3",
 		ring1="Sroda Ring",
 		ear2="Amini Earring",
 	})
@@ -582,8 +600,8 @@ function get_sets()
 	sets.Jishnu = {}
 	
 	sets.Jishnu.Normal =  {
-		head="Blistering Sallet +1",
-		body="Meghanada Cuirie +2",
+		head="Orion Beret +3",
+		body="Amini Caban +3",
 		hands="Amini Glovelettes +3",
 		legs="Nyame Flanchard",
 		feet="Amini Bottillons +3",
@@ -597,6 +615,7 @@ function get_sets()
 	}
 	
 	sets.Jishnu.Normal.Cap = set_combine(sets.Jishnu.Normal, {
+		head="Blistering Sallet +1",
 		body="Amini Caban +3",
 		hands="Ikenga's Gloves",
 		legs="Ikenga's Trousers",
@@ -611,6 +630,7 @@ function get_sets()
 	})
 	
 	sets.Jishnu.True.Cap = set_combine(sets.Jishnu.True, {
+		head="Blistering Sallet +1",
 		body="Amini Caban +3",
 		neck="Scout's Gorget +2",
 		ear2="Amini Earring"
@@ -673,7 +693,7 @@ function get_sets()
 		ear1="Infused Earring",
 		ear2="Telos Earring"})
 
-	Melee_Set_Names = {'Malig', 'DT'}
+	Melee_Set_Names = {'Malig', 'Acc', 'DT', 'DTAcc'}
 	
 	sets.Melee = {
 		head="Malignance Chapeau",
@@ -685,7 +705,6 @@ function get_sets()
 		waist="Olseni Belt",
 		ear1="Crepuscular Earring",
 		ear2="Dedition Earring",
-	--	ear2="Telos Earring",
 		ring1="Chirich Ring +1",
 		ring2="Chirich Ring +1",
 		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+8','"Dual Wield"+10','Phys. dmg. taken-10%',}},
@@ -693,9 +712,17 @@ function get_sets()
 
 	sets.Melee.Malig = sets.Melee
 	
+	sets.Melee.Acc = set_combine(sets.Melee.Malig, {
+		ear2="Telos Earring",
+	})
+	
 	sets.Melee.DT = set_combine(sets.Melee.Malig, {
 		hands="Amini Glovelettes +3",
 		legs="Amini Bragues +3"
+	})
+	
+	sets.Melee.DTAcc = set_combine(sets.Melee.DT, {
+		ear2="Telos Earring",
 	})
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')
@@ -747,7 +774,11 @@ function precast(spell)
 				equip(sets.Jishnu[Jishnu_Set_Names[Jishnu_Index]])
 			end
 		else
-            equip(sets.LS[LS_Set_Names[LS_Index]])
+			if ATT_Cap_Flag then
+				equip(sets.LS[LS_Set_Names[LS_Index]].Cap)			
+			else
+				equip(sets.LS[LS_Set_Names[LS_Index]])			
+			end
 		end
 		
 		Ammo_Set_Subset = sets.Ammo[weapon_set.ammoType]
