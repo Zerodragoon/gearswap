@@ -199,6 +199,10 @@ function parent_self_command(command)
 		TrueFlight_Index = TrueFlight_Index +1
 		if TrueFlight_Index > #TrueFlight_Set_Names then TrueFlight_Index = 1 end
 		add_to_chat(207,'Trueflight Set Changed to: '..TrueFlight_Set_Names[TrueFlight_Index]..'')
+	elseif command == 'jishnuws' then
+		Jishnu_Index = Jishnu_Index +1
+		if Jishnu_Index > #Jishnu_Set_Names then Jishnu_Index = 1 end
+		add_to_chat(207,'Jishnu Set Changed to: '..Jishnu_Set_Names[Jishnu_Index]..'')
 	elseif command == 'update' then
 		status_change(player.status)
 		add_to_chat(207,'Update player status...')

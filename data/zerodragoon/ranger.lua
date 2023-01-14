@@ -12,6 +12,7 @@ function get_sets()
 	Weapon_Index = 1
 	LS_Index = 1
 	TrueFlight_Index = 1
+	Jishnu_Index = 1
 	Ammo_Index = 1
 	ATT_Cap_High = false
 	ATT_Cap_Flag = false
@@ -313,7 +314,7 @@ function get_sets()
 		}
 	}
 
-	Hands_Set_Names = {'PhysicalShield', 'Physical', 'Magical', 'KrakenP', 'KrakenM', 'KrakenT', 'CrepGletis', 'NaegGletis', 'NaegCrep', 'MalevGletis'}
+	Hands_Set_Names = {'PhysicalShield', 'Physical', 'Magical', 'KrakenP', 'KrakenM', 'KrakenT', 'CrepGletis', 'NaegGletis', 'NaegCrep', 'MalevGletis', 'Oneiros'}
 
 	sets.Hands = {}	
 
@@ -366,6 +367,11 @@ function get_sets()
 		main={ name="Malevolence", augments={'INT+9','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
 		sub="Gleti's Knife",
 	}
+	
+	sets.Hands.Oneiros = { 
+		main="Oneiros Knife",
+		sub="Nusku Shield"
+	}
 						
 	--Midshot Sets Below
 	Midshot_Set_Names = {'TrueShot', 'Ikenga', 'Malig', 'Acc', 'Crit', 'CritPDL', 'CritTrue'}
@@ -417,7 +423,7 @@ function get_sets()
 		head="Mummu Bonnet +2",
 		body="Nisroch Jerkin",
 		hands="Mummu Wrists +2",
-		legs="Mummu Kecks +2",
+		legs="Amini Bragues +3",
 		feet="Oshosi Leggings +1",
 		waist="Kwahu Kachina Belt +1",
 		neck="Nefarious Collar +1",
@@ -436,8 +442,8 @@ function get_sets()
 		
 	sets.Midshot.CritTrue =  set_combine(sets.Midshot.CritPDL, {
 		body="Nisroch Jerkin",
-		legs="Amini Bragues +3",
-		feet="Ikenga's Clogs"
+		feet="Ikenga's Clogs",
+		waist="Tellen Belt"
 	})
 
 	sets.Midshot.double = {
@@ -474,14 +480,14 @@ function get_sets()
 		ring1="Regal Ring",
 		ring2="Epaminondas's Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
-		ear1="Ishvara Earring",
-		ear2="Moonshade Earring"}
+		ear1="Moonshade Earring",
+		ear2="Ishvara Earring"}
 
 	sets.LS.Normal = set_combine(sets.LS, {})
 	
 	sets.LS.Ikenga = set_combine(sets.LS, {
 		body="Ikenga's Vest",
-		--Amini Earring +2
+		ear2="Amini Earring"
 	})
 
 	sets.LS.Acc = set_combine(sets.LS, {
@@ -540,8 +546,25 @@ function get_sets()
 	}
 
 	sets.Coronach = {
+		head="Orion Beret +3",							
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Amini Bottillons +3",
+		neck="Scout's Gorget +2",
+		waist="Fotia Belt",
+		ring1="Regal Ring",
+		ring2="Epaminondas's Ring",
+		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
+		ear1="Ishvara Earring",
 		ear2="Sherida Earring"
 	}
+	
+	sets.CoronachCap = set_combine(sets.Coronach, {
+		body="Amini Caban +3",
+		ring1="Sroda Ring",
+		ear2="Amini Earring",
+	})
 
 	sets.Wildfire = {
 		ring1="Epaminondas's Ring"
@@ -553,21 +576,45 @@ function get_sets()
 		ear2="Moonshade Earring",
 		ring1="Epaminondas's Ring"
 	})
-
-	sets.Jishnu =  {
-		head="Adhemar Bonnet +1",
+	
+	Jishnu_Set_Names = {'Normal', 'True'}
+	
+	sets.Jishnu = {}
+	
+	sets.Jishnu.Normal =  {
+		head="Blistering Sallet +1",
 		body="Meghanada Cuirie +2",
-		hands="Mummu Wrists +2",
-		legs="Mummu Kecks +2",
-		feet="Thereoid Greaves",
+		hands="Amini Glovelettes +3",
+		legs="Nyame Flanchard",
+		feet="Amini Bottillons +3",
 		waist="Fotia Belt",
 		neck="Fotia Gorget",
 		ring1="Regal Ring",
 		ring2="Begrudging Ring",
 		ear1="Odr Earring",
-		ear2="Sherida Earring",
+		ear2="Sherida Earring", --Amini Earring +1/+2
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}}
 	}
+	
+	sets.Jishnu.Normal.Cap = set_combine(sets.Jishnu.Normal, {
+		body="Amini Caban +3",
+		hands="Ikenga's Gloves",
+		legs="Ikenga's Trousers",
+		neck="Scout's Gorget +2",
+		ear2="Amini Earring"
+	})
+	
+	sets.Jishnu.True = set_combine(sets.Jishnu.Normal, {
+		body="Nisroch Jerkin",
+		legs="Amini Bragues +3",
+		feet="Ikenga's Clogs"
+	})
+	
+	sets.Jishnu.True.Cap = set_combine(sets.Jishnu.True, {
+		body="Amini Caban +3",
+		neck="Scout's Gorget +2",
+		ear2="Amini Earring"
+	})
 
 	sets.Evis = {
 		head="Adhemar Bonnet +1",
@@ -608,22 +655,9 @@ function get_sets()
 	})
 	
 	--Idle Sets Below
-	Idle_Set_Names = {'DT', 'Normal'}
-	sets.Idle = {
-		head="Arcadian Beret +3",							
-		body="Nisroch Jerkin",
-		hands="Orion Bracers +3",
-		legs="Arcadian Braccae +3",
-		feet="Orion Socks +3",
-		neck="Scout's Gorget +2",
-		waist="Kwahu Kachina Belt +1",
-		ring1="Regal Ring",
-		ring2="Epaminondas's Ring",
-		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10',}},
-		ear1="Infused Earring",
-		ear2="Telos Earring"}
-
-	sets.Idle.Normal = set_combine(sets.Idle, {})
+	Idle_Set_Names = {'DT'}
+	
+	sets.Idle = {}
 
 	sets.Idle.DT = set_combine(sets.Idle, {
 		head="Malignance Chapeau",							
@@ -664,75 +698,6 @@ function get_sets()
 		legs="Amini Bragues +3"
 	})
 
---[[
-	Melee_Set_Names = {'DTAcc','DT', 'Tate', 'DblAtt45', 'DblAtt30', 'DblAtt15', 'DblAtt0', 'TH'}
-
-	sets.Melee = {  
-		head="Adhemar Bonnet +1",							
-		body="Adhemar Jacket +1",
-		hands="Adhemar Wristbands +1",
-		legs="Samnuha Tights",
-		feet={ name="Herculean Boots", augments={'Quadruple Attack +3'}},
-		neck="Anu Torque",
-		waist="Windbuffet Belt +1",
-		ring1="Petrov Ring",
-		ring2="Epona's Ring",
-		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
-		ear1="Suppanomimi",
-		ear2="Sherida Earring"
-	}
-
-	sets.Melee.DblAtt45 = set_combine(sets.Melee, {})
-
-	sets.Melee.DblAtt30 = set_combine(sets.Melee.DblAtt45, {
-		ear2="Eabani Earring"
-	})
-
-	sets.Melee.DblAtt15 = set_combine(sets.Melee.DblAtt30, {
-		legs="Carmine Cuisses +1"
-	})
-
-	sets.Melee.DblAtt0 = set_combine(sets.Melee.DblAtt15, {
-		head={ name="Herculean Helm", augments={'Accuracy+8','"Dual Wield"+5','DEX+1','Attack+12',}},
-	})
-
-	sets.Melee.DT = set_combine(sets.Melee, {
-		head="Malignance Chapeau",
-		body="Malignance Tabard",	
-		hands="Malignance Gloves",
-		legs="Malignance Tights",
-		feet="Malignance Boots",
-		ear1="Telos Earring",
-		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+8','"Dual Wield"+10','Phys. dmg. taken-10%',}},
-    })
-
-	sets.Melee.DTAcc = set_combine(sets.Melee.DT, {
-		head="Malignance Chapeau",
-		body="Malignance Tabard",	
-		hands="Malignance Gloves",
-		legs="Malignance Tights",
-		feet="Malignance Boots",
-		neck="Iskur Gorget",
-		waist="Kentarch Belt +1",
-		ear1="Telos Earring",
-		ear2="Crepuscular Earring",
-		ring1="Chirich Ring +1",
-		ring2="Chirich Ring +1",
-		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+8','"Dual Wield"+10','Phys. dmg. taken-10%',}},
-    })
-		
-	sets.Melee.TH = set_combine(sets.Melee.DT, {
-		ammo="Perfect Lucky Egg",
-		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
-		waist="Chaac Belt"})
-		
-	sets.Melee.Tate = set_combine(sets.Melee, {
-		body="Tatenashi Haramaki +1",	
-		hands="Tatenashi Gote +1",
-		legs="Tatenashi Haidate +1",
-		feet="Tatenashi Sune-ate +1"})
-	}
---]]
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')
 
 end
@@ -761,7 +726,7 @@ function precast(spell)
 			elseif spell.target.distance < 3.0 then
 				equip(sets.TrueFlight.Orpheus)
 			end
-		elseif spell.name == "Wildfire" then
+		elseif spell.name == "Wildfire" or spell.name == "Hot Shot" or spell.name == "Flaming Arrow" then
             equip(set_combine(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]], sets.Wildfire))
 
 			if buffactive['Firestorm'] then
@@ -769,26 +734,18 @@ function precast(spell)
 			elseif spell.target.distance < 3.0 then
 				equip(sets.TrueFlight.Orpheus)
 			end
-		elseif spell.name == "Flaming Arrow" then
-            equip(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]])
-			
-			if buffactive['Firestorm'] then
-				equip(sets.TrueFlight.Hachi)
-			elseif spell.target.distance < 3.0 then
-				equip(sets.TrueFlight.Orpheus)
-			end
-		elseif spell.name == "Hot Shot" then
-            equip(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]])
-			
-			if buffactive['Firestorm'] then
-				equip(sets.TrueFlight.Hachi)
-			elseif spell.target.distance < 3.0 then
-				equip(sets.TrueFlight.Orpheus)
-			end
 		elseif spell.name == "Coronach" then
-            equip(set_combine(sets.LS[LS_Set_Names[LS_Index]], sets.Coronach))
+            if ATT_Cap_Flag then
+				equip(sets.CoronachCap)
+			else 
+				equip(sets.Coronach)
+			end 
 		elseif spell.name == "Jishnu's Radiance" then
-            equip(sets.Jishnu)
+            if ATT_Cap_Flag then
+				equip(sets.Jishnu[Jishnu_Set_Names[Jishnu_Index]].Cap)
+			else
+				equip(sets.Jishnu[Jishnu_Set_Names[Jishnu_Index]])
+			end
 		else
             equip(sets.LS[LS_Set_Names[LS_Index]])
 		end
@@ -798,9 +755,7 @@ function precast(spell)
 		
 		equip(Ammo_Set_Subset[Ammo_Name_Subset[Ammo_Index]])
 
-		if spell.name == "Aeolian Edge" then
-            equip(sets.Aeolian)
-		elseif spell.name == "Burning Blade" or spell.name == "Red Lotus Blade" then
+		if spell.name == "Aeolian Edge" or spell.name == "Burning Blade" or spell.name == "Red Lotus Blade"  then
             equip(sets.Aeolian)
 		elseif spell.name == "Seraph Blade" then
             equip(set_combine(sets.Aeolian, {
@@ -910,3 +865,88 @@ end
 function file_unload()
 	send_command('lua u ar')
 end
+
+--[[
+	Melee_Set_Names = {'DTAcc','DT', 'Tate', 'DblAtt45', 'DblAtt30', 'DblAtt15', 'DblAtt0', 'TH'}
+
+	sets.Melee = {  
+		head="Adhemar Bonnet +1",							
+		body="Adhemar Jacket +1",
+		hands="Adhemar Wristbands +1",
+		legs="Samnuha Tights",
+		feet={ name="Herculean Boots", augments={'Quadruple Attack +3'}},
+		neck="Anu Torque",
+		waist="Windbuffet Belt +1",
+		ring1="Petrov Ring",
+		ring2="Epona's Ring",
+		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
+		ear1="Suppanomimi",
+		ear2="Sherida Earring"
+	}
+
+	sets.Melee.DblAtt45 = set_combine(sets.Melee, {})
+
+	sets.Melee.DblAtt30 = set_combine(sets.Melee.DblAtt45, {
+		ear2="Eabani Earring"
+	})
+
+	sets.Melee.DblAtt15 = set_combine(sets.Melee.DblAtt30, {
+		legs="Carmine Cuisses +1"
+	})
+
+	sets.Melee.DblAtt0 = set_combine(sets.Melee.DblAtt15, {
+		head={ name="Herculean Helm", augments={'Accuracy+8','"Dual Wield"+5','DEX+1','Attack+12',}},
+	})
+
+	sets.Melee.DT = set_combine(sets.Melee, {
+		head="Malignance Chapeau",
+		body="Malignance Tabard",	
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		ear1="Telos Earring",
+		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+8','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+    })
+
+	sets.Melee.DTAcc = set_combine(sets.Melee.DT, {
+		head="Malignance Chapeau",
+		body="Malignance Tabard",	
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		neck="Iskur Gorget",
+		waist="Kentarch Belt +1",
+		ear1="Telos Earring",
+		ear2="Crepuscular Earring",
+		ring1="Chirich Ring +1",
+		ring2="Chirich Ring +1",
+		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+8','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+    })
+		
+	sets.Melee.TH = set_combine(sets.Melee.DT, {
+		ammo="Perfect Lucky Egg",
+		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
+		waist="Chaac Belt"})
+		
+	sets.Melee.Tate = set_combine(sets.Melee, {
+		body="Tatenashi Haramaki +1",	
+		hands="Tatenashi Gote +1",
+		legs="Tatenashi Haidate +1",
+		feet="Tatenashi Sune-ate +1"})
+	}
+	
+	sets.Jishnu =  {
+		head="Adhemar Bonnet +1",
+		body="Meghanada Cuirie +2",
+		hands="Mummu Wrists +2",
+		legs="Mummu Kecks +2",
+		feet="Thereoid Greaves",
+		waist="Fotia Belt",
+		neck="Fotia Gorget",
+		ring1="Regal Ring",
+		ring2="Begrudging Ring",
+		ear1="Odr Earring",
+		ear2="Sherida Earring",
+		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}}
+	}
+--]]

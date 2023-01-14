@@ -231,9 +231,9 @@ function get_sets()
 	sets.MWS.Normal = set_combine(sets.MWS, {})
 	
 	sets.precast['Aeolian Edge'] = set_combine(sets.MWS, {
-	--	body="Volte Jupon", 
-	--	ammo="Perfect Lucky Egg", 
-	--	waist="Chaac Belt"
+		body="Volte Jupon", 
+		ammo="Perfect Lucky Egg", 
+		waist="Chaac Belt"
 	})
 
 	sets.Evis = {
