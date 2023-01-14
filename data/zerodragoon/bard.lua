@@ -19,7 +19,7 @@ function get_sets()
 	set_style_lock()
 	
 	--Hands Sets
-	Hands_Set_Names = {'CarnShield', 'CarnDual', 'NaeglingCrep', 'NaeglingTP', 'NaeglingShield', 'Twashtar', 'TwashtarCrep', 'TwashtarTP', 'TwashtarShield', 'NaeglingKraken', 'CarnKraken', 'TwashKraken', 'AeneasKraken'}
+	Hands_Set_Names = {'CarnShield', 'CarnDual', 'NaeglingCrep', 'NaeglingTP', 'NaeglingShield', 'Twashtar', 'TwashtarCrep', 'TwashtarTP', 'TwashtarShield', 'NaeglingKraken', 'CarnKraken', 'TwashKraken', 'AeneasKraken', 'Staff'}
 
 	sets.Hands = {}	
 	
@@ -86,6 +86,11 @@ function get_sets()
 	sets.Hands.AeneasKraken = { 
 		main="Aeneas",
 		sub="Kraken Club"
+	}
+	
+	sets.Hands.Staff = { 
+		main="Xanon",
+		sub="Enki Strap"
 	}
 
 	sets.Hands.Daybreak = {
@@ -455,6 +460,15 @@ function get_sets()
 		neck="Baetyl Pendant",
 		waist="Orpheus's Sash",
 		right_ear="Friomisi Earring"
+	})
+
+
+	sets.precast['Retribution'] = set_combine(sets.WS, {
+		head="Nyame Helm",								
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 	})
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')
