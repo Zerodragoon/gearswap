@@ -82,6 +82,32 @@ function get_sets()
 
 	sets.PWS.Normal = set_combine(sets.PWS, {})
 	
+	sets.precast['Calamity'] = set_combine(sets.PWS.Normal, {
+		head="Nyame Helm",							
+		body="Nukumi Gausape +2",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		ear1="Thrud Earring",
+		ring1="Regal Ring",
+		ring2="Epaminondas's Ring",
+		waist="Sailfi Belt +1",
+		neck="Republican Platinum Medal",
+	})
+	
+	sets.precast['Mistral Axe'] = set_combine(sets.PWS.Normal, {
+		head="Nyame Helm",							
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		ear1="Thrud Earring",
+		ring1="Regal Ring",
+		ring2="Epaminondas's Ring",
+		waist="Sailfi Belt +1",
+		neck="Republican Platinum Medal",
+	})
+	
 	sets.precast['Decimation'] = set_combine(sets.PWS.Normal, {
 		head="Gleti's Mask",
 		body="Gleti's Cuirass",
@@ -140,7 +166,7 @@ function get_sets()
 	
 	sets.precast['Aeolian Edge'] = set_combine(sets.PWS.Normal, {
 		waist="Orpheus's Sash",
-		neck="Baetyl Pendant",
+		neck="Sibyl Scarf",
 		ear1="Friomisi Earring",
 		ring1="Beithir Ring",
 		ring2="Epaminondas's Ring",
@@ -185,7 +211,7 @@ function get_sets()
 		back={ name="Artio's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}
 	})
 
-	Melee_Set_Names = {'DT', 'PetLevel'}
+	Melee_Set_Names = {'DT', 'PetLevel', 'PetDT'}
 
 	sets.Melee = {  
 		head="Malignance Chapeau",							
@@ -242,6 +268,13 @@ function get_sets()
 	sets.Melee.DT = sets.Melee
 	sets.Melee.PetLevel = set_combine(sets.Melee, {
 		ear2="Nukumi Earring +1"
+	})
+	
+	sets.Melee.PetDT = set_combine(sets.Idle.PetDT, {
+		head="Nyame Helm",
+		ear2="Nukumi Earring +1",
+		ring2="Moonlight Ring",
+		ammo="Aurgelmir Orb +1"
 	})
 	
 	sets.precast.Reward = {
@@ -338,8 +371,15 @@ function self_command(command)
 		if Idle_Index > #Idle_Set_Names then Idle_Index = 1 end
 		add_to_chat(207,'Idle Set Changed to: '..Idle_Set_Names[Idle_Index]..'')
 		equip(sets.Idle[Idle_Set_Names[Idle_Index]])
-	elseif command == 'melee' then
-		Melee_Index = Melee_Index +1
+	elseif command:sub(1, 5) == 'melee' then
+		Temp_Melee_Index = command:sub(6,8)
+
+		if Temp_Melee_Index == '' then
+			Melee_Index = Melee_Index +1
+		else 
+			Melee_Index = tonumber(Temp_Melee_Index)
+		end
+	
 		if Melee_Index > #Melee_Set_Names then Melee_Index = 1 end
 		add_to_chat(207,'Melee Set Changed to: '..Melee_Set_Names[Melee_Index]..'')
 		equip(sets.Melee[Melee_Set_Names[Melee_Index]])
@@ -355,20 +395,6 @@ function self_command(command)
 		if Hands_Index > #Hands_Set_Names then Hands_Index = 1 end
 		add_to_chat(207,'Hands Set Changed to: '..Hands_Set_Names[Hands_Index]..'')
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-	elseif command == 'pdt' then
-		if sets.pdt == pdt.on then
-			equip(pdt.off)
-			equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-			sets.pdt = pdt.off
-			enable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
-			status_change(player.status)
-			add_to_chat(207,'>>>>> PDT Set Unlocked! <<<<<')
-		else				
-			equip(pdt.on)
-			sets.pdt = pdt.on
-			disable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
-			add_to_chat(66,'>>>>> PDT Set Locked! <<<<<')
-		end
 	elseif command == 'pws' then
 		PWS_Index = PWS_Index +1
 		if PWS_Index > #PWS_Set_Names then PWS_Index = 1 end
@@ -392,7 +418,9 @@ function self_command(command)
 		equip(sets.Melee[Melee_Set_Names[Melee_Index]])
 	elseif command == 'startup' then
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-		equip(sets.Idle[Idle_Set_Names[Idle_Index]]) 
+		equip(sets.Idle[Idle_Set_Names[Idle_Index]])
+	elseif command == 'fastki' then
+		send_command('input /pet "Leave" <me>;wait 3;input //gs equip sets.GrasshopperJug;wait 1;input /ja "Bestial Loyalty" <me>;wait 3;input /ja "Killer Instinct" <me>;wait 3;input /pet "Leave" <me>;wait 3;input //gs equip sets.LeechJug;wait 1;input /ja "Call Beast" <me>;')
 	end
 end
 

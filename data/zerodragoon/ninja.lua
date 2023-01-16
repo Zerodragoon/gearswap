@@ -325,13 +325,13 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs="Gyve Trousers",
 		feet="Mochizuki Kyahan +3",
-		neck="Baetyl Pendant",
+		neck="Sibyl Scarf",
 		waist="Eschan Stone",
 		ring1="Dingir Ring",
 		ring2="Acumen Ring",
 		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 		ear1="Friomisi Earring",
-		ear2="Hecate's Earring",
+		ear2="Crematio Earring",
 		ammo="Ghastly Tathlum +1"
     }
 	

@@ -178,7 +178,7 @@ function get_sets()
 	sets.Idle.Normal = set_combine(sets.Idle, {})
 
 
-	Melee_Set_Names = {'DblAtt', 'DT', 'AccMax', 'Tate', 'Zanshin'}
+	Melee_Set_Names = {'DblAtt', 'DT', 'AccMax', 'Tate', 'Zanshin', 'SB' }
 
 	sets.Melee = {  
 		head="Flamma Zucchetto +2",							
@@ -229,21 +229,21 @@ function get_sets()
 		ammo="Perfect Lucky Egg",
 		waist="Chaac Belt"})
 		
-	--[[sets.Melee.SB = set_combine(sets.Melee.DT, {
+	sets.Melee.SB = set_combine(sets.Melee.DT, {
 		head="Kendatsuba Jinpachi +1", --SB 8
 		body="Dagon Breastplate", --SB II 10
 		hands="Kendatsuba Tekko +1", --SB 8,
 		legs="Mpaca's Hose", --SB II 5 PDT 9
 		feet="Ken. Sune-Ate +1", --SB 8
-		neck="Defiant Collar", --SB 3
-		waist="Sarissaphori Belt", --SB 5
+		--neck="Defiant Collar", --SB 3
+		waist="Sarissaphoroi Belt", --SB 5
 		ring1="Chirich Ring +1", --SB 10
 		ring2="Niqmaddu Ring", --SB II 5
 		back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --PDT 10
 		ear1="Digni. Earring", --SB 5
 		ear2="Schere Earring", --SB 3
 		ammo="Aurgelmir Orb +1"
-	})--SB 50 --SB II 20 --PDT 19]]--
+	})--SB 50 --SB II 20 --PDT 19
 
 	sets.precast.Ranged = {
 		head="Sakonji Kabuto +3",

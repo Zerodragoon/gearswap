@@ -45,7 +45,7 @@ function get_sets()
 		hands="Hashishin Bazubands +2",
 		legs="Hashishin Tayt +2",
 		feet="Hashishin Basmak +2",
-		neck="Baetyl Pendant",
+		neck="Sibyl Scarf",
 		waist="Eschan Stone",
 		left_ear="Regal Earring",
 		right_ear="Friomisi Earring",
@@ -59,7 +59,7 @@ function get_sets()
 		hands="Amalric Gages +1",
 		legs="Amalric Slops +1",
 		feet="Amalric Nails +1",
-		neck="Baetyl Pendant" 
+		neck="Sibyl Scarf" 
 	}) 
 	
 	sets.midcast.MACC = set_combine(sets.midcast, {
@@ -244,7 +244,7 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
-		neck="Baetyl Pendant",
+		neck="Sibyl Scarf",
 		waist="Eschan Stone",
 		ring1="Jhakri Ring",
 		ring2="Epaminondas's Ring",

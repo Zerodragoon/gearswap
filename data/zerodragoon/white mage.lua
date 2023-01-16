@@ -335,7 +335,7 @@ function get_sets()
 	Melee_Set_Names = {'Standard'}
 	
 	sets.Melee = {
-		head="Ayanmo Zucchetto +2",
+		head="Bunzi Hat",
 		body="Ayanmo Corazza +2",
 		hands="Bunzi's Gloves",
 		legs="Nyame Flanchard",

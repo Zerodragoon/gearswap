@@ -380,7 +380,7 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",	
-		neck="Baetyl Pendant",		
+		neck="Sibyl Scarf",		
 		waist="Orpheus's Sash",
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",

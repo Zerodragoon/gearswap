@@ -102,7 +102,7 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
-		neck="Baetyl Pendant",
+		neck="Sibyl Scarf",
 		waist="Eschan Stone",
 		left_ear="Malignance Earring",
 		right_ear="Friomisi Earring",
@@ -275,7 +275,7 @@ function get_sets()
 	sets.Idle.Normal = set_combine(sets.Idle, {})
 
 
-	Melee_Set_Names = {'DT', 'DTAcc', 'DblAtt', 'SB', 'TH'}
+	Melee_Set_Names = {'DT', 'DTAcc', 'DblAtt', 'SB', 'FullSB', 'TH'}
 
 	sets.Melee = {  
 		head="Sakpata's Helm",
@@ -319,13 +319,13 @@ function get_sets()
 	})
 	
 	sets.Melee.FullSB = set_combine(sets.Melee, {
-		head="Sakpata's Helm",
+	--	head="Sakpata's Helm",
+		head="Volte Tiara", --SB 6
    		body="Dagon Breastplate", --SB II 10
 		hands="Sakpata's Gauntlets", --SB 8
 		legs="Volte Tights", --SB 8
 		feet="Sakpata's Leggings", --SB 13 R25 15 R30
-		waist="Sailfi Belt +1",
-		--waist="Sarissaphori Belt", --SB 5
+		waist="Sarissaphoroi Belt", --SB 5
 		ring1="Niqmaddu Ring", --SB II 5
 		ring2="Chirich Ring +1", --SB 10
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},

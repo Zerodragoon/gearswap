@@ -124,7 +124,7 @@ function get_sets()
 		hands="Amalric Gages +1",
 		legs="Amalric Slops +1",
 		feet="Amalric Nails +1",
-		neck="Baetyl Pendant",
+		neck="Sibyl Scarf",
 		waist="Sacro Cord",
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",

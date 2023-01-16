@@ -383,7 +383,7 @@ function get_sets()
 	Melee_Set_Names = {'Standard', 'Single', 'TH', 'Kraken', 'KrakenAcc', 'SingleDT'}
 
 	sets.Melee = {
-		head="Ayanmo Zucchetto +2",
+		head="Bunzi Hat",
 		body="Ashera Harness",
 		hands="Bunzi's Gloves",
 		legs="Volte Tights",
@@ -461,7 +461,7 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
-		neck="Baetyl Pendant",
+		neck="Sibyl Scarf",
 		waist="Orpheus's Sash",
 		right_ear="Friomisi Earring"
 	})

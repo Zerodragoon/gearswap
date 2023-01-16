@@ -403,7 +403,7 @@ function get_sets()
 		feet="Chasseur's Bottes +2",
 		neck="Baetyl Pendant",
 		ring1="Crepuscular Ring",
-		ear2="Hecate's Earring"
+		ear2="Crematio Earring"
 	})
 	
 	sets.precast['Dark Shot'] = sets.QuickDraw
@@ -483,39 +483,6 @@ function get_sets()
 		ammo="Perfect Lucky Egg",
 		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
 		waist="Chaac Belt"})
-
---[[	sets.Melee = {  
-		head="Adhemar Bonnet +1",							
-		body="Adhemar Jacket +1",
-		hands="Adhemar Wristbands +1",
-		legs="Samnuha Tights",
-		feet={ name="Herculean Boots", augments={'Quadruple Attack +3'}},
-		neck="Iskur Gorget",
-		waist="Windbuffet Belt +1",
-		ring1="Petrov Ring",
-		ring2="Epona's Ring",
-		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
-		ear1="Suppanomimi",
-		ear2="Telos Earring"
-	}
-
-	sets.Melee.DblAtt45 = set_combine(sets.Melee, {})
-
-	sets.Melee.DblAtt30 = set_combine(sets.Melee.DblAtt45, {
-		feet="Taeon Boots",
-		waist="Reiki Yotai",
-		ear2="Eabani Earring"
-	})
-
-	sets.Melee.DblAtt15 = set_combine(sets.Melee.DblAtt30, {
-		legs="Carmine Cuisses +1"
-	})
-
-	sets.Melee.DblAtt0 = set_combine(sets.Melee.DblAtt15, {
-		head={ name="Herculean Helm", augments={'Accuracy+8','"Dual Wield"+5','DEX+1','Attack+12',}},
-	})
---]]
-
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')
 
@@ -827,3 +794,35 @@ function file_unload()
 	send_command('lua u roller')
 	send_command('lua u ar')
 end
+
+--[[	sets.Melee = {  
+		head="Adhemar Bonnet +1",							
+		body="Adhemar Jacket +1",
+		hands="Adhemar Wristbands +1",
+		legs="Samnuha Tights",
+		feet={ name="Herculean Boots", augments={'Quadruple Attack +3'}},
+		neck="Iskur Gorget",
+		waist="Windbuffet Belt +1",
+		ring1="Petrov Ring",
+		ring2="Epona's Ring",
+		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+		ear1="Suppanomimi",
+		ear2="Telos Earring"
+	}
+
+	sets.Melee.DblAtt45 = set_combine(sets.Melee, {})
+
+	sets.Melee.DblAtt30 = set_combine(sets.Melee.DblAtt45, {
+		feet="Taeon Boots",
+		waist="Reiki Yotai",
+		ear2="Eabani Earring"
+	})
+
+	sets.Melee.DblAtt15 = set_combine(sets.Melee.DblAtt30, {
+		legs="Carmine Cuisses +1"
+	})
+
+	sets.Melee.DblAtt0 = set_combine(sets.Melee.DblAtt15, {
+		head={ name="Herculean Helm", augments={'Accuracy+8','"Dual Wield"+5','DEX+1','Attack+12',}},
+	})
+--]]

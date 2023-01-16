@@ -585,11 +585,16 @@ function get_sets()
 	})
 
 	sets.Wildfire = {
+		ring1="Epaminondas's Ring",
+		ear2="Crematio Earring"
+	}
+	
+	sets.HotShot = {
 		ring1="Epaminondas's Ring"
 	}
 	
 	sets.Aeolian = set_combine(sets.TrueFlight, {
-		neck="Baetyl Pendant",
+		neck="Sibyl Scarf",
 		waist="Orpheus's Sash",
 		ear2="Moonshade Earring",
 		ring1="Epaminondas's Ring"
@@ -753,8 +758,16 @@ function precast(spell)
 			elseif spell.target.distance < 3.0 then
 				equip(sets.TrueFlight.Orpheus)
 			end
-		elseif spell.name == "Wildfire" or spell.name == "Hot Shot" or spell.name == "Flaming Arrow" then
+		elseif spell.name == "Wildfire" then
             equip(set_combine(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]], sets.Wildfire))
+
+			if buffactive['Firestorm'] then
+				equip(sets.TrueFlight.Hachi)
+			elseif spell.target.distance < 3.0 then
+				equip(sets.TrueFlight.Orpheus)
+			end
+		elseif spell.name == "Hot Shot" or spell.name == "Flaming Arrow" then
+            equip(set_combine(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]], sets.HotShot))
 
 			if buffactive['Firestorm'] then
 				equip(sets.TrueFlight.Hachi)

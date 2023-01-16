@@ -42,7 +42,7 @@ function get_sets()
 	
 	sets.precast.Maneuver = {
 		main="Midnights",
-		body="Kara. Farsetto +1",
+		body="Kara. Farsetto +2",
 		hands="Foire Dastanas +3",
 		neck="Bfn. Collar +1",
         back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: Haste+10','Pet: Damage taken -5%',}},
