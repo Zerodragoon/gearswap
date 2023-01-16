@@ -38,12 +38,12 @@ function get_sets()
 	sets.precast = {}
 
 	-- Hands Sets
-	Hands_Set_Names = {'Dual', 'Main', 'Naegling', 'Dagger'}
+	Hands_Set_Names = {'Main', 'Dual', 'Naegling', 'Dagger'}
 
 	sets.Hands = {}	
 
 	sets.Hands.Main = { 
-		main="Agwu's Axe",
+		main="Izizoeksi",
 		sub="Sacro Bulwark"
 	}
 	
