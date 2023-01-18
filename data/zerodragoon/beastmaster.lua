@@ -161,8 +161,6 @@ function get_sets()
 		ring2="Epaminondas's Ring",
 	})
 	
-
-	
 	sets.precast['Aeolian Edge'] = set_combine(sets.PWS.Normal, {
 		waist="Orpheus's Sash",
 		neck="Sibyl Scarf",
@@ -210,14 +208,14 @@ function get_sets()
 		back={ name="Artio's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}
 	})
 
-	Melee_Set_Names = {'DT', 'DTSingle', 'PetDT'}
+	Melee_Set_Names = {'DTSingle', 'DT', 'PetDT'}
 
 	sets.Melee = {  
 		head="Malignance Chapeau",							
 		body="Gleti's Cuirass",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
-		feet="Gleti's Boots",
+		feet="Malignance Boots",
 		neck="Anu Torque",
 		waist="Reiki Yotai",
 		ring1="Moonlight Ring",
@@ -229,7 +227,7 @@ function get_sets()
 	}
 
 	sets.Melee.DT = sets.Melee
-	sets.Melee.PetLevel = set_combine(sets.Melee.DTSingle, {
+	sets.Melee.DTSingle = set_combine(sets.Melee.DT, {
 		waist="Sailfi Belt +1"
 	})
 
