@@ -83,29 +83,33 @@ function get_sets()
 	sets.PWS.Normal = set_combine(sets.PWS, {})
 	
 	sets.precast['Calamity'] = set_combine(sets.PWS.Normal, {
-		head="Nyame Helm",							
 		body="Nukumi Gausape +2",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
 		ear1="Thrud Earring",
 		ring1="Regal Ring",
 		ring2="Epaminondas's Ring",
 		waist="Sailfi Belt +1",
 		neck="Republican Platinum Medal",
+		ammo="Oshasha's Treatise"
 	})
 	
 	sets.precast['Mistral Axe'] = set_combine(sets.PWS.Normal, {
-		head="Nyame Helm",							
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+		body="Nukumi Gausape +2",
 		ear1="Thrud Earring",
 		ring1="Regal Ring",
 		ring2="Epaminondas's Ring",
 		waist="Sailfi Belt +1",
 		neck="Republican Platinum Medal",
+		ammo="Oshasha's Treatise"
+	})
+	
+	sets.precast['Savage Blade'] = set_combine(sets.PWS.Normal, {
+		body="Nukumi Gausape +2",
+		ear1="Thrud Earring",
+		ring1="Regal Ring",
+		ring2="Epaminondas's Ring",
+		waist="Sailfi Belt +1",
+		neck="Republican Platinum Medal",
+		ammo="Oshasha's Treatise"
 	})
 	
 	sets.precast['Decimation'] = set_combine(sets.PWS.Normal, {
@@ -114,6 +118,8 @@ function get_sets()
 		hands="Gleti's Gauntlets",
 		legs="Gleti's Breeches",
 		feet="Gleti's Boots",
+		ear1="Sroda Earring",
+		ear2="Nukumi Earring +1",
 		back={ name="Artio's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	})
 	
@@ -123,6 +129,8 @@ function get_sets()
 		hands="Gleti's Gauntlets",
 		legs="Gleti's Breeches",
 		feet="Gleti's Boots",
+		ear1="Sroda Earring",
+		ear2="Nukumi Earring +1",
 		back={ name="Artio's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	})
 	
@@ -132,16 +140,11 @@ function get_sets()
 		hands="Gleti's Gauntlets",
 		legs="Gleti's Breeches",
 		feet="Gleti's Boots",
+		ear1="Sroda Earring",
+		ear2="Nukumi Earring +1",
 		back={ name="Artio's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	})
-	
-	sets.precast['Mistral Axe'] = set_combine(sets.PWS.Normal, {
-		ammo="Oshasha's Treatise",
-		ring2="Epaminondas's Ring",
-		waist="Sailfi Belt +1",
-		ear1="Nukumi Earring +1"
-	})
-	
+
 	sets.precast['Cloudsplitter'] = set_combine(sets.PWS.Normal, {
 		waist="Orpheus's Sash",
 		ear1="Friomisi Earring",
@@ -158,11 +161,7 @@ function get_sets()
 		ring2="Epaminondas's Ring",
 	})
 	
-	sets.precast['Savage Blade'] = set_combine(sets.PWS.Normal, {
-		ring1="Sroda Ring",
-		ring2="Epaminondas's Ring",
-		ear1="Nukumi Earring +1"
-	})
+
 	
 	sets.precast['Aeolian Edge'] = set_combine(sets.PWS.Normal, {
 		waist="Orpheus's Sash",
@@ -211,12 +210,12 @@ function get_sets()
 		back={ name="Artio's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}
 	})
 
-	Melee_Set_Names = {'DT', 'PetLevel', 'PetDT'}
+	Melee_Set_Names = {'DT', 'DTSingle', 'PetDT'}
 
 	sets.Melee = {  
 		head="Malignance Chapeau",							
-		body="Malignance Tabard",
-		hands="Gleti's Gauntlets",
+		body="Gleti's Cuirass",
+		hands="Malignance Gloves",
 		legs="Malignance Tights",
 		feet="Gleti's Boots",
 		neck="Anu Torque",
@@ -225,8 +224,45 @@ function get_sets()
 		ring2="Gere Ring",
 		back={ name="Artio's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 		ear1="Sherida Earring",
-		ear2="Sroda Earring",
+		ear2="Nukumi Earring +1",
 		ammo="Coiste Bodhar"
+	}
+
+	sets.Melee.DT = sets.Melee
+	sets.Melee.PetLevel = set_combine(sets.Melee.DTSingle, {
+		waist="Sailfi Belt +1"
+	})
+
+	sets.Melee.PetDT = set_combine(sets.Idle.PetDT, {
+		head="Nyame Helm",
+		ear2="Nukumi Earring +1",
+		ring2="Moonlight Ring",
+		ammo="Aurgelmir Orb +1"
+	})
+	
+	sets.precast.Reward = {
+		head="Bison Warbonnet",
+		body="Ankusa Jackcoat +2",
+		hands="Ogre Gloves",
+		ear1="Pratik Earring",
+		legs="Ankusa Trousers +1",
+		back={ name="Artio's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}},
+	}
+	
+	sets.precast.Familiar = {
+		legs="Ankusa Trousers +1"
+	}
+	
+	sets.precast["Call Beast"] = {
+		hands="Ankusa Gloves +1"
+	}
+	
+	sets.precast["Bestial Loyalty"] = {
+		hands="Ankusa Gloves +1"
+	}
+	
+	sets.precast["Killer Instinct"] = {
+		head="Ankusa Helm +1"
 	}
 	
 	sets.PetFood = {
@@ -263,43 +299,6 @@ function get_sets()
 	
 	sets.PlantJug = {
 		ammo="Saline Broth"
-	}
-
-	sets.Melee.DT = sets.Melee
-	sets.Melee.PetLevel = set_combine(sets.Melee, {
-		ear2="Nukumi Earring +1"
-	})
-	
-	sets.Melee.PetDT = set_combine(sets.Idle.PetDT, {
-		head="Nyame Helm",
-		ear2="Nukumi Earring +1",
-		ring2="Moonlight Ring",
-		ammo="Aurgelmir Orb +1"
-	})
-	
-	sets.precast.Reward = {
-		head="Bison Warbonnet",
-		body="Ankusa Jackcoat +2",
-		hands="Ogre Gloves",
-		ear1="Pratik Earring",
-		legs="Ankusa Trousers +1",
-		back={ name="Artio's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}},
-	}
-	
-	sets.precast.Familiar = {
-		legs="Ankusa Trousers +1"
-	}
-	
-	sets.precast["Call Beast"] = {
-		hands="Ankusa Gloves +1"
-	}
-	
-	sets.precast["Bestial Loyalty"] = {
-		hands="Ankusa Gloves +1"
-	}
-	
-	sets.precast["Killer Instinct"] = {
-		head="Ankusa Helm +1"
 	}
 	
 	sets.PetReady = {
