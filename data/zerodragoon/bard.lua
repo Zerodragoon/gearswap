@@ -383,7 +383,7 @@ function get_sets()
 	Melee_Set_Names = {'Standard', 'Single', 'TH', 'Kraken', 'KrakenAcc', 'SingleDT'}
 
 	sets.Melee = {
-		head="Bunzi Hat",
+		head="Bunzi's Hat",
 		body="Ashera Harness",
 		hands="Bunzi's Gloves",
 		legs="Volte Tights",
@@ -488,9 +488,13 @@ function precast(spell)
 	end
 
 	if sets.precast[spell.english] then
-        equip(sets.precast[spell.english])
+        if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+		end
 	elseif spell.type == 'WeaponSkill' then
-		equip(sets.WS) 
+		if checkWSDistance(spell) then
+			equip(sets.WS)
+		end
 	elseif spell.english == 'Spectral Jig' and buffactive.Sneak then
 		cast_delay(0.2)
 		send_command('cancel Sneak')

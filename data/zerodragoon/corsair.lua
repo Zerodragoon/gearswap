@@ -490,14 +490,16 @@ end
 
 function precast(spell)	
 	if sets.precast[spell.english] then
-                equip(sets.precast[spell.english])
-
-		if spell.name == 'Bounty Shot' or spell.name == 'Eagle Eye Shot' then
-			if player.equipment.ammo == 'Hauksbok Bullet' or player.equipment.ammo == 'Hauksbok Arrow' then
-				add_to_chat(167,''..player.equipment.ammo..' equipped, canceling shot')                           
-            			cancel_spell()
-            			return	
-			end	
+        if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+			
+			if spell.name == 'Bounty Shot' or spell.name == 'Eagle Eye Shot' then
+				if player.equipment.ammo == 'Hauksbok Bullet' or player.equipment.ammo == 'Hauksbok Arrow' then
+					add_to_chat(167,''..player.equipment.ammo..' equipped, canceling shot')                           
+							cancel_spell()
+							return	
+				end	
+			end
 		end
 	elseif spell.english:find("Roll") or spell.english:find("Double") then 
 		if RollRange_Flag then
@@ -506,68 +508,70 @@ function precast(spell)
 			equip(sets.precast.rollshort)
 		end
 	elseif spell.type == 'WeaponSkill' then
-		if spell.target.distance > 21.0  then						
-			add_to_chat(167,''..spell.target.name..' is too far can not use '..spell.name..'!!!. Cancelling WeaponSkill ')                           
-            		cancel_spell()
-            		return			
-		elseif spell.name == "Leaden Salute" then
-            equip(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]])
+		if checkWSDistance(spell) then
+			if spell.target.distance > 21.0  then						
+				add_to_chat(167,''..spell.target.name..' is too far can not use '..spell.name..'!!!. Cancelling WeaponSkill ')                           
+				cancel_spell()
+				return			
+			elseif spell.name == "Leaden Salute" then
+				equip(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]])
 
-			if buffactive['Voidstorm'] or 
-				spell.element == world.weather_element or
-    			spell.element == world.day_element then
-				equip(sets.LeadenSalute.Hachi)
-			elseif spell.target.distance < 3.0 then
-				equip(sets.LeadenSalute.Orpheus)
-			end
-		elseif spell.name == "Wildfire" then
-            equip(set_combine(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]], sets.Wildfire))
-
-			if buffactive['Firestorm'] then
-				equip(sets.LeadenSalute.Hachi)
-			elseif spell.target.distance < 3.0 then
-				equip(sets.LeadenSalute.Orpheus)
-			end
-		elseif spell.name == "Hot Shot" then
-            equip(set_combine(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]], sets.Wildfire))
-
-			if buffactive['Firestorm'] then
-				equip(sets.LeadenSalute.Hachi)
-			elseif spell.target.distance < 3.0 then
-				equip(sets.LeadenSalute.Orpheus)
-			end
-		else
-            equip(sets.LS[LS_Set_Names[LS_Index]])
-		end
-		
-		Ammo_Set_Subset = sets.Ammo[weapon_set.ammoType]
-		Ammo_Name_Subset = Ammo_Set_Names[weapon_set.ammoType]
-		
-		equip(Ammo_Set_Subset[Ammo_Name_Subset[Ammo_Index]])
-
-		if spell.name == "Aeolian Edge" then
-                	equip(sets.Aeolian)
-		elseif spell.name == "Burning Blade" or spell.name == "Red Lotus Blade" then
-            equip(sets.Aeolian)
-		elseif spell.name == "Seraph Blade" then
-            equip(set_combine(sets.Aeolian, {
-				ring1="Weatherspoon Ring +1"
-			}))		
-		elseif spell.name == "Circle Blade" then
-                	equip(sets.LS[LS_Set_Names[LS_Index]])
-		elseif spell.name == "Evisceration" then
-                	equip(sets.Evis)
-		elseif spell.name == "Savage Blade" then
-                if ATT_Cap_Flag then
-					equip(sets.SavageCap)
-				else 
-					equip(sets.Savage)
+				if buffactive['Voidstorm'] or 
+					spell.element == world.weather_element or
+					spell.element == world.day_element then
+					equip(sets.LeadenSalute.Hachi)
+				elseif spell.target.distance < 3.0 then
+					equip(sets.LeadenSalute.Orpheus)
 				end
-		elseif player.equipment.ammo == 'Hauksbok Bullet' or player.equipment.ammo == 'Hauksbok Arrow' then
-			add_to_chat(167,''..player.equipment.ammo..' equipped, canceling shot')                           
-            		cancel_spell()
-            		return		
-		end		
+			elseif spell.name == "Wildfire" then
+				equip(set_combine(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]], sets.Wildfire))
+
+				if buffactive['Firestorm'] then
+					equip(sets.LeadenSalute.Hachi)
+				elseif spell.target.distance < 3.0 then
+					equip(sets.LeadenSalute.Orpheus)
+				end
+			elseif spell.name == "Hot Shot" then
+				equip(set_combine(sets.LeadenSalute[LeadenSalute_Set_Names[LeadenSalute_Index]], sets.Wildfire))
+
+				if buffactive['Firestorm'] then
+					equip(sets.LeadenSalute.Hachi)
+				elseif spell.target.distance < 3.0 then
+					equip(sets.LeadenSalute.Orpheus)
+				end
+			else
+				equip(sets.LS[LS_Set_Names[LS_Index]])
+			end
+			
+			Ammo_Set_Subset = sets.Ammo[weapon_set.ammoType]
+			Ammo_Name_Subset = Ammo_Set_Names[weapon_set.ammoType]
+			
+			equip(Ammo_Set_Subset[Ammo_Name_Subset[Ammo_Index]])
+
+			if spell.name == "Aeolian Edge" then
+						equip(sets.Aeolian)
+			elseif spell.name == "Burning Blade" or spell.name == "Red Lotus Blade" then
+				equip(sets.Aeolian)
+			elseif spell.name == "Seraph Blade" then
+				equip(set_combine(sets.Aeolian, {
+					ring1="Weatherspoon Ring +1"
+				}))		
+			elseif spell.name == "Circle Blade" then
+						equip(sets.LS[LS_Set_Names[LS_Index]])
+			elseif spell.name == "Evisceration" then
+						equip(sets.Evis)
+			elseif spell.name == "Savage Blade" then
+					if ATT_Cap_Flag then
+						equip(sets.SavageCap)
+					else 
+						equip(sets.Savage)
+					end
+			elseif player.equipment.ammo == 'Hauksbok Bullet' or player.equipment.ammo == 'Hauksbok Arrow' then
+				add_to_chat(167,''..player.equipment.ammo..' equipped, canceling shot')                           
+						cancel_spell()
+						return		
+			end		
+		end
 	elseif spell.name == "Ranged" then
 		weapon_set = set.Weapon[Weapon_Set_Names[Weapon_Index]]
 		preshot_set = sets.precast[weapon_set.preshot]

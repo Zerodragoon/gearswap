@@ -58,7 +58,7 @@ function get_sets()
 	}
 	
 	sets.precast.Step = {
-		head="Maxixi Tiara +2",
+		head="Maxixi Tiara +3",
 		body="Maxixi Casaque +3",
 		hands="Maxixi Bangles +2",
 		legs="Horos Tights +3",
@@ -74,7 +74,7 @@ function get_sets()
 	}
 
 	sets.precast.Samba = {
-		head="Maxixi Tiara +2",
+		head="Maxixi Tiara +3",
 		back="Senuna's Mantle"
 	}
 
@@ -320,38 +320,43 @@ end
 
 function precast(spell)	
 	if sets.precast[spell.english] then
-                equip(sets.precast[spell.english])
-		if spell.english == 'Spectral Jig' and buffactive.Sneak then
-			cast_delay(0.2)
-			send_command('cancel Sneak')        
-		end
-	elseif spell.type == 'WeaponSkill' then
-		if spell.name == "Aeolian Edge" then
-            equip(sets.MWS[MWS_Set_Names[MWS_Index]])
-		elseif spell.name == "Rudra's Storm" then
-			if ATT_Cap_Flag then
-				equip(sets.RudrasCap)
-			else 
-				equip(sets.Rudras)
-			end
+		if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
 			
-			if buffactive['Climactic Flourish'] then
-				equip(sets.precast['Climactic Flourish'])
+			if spell.english == 'Spectral Jig' and buffactive.Sneak then
+				cast_delay(0.2)
+				send_command('cancel Sneak')        
 			end
-		elseif spell.name == "Pyrrhic Kleos" then
-			if ATT_Cap_Flag then
-				equip(sets.PyrrhicCap)
-			else 
-				equip(sets.Pyrrhic)
-			end
+		end		
+	elseif spell.type == 'WeaponSkill' then
+		if checkWSDistance(spell) then
+			if spell.name == "Aeolian Edge" then
+				equip(sets.MWS[MWS_Set_Names[MWS_Index]])
+			elseif spell.name == "Rudra's Storm" then
+				if ATT_Cap_Flag then
+					equip(sets.RudrasCap)
+				else 
+					equip(sets.Rudras)
+				end
+				
+				if buffactive['Climactic Flourish'] then
+					equip(sets.precast['Climactic Flourish'])
+				end
+			elseif spell.name == "Pyrrhic Kleos" then
+				if ATT_Cap_Flag then
+					equip(sets.PyrrhicCap)
+				else 
+					equip(sets.Pyrrhic)
+				end
 
-			if buffactive['Striking Flourish'] then
-				equip(sets.precast['Striking Flourish'])
+				if buffactive['Striking Flourish'] then
+					equip(sets.precast['Striking Flourish'])
+				end
+			elseif spell.name == "Evisceration" or spell.name == 'Dancing Edge' then
+				equip(sets.Evis)
+			else
+				equip(sets.PWS[PWS_Set_Names[PWS_Index]])
 			end
-		elseif spell.name == "Evisceration" or spell.name == 'Dancing Edge' then
-            equip(sets.Evis)
-		else
-			equip(sets.PWS[PWS_Set_Names[PWS_Index]])
 		end
 	elseif spell.type == "Ninjutsu" then
 		if string.find(spell.english,'Utsusemi') then

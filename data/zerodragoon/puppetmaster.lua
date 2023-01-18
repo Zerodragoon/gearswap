@@ -40,6 +40,10 @@ function get_sets()
 		body="Pitre Tobe"
 	}
 	
+	sets.precast['Tactical Switch'] = {
+		feet="Karagoz Scarpe +2"
+	}
+	
 	sets.precast.Maneuver = {
 		main="Midnights",
 		body="Kara. Farsetto +2",
@@ -265,9 +269,13 @@ end
 
 function precast(spell)	
 	if sets.precast[spell.english] then
-                equip(sets.precast[spell.english])
+        if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+		end
 	elseif spell.type == 'WeaponSkill' then
-		equip(sets.PWS[PWS_Set_Names[PWS_Index]])
+		if checkWSDistance(spell) then
+			equip(sets.PWS[PWS_Set_Names[PWS_Index]])
+		end
 	elseif spell.type == "Ninjutsu" then
 		if string.find(spell.english,'Utsusemi') then
 			equip(sets.precast.Utsusemi)

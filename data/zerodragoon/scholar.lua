@@ -440,7 +440,9 @@ function precast(spell)
 	end
 	
 	if sets.precast[spell.english] then
-                equip(sets.precast[spell.english])
+       if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+		end
 	elseif spell.english == 'Spectral Jig' and buffactive.Sneak then
 		cast_delay(0.2)
 		send_command('cancel Sneak')
@@ -450,7 +452,7 @@ function precast(spell)
 		equip(sets.precast.Elemental)
 	else 
 		equip(sets.precast.FastCast)
-    	end
+    end
 end
 
 function midcast(spell)
@@ -459,7 +461,7 @@ function midcast(spell)
 	end
 	
 	if sets.midcast[spell.english] then
-                equip(sets.midcast[spell.english])
+        equip(sets.midcast[spell.english])
 		
 		if spell.english:find("Refresh") and spell.target.name == "Zerodragoon" then
 			equip(sets.midcast.RefreshRec)

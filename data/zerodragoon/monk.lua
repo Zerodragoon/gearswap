@@ -258,16 +258,20 @@ end
 
 function precast(spell)	
 	if sets.precast[spell.english] then
-        equip(sets.precast[spell.english])
+		if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
 		
-		if buffactive['Impetus'] and Buff_Swaps_flag then
-			equip(sets.Impetus)
+			if buffactive['Impetus'] and Buff_Swaps_flag then
+				equip(sets.Impetus)
+			end
 		end
 	elseif spell.type == 'WeaponSkill' then
-		equip(sets.PWS[PWS_Set_Names[PWS_Index]])
+		if checkWSDistance(spell) then
+			equip(sets.PWS[PWS_Set_Names[PWS_Index]])
 		
-		if buffactive['Impetus'] and Buff_Swaps_flag then
-			equip(sets.Impetus)
+			if buffactive['Impetus'] and Buff_Swaps_flag then
+				equip(sets.Impetus)
+			end
 		end
 	elseif spell.type == "Ninjutsu" then
 		if string.find(spell.english,'Utsusemi') then

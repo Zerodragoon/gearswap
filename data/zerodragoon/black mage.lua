@@ -432,9 +432,13 @@ function precast(spell)
 	end
 
 	if sets.precast[spell.english] then
-        equip(sets.precast[spell.english])
+        if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+		end
 	elseif spell.type == 'WeaponSkill' then
-		equip(sets.WS)
+		if checkWSDistance(spell) then
+			equip(sets.WS)
+		end
 	else 
 		equip(sets.precast.FastCast)
     end

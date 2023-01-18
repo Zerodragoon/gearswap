@@ -309,6 +309,7 @@ function get_sets()
 	sets.precast['Steel Cyclone'] = sets.AxeAcc
 	sets.precast['Upheaval'] = sets.AxeAcc
 	sets.precast['Full Break'] = sets.AxeAcc
+	sets.precast['Ruinator'] = sets.AxeAcc
 
 	--Idle Sets Below
 	Idle_Set_Names = {'DTMove', 'DT', 'DTMagic', 'DTResistance'}
@@ -333,19 +334,23 @@ function precast(spell)
 	end
 
 	if sets.precast[spell.english] then
-        equip(sets.precast[spell.english])
+		if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
 		
-		if spell.english == "Gambit" then
-            send_command('timers delete "Gambit"')
-            send_command('timers create "Gambit" 96 down;wait 66;input /party Gambit [WEARING OFF IN 30 SEC.];wait 30;input /party Gambit [OFF];timers delete "Gambit"')
-		end
-		
-		if spell.english == "Rayke" then
-            send_command('timers delete "Rayke"')
-            send_command('timers create "Rayke" 47 down;wait 32;input /party Rayke [WEARING OFF IN 15 SEC.];wait 15;input /party Rayke [OFF];timers delete "Rayke"')
+			if spell.english == "Gambit" then
+				send_command('timers delete "Gambit"')
+				send_command('timers create "Gambit" 96 down;wait 66;input /party Gambit [WEARING OFF IN 30 SEC.];wait 30;input /party Gambit [OFF];timers delete "Gambit"')
+			end
+			
+			if spell.english == "Rayke" then
+				send_command('timers delete "Rayke"')
+				send_command('timers create "Rayke" 47 down;wait 32;input /party Rayke [WEARING OFF IN 15 SEC.];wait 15;input /party Rayke [OFF];timers delete "Rayke"')
+			end
 		end
 	elseif spell.type == 'WeaponSkill' then
-        equip(sets.WS)
+        if checkWSDistance(spell) then
+			equip(sets.WS)
+		end
 	elseif spell.english == 'Spectral Jig' and buffactive.Sneak then
 		cast_delay(0.2)
 		send_command('cancel Sneak')        

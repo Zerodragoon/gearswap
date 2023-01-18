@@ -465,6 +465,17 @@ function get_sets()
 		right_ring="Archon Ring",
 		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Damage taken-5%',}}, --Feet Lethargy Houseaux +3
 	})
+	
+	sets.precast['Aeolian Edge'] = set_combine(sets.magic.damage, {
+		head="Nyame Helm",								
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		waist="Orpheus's Sash",
+		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Damage taken-5%',}},  --Feet Lethargy Houseaux +3
+	})
+	
 
 	--Idle Sets Below
 	Idle_Set_Names = {'Move', 'Normal', 'Sublimation', 'DT'}
@@ -546,14 +557,18 @@ function precast(spell)
 	end
 
 	if sets.precast[spell.english] then
-        equip(sets.precast[spell.english])
+        if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+		end
 	elseif spell.english == 'Spectral Jig' and buffactive.Sneak then
 		cast_delay(0.2)
 		send_command('cancel Sneak')
 	elseif spell.english:find("Cur") then 
 		equip(sets.precast.Cure)
 	elseif spell.type == 'WeaponSkill' then
-		equip(sets.PWS)	
+	    if checkWSDistance(spell) then
+			equip(sets.PWS)
+		end
 	elseif spell.skill == "Elemental Magic" then
 		equip(sets.precast.Elemental)
 	else 

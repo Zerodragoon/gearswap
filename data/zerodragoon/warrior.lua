@@ -380,35 +380,33 @@ function get_sets()
 end
 
 function precast(spell)	
-	if spell.type == 'WeaponSkill' and spell.target.distance > 4.0  then						
-		--add_to_chat(167,''..spell.target.name..' is too far can not use '..spell.name..'!!!. Cancelling WeaponSkill ')                           
-		--cancel_spell()
-		--return	
-	end 
-	
 	if sets.precast[spell.english] then
-        equip(sets.precast[spell.english])
+        if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+		end
 	elseif spell.type == 'WeaponSkill' then
-		if (spell.name == "Fell Cleave" or spell.name == "Shockwave") and FellCleaveTH_Flag then
-            equip(sets.FellCleaveTH)
-		elseif spell.name == "Upheaval" then
-			if ATT_Cap_Flag then
-				equip(sets.PWS.UpheavalCap)
-			else 
-				equip(sets.PWS)
-			end
-		elseif spell.name == "Savage Blade" or spell.name == "Judgment" or spell.name == "Black Halo" then
-			if ATT_Cap_Flag then
-				if ATT_Cap_High then
-					equip(sets.PWS.SavageCapHigh)
+		if checkWSDistance(spell) then
+			if (spell.name == "Fell Cleave" or spell.name == "Shockwave") and FellCleaveTH_Flag then
+				equip(sets.FellCleaveTH)
+			elseif spell.name == "Upheaval" then
+				if ATT_Cap_Flag then
+					equip(sets.PWS.UpheavalCap)
 				else 
-					equip(sets.PWS.SavageCap)
+					equip(sets.PWS)
 				end
-			else 
-				equip(sets.PWS.Savage)
+			elseif spell.name == "Savage Blade" or spell.name == "Judgment" or spell.name == "Black Halo" then
+				if ATT_Cap_Flag then
+					if ATT_Cap_High then
+						equip(sets.PWS.SavageCapHigh)
+					else 
+						equip(sets.PWS.SavageCap)
+					end
+				else 
+					equip(sets.PWS.Savage)
+				end
+			else
+				equip(sets.PWS)	
 			end
-		else
-			equip(sets.PWS)	
 		end
 	elseif spell.type == "Ninjutsu" then
 		equip(sets.precast.FastCast)

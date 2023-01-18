@@ -249,26 +249,30 @@ end
 
 function precast(spell)	
 	if sets.precast[spell.english] then
-                equip(sets.precast[spell.english])
+        if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+		end
 	elseif spell.type == 'WeaponSkill' then
-		if spell.name == "Impulse Drive" then
-			if ATT_Cap_Flag then
-			    equip(sets.PWS.ImpulseCap)
-			else 
-				equip(sets.PWS.Impulse)
-			end
-		elseif spell.name == "Savage Blade" then
-			if ATT_Cap_Flag then
-				if ATT_Cap_High then
-					equip(sets.PWS.SavageCapHigh)
+		if checkWSDistance(spell) then
+			if spell.name == "Impulse Drive" then
+				if ATT_Cap_Flag then
+					equip(sets.PWS.ImpulseCap)
 				else 
-					equip(sets.PWS.SavageCap)
+					equip(sets.PWS.Impulse)
+				end
+			elseif spell.name == "Savage Blade" then
+				if ATT_Cap_Flag then
+					if ATT_Cap_High then
+						equip(sets.PWS.SavageCapHigh)
+					else 
+						equip(sets.PWS.SavageCap)
+					end
+				else 
+					equip(sets.PWS.Savage)
 				end
 			else 
-				equip(sets.PWS.Savage)
+				equip(sets.PWS[PWS_Set_Names[PWS_Index]])	
 			end
-		else 
-			equip(sets.PWS[PWS_Set_Names[PWS_Index]])	
 		end
 	elseif spell.type == "Ninjutsu" then
 		if string.find(spell.english,'Utsusemi') then

@@ -736,94 +736,98 @@ end
 
 function precast(spell)	
 	if sets.precast[spell.english] then
-        equip(sets.precast[spell.english])
+		if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
 
-		if spell.name == 'Shadowbind' or spell.name == 'Bounty Shot' or spell.name == 'Eagle Eye Shot' then
-			if player.equipment.ammo == 'Hauksbok Bullet' or player.equipment.ammo == 'Hauksbok Arrow' then
-				add_to_chat(167,''..player.equipment.ammo..' equipped, canceling shot')                           
-            			cancel_spell()
-            			return	
-			end	
+			if spell.name == 'Shadowbind' or spell.name == 'Bounty Shot' or spell.name == 'Eagle Eye Shot' then
+				if player.equipment.ammo == 'Hauksbok Bullet' or player.equipment.ammo == 'Hauksbok Arrow' then
+					add_to_chat(167,''..player.equipment.ammo..' equipped, canceling shot')                           
+							cancel_spell()
+							return	
+				end	
+			end
 		end
 	elseif spell.type == 'WeaponSkill' then
-		if spell.target.distance > 21.0  then						
-			add_to_chat(167,''..spell.target.name..' is too far can not use '..spell.name..'!!!. Cancelling WeaponSkill ')                           
-            cancel_spell()
-            return			
-		elseif spell.name == "Trueflight" then
-            equip(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]])
+		if checkWSDistance(spell) then
+			if spell.target.distance > 21.0  then						
+				add_to_chat(167,''..spell.target.name..' is too far can not use '..spell.name..'!!!. Cancelling WeaponSkill ')                           
+				cancel_spell()
+				return			
+			elseif spell.name == "Trueflight" then
+				equip(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]])
 
-			if buffactive['Aurorastorm'] then
-				equip(sets.TrueFlight.Hachi)
-			elseif spell.target.distance < 3.0 then
-				equip(sets.TrueFlight.Orpheus)
-			end
-		elseif spell.name == "Wildfire" then
-            equip(set_combine(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]], sets.Wildfire))
-
-			if buffactive['Firestorm'] then
-				equip(sets.TrueFlight.Hachi)
-			elseif spell.target.distance < 3.0 then
-				equip(sets.TrueFlight.Orpheus)
-			end
-		elseif spell.name == "Hot Shot" or spell.name == "Flaming Arrow" then
-            equip(set_combine(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]], sets.HotShot))
-
-			if buffactive['Firestorm'] then
-				equip(sets.TrueFlight.Hachi)
-			elseif spell.target.distance < 3.0 then
-				equip(sets.TrueFlight.Orpheus)
-			end
-		elseif spell.name == "Coronach" then
-            if ATT_Cap_Flag then
-				equip(sets.CoronachCap)
-			else 
-				equip(sets.Coronach)
-			end 
-		elseif spell.name == "Jishnu's Radiance" then
-            if ATT_Cap_Flag then
-				equip(sets.Jishnu[Jishnu_Set_Names[Jishnu_Index]].Cap)
-			else
-				equip(sets.Jishnu[Jishnu_Set_Names[Jishnu_Index]])
-			end
-		else
-			if ATT_Cap_Flag then
-				equip(sets.LS[LS_Set_Names[LS_Index]].Cap)			
-			else
-				equip(sets.LS[LS_Set_Names[LS_Index]])			
-			end
-		end
-		
-		Ammo_Set_Subset = sets.Ammo[weapon_set.ammoType]
-		Ammo_Name_Subset = Ammo_Set_Names[weapon_set.ammoType]
-		
-		equip(Ammo_Set_Subset[Ammo_Name_Subset[Ammo_Index]])
-
-		if spell.name == "Aeolian Edge" or spell.name == "Burning Blade" or spell.name == "Red Lotus Blade"  then
-            equip(sets.Aeolian)
-		elseif spell.name == "Seraph Blade" then
-            equip(set_combine(sets.Aeolian, {
-				ring1="Weatherspoon Ring +1"
-			}))
-		elseif spell.name == "Circle Blade" then
-            equip(sets.LS[LS_Set_Names[LS_Index]])
-		elseif spell.name == "Evisceration" then
-            equip(sets.Evis)
-		elseif spell.name == "Savage Blade" then
-			if ATT_Cap_Flag then
-				if ATT_Cap_High then
-					equip(sets.SavageCapHigh)
-				else 
-					equip(sets.SavageCap)
+				if buffactive['Aurorastorm'] then
+					equip(sets.TrueFlight.Hachi)
+				elseif spell.target.distance < 3.0 then
+					equip(sets.TrueFlight.Orpheus)
 				end
-			else 
-				equip(sets.Savage)
+			elseif spell.name == "Wildfire" then
+				equip(set_combine(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]], sets.Wildfire))
+
+				if buffactive['Firestorm'] then
+					equip(sets.TrueFlight.Hachi)
+				elseif spell.target.distance < 3.0 then
+					equip(sets.TrueFlight.Orpheus)
+				end
+			elseif spell.name == "Hot Shot" or spell.name == "Flaming Arrow" then
+				equip(set_combine(sets.TrueFlight[TrueFlight_Set_Names[TrueFlight_Index]], sets.HotShot))
+
+				if buffactive['Firestorm'] then
+					equip(sets.TrueFlight.Hachi)
+				elseif spell.target.distance < 3.0 then
+					equip(sets.TrueFlight.Orpheus)
+				end
+			elseif spell.name == "Coronach" then
+				if ATT_Cap_Flag then
+					equip(sets.CoronachCap)
+				else 
+					equip(sets.Coronach)
+				end 
+			elseif spell.name == "Jishnu's Radiance" then
+				if ATT_Cap_Flag then
+					equip(sets.Jishnu[Jishnu_Set_Names[Jishnu_Index]].Cap)
+				else
+					equip(sets.Jishnu[Jishnu_Set_Names[Jishnu_Index]])
+				end
+			else
+				if ATT_Cap_Flag then
+					equip(sets.LS[LS_Set_Names[LS_Index]].Cap)			
+				else
+					equip(sets.LS[LS_Set_Names[LS_Index]])			
+				end
 			end
-		elseif player.equipment.ammo == 'Hauksbok Bullet' or player.equipment.ammo == 'Hauksbok Arrow' then
-			add_to_chat(167,''..player.equipment.ammo..' equipped, canceling shot')                           
-            		cancel_spell()
-            		return		
-		end		
+			
+			Ammo_Set_Subset = sets.Ammo[weapon_set.ammoType]
+			Ammo_Name_Subset = Ammo_Set_Names[weapon_set.ammoType]
+			
+			equip(Ammo_Set_Subset[Ammo_Name_Subset[Ammo_Index]])
+
+			if spell.name == "Aeolian Edge" or spell.name == "Burning Blade" or spell.name == "Red Lotus Blade"  then
+				equip(sets.Aeolian)
+			elseif spell.name == "Seraph Blade" then
+				equip(set_combine(sets.Aeolian, {
+					ring1="Weatherspoon Ring +1"
+				}))
+			elseif spell.name == "Circle Blade" then
+				equip(sets.LS[LS_Set_Names[LS_Index]])
+			elseif spell.name == "Evisceration" then
+				equip(sets.Evis)
+			elseif spell.name == "Savage Blade" then
+				if ATT_Cap_Flag then
+					if ATT_Cap_High then
+						equip(sets.SavageCapHigh)
+					else 
+						equip(sets.SavageCap)
+					end
+				else 
+					equip(sets.Savage)
+				end
+			elseif player.equipment.ammo == 'Hauksbok Bullet' or player.equipment.ammo == 'Hauksbok Arrow' then
+				add_to_chat(167,''..player.equipment.ammo..' equipped, canceling shot')                           
+						cancel_spell()
+						return		
+			end		
+		end
 	elseif spell.name == "Ranged" then
 		weapon_set = set.Weapon[Weapon_Set_Names[Weapon_Index]]
 		preshot_set = sets.precast[weapon_set.preshot]

@@ -298,24 +298,28 @@ end
 
 function precast(spell)	
 	if sets.precast[spell.english] then
-        equip(sets.precast[spell.english])
+       if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+	   end
 	elseif spell.type == 'WeaponSkill' then
-		if spell.name == "Aeolian Edge" then
-			if AeolianTH_Flag then
-				equip(sets.AeolianTH)
+		if checkWSDistance(spell) then
+			if spell.name == "Aeolian Edge" then
+				if AeolianTH_Flag then
+					equip(sets.AeolianTH)
+				else
+					equip(sets.MWS[MWS_Set_Names[MWS_Index]])
+				end
 			else
-				equip(sets.MWS[MWS_Set_Names[MWS_Index]])
+				equip(sets.PWS[PWS_Set_Names[PWS_Index]])
 			end
-		else
-			equip(sets.PWS[PWS_Set_Names[PWS_Index]])
-		end
-		
-		if buffactive['Trick Attack'] then
-			equip(sets.precast["Trick Attack"])
-		end
-		
-		if buffactive['Sneak Attack'] then
-			equip(sets.precast["Sneak Attack"])
+
+			if buffactive['Trick Attack'] then
+				equip(sets.precast["Trick Attack"])
+			end
+
+			if buffactive['Sneak Attack'] then
+				equip(sets.precast["Sneak Attack"])
+			end
 		end
 	elseif spell.type == "Ninjutsu" then
 		if string.find(spell.english,'Utsusemi') then

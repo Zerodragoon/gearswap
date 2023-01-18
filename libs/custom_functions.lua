@@ -16,6 +16,15 @@ Blm_Aoe_Elements = {'Stonega', 'Waterga', 'Firaga', 'Aeroga', 'Thundaga', 'Blizz
 Anc_Nuke_Elements = {'Quake', 'Flood', 'Flare', 'Tornado', 'Burst', 'Freeze'}
 Nin_Nuke_Elements = {'Doton', 'Suiton', 'Katon','Huton', 'Raiton', 'Hyoton'}
 
+Weapon_Skill_Range = {
+    [2] = 3,
+    [4] = 8,
+    [10] = 14,
+    [12] = 20
+}
+
+ws_safety_margin = 0
+
 function set_style_lock()
 	send_command('wait 2.0; input /lockstyleset '..Style_Lock_Id..'')
 end
@@ -94,6 +103,23 @@ function getNinjaNukeString(element, tier)
 	end
 	
 	return element..temptier
+end
+
+function checkWSDistance(spell) 
+	if spell.type == 'WeaponSkill' then
+        local ws_range = Weapon_Skill_Range[spell.range]
+        local player_size = player.model_size
+        local target_size = spell.target.model_size
+        local max_ws_distance = player_size + ws_range + target_size
+
+        if spell.target.distance >= max_ws_distance - ws_safety_margin then
+			add_to_chat(167,"Canceling " .. spell.name .. ". The target is too far.")
+            cancel_spell()
+			return false
+        end
+    end
+	
+	return true
 end
 
 --Global Self Commands

@@ -86,7 +86,7 @@ function get_sets()
 	sets.PWS = {
 		head="Mpaca's Cap",							
 		body="Nyame Mail", 
-		hands="Nyame Gauntlets", --Kasuga Kote +3
+		hands="Kasuga Kote +3",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck="Samurai's Nodowa +2",
@@ -121,13 +121,14 @@ function get_sets()
 		ear2="Ishvara Earring"
 	})
 	
+	
 	sets.precast['Namas Arrow'] = sets.RangedWS
 	sets.precast['Apex Arrow'] = sets.RangedWS
 	sets.precast['Empyreal Arrow'] = sets.RangedWS
 	sets.precast['Tachi: Ageha'] = {
 		head="Kasuga Kabuto +2",
 		body="Kasuga Domaru +3",
-		hands="Kasuga Kote +2",
+		hands="Kasuga Kote +3",
 		legs="Kasuga Haidate +2",
 		feet="Kasuga Sune-Ate +2",
 		waist="Eschan Stone",
@@ -275,18 +276,22 @@ end
 
 function precast(spell)
 	if sets.precast[spell.english] then
-        equip(sets.precast[spell.english])
+		if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
 		
-		if buffactive['Sengikori'] then
-			equip(sets.precast['Sengikori'])
+			if buffactive['Sengikori'] then
+				equip(sets.precast['Sengikori'])
+			end
 		end
 	elseif spell.english == 'Meditate' then
 		equip(sets.Meditate)
 	elseif spell.type == 'WeaponSkill' then
-		if Ranged_Flag == true then 
-			equip(set_combine(sets.PWS[PWS_Set_Names[PWS_Index]], set_combine(sets.Weapon.Ullr, sets.Ammo.arrow)))
-		else 
-			equip(sets.PWS[PWS_Set_Names[PWS_Index]])
+		if checkWSDistance(spell) then
+			if Ranged_Flag == true then 
+				equip(set_combine(sets.PWS[PWS_Set_Names[PWS_Index]], set_combine(sets.Weapon.Ullr, sets.Ammo.arrow)))
+			else 
+				equip(sets.PWS[PWS_Set_Names[PWS_Index]])
+			end
 		end
 	elseif spell.name == "Ranged" then
 		equip(sets.Ammo.arrow)

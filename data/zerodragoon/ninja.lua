@@ -33,7 +33,7 @@ function get_sets()
 		body="Dread Jupon", --7
 		hands="Leyline Gloves", --8
 		legs="Rawhide Trousers", --5
-		feet="Hattori Kyahan +1",
+		feet="Hattori Kyahan +2",
 		neck="Baetyl Pendant", --4
 		ear1="Loquacious Earring", --2
 		ear2="Enchanter's Earring +1", --2
@@ -375,9 +375,13 @@ end
 
 function precast(spell)	
 	if sets.precast[spell.english] then
-                equip(sets.precast[spell.english])
+        if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+		end
 	elseif spell.type == 'WeaponSkill' then
-		equip(sets.PWS[PWS_Set_Names[PWS_Index]])	
+		if checkWSDistance(spell) then
+			equip(sets.PWS[PWS_Set_Names[PWS_Index]])	
+		end
 	elseif spell.type == "Ninjutsu" then
 		if string.find(spell.english,'Utsusemi') then
 			equip(sets.precast.Utsusemi)

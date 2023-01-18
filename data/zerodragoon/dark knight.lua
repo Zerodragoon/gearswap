@@ -319,8 +319,7 @@ function get_sets()
 	})
 	
 	sets.Melee.FullSB = set_combine(sets.Melee, {
-	--	head="Sakpata's Helm",
-		head="Volte Tiara", --SB 6
+		head="Sakpata's Helm",
    		body="Dagon Breastplate", --SB II 10
 		hands="Sakpata's Gauntlets", --SB 8
 		legs="Volte Tights", --SB 8
@@ -344,22 +343,26 @@ end
 
 function precast(spell)	
 	if sets.precast[spell.english] then
-        equip(sets.precast[spell.english])
+        if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+		end
 	elseif spell.type == 'WeaponSkill' then
-		if spell.name == "Torcleaver" then
-			if ATT_Cap_Flag then
-				equip(sets.PWS.TorcleaverCap)
-			else 
-				equip(sets.PWS)
+		if checkWSDistance(spell) then
+			if spell.name == "Torcleaver" then
+				if ATT_Cap_Flag then
+					equip(sets.PWS.TorcleaverCap)
+				else 
+					equip(sets.PWS)
+				end
+			elseif spell.name == "Savage Blade" or spell.name == "Judgment" or spell.name == "Black Halo" then
+				if ATT_Cap_Flag then
+					equip(sets.PWS.SavageCap)
+				else 
+					equip(sets.PWS.Savage)
+				end
+			else
+				equip(sets.PWS)	
 			end
-		elseif spell.name == "Savage Blade" or spell.name == "Judgment" or spell.name == "Black Halo" then
-			if ATT_Cap_Flag then
-				equip(sets.PWS.SavageCap)
-			else 
-				equip(sets.PWS.Savage)
-			end
-		else
-			equip(sets.PWS)	
 		end
 	elseif spell.type == "Ninjutsu" or spell.type == "BlackMagic" then
 		equip(sets.precast.FastCast)

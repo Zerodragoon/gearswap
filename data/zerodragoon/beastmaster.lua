@@ -323,11 +323,15 @@ end
 
 function precast(spell)	
 	if sets.precast[spell.english] then
-        equip(sets.precast[spell.english])
+		if checkWSDistance(spell) then
+			equip(sets.precast[spell.english])
+		end
 	elseif ready_moves_to_check:contains(spell.name) and pet.status == 'Engaged' then
         equip(sets.PetReady)
 	elseif spell.type == 'WeaponSkill' then
-		equip(sets.PWS[PWS_Set_Names[PWS_Index]])	
+		if checkWSDistance(spell) then
+			equip(sets.PWS[PWS_Set_Names[PWS_Index]])	
+		end
 	elseif spell.english == 'Spectral Jig' and buffactive.Sneak then
 		cast_delay(0.2)
 		send_command('cancel Sneak')        
