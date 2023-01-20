@@ -83,6 +83,14 @@ function get_sets()
 		ear2="Peltast's Earring +1"
 	})
 	
+	sets.PWS.ImpulseSB = set_combine(sets.PWS.Impulse, {
+		body="Dagon Breastplate", --SB II 10
+		ring2="Niqmaddu Ring", --SB II 5
+		ear1="Sherida Earring", --SB II 5
+		ear2="Peltast's Earring +1", --SB 6
+		waist="Sarissaphoroi Belt" --SB 5
+	})
+	
 	sets.PWS.Savage = set_combine(sets.PWS, {
 		neck="Dragoon's Collar +2",
 		ring1="Epaminondas's Ring",
@@ -99,9 +107,17 @@ function get_sets()
 		body="Gleti's Cuirass",
 	})
 	
-	sets.precast["Camlann's Torment"] = set_combine(sets.PWS, {
+	sets.PWS.Camlann = set_combine(sets.PWS, {
 		ear2="Ishvara Earring",
 		neck="Dragoon's Collar +2",
+	})
+	
+	sets.PWS.CamlannSB = set_combine(sets.PWS.Camlann, {
+		body="Dagon Breastplate", --SB II 10
+		ring2="Niqmaddu Ring", --SB II 5
+		ear1="Sherida Earring", --SB II 5
+		ear2="Peltast's Earring +1", --SB 6
+		waist="Sarissaphoroi Belt" --SB 5
 	})
 	
 	sets.precast["Drakesbane"] = set_combine(sets.PWS, {
@@ -140,7 +156,7 @@ function get_sets()
 
 	sets.Idle.Normal = set_combine(sets.Idle, {})
 
-	Melee_Set_Names = {'DT', 'PetDT', 'Acc', 'DblAtt', 'Kraken', 'KrakenDT'}
+	Melee_Set_Names = {'DT', 'PetDT', 'Acc', 'DblAtt', 'Kraken', 'KrakenDT', 'SB'}
 
 	sets.Melee = {  
 		head="Flamma Zucchetto +2",							
@@ -206,6 +222,16 @@ function get_sets()
 		--Peltast's Plackart +3?
 		waist="Olseni Belt"
 	})
+	
+	sets.Melee.SB = set_combine(sets.Melee.DT, { --29 SB From Auspice
+		neck="Vim Torque +1",
+		body="Dagon Breastplate", --SB II 10
+		legs="Volte Tights", --SB 8
+		ring1="Chirich Ring +1", --SB 10
+		ring2="Niqmaddu Ring", --SB II 5
+		ear1="Sherida Earring", --SB II 5
+		ear2="Peltast's Earring +1" --SB 6
+	}) --SB II 20 --SB 24
  
 	sets.Melee.Jump = set_combine(sets.Melee, {
 		neck="Vim Torque +1",
@@ -255,7 +281,15 @@ function precast(spell)
 	elseif spell.type == 'WeaponSkill' then
 		if checkWSDistance(spell) then
 			if spell.name == "Impulse Drive" then
-				if ATT_Cap_Flag then
+				if Melee_Set_Names[Melee_Index] == 'SB' then
+					equip(sets.PWS.CamlannSB)
+				else 
+					equip(sets.PWS.Camlann)
+				end
+			elseif spell.name == "Impulse Drive" then
+				if Melee_Set_Names[Melee_Index] == 'SB' then
+					equip(sets.PWS.ImpulseSB)
+				elseif ATT_Cap_Flag then
 					equip(sets.PWS.ImpulseCap)
 				else 
 					equip(sets.PWS.Impulse)

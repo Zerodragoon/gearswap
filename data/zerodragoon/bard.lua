@@ -11,6 +11,7 @@ function get_sets()
 	Lullaby_Short = false
 	BURST_Flag = false
 	Dummy_Flag = false
+	Enmity_Flag = false
 	Style_Lock_Id = 20
 
 	--Default Macro Set for RNG
@@ -200,6 +201,24 @@ function get_sets()
 	sets.midcast.Obi = {
 		waist="Hachirin-no-Obi"
 	}
+	
+	sets.enmity = {
+        main = "Mafic Cudgel",
+        sub = "Genmei Shield",
+        ammo = "Sapience Orb",
+        head = "Halitus Helm",
+        body = "Emet Harness +1",
+		hands= = "Nyame Gauntlets",
+        legs = "Zoar Subligar +1",
+		feet = "Nyame Sollerets",
+        neck = "Unmoving Collar +1",
+        waist = "Kasiri Belt",
+        left_ear = "Friomisi Earring",
+        right_ear = "Trux Earring",
+        left_ring = "Supershear Ring",
+        right_ring = "Eihwaz Ring",
+		back={ name="Intarabus's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
+    }
 	
 	sets.midcast.Song = {
 		main="Carnwenhan",
@@ -550,7 +569,11 @@ function midcast(spell)
 		elseif spell.english:find("Etude") then
 			equip(sets.midcast.Etude)
 		elseif spell.english:find("Lullaby") then
-			equip(sets.midcast.Lullaby)
+			if Enmity_Flag then
+				equip(sets.enmity)
+			else
+				equip(sets.midcast.Lullaby)
+			end
 		else 
 			equip(sets.midcast.Song)
 		end
@@ -634,20 +657,6 @@ function self_command(command)
 		if Instrument_Index > #Instrument_Set_Names then Instrument_Index = 1 end
 		add_to_chat(207,'Instrument Set Changed to: '..Instrument_Set_Names[Instrument_Index]..'')
 		equip(sets.Instruments[Instrument_Set_Names[Instrument_Index]])
-	elseif command == 'pdt' then
-		if sets.pdt == pdt.on then
-			equip(pdt.off)
-			equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-			sets.pdt = pdt.off
-			enable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
-			status_change(player.status)
-			add_to_chat(207,'>>>>> PDT Set Unlocked! <<<<<')
-		else				
-			equip(pdt.on)
-			sets.pdt = pdt.on
-			disable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
-			add_to_chat(66,'>>>>> PDT Set Locked! <<<<<')
-		end
 	elseif command == 'burst' then
 		BURST_Flag = not BURST_Flag
 	elseif command == 'dummy' then
@@ -656,6 +665,9 @@ function self_command(command)
 	elseif command == 'lullaby' then
 		add_to_chat(207,'Lullaby Short Set: '..tostring(not Lullaby_Short)..'')
 		Lullaby_Short = not Lullaby_Short
+	elseif command == 'enmity' then
+		add_to_chat(207,'Enmity Set: '..tostring(not Enmity_Flag)..'')
+		Enmity_Flag = not Enmity_Flag
 	elseif command == 'equipidle' then
 		equip(sets.Idle[Idle_Set_Names[Idle_Index]]) 
 	elseif command == 'equipmelee' then
