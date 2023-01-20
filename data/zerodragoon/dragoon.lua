@@ -280,7 +280,7 @@ function precast(spell)
 		end
 	elseif spell.type == 'WeaponSkill' then
 		if checkWSDistance(spell) then
-			if spell.name == "Impulse Drive" then
+			if spell.name == "Camlann's Torment" then
 				if Melee_Set_Names[Melee_Index] == 'SB' then
 					equip(sets.PWS.CamlannSB)
 				else 
