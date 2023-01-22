@@ -278,7 +278,9 @@ function get_sets()
 
 	sets.Melee.DTTH = set_combine(sets.Melee.DT, {	
 		hands="Plunderer's Armlets +3",
-		ammo="Perfect Lucky Egg"}) --Feet Skulker's Poulaines +3
+		ammo="Perfect Lucky Egg",
+		ring1="Moonlight Ring",
+		ring2="Moonlight Ring"}) --Feet Skulker's Poulaines +3
 
 	sets.Melee.Crit = set_combine(sets.Melee, {
 		head="Gleti's Mask",

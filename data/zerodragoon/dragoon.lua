@@ -51,7 +51,7 @@ function get_sets()
 	PWS_Set_Names = {'Normal'}
 
 	sets.PWS = {
-		head="Nyame Helm", --Peltast's Mezail +3					
+		head="Peltast's Mezail +3",				
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
@@ -68,7 +68,6 @@ function get_sets()
 	sets.PWS.Normal = set_combine(sets.PWS, {})
 
 	sets.PWS.Impulse = set_combine(sets.PWS, {
-		head="Blistering Sallet +1", --Peltast Mezail +3
 		neck="Dragoon's Collar +2",
 		body="Gleti's Cuirass",
 		legs="Peltast's Cuissots +2",
@@ -121,13 +120,15 @@ function get_sets()
 	})
 	
 	sets.precast["Drakesbane"] = set_combine(sets.PWS, {
-		ehead="Blistering Sallet +1",
+		head="Blistering Sallet +1",
 		neck="Dragoon's Collar +2",
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
 		legs="Peltast's Cuissots +2",
 		feet="Gleti's Boots",
-		waist="Sailfi Belt +1"
+		waist="Sailfi Belt +1",
+		ear1="Thrud Earring",
+		ear2="Peltast's Earring +1"
 	})
 
 	-- Magical WS Sets Below

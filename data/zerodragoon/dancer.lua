@@ -60,7 +60,7 @@ function get_sets()
 	sets.precast.Step = {
 		head="Maxixi Tiara +3",
 		body="Maxixi Casaque +3",
-		hands="Maxixi Bangles +2",
+		hands="Maxixi Bangles +3",
 		legs="Horos Tights +3",
 		feet="Horos Toe Shoes +3",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
@@ -231,9 +231,7 @@ function get_sets()
 	sets.MWS.Normal = set_combine(sets.MWS, {})
 	
 	sets.precast['Aeolian Edge'] = set_combine(sets.MWS, {
-		body="Volte Jupon", 
-		ammo="Perfect Lucky Egg", 
-		waist="Chaac Belt"
+
 	})
 
 	sets.Evis = {

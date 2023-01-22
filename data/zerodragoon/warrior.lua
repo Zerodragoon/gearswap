@@ -76,7 +76,7 @@ function get_sets()
 	}
 	
 	sets.precast['Mighty Strikes'] = {
-		hands="Agoge Mufflers"
+		hands="Agoge Mufflers +1"
 	}
 	
 	sets.precast['Tomahawk'] = {

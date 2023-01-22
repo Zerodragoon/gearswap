@@ -113,11 +113,11 @@ function get_sets()
 	})
 	
 	sets.precast['Holy Circle'] = {
-		feet="Reverence Leggings +1"
+		feet="Reverence Leggings +2"
 	}
 	
 	sets.precast['Cover'] = {
-		head="Reverence Coronet +1"
+		head="Reverence Coronet +2"
 	}
 	
 	sets.precast['Atonement'] = sets.magic.Enmity
