@@ -190,7 +190,7 @@ function get_sets()
 	sets.midcast.Burst = set_combine(sets.midcast.elemental, {
 		head="Pedagogy Mortarboard +3",
 		body="Agwu's Robe",
-		hands="Amalric Gages +1", --Agwu's Gages
+		hands="Agwu's Gages",
 		legs="Agwu's Slops",
 		feet="Arbatel Loafers +3",	
 		right_ring="Mujin Band"

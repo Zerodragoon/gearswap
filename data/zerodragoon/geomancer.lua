@@ -175,9 +175,9 @@ function get_sets()
 	})
 
 	sets.midcast.Burst = set_combine(sets.midcast.elemental, {
-		head="Ea Hat +1",
+		head="Ea Hat +1", --Azimuth Head?
 		body="Ea Houppe. +1", --Azimuth Body?
-		hands="Amalric Gages +1", --Awgus Gages
+		hands="Agwu's Gages", --Awgus Gages
 		legs="Ea Slops +1", --Azimuth legs?
 		feet="Agwu's Pigaches",
 		right_ring="Mujin Band"

@@ -541,7 +541,8 @@ function get_sets()
 	
 	sets.Melee.Enspell = set_combine(sets.Melee, {
 		hands="Ayanmo Manopolas +2",
-		waist="Orpheus's Sash"
+		waist="Orpheus's Sash",
+		ammo="Sroda Tathlum"
 	})
 	
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')

@@ -208,7 +208,7 @@ function get_sets()
         ammo = "Sapience Orb",
         head = "Halitus Helm",
         body = "Emet Harness +1",
-		hands= = "Nyame Gauntlets",
+		hands= "Nyame Gauntlets",
         legs = "Zoar Subligar +1",
 		feet = "Nyame Sollerets",
         neck = "Unmoving Collar +1",
@@ -553,7 +553,9 @@ function midcast(spell)
         equip(sets.midcast[spell.english])
 	elseif spell.type == 'BardSong' then
 		if Dummy_Flag == true then
-			equip(sets.Idle.DT)
+			equip(set_combine(sets.Idle.DT, {
+				ranged="Daurdabla"
+			}))
 		elseif spell.english:find("Ballad") then
 			equip(sets.midcast.Ballad)
 		elseif spell.english:find("Minne") then

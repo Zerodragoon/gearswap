@@ -280,7 +280,7 @@ function get_sets()
 		ammo=""
 	})
 
-	Melee_Set_Names = {'Sakpata', 'Boii', 'SB', 'TripleAtt', 'TH', 'DoubleAttackDamage'}
+	Melee_Set_Names = {'Boii', 'Sakpata', 'SB', 'TripleAtt', 'TH', 'DoubleAttackDamage'}
 
 	sets.Melee = {  
 		
