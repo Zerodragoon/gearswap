@@ -58,13 +58,19 @@ function get_sets()
 	}
 	
 	sets.precast['Aggressor'] = {
+		main="Instigator",
+		sub="Utu Grip",
 		head="Pummeler's Mask +2",
-		hands="Agoge Lorica +1"
+		hands="Agoge Lorica +3"
 	}
 	
 	sets.precast['Retaliation'] = {
 		hands="Pummeler's Mufflers +2",
 		feet="Boii Calligae +2"
+	}
+	
+	sets.precast['Defender'] = {
+		hands="Agoge Mufflers +3"
 	}
 	
 	sets.precast['Restraint'] = {
@@ -76,7 +82,7 @@ function get_sets()
 	}
 	
 	sets.precast['Mighty Strikes'] = {
-		hands="Agoge Mufflers +1"
+		hands="Agoge Mufflers +3"
 	}
 	
 	sets.precast['Tomahawk'] = {
