@@ -90,7 +90,7 @@ function get_sets()
 		feet="Agoge Calligae +3",
 	}
 
-	Hands_Set_Names = {'Sword', 'GAxe', 'Spear', 'GSword', 'Mace', 'Knife', 'Staff'}
+	Hands_Set_Names = {'Sword', 'GAxe', 'Spear', 'GSword', 'Mace', 'Knife', 'Staff', 'Ukon'}
 
 	sets.Hands = {}	
 
@@ -128,7 +128,12 @@ function get_sets()
 		main="Xoanon",
 		sub="Utu Grip"
 	}
-	  
+	
+	sets.Hands.Ukon = { 
+		main="Lumberjack",
+		sub="Utu Grip"
+	}
+	   
 	sets.GK = {
 		neck="Combatant's Torque",
 		head="Fazheluo Helm"
