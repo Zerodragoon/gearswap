@@ -126,7 +126,7 @@ function get_sets()
 	sets.midcast['Phalanx'] = set_combine(sets.magic.MidCast, {
 		main="Sakpata's Sword",
 		sub="Priwen",
-		head="Yorium Barbuta",
+		head={ name="Odyssean Helm", augments={'Mag. Acc.+22','Pet: AGI+2','Phalanx +4','Accuracy+9 Attack+9','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
 		body="Yorium Cuirass",
 		hands="Souveran Handschuhs +1",
 		legs="Sakpata's Cuisses",

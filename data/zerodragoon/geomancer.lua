@@ -178,7 +178,7 @@ function get_sets()
 		head="Ea Hat +1", 
 		body="Ea Houppe. +1", --Azimuth Body?
 		hands="Agwu's Gages", --Awgus Gages
-		legs="Ea Slops +1", --Azimuth legs?
+		legs="Ea Slops +1", --Azimuth legs
 		feet="Agwu's Pigaches",
 		right_ring="Mujin Band"
 	})

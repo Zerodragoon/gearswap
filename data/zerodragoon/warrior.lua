@@ -60,7 +60,7 @@ function get_sets()
 	sets.precast['Aggressor'] = {
 		main="Instigator",
 		sub="Utu Grip",
-		head="Pummeler's Mask +2",
+		head="Pummeler's Mask +3",
 		hands="Agoge Lorica +3"
 	}
 	
@@ -130,7 +130,7 @@ function get_sets()
 	}
 	
 	sets.Hands.Ukon = { 
-		main="Lumberjack",
+		main="Bonesplitter",
 		sub="Utu Grip"
 	}
 	   

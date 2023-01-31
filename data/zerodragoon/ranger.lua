@@ -456,14 +456,14 @@ function get_sets()
 	sets.precast['Eagle Eye Shot'] = sets.Midshot
 
 	--Barrage Sets Below
-	Barrage_Set_Names = {'BarrageAcc', 'BarrageSTP'}
+	Barrage_Set_Names = {'BarrageSTP', 'BarrageAcc'}
 	sets.Barrage = set_combine(sets.Midshot.Acc, {
 			hands="Orion Bracers +3",
 			legs="Amini Bragues +3",
 			waist="Tellen Belt"
 			})
 
-	sets.Barrage.BarrageSTP = set_combine(sets.Barrage, sets.Midshot.Standard)
+	sets.Barrage.BarrageSTP = set_combine(sets.Midshot.Standard, sets.Barrage)
 
 	sets.Barrage.BarrageAcc = sets.Barrage
 						
@@ -637,6 +637,7 @@ function get_sets()
 	sets.Jishnu.True.Cap = set_combine(sets.Jishnu.True, {
 		head="Blistering Sallet +1",
 		body="Amini Caban +3",
+		hands="Ikenga's Gloves",
 		neck="Scout's Gorget +2",
 		ear2="Amini Earring"
 	})

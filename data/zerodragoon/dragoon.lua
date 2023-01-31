@@ -70,7 +70,7 @@ function get_sets()
 	sets.PWS.Impulse = set_combine(sets.PWS, {
 		neck="Dragoon's Collar +2",
 		body="Gleti's Cuirass",
-		legs="Peltast's Cuissots +2",
+		legs="Peltast's Cuissots +3",
 		waist="Sailfi Belt +1",
 		ring2="Epaminondas's Ring",
 	})
@@ -124,7 +124,7 @@ function get_sets()
 		neck="Dragoon's Collar +2",
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		legs="Peltast's Cuissots +2",
+		legs="Peltast's Cuissots +3",
 		feet="Gleti's Boots",
 		waist="Sailfi Belt +1",
 		ear1="Thrud Earring",

@@ -1,0 +1,17 @@
+sets.exported={
+    main="Sakpata's Sword",
+    sub={ name="Priwen", augments={'HP+50','Mag. Evasion+50','Damage Taken -3%',}},
+    ammo="Staunch Tathlum +1",
+    head={ name="Odyssean Helm", augments={'Mag. Acc.+22','Pet: AGI+2','Phalanx +4','Accuracy+9 Attack+9','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
+    body={ name="Yorium Cuirass", augments={'Spell interruption rate down -9%','Phalanx +3',}},
+    hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    legs="Sakpata's Cuisses",
+    feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    neck="Incanter's Torque",
+    waist="Olympus Sash",
+    left_ear="Mimir Earring",
+    right_ear="Andoaa Earring",
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
+    back={ name="Weard Mantle", augments={'VIT+2','DEX+4','Enmity+1','Phalanx +5',}},
+}
