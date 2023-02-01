@@ -157,18 +157,6 @@ function parent_self_command(command)
 		if Hands_Index > #Hands_Set_Names then Hands_Index = 1 end
 		add_to_chat(207,'Hands Set Changed to: '..Hands_Set_Names[Hands_Index]..'')
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-	elseif command:sub(1, 5) == 'hands' then
-		Temp_Hands_Index = command:sub(6,8)
-
-		if Temp_Hands_Index == '' then
-			Hands_Index = Hands_Index +1
-		else 
-			Hands_Index = tonumber(Temp_Hands_Index)
-		end
-		
-		if Hands_Index > #Hands_Set_Names then Hands_Index = 1 end
-		add_to_chat(207,'Hands Set Changed to: '..Hands_Set_Names[Hands_Index]..'')
-		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
 	elseif command == 'flurry' then
 		Flurry_Index = Flurry_Index +1
 		if Flurry_Index > #Flurry_Set_Names then Flurry_Index = 1 end
@@ -209,10 +197,17 @@ function parent_self_command(command)
 		equip(Ammo_Set_Subset[Ammo_Name_Subset[Ammo_Index]])
 
 		add_to_chat(207,'Ammo Set Changed to: '..Ammo_Name_Subset[Ammo_Index]..'')	
-	elseif command == 'midshot' then
-		Midshot_Index = Midshot_Index +1
+	elseif command:sub(1, 7) == 'midshot' then
+		Temp_Midshot_Index = command:sub(8,10)
+
+		if Temp_Midshot_Index == '' then
+			Midshot_Index = Midshot_Index +1
+		else 
+			Midshot_Index = tonumber(Temp_Midshot_Index)
+		end
+		
 		if Midshot_Index > #Midshot_Set_Names then Midshot_Index = 1 end
-		add_to_chat(207,'Midshot Set Changed to: '..Midshot_Set_Names[Midshot_Index]..'')		
+		add_to_chat(207,'Midshot Set Changed to: '..Midshot_Set_Names[Midshot_Index]..'')			
 	elseif command == 'barrage' then
 		Barrage_Index = Barrage_Index +1
 		if Barrage_Index > #Barrage_Set_Names then Barrage_Index = 1 end

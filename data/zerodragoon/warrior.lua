@@ -369,7 +369,7 @@ function get_sets()
 		neck="Warrior's Bead Necklace +2", --7 
 		waist="Ioskeha Belt +1", --9
 		ring1="Niqmaddu Ring",
-		ring2="Chirich Ring +1",
+		ring2="Moonlight Ring",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --10
 		ear1="Schere Earring", --6
 		ear2="Boii Earring", --7

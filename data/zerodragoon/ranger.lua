@@ -259,7 +259,7 @@ function get_sets()
 	Ammo_Set_Names = {
 		bullet = {'Chrono', 'Eradicating', 'Devastating'},
 		arrow = {'Chrono', 'Yoichi', 'Artemis'},
-		bolt= {'Quelling'},
+		bolt= {'Quelling', 'Acid'},
 		hauksbokArrow = {'Hauksbok', 'Chrono'},
 		hauksbokBullet = {'Hauksbok', 'Chrono'}
 	}
@@ -293,6 +293,9 @@ function get_sets()
 	sets.Ammo.bolt = {
 		Quelling = {
 			ammo="Quelling Bolt"
+		},
+		Acid = {
+			ammo="Abrasion Bolt"
 		}
 	}
 
@@ -457,15 +460,15 @@ function get_sets()
 
 	--Barrage Sets Below
 	Barrage_Set_Names = {'BarrageSTP', 'BarrageAcc'}
-	sets.Barrage = set_combine(sets.Midshot.Acc, {
+	sets.Barrage = {
 			hands="Orion Bracers +3",
 			legs="Amini Bragues +3",
 			waist="Tellen Belt"
-			})
+			}
 
-	sets.Barrage.BarrageSTP = set_combine(sets.Midshot.Standard, sets.Barrage)
+	sets.Barrage.BarrageSTP = set_combine(sets.Midshot.TrueShot, sets.Barrage)
 
-	sets.Barrage.BarrageAcc = sets.Barrage
+	sets.Barrage.BarrageAcc = set_combine(sets.Midshot.Acc, sets.Barrage)
 						
 	-- Last Stand Sets Below
 	LS_Set_Names = {'Normal', 'Ikenga', 'Nyame', 'Acc'}
@@ -895,8 +898,13 @@ end
 --Example Make a macro /console gs c tp (case sensitive)
 function self_command(command)
 	parent_self_command(command)
-
-	if command == 'startup' then
+	
+	if command == 'acid' then
+		local weapon_index = Weapon_Index
+		local midshot_index = Midshot_Index
+		
+		windower.send_command('input //gs c weapon2; wait .1;input //gs c ammo; wait .1;input //gs c midshot4; wait .1;input /ra <t>; wait 1;input //gs c weapon'..Weapon_Index..'; wait .1;input //gs c midshot'..Midshot_Index..'; wait .1;timers delete "Acid"; wait .1;timers create "Acid" 60 down;')
+	elseif command == 'startup' then
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
  
 		weapon_set = set.Weapon[Weapon_Set_Names[Weapon_Index]]
