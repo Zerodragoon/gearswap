@@ -240,7 +240,7 @@ function get_sets()
 		ring1="Ilabrat Ring",
 		ring2="Crepuscular Ring",
 		back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','"Store TP"+10','Damage taken-5%',}},
-		ear1="Enervating Earring",
+		ear1="Crepuscular Earring",
 		ear2="Telos Earring"  
 	}
 	

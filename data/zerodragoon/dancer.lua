@@ -326,6 +326,14 @@ function precast(spell)
 		if checkWSDistance(spell) then
 			equip(sets.precast[spell.english])
 			
+			if spell.english == 'Feather Step' then
+				send_command('timers create "Feather Step" 120 down')
+			end
+			
+			if spell.english == 'Box Step' then
+				send_command('timers create "Box Step" 120 down')
+			end
+			
 			if spell.english == 'Spectral Jig' and buffactive.Sneak then
 				cast_delay(0.2)
 				send_command('cancel Sneak')        
@@ -430,20 +438,6 @@ function self_command(command)
 		if Hands_Index > #Hands_Set_Names then Hands_Index = 1 end
 		add_to_chat(207,'Hands Set Changed to: '..Hands_Set_Names[Hands_Index]..'')
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-	elseif command == 'pdt' then
-		if sets.pdt == pdt.on then
-			equip(pdt.off)
-			equip(sets.Hands[Hands_Set_Names[Hands_Index]])
-			sets.pdt = pdt.off
-			enable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
-			status_change(player.status)
-			add_to_chat(207,'>>>>> PDT Set Unlocked! <<<<<')
-		else				
-			equip(pdt.on)
-			sets.pdt = pdt.on
-			disable('head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
-			add_to_chat(66,'>>>>> PDT Set Locked! <<<<<')
-		end
 	elseif command == 'pws' then
 		PWS_Index = PWS_Index +1
 		if PWS_Index > #PWS_Set_Names then PWS_Index = 1 end
