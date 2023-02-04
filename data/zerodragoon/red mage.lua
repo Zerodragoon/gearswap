@@ -519,7 +519,7 @@ function get_sets()
 	})
 
 	--Melee Sets
-	Melee_Set_Names = {'Standard', 'Enspell'}
+	Melee_Set_Names = {'Standard', 'Enspell', 'Odin'}
 
 	sets.Melee = set_combine(sets.Hands.Naegling,{
 		ammo="Aurgelmir Orb +1",
@@ -542,8 +542,16 @@ function get_sets()
 	sets.Melee.Enspell = set_combine(sets.Melee, {
 		hands="Ayanmo Manopolas +2",
 		waist="Orpheus's Sash",
-		ammo="Sroda Tathlum"
+		ammo="Sroda Tathlum",
 	})
+	
+	sets.TP.Odin = set_combine(sets.Melee.Enspell, {
+        main = "Ceremonial Dagger",
+        ranged = "Ullr",
+        ammo = empty,
+        neck = "Dls. Torque +2",
+        right_ring = "Metamorph Ring +1"
+    })
 	
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')
 end

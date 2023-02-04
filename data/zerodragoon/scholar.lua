@@ -147,8 +147,8 @@ function get_sets()
 		sub="Ammurapi Shield",
 		ammo="Ghastly Tathlum +1",
 		head="Agwu's Cap",
-		body="Agwu's Robe",
-		hands="Arbatel Bracers +3",
+		body="Agwu's Robe", --Arbatel Gown +3
+		hands="Agwu's Gages",
 		legs="Agwu's Slops", 
 		feet="Arbatel Loafers +3"
 		neck="Argute Stole +2",
@@ -194,8 +194,8 @@ function get_sets()
 	}
 
 	sets.midcast.Burst = set_combine(sets.midcast.elemental, {
-		head="Pedagogy Mortarboard +3",
-		body="Agwu's Robe",
+		head="Pedagogy Mortarboard +3", --Agwu's Cap
+		body="Agwu's Robe", --Arbatel Gown +3
 		hands="Agwu's Gages",
 		legs="Agwu's Slops",
 		feet="Arbatel Loafers +3",	

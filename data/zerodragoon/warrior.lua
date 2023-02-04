@@ -66,7 +66,7 @@ function get_sets()
 	
 	sets.precast['Retaliation'] = {
 		hands="Pummeler's Mufflers +3",
-		feet="Boii Calligae +2"
+		feet="Boii Calligae +3"
 	}
 	
 	sets.precast['Defender'] = {
@@ -233,6 +233,16 @@ function get_sets()
 	sets.precast['Cataclysm'] = sets.MWS
 	sets.precast['Aeolian Edge'] = sets.MWS
 	
+			
+	sets.PWS.Impulse = set_combine(sets.PWS, {
+		feet="Boii Calligae +3"
+	})
+	
+	sets.PWS.ImpulseCap = set_combine(sets.PWS.Impulse, {
+		legs="Boii Cuisses +3"
+		ring1="Sroda Ring"
+	})
+	
 	sets.PWS.UpheavalCap = set_combine(sets.PWS, {
 		body="Sakpata's Breastplate",
 		hands="Sakpata's Gauntlets",
@@ -365,7 +375,7 @@ function get_sets()
    		body="Sakpata's Breastplate", --8
 		hands="Sakpata's Gauntlets", --6
 		legs="Agoge Cuisses +3", --5
-		feet="Boii Calligae +2",
+		feet="Boii Calligae +3",
 		neck="Warrior's Bead Necklace +2", --7 
 		waist="Ioskeha Belt +1", --9
 		ring1="Niqmaddu Ring",
@@ -404,6 +414,12 @@ function precast(spell)
 					equip(sets.PWS.UpheavalCap)
 				else 
 					equip(sets.PWS)
+				end
+			elseif spell.name == "Impulse Drive" then
+				if ATT_Cap_Flag then
+					equip(sets.PWS.ImpulseCap)
+				else 
+					equip(sets.PWS.Impulse)
 				end
 			elseif spell.name == "Savage Blade" or spell.name == "Judgment" or spell.name == "Black Halo" then
 				if ATT_Cap_Flag then
