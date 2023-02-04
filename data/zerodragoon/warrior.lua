@@ -249,7 +249,7 @@ function get_sets()
 		ring2="Sroda Ring",
 		ear1="Schere Earring",
 		ear2="Boii Earring",
-		ammo="Yetshila",
+		ammo="Yetshila +1",
 		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10','Phys. dmg. taken-10%',}}
 	})
 	
@@ -326,7 +326,7 @@ function get_sets()
 		
 	}
 
-	sets.Melee.TripleAtt = set_combine(sets.Melee, {head="Flamma Zucchetto +2",			
+	sets.Melee.TripleAtt = set_combine(sets.Melee, {		
 		head="Flamma Zucchetto +2",
 		body="Tatenashi Haramaki +1",
 		hands="Tatena. Gote +1",
@@ -337,8 +337,8 @@ function get_sets()
 		ring1="Niqmaddu Ring",
 		ring2="Chirich Ring +1",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
-		ear1="Brutal Earring",
-		ear2="Schere Earring", --Boii Earring +2
+		ear1="Brutal Earring", --Boii Earring +2
+		ear2="Schere Earring", 
 		ammo="Coiste Bodhar"})
 		
 	sets.Melee.SB = set_combine(sets.Melee, { --33
@@ -371,7 +371,7 @@ function get_sets()
 		ear1="Brutal Earring", --5
 		ear2="Schere Earring", --6 
 		ammo="Coiste Bodhar" --3
-	})
+	}) --100
 	
 	sets.Melee.Boii = set_combine(sets.Melee.Sakpata, { --33
 		head="Boii Mask +3", --7
@@ -387,7 +387,7 @@ function get_sets()
 		ear1="Schere Earring", --6
 		ear2="Boii Earring", --7
 		ammo="Coiste Bodhar" --3
-	})
+	}) --101
 	
 	sets.Melee.DoubleAttackDamage = set_combine(sets.Melee.Sakpata, { --33
 		head="Sakpata's Helm", --5
@@ -403,7 +403,7 @@ function get_sets()
 		ear1="Schere Earring", --6
 		ear2="Boii Earring", --7
 		ammo="Coiste Bodhar" --3
-	})
+	}) --99
 
 	sets.Melee.TH = set_combine(sets.Melee.Sakpata, {
 		body="Odyssean Chestplate",
