@@ -188,7 +188,7 @@ function get_sets()
 		main="Verethragna",
 		head="Malignance Chapeau",							
 		body="Malignance Tabard",
-		hands="Malignance Gloves",
+		hands="Karagoz Gaunti +2",
 		legs="Malignance Tights",
 		feet="Hermes' Sandals",
 		neck="Loricate Torque +1",
@@ -254,7 +254,7 @@ function get_sets()
 	sets.Melee.MasterDT = set_combine(sets.Melee, {
 		head="Malignance Chapeau",							
 		body="Malignance Tabard",
-		hands="Malignance Gloves",
+		hands="Karagoz Gaunti +2",
 		legs="Malignance Tights",
 		feet="Malignance Boots",
 	})

@@ -232,21 +232,40 @@ function get_sets()
 	sets.precast['Earth Crusher'] = sets.MWS
 	sets.precast['Cataclysm'] = sets.MWS
 	sets.precast['Aeolian Edge'] = sets.MWS
-	
 			
 	sets.PWS.Impulse = set_combine(sets.PWS, {
 		feet="Boii Calligae +3"
 	})
-	
+
 	sets.PWS.ImpulseCap = set_combine(sets.PWS.Impulse, {
-		legs="Boii Cuisses +3"
+		legs="Boii Cuisses +3",
 		ring1="Sroda Ring"
 	})
 	
-	sets.PWS.UpheavalCap = set_combine(sets.PWS, {
+	sets.PWS.Ukkos = set_combine(sets.PWS, {
+		legs="Boii Cuisses +3",
+		feet="Boii Calligae +3",
+		ring1="Niqmaddu Ring",
+		ring2="Sroda Ring",
+		ear1="Schere Earring",
+		ear2="Boii Earring",
+		ammo="Yetshila",
+		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10','Phys. dmg. taken-10%',}}
+	})
+	
+	sets.PWS.UkkosCap = set_combine(sets.PWS.Ukkos, {
 		body="Sakpata's Breastplate",
-		hands="Sakpata's Gauntlets",
-		legs="Sakpata's Cuisses"
+	})
+	
+	sets.PWS.Upheaval = set_combine(sets.PWS, {
+		legs="Boii Cuisses +3",
+		ring1="Niqmaddu Ring",
+		back={ name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+	})
+	
+	sets.PWS.UpheavalCap = set_combine(sets.PWS.Upheaval, {
+		body="Sakpata's Breastplate",
+		ring2="Sroda Ring"
 	})
 	
 	sets.PWS.Savage = set_combine(sets.PWS, {
@@ -413,13 +432,19 @@ function precast(spell)
 				if ATT_Cap_Flag then
 					equip(sets.PWS.UpheavalCap)
 				else 
-					equip(sets.PWS)
+					equip(sets.PWS.Upheaval)
 				end
 			elseif spell.name == "Impulse Drive" then
 				if ATT_Cap_Flag then
 					equip(sets.PWS.ImpulseCap)
 				else 
 					equip(sets.PWS.Impulse)
+				end
+			elseif spell.name == "Ukko's Fury" then
+				if ATT_Cap_Flag then
+					equip(sets.PWS.UkkosCap)
+				else 
+					equip(sets.PWS.Ukkos)
 				end
 			elseif spell.name == "Savage Blade" or spell.name == "Judgment" or spell.name == "Black Halo" then
 				if ATT_Cap_Flag then
