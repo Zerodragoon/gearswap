@@ -133,10 +133,10 @@ function get_sets()
 	sets.midcast.Burst = set_combine(sets.midcast.elemental, {
 		head="Ea Hat +1",
     	body="Ea Houppe. +1", --Wicce Coat
-		hands="Agwu's Gages", --Agwu's Gages
+		hands="Agwu's Gages",
     	legs="Ea Slops +1", --Wicce Legs
     	feet="Agwu's Pigaches",
-		right_ring="Mujin Band", --Drop
+		waist="Acuity Belt +1",
 		ammo="Ghastly Tathlum +1"
 	})
 	

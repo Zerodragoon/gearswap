@@ -173,7 +173,7 @@ function get_sets()
 		ranged="Earp"
 	}
 
-	Hands_Set_Names = {'NaeglingBlurred', 'NaeglingGleti', 'NaeglingCrep', 'RangedShield', 'RangedDual', 'Tauret', 'RostamMelee', 'RostamTauret', 'RostamGleti', 'RostamCrep'}
+	Hands_Set_Names = {'NaeglingGleti', 'NaeglingBlurred', 'NaeglingCrep', 'RangedShield', 'RangedDual', 'Tauret', 'RostamMelee', 'RostamTauret', 'RostamGleti', 'RostamCrep'}
 
 	sets.Hands = {}	
 
@@ -448,13 +448,13 @@ function get_sets()
 		ear2="Telos Earring"}
 		)
 
-	Melee_Set_Names = {'DT', 'DTMax', 'DTAcc', 'TH'}
+	Melee_Set_Names = {'DT', 'DTMax', 'DTAcc', 'DTDps'}
 	
 	sets.Melee = {  
 		head="Malignance Chapeau",
 		body="Malignance Tabard",	
 		hands="Malignance Gloves",
-		legs="Malignance Tights", --Chasseur's Culottes +3
+		legs="Chasseur's Culottes +2",
 		feet="Malignance Boots",
 		neck="Iskur Gorget",
 		waist="Reiki Yotai",
@@ -467,9 +467,8 @@ function get_sets()
 	
 	sets.Melee.DT  = set_combine(sets.Melee, {})
 	
-	sets.Melee.DTMax  = set_combine(sets.Melee, {
-		neck="Loricate Torque +1",
-		ring2="Defending Ring"
+	sets.Melee.DTMax  = set_combine(sets.Melee.DT, {
+		ring1="Defending Ring"
 	})
 
 	sets.Melee.DTAcc  = set_combine(sets.Melee.DT, {
@@ -479,11 +478,14 @@ function get_sets()
 		ring1="Chirich Ring +1",
 		ring2="Chirich Ring +1"})
 		
-	sets.Melee.TH = set_combine(sets.Melee.DT, {
-		ammo="Perfect Lucky Egg",
-		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
-		waist="Chaac Belt"})
-
+	sets.Melee.DTDps  = set_combine(sets.Melee.DT, {
+		hands="Adhemar Wrist. +1",
+		feet={ name="Herculean Boots", augments={'Quadruple Attack +3'}},
+		waist="Windbuffet Belt +1",
+		ear2="Dedition Earring",
+		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
+	})
+		
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')
 
 end
@@ -829,4 +831,10 @@ end
 	sets.Melee.DblAtt0 = set_combine(sets.Melee.DblAtt15, {
 		head={ name="Herculean Helm", augments={'Accuracy+8','"Dual Wield"+5','DEX+1','Attack+12',}},
 	})
+	
+		sets.Melee.TH = set_combine(sets.Melee.DT, {
+		ammo="Perfect Lucky Egg",
+		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
+		waist="Chaac Belt"})
+
 --]]

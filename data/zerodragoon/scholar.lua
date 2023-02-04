@@ -146,11 +146,11 @@ function get_sets()
 		main="Bunzi's Rod",
 		sub="Ammurapi Shield",
 		ammo="Ghastly Tathlum +1",
-		head="Pedagogy Mortarboard +3",
-		body="Amalric Doublet +1",
-		hands="Amalric Gages +1",
-		legs="Amalric Slops +1",
-		feet="Arbatel Loafers +3", -- Arbatel Loafers +3
+		head="Agwu's Cap",
+		body="Agwu's Robe",
+		hands="Arbatel Bracers +3",
+		legs="Agwu's Slops", 
+		feet="Arbatel Loafers +3"
 		neck="Argute Stole +2",
 		waist="Sacro Cord",
 		left_ear="Malignance Earring",
@@ -162,11 +162,17 @@ function get_sets()
 	
 	sets.midcast.Helix = set_combine(sets.midcast.elemental, {
 		head="Agwu's Cap",
-		body="Agwu's Robe", --Arbatel Gown +3
+		body="Agwu's Robe",
 		hands="Arbatel Bracers +3",
-		legs="Agwu's Slops", --Arbatel Pants +3
+		legs="Agwu's Slops",
 		feet="Arbatel Loafers +3",
 		ear2="Arbatel Earring +1"
+	})
+	
+	sets.midcast.HelixBurst = set_combine(sets.midcast.Helix, {
+		head="Pedagogy Mortarboard +3",
+		hands="Agwu's Gages",
+		ring2="Mujin Band"
 	})
 	
 	sets.midcast.HelixWeak = {
@@ -489,6 +495,10 @@ function midcast(spell)
 				return
 			else 
 				equip(sets.midcast.Helix)
+				
+				if BURST_Flag then 
+					equip(sets.midcast.HelixBurst)
+				end
 			end
 		else
 			equip(sets.midcast.elemental)

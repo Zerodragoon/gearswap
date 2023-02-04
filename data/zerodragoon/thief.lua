@@ -98,6 +98,10 @@ function get_sets()
 		body="Plunderer's Vest +3",
 		hands="Pillager's Armlets +3"
 	}
+	
+	sets.precast["Conspirator"] = {
+		body="Skulker's Vest +2"
+	}
 
 	Hands_Set_Names = {'Twashtar', 'TwashtarTP', 'Tauret', 'Aeneas', 'AeneasTP'}
 
