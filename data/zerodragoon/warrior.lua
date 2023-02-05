@@ -320,7 +320,7 @@ function get_sets()
 		ammo=""
 	})
 
-	Melee_Set_Names = {'Boii', 'Sakpata', 'SB', 'TripleAtt', 'TH', 'DoubleAttackDamage'}
+	Melee_Set_Names = {'Boii', 'Sakpata', 'SB', 'TripleAtt', 'TH', 'DoubleAttackDamage', 'Experimental'}
 
 	sets.Melee = {  
 		
@@ -404,6 +404,22 @@ function get_sets()
 		ear2="Boii Earring", --7
 		ammo="Coiste Bodhar" --3
 	}) --99
+	
+	sets.Melee.Experimental = set_combine(sets.Melee.Sakpata, {
+		ammo="Coiste Bodhar",
+		head="Hjarrandi Helm",
+		neck="Vim Torque +1",
+		ear1="Schere Earring",
+		ear2="Dedition Earring",
+		body="Boii Lorica +3",
+		hands="Sakpata's Gauntlets",
+		ring1="Niqmaddu Ring",
+		ring2="Moonlight Ring",
+		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+		waist="Sailfi Belt +1",
+		legs="Pummeler's Cuisses +3",
+		feet="Pummeler's Calligae +3"
+	})
 
 	sets.Melee.TH = set_combine(sets.Melee.Sakpata, {
 		body="Odyssean Chestplate",

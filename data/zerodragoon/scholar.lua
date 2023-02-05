@@ -150,7 +150,7 @@ function get_sets()
 		body="Agwu's Robe", --Arbatel Gown +3
 		hands="Agwu's Gages",
 		legs="Agwu's Slops", 
-		feet="Arbatel Loafers +3"
+		feet="Arbatel Loafers +3",
 		neck="Argute Stole +2",
 		waist="Sacro Cord",
 		left_ear="Malignance Earring",
