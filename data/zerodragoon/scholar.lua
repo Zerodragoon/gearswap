@@ -17,6 +17,8 @@ function get_sets()
 	
 	set_style_lock()
 	
+	send_command('wait 5.0;input //lua l dressup')
+	
 	--Hands Sets
 	Hands_Set_Names = {'Daybreak', 'Bunzi', 'Marin', 'Xoanon'}
 
@@ -680,4 +682,5 @@ end
 
 function file_unload()
 	send_command('input //lua u nostrum')
+	send_command('lua u dressup')
 end

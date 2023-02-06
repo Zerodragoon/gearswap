@@ -16,7 +16,7 @@ function get_sets()
 	set_style_lock()
 	
 	--Hands Sets
-	Hands_Set_Names = {'Standard', 'Enspell', 'Naegling', 'Tauret'}
+	Hands_Set_Names = {'Standard', 'Enspell', 'Naegling', 'Tauret', 'Ceremonial'}
 
 	sets.Hands = {}	
 
@@ -53,6 +53,11 @@ function get_sets()
 	sets.Hands.Tauret = { 
 		main="Tauret",
     	sub="Blurred Knife +1"
+	}
+
+	sets.Hands.Ceremonial = {
+		main = "Ceremonial Dagger",
+		sub = "Ceremonial Dagger",
 	}
 
 	--Precast
@@ -546,7 +551,6 @@ function get_sets()
 	})
 	
 	sets.TP.Odin = set_combine(sets.Melee.Enspell, {
-        main = "Ceremonial Dagger",
         ranged = "Ullr",
         ammo = empty,
         neck = "Dls. Torque +2",

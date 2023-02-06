@@ -135,6 +135,8 @@ function get_sets()
 	})
 	
 	sets.midcast.Absorb = set_combine(sets.midcast.MagicDark, {
+		hands="Pavor Gauntlets",
+		back="Chuparrosa Mantle",
 		ring1="Kishar Ring",
 		ring2="Stikini Ring +1"
 	})
