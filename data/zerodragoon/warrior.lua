@@ -130,7 +130,7 @@ function get_sets()
 	}
 	
 	sets.Hands.Ukon = { 
-		main="Bonesplitter",
+		main="Ukonvasara",
 		sub="Utu Grip"
 	}
 	   
@@ -417,7 +417,7 @@ function get_sets()
 		ring2="Moonlight Ring",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
 		waist="Sailfi Belt +1",
-		legs="Pummeler's Cuisses +3",
+		legs="Pummeler's Cuisses +2",
 		feet="Pummeler's Calligae +3"
 	})
 

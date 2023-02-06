@@ -244,7 +244,7 @@ function get_sets()
 		ring1="Shadow Ring",
 		ring2="Apeile Ring +1",
 		ear1="Sanare Earring",
-		ear2="Chevalier's Earring +1"
+		ear2="Odnowa Earring +1"
 	})
 	
 	sets.TP.TP = set_combine(sets.TP.Sakpata, {
@@ -291,7 +291,7 @@ function get_sets()
 	}
 
 	--Idle Sets Below
-	Idle_Set_Names = {'StandardMove', 'Standard', 'Sakpata'}
+	Idle_Set_Names = {'StandardMove', 'Standard', 'Sakpata', 'Magic'}
 	sets.Idle = {}
 	
 	sets.Idle.Standard = set_combine(sets.TP.Standard,{	
@@ -312,6 +312,8 @@ function get_sets()
 		head="Sakpata's Helm",
 		legs="Sakpata's Cuisses",
 	})
+	
+	sets.Idle.Magic = sets.TP.Magic
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate;input //shield on')
 
