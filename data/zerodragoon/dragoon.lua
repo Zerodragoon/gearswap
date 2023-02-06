@@ -388,13 +388,16 @@ function self_command(command)
 		status_change(player.status)
 		add_to_chat(207,'Update player status...')
 	elseif command == 'attcap' then
-		add_to_chat(207,'Attack Cap Set: '..tostring(not ATT_Cap_Flag)..'')
+		if ATT_Cap_Flag and not ATT_Cap_High then
+			add_to_chat(207,'Attack Cap High Set: '..tostring(not ATT_Cap_High)..'')
 
-		ATT_Cap_Flag = not ATT_Cap_Flag
-	elseif command == 'attcaphigh' then
-		add_to_chat(207,'Attack Cap High Set: '..tostring(not ATT_Cap_High)..'')
+			ATT_Cap_High = not ATT_Cap_High
+		else 
+			add_to_chat(207,'Attack Cap Set: '..tostring(not ATT_Cap_Flag)..'')
 
-		ATT_Cap_High = not ATT_Cap_High
+			ATT_Cap_Flag = not ATT_Cap_Flag
+			ATT_Cap_High = false
+		end
 	elseif command == 'angon' then
 		equip(sets.precast.Angon)
 	elseif command == 'equiptf' then

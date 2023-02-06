@@ -213,7 +213,7 @@ function get_sets()
 	}
 			
 	--TP Sets Below
-	TP_Set_Names = {'Standard', 'TP', 'Sakpata', 'Magic'}
+	TP_Set_Names = {'Standard', 'TP', 'Sakpata', 'Magic', 'Annul'}
 
 	sets.TP = { 
 		ammo="Staunch Tathlum +1",
@@ -245,6 +245,10 @@ function get_sets()
 		ring2="Apeile Ring +1",
 		ear1="Sanare Earring",
 		ear2="Odnowa Earring +1"
+	})
+	
+	sets.TP.Annul = set_combine(sets.TP.Magic, {
+		ring2="Archon Ring"
 	})
 	
 	sets.TP.TP = set_combine(sets.TP.Sakpata, {
@@ -291,7 +295,7 @@ function get_sets()
 	}
 
 	--Idle Sets Below
-	Idle_Set_Names = {'StandardMove', 'Standard', 'Sakpata', 'Magic'}
+	Idle_Set_Names = {'StandardMove', 'Standard', 'Sakpata', 'Magic', 'Annul'}
 	sets.Idle = {}
 	
 	sets.Idle.Standard = set_combine(sets.TP.Standard,{	
@@ -314,6 +318,7 @@ function get_sets()
 	})
 	
 	sets.Idle.Magic = sets.TP.Magic
+	sets.Idle.Annul = sets.TP.Annul
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate;input //shield on')
 

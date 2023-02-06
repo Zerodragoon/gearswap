@@ -255,12 +255,19 @@ function parent_self_command(command)
 	elseif command == 'equipmelee' then
 		equip(sets.Melee[Melee_Set_Names[Melee_Index]])
 	elseif command == 'attcap' then
-		add_to_chat(207,'Attack Cap Set: '..tostring(not ATT_Cap_Flag)..'')
+		if ATT_Cap_Flag and not ATT_Cap_High then
+			add_to_chat(207,'Attack Cap High Set: '..tostring(not ATT_Cap_High)..'')
 
-		ATT_Cap_Flag = not ATT_Cap_Flag
-	elseif command == 'attcaphigh' then
-		add_to_chat(207,'Attack Cap High Set: '..tostring(not ATT_Cap_High)..'')
+			ATT_Cap_High = not ATT_Cap_High
+		else 
+			add_to_chat(207,'Attack Cap Set: '..tostring(not ATT_Cap_Flag)..'')
 
-		ATT_Cap_High = not ATT_Cap_High
+			ATT_Cap_Flag = not ATT_Cap_Flag
+			ATT_Cap_High = false
+		end
+	elseif command == 'doubleenmity' then
+		add_to_chat(207,'Double Shot Enmity Set: '..tostring(not Double_Shot_Enmity_Flag)..'')
+
+		Double_Shot_Enmity_Flag = not Double_Shot_Enmity_Flag
 	end
 end

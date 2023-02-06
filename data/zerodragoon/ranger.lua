@@ -16,6 +16,7 @@ function get_sets()
 	Ammo_Index = 1
 	ATT_Cap_High = false
 	ATT_Cap_Flag = false
+	Double_Shot_Enmity_Flag = false
 	Style_Lock_Id = 3
 
 	--Default Macro Set for RNG
@@ -422,7 +423,6 @@ function get_sets()
 	})
 
 	sets.Midshot.Crit =  set_combine(sets.Midshot, {
-		--head="Meghanada Visor +2",
 		head="Mummu Bonnet +2",
 		body="Nisroch Jerkin",
 		hands="Mummu Wrists +2",
@@ -430,7 +430,6 @@ function get_sets()
 		feet="Oshosi Leggings +1",
 		waist="Kwahu Kachina Belt +1",
 		neck="Nefarious Collar +1",
-		--ring1="Ilabrat Ring", --Begruding Ring
 		ring1="Begrudging Ring",
 		ring2="Mummu Ring",
 		ear1="Odr Earring",
@@ -448,15 +447,21 @@ function get_sets()
 		feet="Ikenga's Clogs",
 		waist="Tellen Belt"
 	})
-
+	
 	sets.Midshot.double = {
 			head="Arcadian Beret +3",
 			body="Arcadian Jerkin +3",
 			hands="Oshosi Gloves +1",
 			legs="Oshosi Trousers +1",
 			feet="Oshosi Leggings +1"}
+			
+	sets.Midshot.DoubleEnmity = set_combine(sets.Midshot.double, {
+		head="Amini Gapette +2"
+	})
 
-	sets.precast['Eagle Eye Shot'] = sets.Midshot
+	sets.precast['Eagle Eye Shot'] = set_combine(sets.Midshot.TrueShot, {
+		legs="Arcadian Braccae +3"
+	})
 
 	--Barrage Sets Below
 	Barrage_Set_Names = {'BarrageSTP', 'BarrageAcc'}
@@ -872,7 +877,11 @@ function midcast(spell)
 		if buffactive.Barrage then
 			equip(sets.Barrage[Barrage_Set_Names[Barrage_Index]])						
 		elseif buffactive['Double Shot'] then
-			equip(set_combine(sets.Midshot[Midshot_Set_Names[Midshot_Index]], sets.Midshot.double))						
+			if Double_Shot_Enmity_Flag then
+				equip(set_combine(sets.Midshot[Midshot_Set_Names[Midshot_Index]], sets.Midshot.DoubleEnmity))						
+			else
+				equip(set_combine(sets.Midshot[Midshot_Set_Names[Midshot_Index]], sets.Midshot.double))						
+			end
 		end
 	end
 end

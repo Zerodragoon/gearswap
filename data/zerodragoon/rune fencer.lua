@@ -6,6 +6,7 @@ function get_sets()
 	Hands_Index = 1
 	Idle_Index = 1
 	Engaged_Flag = false
+	Refresh_Body = false
 	Style_Lock_Id = 29
 
 	--Default Macro Set for PLD
@@ -212,7 +213,7 @@ function get_sets()
 	}
 
 	--TP Sets Below
-	TP_Set_Names = {'Standard', 'Magic', 'Resistance', 'Hybrid', 'DD'}
+	TP_Set_Names = {'Standard', 'Magic', 'Resistance', 'Annul', 'Hybrid', 'DD'}
 
 	sets.TP = { 
 		ammo="Staunch Tathlum +1",
@@ -234,16 +235,18 @@ function get_sets()
 	
 	sets.TP.Magic = set_combine(sets.TP, {
 		hands="Nyame Gauntlets",
+		body="Erilaz Surcoat +2",
 		feet="Erilaz Greaves +3",
+		waist="Engraved Belt",
 		ring2="Shadow Ring"
 	})
 	
 	sets.TP.Resistance = set_combine(sets.TP.Magic, {
 		neck="Warder's Charm +1",
-		body="Runeist Coat +3",
-		feet="Erilaz Greaves +3",
-		waist="Engraved Belt",
-	--	ring1="Archon Ring"
+	})
+	
+	sets.TP.Annul = set_combine(sets.TP.Resistance, {
+		ring1="Archon Ring"
 	})
 	
 	sets.TP.Hybrid = set_combine(sets.TP, {
@@ -312,12 +315,13 @@ function get_sets()
 	sets.precast['Ruinator'] = sets.AxeAcc
 
 	--Idle Sets Below
-	Idle_Set_Names = {'DTMove', 'DT', 'DTMagic', 'DTResistance'}
+	Idle_Set_Names = {'DTMove', 'DT', 'DTMagic', 'DTResistance', 'DTAnnul'}
 	sets.Idle = {}
 	
 	sets.Idle.DT = sets.TP.Standard
 	sets.Idle.DTMagic = sets.TP.Magic
 	sets.Idle.DTResistance = sets.TP.Resistance
+	sets.Idle.DTAnnul = sets.TP.Annul
 	sets.Idle.DTMove  = set_combine(sets.TP.Standard, {
 		legs="Carmine Cuisses +1",
 		ring2="Defending Ring"
@@ -387,7 +391,11 @@ function aftercast(spell)
 	else		
 		equip(sets.Idle[Idle_Set_Names[Idle_Index]])	
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])			
-	end		
+	end
+	
+	if Refresh_Body then
+		equip({body="Runeist Coat +3"})
+	end
 end
 
 function status_change(new,old)
@@ -400,6 +408,10 @@ function status_change(new,old)
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
 		Engaged_Flag = true
 	end	
+	
+	if Refresh_Body then
+		equip({body="Runeist Coat +3"})
+	end
 end
 
 --Toggle Self Commands with //gs c [command name] 
@@ -445,6 +457,9 @@ function self_command(command)
 	elseif command == 'startup' then
 		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
 		equip(sets.Idle[Idle_Set_Names[Idle_Index]])
+	elseif command == 'refreshbody' then
+		add_to_chat(207,'Refresh Body Set: '..tostring(not Refresh_Body)..'')
+		Refresh_Body = not Refresh_Body
 	elseif command == 'forcesets' then
 		if player.status=='Engaged' then
 			equip(sets.TP[TP_Set_Names[TP_Index]]) 

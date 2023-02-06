@@ -562,13 +562,16 @@ function self_command(command)
 		if PWS_Index > #PWS_Set_Names then PWS_Index = 1 end
 		add_to_chat(207,'Physical WS Set Changed to: '..PWS_Set_Names[PWS_Index]..'')
 	elseif command == 'attcap' then
-		add_to_chat(207,'Attack Cap Set: '..tostring(not ATT_Cap_Flag)..'')
+		if ATT_Cap_Flag and not ATT_Cap_High then
+			add_to_chat(207,'Attack Cap High Set: '..tostring(not ATT_Cap_High)..'')
 
-		ATT_Cap_Flag = not ATT_Cap_Flag
-	elseif command == 'attcaphigh' then
-		add_to_chat(207,'Attack Cap High Set: '..tostring(not ATT_Cap_High)..'')
+			ATT_Cap_High = not ATT_Cap_High
+		else 
+			add_to_chat(207,'Attack Cap Set: '..tostring(not ATT_Cap_Flag)..'')
 
-		ATT_Cap_High = not ATT_Cap_High
+			ATT_Cap_Flag = not ATT_Cap_Flag
+			ATT_Cap_High = false
+		end
 	elseif command == 'mws' then
 		MWS_Index = MWS_Index +1
 		if MWS_Index > #MWS_Set_Names then MWS_Index = 1 end
