@@ -318,7 +318,7 @@ function get_sets()
 		}
 	}
 
-	Hands_Set_Names = {'PhysicalShield', 'Physical', 'Magical', 'KrakenP', 'KrakenM', 'KrakenT', 'CrepGletis', 'NaegGletis', 'NaegCrep', 'MalevGletis', 'Oneiros'}
+	Hands_Set_Names = {'PhysicalShield', 'Physical', 'Magical', 'KrakenP', 'KrakenM', 'KrakenT', 'CrepGletis', 'NaegGletis', 'NaegCrep', 'MalevGletis', 'Oneiros', 'SubtleBlow'}
 
 	sets.Hands = {}	
 
@@ -376,9 +376,14 @@ function get_sets()
 		main="Oneiros Knife",
 		sub="Nusku Shield"
 	}
+	
+	sets.Hands.SubtleBlow = { 
+		main="Gleti's Knife",
+		sub="Nusku Shield"
+	}
 						
 	--Midshot Sets Below
-	Midshot_Set_Names = {'TrueShot', 'Ikenga', 'Malig', 'Acc', 'Crit', 'CritPDL', 'CritTrue'}
+	Midshot_Set_Names = {'TrueShot', 'Ikenga', 'Malig', 'Acc', 'Crit', 'CritPDL', 'CritTrue', 'SubtleBlow'}
 	sets.Midshot = { 
 		head="Arcadian Beret +3",							
 		body="Malignance Tabard",
@@ -446,6 +451,12 @@ function get_sets()
 		body="Nisroch Jerkin",
 		feet="Ikenga's Clogs",
 		waist="Tellen Belt"
+	})
+	
+	sets.Midshot.SubtleBlow =  set_combine(sets.Midshot.TrueShot, {
+		hands="Ikenga's Gloves",
+		ring1="Chirich Ring +1",
+		ear1="Sherida Earring"
 	})
 	
 	sets.Midshot.double = {
@@ -707,7 +718,7 @@ function get_sets()
 		ear1="Infused Earring",
 		ear2="Telos Earring"})
 
-	Melee_Set_Names = {'Malig', 'Acc', 'DT', 'DTAcc'}
+	Melee_Set_Names = {'Malig', 'Acc', 'DT', 'DTAcc', 'SubtleBlow'}
 	
 	sets.Melee = {
 		head="Malignance Chapeau",
@@ -717,8 +728,8 @@ function get_sets()
 		feet="Malignance Boots",
 		neck="Iskur Gorget",
 		waist="Olseni Belt",
-		ear1="Crepuscular Earring",
-		ear2="Dedition Earring",
+		ear1="Dedition Earring",
+		ear2="Crepuscular Earring",
 		ring1="Chirich Ring +1",
 		ring2="Chirich Ring +1",
 		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+8','"Dual Wield"+10','Phys. dmg. taken-10%',}},
@@ -737,6 +748,10 @@ function get_sets()
 	
 	sets.Melee.DTAcc = set_combine(sets.Melee.DT, {
 		ear2="Telos Earring",
+	})
+	
+	sets.Melee.SubtleBlow = set_combine(sets.Melee.DT, {
+		ear1="Sherida Earring"
 	})
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')
