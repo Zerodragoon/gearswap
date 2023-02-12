@@ -224,15 +224,14 @@ function get_sets()
 	})
 	
 	sets.PWS.MultiHit = set_combine(sets.PWS, {
-		head="Sakpata's Helm",
-   		body="Sakpata's Breastplate",
+		head="Heathen's Burgeonet +2",
+   		body="Nyame Mail",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
-		feet="Sakpata's Leggings",
-		--ear2="Schere Earring",
-		ear2="Brutal Earring",
+		feet="Heathen's Sollerts +2",
 		ammo="Coiste Bodhar",
 		waist="Fotia Belt",
+		ring2="Regal Ring"
 	})
 
 	
@@ -270,13 +269,27 @@ function get_sets()
 		waist="Sailfi Belt +1"
 	})
 	
-	sets.precast['Resolution'] = sets.PWS.MultiHit
-	sets.precast['Insurgency'] = sets.PWS.MultiHit
+	sets.precast['Scourge'] = set_combine(sets.PWS, {
+		ear1="Thurd Earring"
+	})
+	
+	sets.precast['Resolution'] = 	sets.precast['Entropy'] = set_combine(sets.PWS.MultiHit, {
+		body="Sakpata's Breastplate",
+		feet="Sakpata's Leggings",
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
+		ear2="Brutal Earring"
+	})
+	
+	sets.precast['Insurgency'] = set_combine(sets.PWS.MultiHit, {
+		waist="Sailfi Belt +1",
+		ring2="Regal Ring"
+	})
+	
 	sets.precast['Entropy'] = set_combine(sets.PWS.MultiHit, {
 		body="Dagon Breastplate",
 		neck="Fotia Gorget",
-		waist="Fotia Belt",
-		ring2="Regal Ring"
+		waist="Fotia Belt"
 	})
 	
 	sets.precast['Frostbite'] = sets.MWS
