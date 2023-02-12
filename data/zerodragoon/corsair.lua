@@ -482,7 +482,7 @@ function get_sets()
 		hands="Adhemar Wrist. +1",
 		feet={ name="Herculean Boots", augments={'Quadruple Attack +3'}},
 		waist="Windbuffet Belt +1",
-		ear2="Dedition Earring",
+		ear1="Dedition Earring",
 		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
 	})
 		

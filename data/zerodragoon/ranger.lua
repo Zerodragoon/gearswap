@@ -467,7 +467,7 @@ function get_sets()
 			feet="Oshosi Leggings +1"}
 			
 	sets.Midshot.DoubleEnmity = set_combine(sets.Midshot.double, {
-		head="Amini Gapette +2"
+		head="Amini Gapette +3"
 	})
 
 	sets.precast['Eagle Eye Shot'] = set_combine(sets.Midshot.TrueShot, {

@@ -46,8 +46,6 @@ function get_sets()
 	}
 		
 	sets.precast['Berserk'] = {
-		main="Instigator",
-		sub="Utu Grip",
 		body="Pummeler's Lorica +3",
 		feet="Agoge Calligae +3",
 		back="Cichol's Mantle" 
@@ -58,8 +56,6 @@ function get_sets()
 	}
 	
 	sets.precast['Aggressor'] = {
-		main="Instigator",
-		sub="Utu Grip",
 		head="Pummeler's Mask +3",
 		hands="Agoge Lorica +3"
 	}
@@ -248,7 +244,7 @@ function get_sets()
 		ring1="Niqmaddu Ring",
 		ring2="Sroda Ring",
 		ear1="Schere Earring",
-		ear2="Boii Earring",
+		ear2="Boii Earring +1",
 		ammo="Yetshila +1",
 		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10','Phys. dmg. taken-10%',}}
 	})
@@ -353,7 +349,7 @@ function get_sets()
 		ring2="Chirich Ring +1",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --10
 		ear1="Schere Earring",
-		ear2="Boii Earring",
+		ear2="Boii Earring +1",
 		ammo="Coiste Bodhar"
 	})
 	
@@ -385,9 +381,9 @@ function get_sets()
 		ring2="Chirich Ring +1",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --10
 		ear1="Schere Earring", --6
-		ear2="Boii Earring", --7
+		ear2="Boii Earring +1", --8
 		ammo="Coiste Bodhar" --3
-	}) --101
+	}) --102
 	
 	sets.Melee.DoubleAttackDamage = set_combine(sets.Melee.Sakpata, { --33
 		head="Sakpata's Helm", --5
@@ -401,24 +397,24 @@ function get_sets()
 		ring2="Moonlight Ring",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --10
 		ear1="Schere Earring", --6
-		ear2="Boii Earring", --7
+		ear2="Boii Earring +1", --8
 		ammo="Coiste Bodhar" --3
-	}) --99
+	}) --100
 	
 	sets.Melee.Experimental = set_combine(sets.Melee.Sakpata, {
-		ammo="Coiste Bodhar",
 		head="Hjarrandi Helm",
+		body="Boii Lorica +3",
+		hands="Sakpata's Gauntlets",
+		legs="Pummeler's Cuisses +2",
+		feet="Pummeler's Calligae +3",
 		neck="Vim Torque +1",
 		ear1="Schere Earring",
 		ear2="Dedition Earring",
-		body="Boii Lorica +3",
-		hands="Sakpata's Gauntlets",
 		ring1="Niqmaddu Ring",
 		ring2="Moonlight Ring",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
 		waist="Sailfi Belt +1",
-		legs="Pummeler's Cuisses +2",
-		feet="Pummeler's Calligae +3"
+		ammo="Coiste Bodhar",
 	})
 
 	sets.Melee.TH = set_combine(sets.Melee.Sakpata, {
@@ -426,7 +422,7 @@ function get_sets()
 		ammo="Perfect Lucky Egg",
 		waist="Chaac Belt",
 		ear1="Schere Earring",
-		ear2="Boii Earring"})
+		ear2="Boii Earring +1"})
 		
 	sets.Melee.Pull = set_combine(sets.Melee.TH, {
 		ranged="Halakaala",

@@ -165,8 +165,7 @@ function get_sets()
 	
 	sets.Hands.Tauret = { 
 		main="Tauret",
-		sub="Fusetto +2"
-	--	sub="Gleti's Knife",
+		sub="Gleti's Knife",
 	}
 						
 	-- Physical WS Sets Below

@@ -184,8 +184,8 @@ function get_sets()
 		ring1="Gere Ring",
 		ring2="Niqmaddu Ring",
 		back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Damage taken-5%',}},
-		ear1="Telos Earring",
-		ear2="Sherida Earring",
+		ear1="Sherida Earring",
+		ear2="Schere Earring",
 		ammo="Aurgelmir Orb +1"
 	}
 
@@ -205,7 +205,6 @@ function get_sets()
 	sets.Melee.MpacaDT = set_combine(sets.Melee.DT, {
 		body="Mpaca's Doublet",	
 		hands="Mpaca's Gloves",
-		ear2="Schere Earring",
 		ammo="Coiste Bodhar"})
 		
 	sets.Melee.FullMpacaDT = set_combine(sets.Melee.DT, {
@@ -214,7 +213,6 @@ function get_sets()
 		hands="Mpaca's Gloves",
 		legs="Mpaca's Hose",
 		feet="Mpaca's Boots",
-		ear2="Schere Earring",
 		ammo="Coiste Bodhar"})
 		
 	sets.Melee.DTTH = set_combine(sets.Melee.DT, {

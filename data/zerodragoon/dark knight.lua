@@ -8,6 +8,7 @@ function get_sets()
 	PWS_Index = 1
 	MWS_Index = 1
 	ATT_Cap_Flag = false
+	Absorb_Weapon_Flag = true
 
 	FellCleaveTH_Flag = false
 	--Default Macro Set for DRK
@@ -59,7 +60,7 @@ function get_sets()
 		hands="Ignominy Gauntlets +3"
 	}
 
-	Hands_Set_Names = {'GSword', 'Apocalypse', 'Scythe', 'Sword', 'GAxe', 'Mace'}
+	Hands_Set_Names = {'GSword', 'Apocalypse', 'Scythe', 'Sword', 'GAxe', 'Mace', 'Anguta'}
 
 	sets.Hands = {}	
 
@@ -78,6 +79,11 @@ function get_sets()
 		sub="Utu Grip"
 	}
 	
+	sets.Hands.Anguta = { 
+		main="Anguta",
+		sub="Utu Grip"
+	}
+	
 	sets.Hands.GAxe = { 
 		main="Hepatizon Axe +1",
 		sub="Utu Grip"
@@ -91,6 +97,11 @@ function get_sets()
 	sets.Hands.Mace = { 
 		main="Loxotic Mace +1",
 		sub="Blurred Shield +1"
+	}
+	
+	sets.Hands.Absorb = {
+		main="Shukuyu's Scythe",
+		sub="Khonsu"
 	}
 	
 	sets.midcast = {}
@@ -208,7 +219,8 @@ function get_sets()
 		
 	sets.MWS = set_combine(sets.midcast.Magic, {
 		ear1="Moonshade Earring",
-		ring1="Epaminondas's Ring"
+		ring1="Archon Ring",
+		neck="Sibyl Scarf"
 	})
 	
 	sets.PWS.MultiHit = set_combine(sets.PWS, {
@@ -245,17 +257,38 @@ function get_sets()
 		body="Odyssean Chestplate",
 		waist="Chaac Belt"
 	})
-
+	
+	sets.precast['Cataclysm'] = set_combine(sets.PWS, {
+		waist="Sailfi Belt +1"
+	})
+	
+	sets.precast['Cross Reaper'] = set_combine(sets.PWS, {
+		waist="Sailfi Belt +1"
+	})
+	
+	sets.precast['Quietus'] = set_combine(sets.PWS, {
+		waist="Sailfi Belt +1"
+	})
+	
 	sets.precast['Resolution'] = sets.PWS.MultiHit
 	sets.precast['Insurgency'] = sets.PWS.MultiHit
-	sets.precast['Entropy'] = sets.PWS.MultiHit
+	sets.precast['Entropy'] = set_combine(sets.PWS.MultiHit, {
+		body="Dagon Breastplate",
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
+		ring2="Regal Ring"
+	})
 	
 	sets.precast['Frostbite'] = sets.MWS
 	sets.precast['Freezebite'] = sets.MWS
 	sets.precast['Herculean Slash'] = sets.MWS
 	sets.precast['Dark Harvest'] = sets.MWS
-	sets.precast['Shadow of Death'] = sets.MWS
-	sets.precast['Infernal Scythe'] = sets.MWS
+	sets.precast['Shadow of Death'] = set_combine(sets.MWS, {
+		head="Pixie Hairpin +1",
+	})
+	sets.precast['Infernal Scythe'] = set_combine(sets.MWS, {
+		head="Pixie Hairpin +1"
+	})
 
 	--Idle Sets Below
 	Idle_Set_Names = {'Normal'}
@@ -383,6 +416,10 @@ function midcast(spell)
 		if buffactive['Dark Seal'] then
 			equip({head="Fallen's Burgeonet +3"})						
 		end
+		
+		if spell.english:find("Absorb") and Absorb_Weapon_Flag then
+			equip(sets.Hands.Absorb)
+		end
 	elseif spell.type == "Ninjutsu" or spell.type == "BlackMagic" then
 		equip(sets.midcast.Magic)
 		
@@ -458,6 +495,10 @@ function self_command(command)
 		add_to_chat(207,'Attack Cap Set: '..tostring(not ATT_Cap_Flag)..'')
 
 		ATT_Cap_Flag = not ATT_Cap_Flag
+	elseif command == 'absorbweapon' then
+		add_to_chat(207,'Absorb Weapon Set: '..tostring(not Absorb_Weapon_Flag)..'')
+
+		Absorb_Weapon_Flag = not Absorb_Weapon_Flag
 	elseif command == 'update' then
 		status_change(player.status)
 		add_to_chat(207,'Update player status...')
