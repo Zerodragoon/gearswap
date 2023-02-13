@@ -191,7 +191,7 @@ function get_sets()
 		waist="Orpheus's Sash"
 	}
 
-	Hands_Set_Names = {'Cleave', 'Standard'}
+	Hands_Set_Names = {'Tizona', 'TizonaBunzi', 'Cleave', 'Standard'}
 
 	sets.Hands = {}	
 
@@ -202,6 +202,16 @@ function get_sets()
 
 	sets.Hands.Cleave = { 
 		main="Maxentius",
+		sub="Bunzi's Rod"
+	}
+	
+	sets.Hands.Tizona = { 
+		main="Tizona",
+		sub="Machaera +2"
+	}
+	
+	sets.Hands.TizonaBunzi = { 
+		main="Tizona",
 		sub="Bunzi's Rod"
 	}
 
