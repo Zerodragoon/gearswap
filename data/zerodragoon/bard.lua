@@ -271,7 +271,8 @@ function get_sets()
 		body="Brioso Justaucorps +3",
 		hands="Brioso Cuffs +3",
 		legs="Brioso Cannions +3",
-		waist="Acuity Belt +1"
+		waist="Acuity Belt +1",
+		back="Aurist's Cape +1"
 	})
 	
 	sets.midcast.Lullaby = set_combine(sets.midcast.SongEnfeeb, {

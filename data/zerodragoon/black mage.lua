@@ -180,7 +180,7 @@ function get_sets()
 		ear2="Regal Earring",
 		ring1="Kishar Ring",
 		ring2="Metamorph Ring +1",
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10'}}
+		back="Aurist's Cape +1"
 	})
 	
 	sets.midcast.Impact = set_combine(sets.midcast.enfeeb, {

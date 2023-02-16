@@ -192,6 +192,8 @@ function get_sets()
 		hands="Runeist Mitons +3",
 		legs="Carmine Cuisses +1"
 	})
+	
+	sets.midcast["Aquaveil"] = sets.magic.MidCast
 
 	Hands_Set_Names = {'EpeoTank', 'EpeoDD', 'Axe'}	
 

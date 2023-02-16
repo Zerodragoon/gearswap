@@ -115,7 +115,7 @@ function get_sets()
 		ear2="Dignitary's Earring",
 		ring1="Kishar Ring",
 		ring2="Stikini Ring +1",
-		back="Izdubar Mantle"
+		back="Aurist's Cape +1"
 	}
 	
 	sets.midcast['Dispelga'] = set_combine(sets.midcast.enfeeb, {

@@ -218,7 +218,7 @@ function get_sets()
 		ear2="Malignance Earring",
 		ring1="Kishar Ring",
 		ring2="Stikini Ring +1",
-		back="Lugh's Cape"
+		back="Aurist's Cape +1"
 	})
 	
 	sets.midcast.Impact = set_combine(sets.midcast.enfeeb, {

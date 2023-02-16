@@ -129,7 +129,7 @@ function get_sets()
 		waist="Yemaya Belt"
 	}
 
-	Hands_Set_Names = {'Twashtar', 'TwashtarTP', 'Tauret', 'Aeneas', 'AeneasTP', 'TwashtarFencer', 'TwashtarSB'}
+	Hands_Set_Names = {'Twashtar', 'TwashtarTP', 'Tauret', 'Aeneas', 'AeneasTP', 'TwashtarFencer', 'TwashtarA'}
 
 	sets.Hands = {}	
 
@@ -145,7 +145,7 @@ function get_sets()
 	
 	sets.Hands.Twashtar = { 
 		main="Twashtar",
-		sub="Aeneas"
+		sub="Gleti's Knife"
 	}
 	
 	sets.Hands.TwashtarTP = { 
@@ -158,9 +158,9 @@ function get_sets()
 		sub="Airy Buckler"
 	}
 	
-	sets.Hands.TwashtarSB = { 
+	sets.Hands.TwashtarA = { 
 		main="Twashtar",
-		sub="Gleti's Knife"
+		sub="Aeneas"
 	}
 	
 	sets.Hands.Tauret = { 

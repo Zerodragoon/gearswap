@@ -228,7 +228,7 @@ function get_sets()
    		body="Nyame Mail",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
-		feet="Heathen's Sollerts +2",
+		feet="Heathen's Sollerets +2",
 		ammo="Coiste Bodhar",
 		waist="Fotia Belt",
 		ring2="Regal Ring"
@@ -270,10 +270,10 @@ function get_sets()
 	})
 	
 	sets.precast['Scourge'] = set_combine(sets.PWS, {
-		ear1="Thurd Earring"
+		ear1="Thrud Earring"
 	})
 	
-	sets.precast['Resolution'] = 	sets.precast['Entropy'] = set_combine(sets.PWS.MultiHit, {
+	sets.precast['Resolution'] = set_combine(sets.PWS.MultiHit, {
 		body="Sakpata's Breastplate",
 		feet="Sakpata's Leggings",
 		neck="Fotia Gorget",
@@ -443,6 +443,10 @@ function midcast(spell)
 end
 
 function aftercast(spell)
+	if spell.english:find('Absorb') then
+		equip(sets.Hands[Hands_Set_Names[Hands_Index]])
+	end
+
 	if player.status=='Engaged' then
 		equip(sets.Melee[Melee_Set_Names[Melee_Index]])
 		

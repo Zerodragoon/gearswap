@@ -70,12 +70,16 @@ function get_sets()
 		legs="Hashishin Tayt +2",
 		feet="Hashishin Basmak +2",
 		neck={ name="Mirage Stole +1", augments={'Path: A',}},
-		waist="Luminary Sash",
+		waist="Acuity Belt +1",
 		left_ear="Crep. Earring",
-		right_ear="Digni. Earring",
+		right_ear="Hashi. Earring +1",
 		left_ring="Stikini Ring +1",
 		right_ring="Weather. Ring +1",
-		back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}}
+		back="Aurist's Cape +1"
+	})
+	
+	sets.midcast.MACCFC = set_combine(sets.midcast.Macc, {
+		head="Carmine Mask +1"
 	})
 	
 	sets.midcast['Fire II'] = sets.midcast.MAB
@@ -84,6 +88,23 @@ function get_sets()
 	sets.midcast.Tenebral = {
 		head = "Pixie Hairpin +1",
 		right_ring = "Archon Ring"
+	}
+	
+	sets.midcast.Enmity = {
+		--head="Rabid Visor",
+		head="Nyame Helm",
+		body="Emet Harness +1",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck = "Unmoving Collar +1",
+		waist = "Kasiri Belt",
+		left_ear = "Cryptic Earring",
+		right_ear = "Friomisi Earring",
+		left_ring = "Supershear Ring",
+		right_ring = "Eihwaz Ring",
+		back = "Earthcry Mantle",
+		ammo="Sapience Orb"
 	}
 
 	sets.midcast.Enhancing = {
@@ -100,6 +121,17 @@ function get_sets()
 		ring2="Stikini Ring +1",
     	back="Cornflower Cape"
 	}
+	
+	sets.midcast.EnhancingBlueSkill = set_combine(sets.midcast.Enhancing, {
+		head="Nyame Helm",
+		body="Assimilator's Jubbah +2",
+		hands="Nyame Gauntlets",
+		legs="Hashishin Tayt +2",
+		feet="Luhlaza Charuqs +1",
+		ear1="Odnowa Earring +1",
+		ear2="Hashi. Earring +1",
+		waist="Flume Belt +1"
+	})
 	
 	sets.midcast.Healing = set_combine(sets.midcast.Enhancing, {
 		waist="Gishdubar Sash",
@@ -129,6 +161,7 @@ function get_sets()
 	sets.midcast["Wild Carrot"] = sets.midcast.Healing
 	sets.midcast["White Wind"] = sets.midcast.Healing
 	sets.midcast["Healing Breeze"] = sets.midcast.Healing
+	sets.midcast["Plenilune Embrace"] = sets.midcast.Healing
 	sets.midcast["Cure"] = sets.midcast.Healing
 	sets.midcast["Cure II"] = sets.midcast.Healing
 	sets.midcast["Cure III"] = sets.midcast.Healing
@@ -149,28 +182,29 @@ function get_sets()
 		feet={ name="Taeon Boots", augments={'Phalanx +3',}}
 	})
 
-	sets.midcast['Occultation'] = set_combine(sets.midcast.Enhancing, {
-		head="Nyame Helm",
-		body="Assimilator's Jubbah +2",
-		hands="Nyame Gauntlets",
-		legs="Hashishin Tayt +2",
-		feet="Luhlaza Charuqs +1",
-		ear1="Odnowa Earring +1",
-		ear2="Hashi. Earring +1",
-		waist="Flume Belt +1"
-	})
-	
-	sets.midcast['Diamondhide'] = sets.midcast.Enhancing
+	sets.midcast['Occultation'] = sets.midcast.EnhancingBlueSkill
+	sets.midcast['Diamondhide'] = sets.midcast.EnhancingBlueSkill
+	sets.midcast['Magic Barrier'] = sets.midcast.EnhancingBlueSkill
+
 	sets.midcast['Erratic Flutter'] = sets.midcast.Enhancing
 	sets.midcast['Cocoon'] = sets.midcast.Enhancing
 	sets.midcast['Reactor Cool'] = sets.midcast.Enhancing
 	sets.midcast['Barrier Tusk'] = sets.midcast.Enhancing
-	sets.midcast['Fantod'] = sets.midcast.Enhancing
 	sets.midcast['Nat. Meditation'] = sets.midcast.Enhancing
-	sets.midcast['Reaving Wind'] = sets.midcast.MACC
-	sets.midcast['Feather Tickle'] = sets.midcast.MACC
+	sets.midcast['Reaving Wind'] = sets.midcast.MACCFC
+	sets.midcast['Feather Tickle'] = sets.midcast.MACCFC
 	sets.midcast['Silent Storm'] = sets.midcast.MACC
+	sets.midcast['Searing Tempest'] = sets.midcast.MACC
+	sets.midcast['Tearing Gust'] = sets.midcast.MACC
 	
+	--sets.midcast['Fantod'] = sets.midcast.Enhancing
+	sets.midcast['Fantod'] = sets.midcast.Enmity
+	sets.midcast['Temporal Shift'] = sets.midcast.Enmity
+	sets.midcast['Actinic Burst'] = sets.midcast.Enmity
+	sets.midcast['Blank Gaze'] = sets.midcast.Enmity
+	sets.midcast['Geist Wall'] = sets.midcast.Enmity
+	sets.midcast['Jettatura'] = sets.midcast.Enmity
+
 	sets.midcast['Mighty Guard'] = set_combine(sets.midcast.Enhancing, {
 		feet="Luhlaza Charuqs +1"
 	})
@@ -191,7 +225,7 @@ function get_sets()
 		waist="Orpheus's Sash"
 	}
 
-	Hands_Set_Names = {'Tizona', 'TizonaBunzi', 'Cleave', 'Standard'}
+	Hands_Set_Names = {'Tizona', 'TizonaBunzi', 'Cleave', 'Standard', 'TizonaSakpata'}
 
 	sets.Hands = {}	
 
@@ -213,6 +247,11 @@ function get_sets()
 	sets.Hands.TizonaBunzi = { 
 		main="Tizona",
 		sub="Bunzi's Rod"
+	}
+	
+	sets.Hands.TizonaSakpata = { 
+		main="Tizona",
+		sub="Sakpata's Sword"
 	}
 
 	PWS_Set_Names = {'Normal'}
@@ -263,7 +302,7 @@ function get_sets()
 		ear2="Ishvara Earring"}
 	
 	--Idle Sets Below
-	Idle_Set_Names = {'Normal', 'Learn'}
+	Idle_Set_Names = {'Normal', 'Learn', 'MagicDT'}
 	sets.Idle = {
     	head="Rawhide Mask",							
 		body="Jhakri Robe +2",
@@ -284,6 +323,20 @@ function get_sets()
 	
 	sets.Idle.Learn = set_combine(sets.Idle, {
 		hands="Assimilator's Bazubands +2"
+	})
+	
+	sets.Idle.MagicDT = set_combine(sets.Idle, {
+		head="Nyame Helm",									
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Warder's Charm +1",
+		waist="Carrier's Sash",
+		ring1="Shadow Ring",
+		ring2="Archon Ring",
+		ear1="Sanare Earring",
+		ear2="Eabani Earring"
 	})
 
 	Melee_Set_Names = {'DT', 'DTRefresh', 'Learn'}

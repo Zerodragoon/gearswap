@@ -405,7 +405,7 @@ function get_sets()
 		head="Hjarrandi Helm",
 		body="Boii Lorica +3",
 		hands="Sakpata's Gauntlets",
-		legs="Pummeler's Cuisses +2",
+		legs="Pummeler's Cuisses +3",
 		feet="Pummeler's Calligae +3",
 		neck="Vim Torque +1",
 		ear1="Schere Earring",
