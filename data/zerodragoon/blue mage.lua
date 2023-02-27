@@ -43,7 +43,7 @@ function get_sets()
 		head="Hashishin Kavuk +2", --Hashishin Set +3
 		body="Hashishin Mintan +2",
 		hands="Hashishin Bazubands +2",
-		legs="Hashishin Tayt +2",
+		legs="Hashishin Tayt +3",
 		feet="Hashishin Basmak +2",
 		neck="Sibyl Scarf",
 		waist="Eschan Stone",
@@ -67,19 +67,31 @@ function get_sets()
 		head="Hashishin Kavuk +2", --Hashishin Set +3
 		body="Hashishin Mintan +2",
 		hands="Hashishin Bazubands +2",
-		legs="Hashishin Tayt +2",
+		legs="Hashishin Tayt +3",
 		feet="Hashishin Basmak +2",
-		neck={ name="Mirage Stole +1", augments={'Path: A',}},
+		neck={ name="Mirage Stole +2", augments={'Path: A',}},
 		waist="Acuity Belt +1",
 		left_ear="Crep. Earring",
 		right_ear="Hashi. Earring +1",
 		left_ring="Stikini Ring +1",
 		right_ring="Weather. Ring +1",
-		back="Aurist's Cape +1"
+        back={ name="Rosmerta's Cape", augments={'VIT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}},
 	})
 	
-	sets.midcast.MACCFC = set_combine(sets.midcast.Macc, {
+	sets.midcast.MACCFC = set_combine(sets.midcast.MACC, {
 		head="Carmine Mask +1"
+	})
+	
+	sets.midcast.MACCWeak = set_combine(sets.midcast.MACC, {
+		main="Caliburnus",
+		sub="Prime Sword",
+		head="Malignance Chapeau",
+		body="Malignance Tabard",
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		waist="Luminary Sash",
+		ammo="Staunch Tathlum +1"
 	})
 	
 	sets.midcast['Fire II'] = sets.midcast.MAB
@@ -91,8 +103,7 @@ function get_sets()
 	}
 	
 	sets.midcast.Enmity = {
-		--head="Rabid Visor",
-		head="Nyame Helm",
+		head="Rabid Visor",
 		body="Emet Harness +1",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
@@ -113,7 +124,7 @@ function get_sets()
 		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
 		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
 		feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
-		neck="Mirage Stole +1",
+		neck="Mirage Stole +2",
 		waist="Olympus Sash",
 		ear1="Mimir Earring",
 		ear2="Andoaa Earring",
@@ -126,7 +137,7 @@ function get_sets()
 		head="Nyame Helm",
 		body="Assimilator's Jubbah +2",
 		hands="Nyame Gauntlets",
-		legs="Hashishin Tayt +2",
+		legs="Hashishin Tayt +3",
 		feet="Luhlaza Charuqs +1",
 		ear1="Odnowa Earring +1",
 		ear2="Hashi. Earring +1",
@@ -135,7 +146,7 @@ function get_sets()
 	
 	sets.midcast.Healing = set_combine(sets.midcast.Enhancing, {
 		waist="Gishdubar Sash",
-		neck="Mirage Stole +1",
+		neck="Mirage Stole +2",
 		body="Pinga Tunic +1", --15
 		hands="Hashishin Bazubands +2",
 		legs="Pinga Pants +1", --13
@@ -184,7 +195,11 @@ function get_sets()
 
 	sets.midcast['Occultation'] = sets.midcast.EnhancingBlueSkill
 	sets.midcast['Diamondhide'] = sets.midcast.EnhancingBlueSkill
-	sets.midcast['Magic Barrier'] = sets.midcast.EnhancingBlueSkill
+	sets.midcast['Magic Barrier'] = set_combine(sets.midcast.EnhancingBlueSkill, {
+		head="Luhlaza Keffiyeh +1",
+		hands="Rawhide Gloves",
+		ear1="Njordr Earring"
+	})
 
 	sets.midcast['Erratic Flutter'] = sets.midcast.Enhancing
 	sets.midcast['Cocoon'] = sets.midcast.Enhancing
@@ -194,8 +209,8 @@ function get_sets()
 	sets.midcast['Reaving Wind'] = sets.midcast.MACCFC
 	sets.midcast['Feather Tickle'] = sets.midcast.MACCFC
 	sets.midcast['Silent Storm'] = sets.midcast.MACC
-	sets.midcast['Searing Tempest'] = sets.midcast.MACC
-	sets.midcast['Tearing Gust'] = sets.midcast.MACC
+	sets.midcast['Searing Tempest'] = sets.midcast.MACCWeak
+	sets.midcast['Tearing Gust'] = sets.midcast.MACCWeak
 	
 	--sets.midcast['Fantod'] = sets.midcast.Enhancing
 	sets.midcast['Fantod'] = sets.midcast.Enmity
@@ -261,7 +276,7 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
-		neck="Mirage Stole +1",
+		neck="Mirage Stole +2",
 		waist="Sailfi Belt +1",
 		ring1="Beithir Ring",  
 		ring2="Epaminondas's Ring",
@@ -347,7 +362,7 @@ function get_sets()
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
 		feet="Malignance Boots",
-		neck="Mirage Stole +1",
+		neck="Mirage Stole +2",
 		waist="Reiki Yotai",
 		ring1="Petrov Ring",
 		ring2="Epona's Ring",

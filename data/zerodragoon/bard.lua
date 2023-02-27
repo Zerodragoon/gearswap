@@ -11,6 +11,7 @@ function get_sets()
 	Lullaby_Short = false
 	BURST_Flag = false
 	Dummy_Flag = false
+	DummyForced_Flag = false
 	Enmity_Flag = false
 	Style_Lock_Id = 20
 
@@ -557,6 +558,11 @@ function midcast(spell)
 			equip(set_combine(sets.Idle.DT, {
 				ranged="Daurdabla"
 			}))
+			
+			if DummyForced_Flag then
+				DummyForced_Flag = false
+				Dummy_Flag = false
+			end
 		elseif spell.english:find("Ballad") then
 			equip(sets.midcast.Ballad)
 		elseif spell.english:find("Minne") then
@@ -662,6 +668,9 @@ function self_command(command)
 		equip(sets.Instruments[Instrument_Set_Names[Instrument_Index]])
 	elseif command == 'burst' then
 		BURST_Flag = not BURST_Flag
+	elseif command == 'dummyforce' then
+		Dummy_Flag = true
+		DummyForced_Flag = true
 	elseif command == 'dummy' then
 		add_to_chat(207,'Dummy Flag Set: '..tostring(not Dummy_Flag)..'')
 		Dummy_Flag = not Dummy_Flag

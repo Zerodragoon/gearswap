@@ -254,7 +254,7 @@ function get_sets()
 	sets.Melee.MasterDT = set_combine(sets.Melee, {
 		head="Malignance Chapeau",							
 		body="Malignance Tabard",
-		hands="Karagoz Gaunti +2",
+		hands="Karagoz Gauanti +2",
 		legs="Malignance Tights",
 		feet="Malignance Boots",
 	})
