@@ -84,6 +84,7 @@ function get_sets()
 	
 	sets.midcast.MACCWeak = set_combine(sets.midcast.MACC, {
 		main="Caliburnus",
+		sub="Pukulatmuj +1",
 		sub="Prime Sword",
 		head="Malignance Chapeau",
 		body="Malignance Tabard",
@@ -155,6 +156,7 @@ function get_sets()
 		ring2="Stikini Ring +1",
 		back="Oretania's Cape +1" --6
 	})
+
 
 	sets.midcast["Battery Charge"] = set_combine(sets.midcast.Enhancing, {
 		head="Amalric Coif +1",

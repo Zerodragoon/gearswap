@@ -82,6 +82,26 @@ function get_sets()
 		ring1="Evanescence Ring"
 	})
 	
+	sets.midcast.MagicDamage = {
+		head="Agwu's Cap",
+		body="Agwu's Robe",
+		hands="Agwu's Gages",
+		legs="Agwu's Slops",
+		feet="Agwu's Pigaches",
+		neck="Baetyl Pendant",
+		waist="Orpheus's Sash",
+		ring1="Mujin Band",
+		ring2="Metamorph Ring +1",
+		ear1="Friomisi Earring",
+		ear2="Crematio Earring",
+		ammo="Seething Bomblet +1",
+		back="Izdubar Mantle"
+	}
+		
+	sets.precast['Bio II'] = sets.midcast.MagicDamage
+	sets.precast['Swipe'] = sets.midcast.MagicDamage
+	sets.precast['Lunge'] = sets.midcast.MagicDamage
+	
 	sets.precast['Vivacious Pulse'] = set_combine(sets.magic.MidCastEnmity, {
 		main="Peord claymore",
 		head="Erilaz Galea +3",
@@ -90,7 +110,7 @@ function get_sets()
 		ring1="Stikini Ring +1",
 		ring2="Stikini Ring +1"
 	})
-	
+		
 	sets.precast['Gambit'] = set_combine(sets.magic.MidCastEnmity, {
 		hands="Runeist Mitons +3"
 	})
@@ -98,6 +118,8 @@ function get_sets()
 	sets.precast['Rayke'] = set_combine(sets.magic.MidCastEnmity, {
 		feet="Futhark Boots +1"
 	})
+	
+	sets.precast['Swordplay'] = sets.magic.MidCastEnmity
 	
 	sets.precast['Valiance'] = set_combine(sets.magic.MidCastEnmity, {
 		body="Runeist Coat +3",

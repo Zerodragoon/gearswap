@@ -51,6 +51,7 @@ function buff_change(name,gain,buff_details)
             equip({sub = "Duban"})
 			equip({ranged = "Earp"})
 			equip({ranged = "Prime Horn"})
+			equip({main = "Caliburnus"})
 		else
 			windower.send_command('gs c startup')
         end
