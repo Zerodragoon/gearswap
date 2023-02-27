@@ -287,8 +287,8 @@ function get_sets()
 
 	sets.TP.DD = set_combine(sets.TP, {
 		ammo="Coiste Bodhar",
-  		head="Ashera Harness",	
-   		body="Adhemar Jacket +1",
+  		head="Adhemar Bonnet +1",	
+   		body="Ashera Harness",
 		hands="Adhemar Wristbands +1",
 		legs="Samnuha Tights",
 		feet={ name="Herculean Boots", augments={'Quadruple Attack +3'}},
