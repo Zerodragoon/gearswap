@@ -18,7 +18,7 @@ function get_sets()
 	sets.precast = {}
 	
 	sets.precast.Diffusion = {
-		feet="Luhlaza Charuqs +1"
+		feet="Luhlaza Charuqs +3"
 	}
 		
 	-- Magic Sets Below		
@@ -85,7 +85,6 @@ function get_sets()
 	sets.midcast.MACCWeak = set_combine(sets.midcast.MACC, {
 		main="Caliburnus",
 		sub="Pukulatmuj +1",
-		sub="Prime Sword",
 		head="Malignance Chapeau",
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
@@ -95,6 +94,22 @@ function get_sets()
 		ammo="Staunch Tathlum +1"
 	})
 	
+	sets.midcast.PhysicalAcc = {
+		head="Hashishin Kavuk +2", --Hashishin Set +3
+		body="Hashishin Mintan +2",
+		hands="Hashishin Bazubands +2",
+		legs="Hashishin Tayt +3",
+		feet="Hashishin Basmak +2",
+		neck="Mirage Stole +2",
+		waist="Kentarch Belt +1",
+		ring1="Chirich Ring +1",
+		ring2="Chirich Ring +1",
+		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+		ear1="Digni. Earring",
+		ear2="Telos Earring",
+		ammo="Expeditious Pinion"
+	}
+	
 	sets.midcast['Fire II'] = sets.midcast.MAB
 	sets.midcast['Stone III'] = sets.midcast.MAB
 	
@@ -102,6 +117,8 @@ function get_sets()
 		head = "Pixie Hairpin +1",
 		right_ring = "Archon Ring"
 	}
+	
+	sets.midcast['Quad. Continuum'] = sets.midcast.PhysicalAcc
 	
 	sets.midcast.Enmity = {
 		head="Rabid Visor",
@@ -139,7 +156,7 @@ function get_sets()
 		body="Assimilator's Jubbah +2",
 		hands="Nyame Gauntlets",
 		legs="Hashishin Tayt +3",
-		feet="Luhlaza Charuqs +1",
+		feet="Luhlaza Charuqs +3",
 		ear1="Odnowa Earring +1",
 		ear2="Hashi. Earring +1",
 		waist="Flume Belt +1"
@@ -223,7 +240,7 @@ function get_sets()
 	sets.midcast['Jettatura'] = sets.midcast.Enmity
 
 	sets.midcast['Mighty Guard'] = set_combine(sets.midcast.Enhancing, {
-		feet="Luhlaza Charuqs +1"
+		feet="Luhlaza Charuqs +3"
 	})
 	
 	sets.midcast['Dia'] = set_combine(sets.midcast, {
@@ -344,7 +361,7 @@ function get_sets()
 	
 	sets.Idle.MagicDT = set_combine(sets.Idle, {
 		head="Nyame Helm",									
-		body="Nyame Mail",
+		body="Hashishin Mintan +2",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
@@ -378,7 +395,7 @@ function get_sets()
 
 	sets.Melee.DTRefresh = set_combine(sets.Melee.DT, {
 		head="Rawhide Mask",							
-		body="Jhakri Robe +2",		
+		body="Hashishin Mintan +2",		
 		hands="Malignance Gloves",
 		legs="Rawhide Trousers",
 		feet="Malignance Boots",
