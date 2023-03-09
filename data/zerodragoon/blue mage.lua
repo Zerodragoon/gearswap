@@ -243,6 +243,10 @@ function get_sets()
 		feet="Luhlaza Charuqs +3"
 	})
 	
+	sets.midcast['Memento Mori'] = set_combine(sets.midcast.Enhancing, {
+		feet="Luhlaza Charuqs +3"
+	})
+	
 	sets.midcast['Dia'] = set_combine(sets.midcast, {
 		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
 		waist="Chaac Belt",
