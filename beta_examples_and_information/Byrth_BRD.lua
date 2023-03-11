@@ -25,7 +25,7 @@ function get_sets()
         legs="Querkening Brais",
         feet={ name="Telchine Pigaches", augments={'Song spellcasting time -7%',}},
         neck="Orunmila's Torque",
-        waist="Flume Belt +1",
+        waist="Platinum Moogle Belt",
         left_ear="Loquac. Earring",
         right_ear="Enchntr. Earring +1",
         left_ring="Defending Ring",
@@ -223,7 +223,7 @@ function get_sets()
     sets.aftercast.Regen = {main={name="Sangoma",priority=15},sub={name="Genmei Shield",priority=16},range={name="Oneiros Harp",priority=14},ammo={name=empty,priority=13},
         head="Bihu Roundlet +1",neck="Loricate Torque +1",ear1={name="Loquac. Earring",priority=7},ear2={name="Gifted Earring",priority=5},
         body="Ischemia Chasuble",hands={name="Umuthi Gloves",priority=9},ring1="Defending Ring",ring2={name="Dark Ring",priority=8},
-        back="Umbra Cape",waist="Flume Belt +1",legs={name="Lengo Pants",priority=6},feet="Fili Cothurnes +1"}
+        back="Umbra Cape",waist="Platinum Moogle Belt",legs={name="Lengo Pants",priority=6},feet="Fili Cothurnes +1"}
     
     sets.aftercast.PDT = {
         main="Sangoma",
@@ -236,7 +236,7 @@ function get_sets()
         legs="Jokushu Haidate",
         feet="Fili Cothurnes +1",
         neck="Loricate Torque +1",
-        waist="Flume Belt +1",
+        waist="Platinum Moogle Belt",
         left_ear="Loquac. Earring",
         right_ear="Gifted Earring",
         left_ring="Defending Ring",

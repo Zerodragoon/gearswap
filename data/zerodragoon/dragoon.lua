@@ -147,7 +147,7 @@ function get_sets()
 		legs="Carmine Cuisses +1",
 		feet="Gleti's Boots",
 		neck="Loricate Torque +1",
-		waist="Gishdubar Sash",
+		waist="Platinum Moogle Belt",
 		ring1="Moonlight Ring",
 		ring2="Moonlight Ring",
 		back="Moonlight Cape",

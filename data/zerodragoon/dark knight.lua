@@ -191,7 +191,8 @@ function get_sets()
 		ear2="Odnowa Earring +1",
 		ring1="Moonlight Ring",
 		ring2="Moonlight Ring",
-		back="Moonlight Cape"
+		back="Moonlight Cape",
+		waist="Platinum Moogle Belt"
 	})
 	
 	sets.midcast["Weapon Bash"] = {
@@ -312,7 +313,7 @@ function get_sets()
 		legs="Carmine Cuisses +1",
 		feet="Sakpata's Leggings",
 		neck="Loricate Torque +1",
-		waist="Gishdubar Sash",
+		waist="Platinum Moogle Belt",
 		ring1="Warden's Ring",
 		ring2="Defending Ring",
 		back="Moonlight Cape",

@@ -159,7 +159,7 @@ function get_sets()
 		feet="Luhlaza Charuqs +3",
 		ear1="Odnowa Earring +1",
 		ear2="Hashi. Earring +1",
-		waist="Flume Belt +1"
+		waist="Platinum Moogle Belt"
 	})
 	
 	sets.midcast.Healing = set_combine(sets.midcast.Enhancing, {
@@ -348,7 +348,7 @@ function get_sets()
 		legs="Carmine Cuisses +1",
 		feet="Malignance Boots",
 		neck="Loricate Torque +1",
-		waist="Gishdubar Sash",
+		waist="Platinum Moogle Belt",
 		ring1="Stikini Ring +1",
 		ring2="Stikini Ring +1",
 		back="Moonlight Cape",

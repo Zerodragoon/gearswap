@@ -223,7 +223,7 @@ function get_sets()
 		legs="Chevalier's Cuisses +2",
 		feet="Sakpata's Leggings",
 		neck="Loricate Torque +1",
-		waist="Flume Belt +1",
+		waist="Platinum Moogle Belt", --Flume Belt +1
 		ring1="Moonlight Ring",
 		ring2="Moonlight Ring",
 		back={ name="Rudianos's Mantle", augments={'"Fast Cast"+10'}},

@@ -711,7 +711,7 @@ function get_sets()
 		legs="Malignance Tights",
 		feet="Orion Socks +3",
 		neck="Loricate Torque +1",
-		waist="Gishdubar Sash",
+		waist="Platinum Moogle Belt",
 		ring1="Warden's Ring",
 		ring2="Defending Ring",
 		back="Moonlight Cape",

@@ -247,7 +247,7 @@ function get_sets()
 		legs="Erilaz Leg Guards +3",
 		feet="Turms Leggings +1",
 		neck="Futhark Torque +2",
-		waist="Flume Belt +1",
+		waist="Platinum Moogle Belt",
 		ring1="Moonlight Ring",
 		ring2="Moonlight Ring",
 		ear1="Ethereal Earring",

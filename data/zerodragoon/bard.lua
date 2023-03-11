@@ -390,7 +390,7 @@ function get_sets()
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck="Loricate Torque +1",
-		waist="Flume Belt +1",
+		waist="Platinum Moogle Belt",
 		left_ring="Warden's Ring",
 		right_ring="Defending Ring",
 		back="Moonlight Cape"

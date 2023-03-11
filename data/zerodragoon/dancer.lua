@@ -48,7 +48,7 @@ function get_sets()
 		ear1="Sjofn Earring", --10
 		ear2="Handler's Earring +1",
 		back="Moonlight Cape",
-		waist="Flume Belt +1",
+		waist="Platinum Moogle Belt",
 		ammo="Staunch Tathlum +1"
 	} --67
 		
@@ -263,7 +263,7 @@ function get_sets()
 		legs="Malignance Tights",
 		feet="Tandava Crackows",
 		neck="Loricate Torque +1",
-		waist="Gishdubar Sash",
+		waist="Platinum Moogle Belt",
 		ring1="Warden's Ring",
 		ring2="Defending Ring",
 		back="Moonlight Cape",

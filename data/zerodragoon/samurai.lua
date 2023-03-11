@@ -168,7 +168,7 @@ function get_sets()
 		legs="Kasuga Haidate +2",
 		feet="Danzo Sune-ate",
 		neck="Loricate Torque +1",
-		waist="Flume Belt +1",
+		waist="Platinum Moogle Belt",
 		ring1="Defending Ring",
 		ring2="Warden's Ring",
 		back="Moonlight Cape",
