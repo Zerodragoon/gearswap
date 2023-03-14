@@ -461,7 +461,8 @@ function get_sets()
 	}
 	
 	sets.precast['Savage Blade'] = set_combine(sets.WS, {
-		head="Nyame Helm",								
+		head="Nyame Helm",
+		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",

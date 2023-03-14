@@ -253,7 +253,7 @@ function get_sets()
 		body="Sakpata's Breastplate",
 	})
 	
-	sets.PWS.Upheaval = set_combine(sets.PWS, {
+	sets.PWS.Upheaval = set_combine(sets.PWS, { --Maybe Nyame Gauntlets?
 		legs="Boii Cuisses +3",
 		ring1="Niqmaddu Ring",
 		back={ name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
