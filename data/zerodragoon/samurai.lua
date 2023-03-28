@@ -186,7 +186,8 @@ function get_sets()
 		body="Tatenashi Haramaki +1",
 		hands="Wakido Kote +3",
 		legs="Tatena. Haidate +1",
-		feet="Tatenashi Sune-ate +1",
+		feet="Ryuo Sune-Ate +1",
+		--feet="Tatenashi Sune-ate +1",
 		neck="Samurai's Nodowa +2",
 		waist="Sailfi Belt +1",
 		ring1="Chirich Ring +1",
@@ -222,7 +223,8 @@ function get_sets()
 	sets.Melee.Zanshin = set_combine(sets.Melee.Tate, {
 		body="Kasuga Domaru +3",
 		neck="Moonlight Nodowa",
-		back="Takaha Mantle"
+		back="Takaha Mantle",
+		feet="Ryuo Sune-Ate +1"
 	})
 	
 	sets.Melee.TH = set_combine(sets.Melee.DblAtt, {
