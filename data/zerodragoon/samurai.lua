@@ -126,7 +126,7 @@ function get_sets()
 	sets.precast['Apex Arrow'] = sets.RangedWS
 	sets.precast['Empyreal Arrow'] = sets.RangedWS
 	sets.precast['Tachi: Ageha'] = {
-		head="Kasuga Kabuto +2",
+		head="Kasuga Kabuto +3",
 		body="Kasuga Domaru +3",
 		hands="Kasuga Kote +3",
 		legs="Kasuga Haidate +2",
@@ -162,10 +162,10 @@ function get_sets()
 	--Idle Sets Below
 	Idle_Set_Names = {'Normal'}
 	sets.Idle = {
-		head="Kasuga Kabuto +2",
+		head="Kasuga Kabuto +3",
 		body="Kasuga Domaru +3",
 		hands="Sakonji Kote +3",
-		legs="Kasuga Haidate +2",
+		legs="Kasuga Haidate +3",
 		feet="Danzo Sune-ate",
 		neck="Loricate Torque +1",
 		waist="Platinum Moogle Belt",
@@ -207,10 +207,10 @@ function get_sets()
 	})
 	
 	sets.Melee.DT = set_combine(sets.Melee, {
-		head="Kasuga Kabuto +2",
+		head="Kasuga Kabuto +3",
 		body="Kasuga Domaru +3",
 		hands="Mpaca's Gloves",
-		legs="Kasuga Haidate +2"
+		legs="Kasuga Haidate +3"
 	})
 	
 	sets.Melee.Tate = set_combine(sets.Melee, {
