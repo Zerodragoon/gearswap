@@ -437,7 +437,8 @@ function get_sets()
 	sets.Melee.Kraken = set_combine(sets.Melee, {  
 		waist="Olseni Belt",
 		ear1="Crepuscular Earring",
-		hands="Gazu Bracelets +1"
+		hands="Gazu Bracelets +1",
+		feet="Volte Spats"
 	})
 	
 	sets.Melee.KrakenAcc = set_combine(sets.Melee.Kraken, {  

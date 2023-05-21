@@ -203,7 +203,7 @@ function get_sets()
 		body="Hjarrandi Breastplate",
 		hands="Gleti's Gauntlets",
 		legs="Pteroslaver Brais +3", 
-		feet="Flamma Gambieras +2", --Volte Spats
+		feet="Volte Spats",
 		neck="Vim Torque +1",
 		waist="Klouskap Sash +1",
 		ring1="Chirich Ring +1",

@@ -153,7 +153,7 @@ function get_sets()
 	
 	sets.midcast.EnhancingBlueSkill = set_combine(sets.midcast.Enhancing, {
 		head="Nyame Helm",
-		body="Assimilator's Jubbah +2",
+		body="Assimilator's Jubbah +3",
 		hands="Nyame Gauntlets",
 		legs="Hashishin Tayt +3",
 		feet="Luhlaza Charuqs +3",
@@ -254,6 +254,12 @@ function get_sets()
 	})
 	
 	sets.midcast['Dia II'] = set_combine(sets.midcast, {
+		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
+		waist="Chaac Belt",
+		ammo="Perfect Lucky Egg"
+	})
+	
+	sets.midcast['Diaga'] = set_combine(sets.midcast, {
 		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
 		waist="Chaac Belt",
 		ammo="Perfect Lucky Egg"

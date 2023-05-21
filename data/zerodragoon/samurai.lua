@@ -129,7 +129,7 @@ function get_sets()
 		head="Kasuga Kabuto +3",
 		body="Kasuga Domaru +3",
 		hands="Kasuga Kote +3",
-		legs="Kasuga Haidate +2",
+		legs="Kasuga Haidate +3",
 		feet="Kasuga Sune-Ate +2",
 		waist="Eschan Stone",
 		neck="Samurai's Nodowa +2",
