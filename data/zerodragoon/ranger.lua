@@ -496,7 +496,7 @@ function get_sets()
 		feet="Amini Bottillons +3",
 		neck="Scout's Gorget +2",
 		waist="Fotia Belt",
-		ring1="Regal Ring",
+		ring1="Cornelia's Ring",
 		ring2="Epaminondas's Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
 		ear1="Moonshade Earring",
@@ -591,7 +591,7 @@ function get_sets()
 		feet="Amini Bottillons +3",
 		neck="Scout's Gorget +2",
 		waist="Fotia Belt",
-		ring1="Regal Ring",
+		ring1="Cornelia's Ring",
 		ring2="Epaminondas's Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
 		ear1="Ishvara Earring",
@@ -686,13 +686,14 @@ function get_sets()
 		neck="Scout's Gorget +2",
 		ear1="Moonshade Earring",
 		ear2="Ishvara Earring",
-		ring1="Sroda Ring",
+		ring1="Cornelia's Ring",
 		ring2="Epaminondas's Ring",
 		back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
 	}
 	
 	sets.SavageCap = set_combine(sets.Savage, {	
 		ear2="Amini Earring", --Amini Earring +2
+		ring2="Sroda Ring"
 	})
 	
 	sets.SavageCapHigh = set_combine(sets.SavageCap, {	

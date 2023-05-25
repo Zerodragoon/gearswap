@@ -204,7 +204,7 @@ function get_sets()
 		body={ name="Taeon Tabard", augments={'"Cure" potency +5%','"Regen" potency+3',}},
 		head="Runeist Bandeau +3",
 		feet={ name="Taeon Boots", augments={'"Cure" potency +5%','"Regen" potency+3',}},
-		ear2="Erilaz Earring",
+		ear2="Erilaz Earring +1",
 		neck="Sacro Gorget",
 		waist="Sroda Belt"
 	})
@@ -251,7 +251,7 @@ function get_sets()
 		ring1="Moonlight Ring",
 		ring2="Moonlight Ring",
 		ear1="Ethereal Earring",
-		ear2="Erilaz Earring",
+		ear2="Erilaz Earring +1",
 		back={ name="Ogma's Cape", augments={'"Enmity"+10'}} -- HP +60, M.Eva. +20, Eva. +20, Enmity +10, M.Eva +10, Phys. dmg. taken -10
 	}
 

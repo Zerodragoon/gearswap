@@ -488,7 +488,7 @@ function midcast(spell)
 		if buffactive.Rapture then
 			equip(sets.midcast.Rapture)
 		end
-	elseif spell.skill == 'Enfeebling Magic' then
+	elseif spell.skill == 'Enfeebling Magic' or spell.skill == 'Dark Magic' then
 		equip(sets.midcast.enfeeb)
 	elseif spell.type == "BlackMagic" then
 		if spell.english:find("helix") then
