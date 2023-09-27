@@ -455,8 +455,8 @@ function get_sets()
 		waist="Sailfi Belt +1",
 		left_ear="Moonshade Earring",
 		right_ear="Ishvara Earring",
-		left_ring="Ilabrat Ring",
-		right_ring="Epaminondas's Ring",
+		left_ring="Epaminondas's Ring",
+		right_ring="Cornelia's Ring",
 		range={ name="Linos", augments={'Attack+20','Weapon skill damage +3%','STR+6 DEX+6',}},
 		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}}
 	}
@@ -467,7 +467,6 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
-		left_ring="Sroda Ring",
 		back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 	})
 	

@@ -442,7 +442,7 @@ function get_sets()
 		feet="Nyame Sollerets", --Lethargy Houseaux +3
 		neck="Anu Torque",
 		waist="Fotia Belt",
-		ring1="Ilabrat Ring",
+		ring1="Cornelia's Ring",
 		ring2="Epaminondas's Ring",
 		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Damage taken-5%',}},
 		ear1="Ishvara Earring",
@@ -451,7 +451,7 @@ function get_sets()
 	}
 	
 	sets.precast['Savage Blade'] = set_combine(sets.PWS, {
-		ring1="Sroda Ring"
+
 	})
 	
 	sets.PWS.Normal = set_combine(sets.PWS, {})

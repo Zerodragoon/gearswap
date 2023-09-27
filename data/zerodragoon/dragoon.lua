@@ -92,13 +92,14 @@ function get_sets()
 	
 	sets.PWS.Savage = set_combine(sets.PWS, {
 		neck="Dragoon's Collar +2",
-		ring1="Epaminondas's Ring",
-		ring2="Sroda Ring",
+		ring1="Cornelia's Ring",
+		ring2="Epaminondas's Ring",
 		waist="Sailfi Belt +1"
 	})
 	
 	sets.PWS.SavageCap = set_combine(sets.PWS.Savage, {
-		ear2="Peltast's Earring +1"
+		ear2="Peltast's Earring +1",
+		ring2="Sroda Ring",
 	})
 	
 	sets.PWS.SavageCapHigh = set_combine(sets.PWS.SavageCap, {

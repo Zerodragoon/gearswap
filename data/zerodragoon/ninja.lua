@@ -101,8 +101,8 @@ function get_sets()
 		feet="Nyame Sollerets", -- Hattori Kyahan +3
 		neck="Ninja Nodowa +2",
 		waist="Fotia Belt",
-		ring1="Regal Ring",
-		ring2="Epaminondas's Ring",
+		ring1="Epaminondas's Ring",
+		ring2="Cornelia's Ring",
 		back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 		ear1="Moonshade Earring",
 		ear2="Ishvara Earring",
@@ -186,8 +186,7 @@ function get_sets()
 	})
 	
 	sets.precast['Blade: Ten'] = set_combine(sets.PWS, {
-		waist="Kentarch Belt +1",
-		ring1="Beithir Ring"
+		waist="Kentarch Belt +1"
 	})
 
 	-- Magical WS Sets Below

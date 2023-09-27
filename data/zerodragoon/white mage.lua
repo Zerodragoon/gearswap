@@ -360,7 +360,7 @@ function get_sets()
 		waist="Fotia Belt",
 		left_ear="Regal Earring",
 		right_ear="Moonshade Earring",
-		left_ring="Ilabrat Ring",
+		left_ring="Cornelia's Ring",
 		right_ring="Epaminondas's Ring",
 		--back="Atheling Mantle"
 	}

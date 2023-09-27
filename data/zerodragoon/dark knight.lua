@@ -209,8 +209,8 @@ function get_sets()
 		feet="Nyame Sollerets", --Heathen's Sollerts +3
 		neck="Abyssal Beads +2",
 		waist="Fotia Belt",
-		ring1="Niqmaddu Ring",
-		ring2="Epaminondas's Ring",
+		ring1="Epaminondas's Ring",
+		ring2="Cornelia's Ring",
 		back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 		ear1="Moonshade Earring",
 		ear2="Heathen's Earring +1",
@@ -232,24 +232,26 @@ function get_sets()
 		feet="Heathen's Sollerets +2",
 		ammo="Coiste Bodhar",
 		waist="Fotia Belt",
+		ring1="Niqmaddu Ring",
 		ring2="Regal Ring"
 	})
 
 	
 	sets.PWS.Savage = set_combine(sets.PWS, {
-		ring1="Sroda Ring",
 		waist="Sailfi Belt +1"
 	})
 	
 	sets.PWS.SavageCap = set_combine(sets.PWS.Savage, {
 		hands="Sakpata's Gauntlets",
-		legs="Sakpata's Cuisses"
+		legs="Sakpata's Cuisses",
+		ring1="Sroda Ring",
 	})
 	
 	sets.PWS.TorcleaverCap = set_combine(sets.PWS.Savage, {
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
-		waist="Sailfi Belt +1"
+		waist="Sailfi Belt +1",
+		ring1="Sroda Ring"
 	})
 	
 	sets.precast['Shockwave'] = set_combine(sets.PWS, {

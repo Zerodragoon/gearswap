@@ -313,7 +313,7 @@ function get_sets()
 		left_ear="Moonshade Earring",
 		right_ear="Sherida Earring",
 		left_ring="Epaminondas's Ring",
-		right_ring="Ilabrat Ring",
+		right_ring="Cornelia's Ring",
 		back={ name="Ogma's Cape", augments={'"Weapon skill Damage"+10'}} --DEX +30, Acc/Atk +20, WSD +10
 	}
 	

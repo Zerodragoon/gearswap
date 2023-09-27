@@ -201,8 +201,8 @@ function get_sets()
 		feet="Nyame Sollerets",
 		neck="Warrior's Bead Necklace +2",
 		waist="Sailfi Belt +1",
-		ring1="Regal Ring",
-		ring2="Epaminondas's Ring",
+		ring1="Epaminondas's Ring",
+		ring2="Cornelia's Ring",
 		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 		ear1="Thrud Earring",
 		ear2="Moonshade Earring",
@@ -211,8 +211,7 @@ function get_sets()
 	sets.MWS = set_combine(sets.Magic, {
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
-		ear1="Moonshade Earring",
-		ring1="Epaminondas's Ring"
+		ear1="Moonshade Earring"
 	})
 		
 	sets.precast['Tachi: Koki'] = set_combine(sets.PWS, sets.GK)
@@ -265,11 +264,12 @@ function get_sets()
 	})
 	
 	sets.PWS.Savage = set_combine(sets.PWS, {
-		ring1="Sroda Ring"
+		
 	})
 	
 	sets.PWS.SavageCap = set_combine(sets.PWS.Savage, {
-		legs="Boii Cuisses +3"
+		legs="Boii Cuisses +3",
+		ring1="Sroda Ring"
 	})
 	
 	sets.PWS.SavageCapHigh = set_combine(sets.PWS.SavageCap, {

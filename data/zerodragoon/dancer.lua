@@ -179,7 +179,7 @@ function get_sets()
 		feet="Nyame Sollerets",
 		neck="Etoile Gorget +2",
 		waist="Fotia Belt",
-		ring1="Regal Ring",
+		ring1="Cornelia's Ring",
 		ring2="Epaminondas's Ring",
 		ammo="Aurgelmir Orb +1",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
@@ -204,6 +204,7 @@ function get_sets()
 		legs="Gleti's Breeches",
 		feet="Gleti's Boots",
 		ammo="Coiste Bodhar",
+		ring1="Regal Ring",
 		ring2="Gere Ring",
 		ear1="Sherida Earring",
 		ear2="Mache Earring +1"
@@ -227,7 +228,7 @@ function get_sets()
 		neck="Sibyl Scarf",
 		waist="Orpheus's Sash",
 		ring1="Metamorph Ring +1",
-		ring2="Epaminondas's Ring",
+		ring2="Cornelia's Ring",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 		ear1="Friomisi Earring",
 		ear2="Ishvara Earring"}
