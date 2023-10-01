@@ -92,7 +92,8 @@ function get_sets()
 		neck="Samurai's Nodowa +2",
 		waist="Sailfi Belt +1",
 		ring1="Epaminondas's Ring",
-		ring2="Cornelia's Ring",
+		ring2="Ephramad's Ring",
+		--ring2="Niqmaddu Ring"
 		back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 		ear1="Moonshade Earring", 
 		--ear2="Thrud Earring",

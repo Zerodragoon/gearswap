@@ -273,7 +273,7 @@ function get_sets()
 		waist="Windbuffet Belt +1",
 		left_ear="Thrud Earring",
 		right_ear="Ishvara Earring",
-		left_ring="Cornelia's Ring",
+		left_ring="Beithir Ring",
 		right_ring="Epaminondas's Ring",
 		back={ name="Rudianos's Mantle", augments={'"Weapon Skill Damage "+10'}}
 	}
@@ -289,7 +289,7 @@ function get_sets()
 		waist="Windbuffet Belt +1",
 		left_ear="Thrud Earring",
 		right_ear="Ishvara Earring",
-		left_ring="Cornelia's Ring",
+		left_ring="Beithir Ring",
 		right_ring="Epaminondas's Ring",
 		back={ name="Rudianos's Mantle", augments={'"Weapon Skill Damage "+10'}}
 	}

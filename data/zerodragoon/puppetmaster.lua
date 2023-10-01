@@ -116,7 +116,7 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
-		ring1="Cornelia's Ring",
+		ring1="Ephramad's Ring",
 		ring2="Epaminondas's Ring",
 		--back="Sacro Mantle",
 		--body="Volte Jupon",

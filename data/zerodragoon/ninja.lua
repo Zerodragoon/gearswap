@@ -102,7 +102,7 @@ function get_sets()
 		neck="Ninja Nodowa +2",
 		waist="Fotia Belt",
 		ring1="Epaminondas's Ring",
-		ring2="Cornelia's Ring",
+		ring2="Ephramad's Ring",
 		back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 		ear1="Moonshade Earring",
 		ear2="Ishvara Earring",

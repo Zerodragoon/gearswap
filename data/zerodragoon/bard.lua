@@ -456,7 +456,7 @@ function get_sets()
 		left_ear="Moonshade Earring",
 		right_ear="Ishvara Earring",
 		left_ring="Epaminondas's Ring",
-		right_ring="Cornelia's Ring",
+		right_ring="Ephramad's Ring",
 		range={ name="Linos", augments={'Attack+20','Weapon skill damage +3%','STR+6 DEX+6',}},
 		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}}
 	}

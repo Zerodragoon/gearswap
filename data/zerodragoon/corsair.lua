@@ -304,7 +304,7 @@ function get_sets()
 		feet="Nyame Sollerets",
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
-		ring1="Cornelia's Ring",
+		ring1="Ephramad's Ring",
 		ring2="Epaminondas's Ring",
 		back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
 		ear1="Ishvara Earring",
@@ -352,14 +352,14 @@ function get_sets()
 
 	sets.Wildfire = {
 		head="Nyame Helm",
-		ring1="Cornelia's Ring"
+		ring1="Epaminondas's Ring"
 	}
 	
 	sets.Aeolian = set_combine(sets.LeadenSalute, {
 		head="Nyame Helm",						
 		waist="Orpheus's Sash",
 		ear2="Moonshade Earring",
-		ring1="Cornelia's Ring"
+		ring1="Epaminondas's Ring"
 	})
 
 	sets.Evis = {
@@ -387,7 +387,7 @@ function get_sets()
 		neck="Republican Platinum Medal",
 		ear1="Ishvara Earring",
 		ear2="Moonshade Earring",
-		ring1="Cornelia's Ring",
+		ring1="Ephramad's Ring",
 		ring2="Epaminondas's Ring",
 		back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}}
 	}

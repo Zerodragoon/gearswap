@@ -105,7 +105,7 @@ function get_sets()
 	sets.precast['Savage Blade'] = set_combine(sets.PWS.Normal, {
 		body="Nukumi Gausape +2",
 		ear1="Thrud Earring",
-		ring1="Cornelia's Ring",
+		ring1="Ephramad's Ring",
 		ring2="Epaminondas's Ring",
 		waist="Sailfi Belt +1",
 		neck="Republican Platinum Medal",
@@ -150,7 +150,7 @@ function get_sets()
 		ear1="Friomisi Earring",
 		neck="Baetyl Pendant",
 		ring1="Weatherspoon Ring +1",
-		ring2="Cornelia's Ring",
+		ring2="Epaminondas's Ring",
 	})
 		
 	sets.precast['Primal Rend'] = set_combine(sets.PWS.Normal, {
@@ -158,14 +158,14 @@ function get_sets()
 		ear1="Friomisi Earring",
 		neck="Baetyl Pendant",
 		ring1="Weatherspoon Ring +1",
-		ring2="Cornelia's Ring",
+		ring2="Epaminondas's Ring",
 	})
 	
 	sets.precast['Aeolian Edge'] = set_combine(sets.PWS.Normal, {
 		waist="Orpheus's Sash",
 		neck="Sibyl Scarf",
 		ear1="Friomisi Earring",
-		ring1="Cornelia's Ring",
+		ring1="Beithir Ring",
 		ring2="Epaminondas's Ring",
 	})
 

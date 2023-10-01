@@ -210,7 +210,7 @@ function get_sets()
 		neck="Abyssal Beads +2",
 		waist="Fotia Belt",
 		ring1="Epaminondas's Ring",
-		ring2="Cornelia's Ring",
+		ring2="Ephramad's Ring",
 		back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 		ear1="Moonshade Earring",
 		ear2="Heathen's Earring +1",
