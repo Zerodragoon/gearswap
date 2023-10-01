@@ -17,7 +17,7 @@ function get_sets()
 	set_style_lock()
 
 	-- Hands Sets
-	Hands_Set_Names = {'Trishula', 'Shining', 'Naegling', 'Malig'}
+	Hands_Set_Names = {'Trishula', 'Shining', 'Naegling', 'Malig', 'Mafic', 'NaeglingSingle'}
 	
 	organizer_items = {
 		angon="Angon"
@@ -44,6 +44,16 @@ function get_sets()
 	sets.Hands.Malig = {
 		main="Malignance Pole",
 		sub="Utu Grip"
+	}
+	
+	sets.Hands.Mafic = {
+		main="Mafic Cudgel",
+		sub="Ark Shield"
+	}
+	
+	sets.Hands.NaeglingSingle = {
+		main="Naegling",
+		sub="Ark Shield"
 	}
 						
 	-- Physical WS Sets Below
@@ -103,8 +113,7 @@ function get_sets()
 	})
 	
 	sets.PWS.SavageCapHigh = set_combine(sets.PWS.SavageCap, {
-		hands="Gleti's Gauntlets",
-		body="Gleti's Cuirass",
+		body="Peltast's Plackart +2",
 	})
 	
 	sets.PWS.Camlann = set_combine(sets.PWS, {
@@ -297,6 +306,16 @@ function precast(spell)
 					equip(sets.PWS.Impulse)
 				end
 			elseif spell.name == "Savage Blade" then
+				if ATT_Cap_Flag then
+					if ATT_Cap_High then
+						equip(sets.PWS.SavageCapHigh)
+					else 
+						equip(sets.PWS.SavageCap)
+					end
+				else 
+					equip(sets.PWS.Savage)
+				end
+			elseif spell.name == "Judgment" then
 				if ATT_Cap_Flag then
 					if ATT_Cap_High then
 						equip(sets.PWS.SavageCapHigh)
