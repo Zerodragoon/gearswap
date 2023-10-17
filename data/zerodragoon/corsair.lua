@@ -380,7 +380,7 @@ function get_sets()
 	sets.Savage = {	
 		head="Nyame Helm",						
 		body="Nyame Mail",
-		hands="Nyame Gauntlets", --Chasseur's Gants +3
+		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		waist="Sailfi Belt +1",

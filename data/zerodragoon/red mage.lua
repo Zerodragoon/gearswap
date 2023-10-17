@@ -550,7 +550,7 @@ function get_sets()
 		ammo="Sroda Tathlum",
 	})
 	
-	sets.TP.Odin = set_combine(sets.Melee.Enspell, {
+	sets.Melee.Odin = set_combine(sets.Melee.Enspell, {
         ranged = "Ullr",
         ammo = empty,
         neck = "Dls. Torque +2",
