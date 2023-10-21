@@ -438,7 +438,7 @@ function get_sets()
 		ring1="Begrudging Ring",
 		ring2="Mummu Ring",
 		ear1="Odr Earring",
-		ear2="Telos Earring", --Amini Earring +2
+		ear2="Amini Earring +1", --Amini Earring +2
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}}})
 
 		
@@ -508,7 +508,7 @@ function get_sets()
 		body="Ikenga's Vest",
 		hands="Ikenga's Gloves",
 		--ring1="Sroda Ring",
-		ear2="Amini Earring"
+		ear2="Amini Earring +1"
 	}
 	
 	sets.LS.Normal.Cap = set_combine(sets.LS, sets.LS.Cap)
@@ -600,7 +600,7 @@ function get_sets()
 	
 	sets.CoronachCap = set_combine(sets.Coronach, {
 		ring1="Sroda Ring",
-		ear2="Amini Earring",
+		ear2="Amini Earring +1",
 	})
 
 	sets.Wildfire = {
@@ -634,7 +634,7 @@ function get_sets()
 		ring1="Regal Ring",
 		ring2="Begrudging Ring",
 		ear1="Odr Earring",
-		ear2="Sherida Earring", --Amini Earring +1/+2
+		ear2="Amini Earring +1", --Amini Earring +1/+2
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}}
 	}
 	
@@ -643,8 +643,7 @@ function get_sets()
 		body="Amini Caban +3",
 		hands="Ikenga's Gloves",
 		legs="Ikenga's Trousers",
-		neck="Scout's Gorget +2",
-		ear2="Amini Earring"
+		neck="Scout's Gorget +2"
 	})
 	
 	sets.Jishnu.True = set_combine(sets.Jishnu.Normal, {
@@ -657,8 +656,7 @@ function get_sets()
 		head="Blistering Sallet +1",
 		body="Amini Caban +3",
 		hands="Ikenga's Gloves",
-		neck="Scout's Gorget +2",
-		ear2="Amini Earring"
+		neck="Scout's Gorget +2"
 	})
 
 	sets.Evis = {
@@ -692,7 +690,7 @@ function get_sets()
 	}
 	
 	sets.SavageCap = set_combine(sets.Savage, {	
-		ear2="Amini Earring", --Amini Earring +2
+		ear2="Amini Earring +1", --Amini Earring +2
 		ring2="Sroda Ring"
 	})
 	
