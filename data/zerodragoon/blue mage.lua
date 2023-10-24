@@ -198,6 +198,8 @@ function get_sets()
 	sets.midcast["Cure IV"] = sets.midcast.Healing
 
 	sets.midcast["Stoneskin"] = set_combine(sets.midcast.Enhancing, {
+		hands="Stone Mufflers",
+		neck="Stone Gorget",
 		legs="Shedir Seraweels",
 		ear1="Earthcry Earring",
 		waist="Siegel Sash"

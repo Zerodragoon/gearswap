@@ -335,6 +335,7 @@ function get_sets()
 	})
 	
 	sets.midcast["Stoneskin"] = set_combine(sets.midcast.Enhancing, {
+		hands="Stone Mufflers",
 		legs="Shedir Seraweels",
 		ear1="Earthcry Earring",
 		neck="Nodens Gorget",
