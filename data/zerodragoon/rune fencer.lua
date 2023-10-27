@@ -222,7 +222,7 @@ function get_sets()
 	
 	sets.midcast["Aquaveil"] = sets.magic.MidCast
 
-	Hands_Set_Names = {'EpeoTank', 'EpeoDD', 'Axe'}	
+	Hands_Set_Names = {'EpeoTank', 'EpeoDD', 'Axe', 'Sword'}	
 
 	sets.Hands = {}	
 
@@ -240,9 +240,13 @@ function get_sets()
 		main="Hepatizon Axe +1",
 		sub="Utu Grip"
 	}
+	
+	sets.Hands.Sword = {
+		main="Reikiko"
+	}
 
 	--TP Sets Below
-	TP_Set_Names = {'Standard', 'Magic', 'Resistance', 'Annul', 'Hybrid', 'DD'}
+	TP_Set_Names = {'Standard', 'Magic', 'Resistance', 'Annul', 'Hybrid', 'DD', 'Regain'}
 
 	sets.TP = { 
 		ammo="Staunch Tathlum +1",
@@ -305,6 +309,10 @@ function get_sets()
 		right_ring="Niqmaddu Ring",
 		back={ name="Ogma's Cape", augments={'"Dbl.Atk."+10'}} -- STR +30, Acc +20, Attk +20, Double Attk +10, PDT -10
 	})
+	
+	sets.TP.Regain = set_combine(sets.TP, {
+		head="Turms Cap +1"
+	})
 
 	sets.WS = {
 		ammo="Knobkierrie",
@@ -344,7 +352,7 @@ function get_sets()
 	sets.precast['Ruinator'] = sets.AxeAcc
 
 	--Idle Sets Below
-	Idle_Set_Names = {'DTMove', 'DT', 'DTMagic', 'DTResistance', 'DTAnnul'}
+	Idle_Set_Names = {'DTMove', 'DT', 'DTMagic', 'DTResistance', 'DTAnnul', 'Regain'}
 	sets.Idle = {}
 	
 	sets.Idle.DT = sets.TP.Standard
@@ -354,6 +362,9 @@ function get_sets()
 	sets.Idle.DTMove  = set_combine(sets.TP.Standard, {
 		legs="Carmine Cuisses +1",
 		ring2="Defending Ring"
+	})
+	sets.Idle.Regain  = set_combine(sets.TP.Resistance, {
+		head="Turms Cap +1"
 	})
 	
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate;input //shield on')
