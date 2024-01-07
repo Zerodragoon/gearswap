@@ -34,7 +34,7 @@ function get_sets()
 		ear2="Enchanter's Earring +1",
 		ring1="Prolix Ring",
 		ring2="Weatherspoon Ring +1",
-		neck="Baetyl Pendant",
+		neck="Orunmila's Torque",
 		ammo="Sapience Orb" --2
 	}
 	

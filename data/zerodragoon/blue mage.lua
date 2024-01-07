@@ -29,14 +29,14 @@ function get_sets()
 		waist="Witful Belt", --3 --3
 		legs="Pinga Pants +1", --13
 		feet="Carmine Greaves +1", --8
-		neck="Baetyl Pendant", --4
+		neck="Orunmila's Torque", --5
 		ear1="Loquacious Earring", --2
 		ear2="Enchanter's Earring +1", --2
 		ring1="Kishar Ring", --4
 		ring2="Weatherspoon Ring +1", --5 --3
 		back="Fi Follet Cape +1", --10
 		ammo="Sapience Orb" --2
-	} --81 --6
+	} --82 --6
 
 	sets.midcast = { 
 		ammo="Pemphredo Tathlum",

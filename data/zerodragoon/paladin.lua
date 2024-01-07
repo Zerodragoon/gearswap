@@ -29,13 +29,13 @@ function get_sets()
 		legs="Eschite Cuisses", --5
 		feet="Odyssean Greaves", --10 --Chevalier's Sabatons +3
 		ammo="Sapience Orb", --2
-		neck="Baetyl Pendant", --4
+		neck="Orunmila's Torque", --5
 		ear1="Loquacious Earring", --2
 		ear2="Enchanter's Earring +1", --2
 		ring1="Weatherspoon Ring +1", --6 --3
 		ring2="Kishar Ring", --4
 		back={ name="Rudianos's Mantle", augments={'"Fast Cast"+10'}} --10
-	} --77
+	} --78
 	
 	sets.magic.MidCast = {
 		ammo="Staunch Tathlum +1", -- 11

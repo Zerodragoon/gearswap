@@ -24,6 +24,18 @@ function get_sets()
 	}
 	
 	sets.precast = {}
+	
+	sets.precast.FastCast = {
+		body="Sacro Breastplate",
+		hands="Leyline Gloves",
+		ear1="Loquacious Earring",
+		ear2="Enchanter's Earring +1",
+		ring1="Prolix Ring",
+		ring2="Weatherspoon Ring +1",
+		neck="Orunmila's Torque",
+		ammo="Sapience Orb" --2
+	}
+	
 	sets.Hands = {}	
 
 	sets.Hands.Shining = { 

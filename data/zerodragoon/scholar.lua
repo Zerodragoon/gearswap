@@ -72,13 +72,13 @@ function get_sets()
 		legs="Pinga Pants +1", --11
 		feet="Academic's Loafers +3", --12
 		waist="Witful Belt", --3 --3
-		neck="Baetyl Pendant", --4
+		neck="Orunmila's Torque", --5
 		left_ear="Malignance Earring", --4
 		right_ear="Loquac. Earring", --2
 		left_ring="Kishar Ring", --4
 		right_ring="Weatherspoon Ring +1", --6 --4
 		back="Fi Follet Cape +1" --10
-	} --100 --7
+	} --101 --7
 	
 	sets.precast.Elemental = set_combine(sets.precast.FastCast, {
 		

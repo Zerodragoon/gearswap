@@ -73,14 +73,14 @@ function get_sets()
 		legs="Geomancy Pants +3", --13 
 		feet={ name="Merlinic Crackows", augments={'"Fast Cast"+7',}}, --12
 		waist="Witful Belt", --3 --3
-		neck="Baetyl Pendant", --4
+		neck="Orunmila's Torque", --5
 		left_ear="Malignance Earring", --4
 		right_ear="Loquac. Earring", --2
 		left_ring="Kishar Ring", --4
 		right_ring="Weatherspoon Ring +1", --5 --3
 		back="Perimede Cape", --0 --3
 		ammo="Sapience Orb" --2
-	} --82 --10
+	} --83 --10
 
 	sets.precast.Geomancy = set_combine(sets.precast.FastCast, {
 	})

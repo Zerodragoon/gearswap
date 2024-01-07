@@ -34,14 +34,14 @@ function get_sets()
 		hands="Leyline Gloves", --8
 		legs="Rawhide Trousers", --5
 		feet="Hattori Kyahan +2",
-		neck="Baetyl Pendant", --4
+		neck="Orunmila's Torque", --5
 		ear1="Loquacious Earring", --2
 		ear2="Enchanter's Earring +1", --2
 		ring1="Weatherspoon Ring +1", --6 
 		ring2="Prolix Ring", --2
 		ammo="Sapience Orb", --2
 		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}
-	} --55
+	} --56
 	
 	sets.precast.Utsusemi = set_combine(sets.precast.FastCast,{
 		neck="Magoraga Beads", --10

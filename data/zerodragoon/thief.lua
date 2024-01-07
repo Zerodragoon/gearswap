@@ -24,7 +24,7 @@ function get_sets()
 		body="Dread Jupon", --7
 		legs="Rawhide Trousers", --5
 		feet="Carmine Greaves +1", --8
-		neck="Baetyl Pendant", --4
+		neck="Orunmila's Torque", --5
 		ear1="Loquacious Earring", --2
 		ear2="Enchanter's Earring +1", --2
 		ring1="Weatherspoon Ring +1", --5

@@ -143,18 +143,18 @@ function get_sets()
 		legs="Ayanmo Cosciales +2", --6
 		feet="Chironic Slippers", --5
 		waist="Witful Belt", --3 --3
-		neck="Baetyl Pendant", --4
+		neck="Orunmila's Torque", --5
 		left_ear="Enchanter's Earring +1", --2
 		right_ear="Loquac. Earring", --2
 		left_ring="Kishar Ring", --4
 		right_ring="Weatherspoon Ring +1", --5 --3
 		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Damage taken-5%',}} --10
-	} --82 --6
+	} --83 --6
 	
 	sets.precast.FastCast = set_combine(sets.precast.SongCast, {
 		ammo="Sapience Orb", --2
 		head="Volte Beret" --6
-	}) --76 --6
+	}) --77 --6
 	
 	sets.precast['Curing Waltz III'] = sets.Waltz
 	

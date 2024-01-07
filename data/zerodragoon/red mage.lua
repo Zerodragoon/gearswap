@@ -71,13 +71,13 @@ function get_sets()
 		legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+9','"Fast Cast"+7','MND+1','Mag. Acc.+15',}}, --7
 		feet={ name="Merlinic Crackows", augments={'"Fast Cast"+7',}}, --12
 		waist="Witful Belt", --3 --3
-		neck="Baetyl Pendant", --4
+		neck="Orunmila's Torque", --5
 		left_ear="Malignance Earring", --4
 		right_ear="Loquac. Earring", --2
 		left_ring="Kishar Ring", --4
 		right_ring="Weatherspoon Ring +1", --5 --3
 		back="Perimede Cape" --0 --4
-	} --108 --10
+	} --109 --10
 	
 	sets.precast.Elemental = set_combine(sets.precast.FastCast, {
 		

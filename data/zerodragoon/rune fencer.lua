@@ -25,13 +25,13 @@ function get_sets()
 		legs="Aya. Cosciales +2", --6
 		feet="Carmine Greaves +1", --8
 		ammo="Sapience Orb", --2
-		neck="Baetyl Pendant", --4
+		neck="Orunmila's Torque", --5
 		ear1="Loquacious Earring", --2
 		ear2="Enchanter's Earring +1", --2
 		ring1="Weatherspoon Ring +1", --5 --3
 		ring2="Kishar Ring", --4
 		back={ name="Ogma's Cape", augments={'"Fast Cast"+10'}} --10
-	} --64
+	} --65
 
 	sets.magic.MidCast = { --10
 		ammo="Staunch Tathlum +1", -- 11
@@ -413,6 +413,10 @@ function midcast(spell)
 		
 		if spell.skill == 'Enhancing Magic' and Engaged_Flag then
 			equip(sets.magic.MidCastFullDT)
+		end
+		
+		if spell.english == 'Stoneskin' and buffactive.Stoneskin then
+			send_command('wait .5; cancel Stoneskin')        
 		end
 	elseif spell.skill == 'Enhancing Magic' then
 		equip(sets.midcast.Enhancing)

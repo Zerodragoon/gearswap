@@ -111,13 +111,13 @@ function get_sets()
 		body="Dread Jupon", --7
 		legs="Rawhide Trousers", --5
 		feet="Carmine Greaves +1", --8
-		neck="Baetyl Pendant", --4
+		neck="Orunmila's Torque", --5
 		ear1="Loquacious Earring", --2
 		ear2="Enchanter's Earring +1", --2
 		ring1="Weatherspoon Ring +1", --5
 		ring2="Prolix Ring", --2
 		back={ name="Belenus's Cape", augments={'"Fast Cast"+10',}} --10
-	} --57
+	} --58
 	
 	sets.precast.Utsusemi = set_combine(sets.precast.FastCast,{
 		neck="Magoraga Beads", --10
