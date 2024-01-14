@@ -123,6 +123,7 @@ function get_sets()
 	sets.precast['Atonement'] = sets.magic.Enmity
 	
 	sets.midcast['Flash'] = sets.magic.Enmity
+	sets.midcast['Foil'] = sets.magic.Enmity
 	sets.midcast['Phalanx'] = set_combine(sets.magic.MidCast, {
 		main="Sakpata's Sword",
 		sub="Priwen",
@@ -176,6 +177,14 @@ function get_sets()
 	
 	sets.midcast["Enlight II"] = set_combine(sets.magic.MidCast, {
 		hands="Regal Gauntlets"
+	})
+	
+	sets.midcast["Stoneskin"] = set_combine(sets.magic.MidCast, {
+		hands="Stone Mufflers",
+		legs="Haven Hose",
+		neck="Stone Gorget",
+		ear1="Earthcry Earring",
+		waist="Siegel Sash"
 	})
 
 	Hands_Set_Names = {'Aegis', 'Ochain', 'Srivatsa', 'SAegis', 'SSrivatsa', 'Malevolence'}	
@@ -348,6 +357,10 @@ end
 function midcast(spell)
 	if sets.midcast[spell.english] then
         equip(sets.midcast[spell.english])
+		
+		if spell.english == 'Stoneskin' and buffactive.Stoneskin then
+			send_command('wait .5; cancel Stoneskin')        
+		end
 	elseif spell.type == "WhiteMagic" or spell.type == "BlueMagic" then
 		equip(sets.magic.MidCast)   
 		

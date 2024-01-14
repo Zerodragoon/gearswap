@@ -154,7 +154,7 @@ function get_sets()
 	sets.PWS.Normal = set_combine(sets.PWS, {})
 	
 	sets.precast["Rudra's Storm"] = set_combine(sets.PWS, {	
-		legs="Plunderer's Culottes +3",
+		--legs="Plunderer's Culottes +3",
 		waist="Kentarch Belt +1",
 		ring1="Ilabrat Ring", 
 		ear1="Sherida Earring"

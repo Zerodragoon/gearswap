@@ -137,7 +137,7 @@ function get_sets()
 		back={ name="Belenus's Cape", augments={'"Waltz" potency +10%',}} --10
 	}
 
-	Weapon_Set_Names = {'Fomalhaut', 'Gastraphetes', 'Annihilator', 'Armageddon', 'FailNot', 'Sparrowhawk', 'Anarchy', 'Sharanga', 'Yoichinoyumi', 'Gandiva', 'Ullr'}
+	Weapon_Set_Names = {'Fomalhaut', 'Gastraphetes', 'Annihilator', 'Armageddon', 'FailNot', 'Sparrowhawk', 'Anarchy', 'Sharanga', 'Yoichinoyumi', 'Gandiva', 'Ullr', 'PrimeGun', 'PrimeBow'}
 
 	set.Weapon = {}	
 
@@ -165,11 +165,19 @@ function get_sets()
 		preshot="Standard"
 	}
 	
-	set.Weapon.Prime = {
+	set.Weapon.PrimeGun = {
 		set={ 
 			ranged="Earp"
 		},
 		ammoType="bullet",
+		preshot="Standard"
+	}
+	
+	set.Weapon.PrimeBow = {
+		set={ 
+			ranged="Pinaka"
+		},
+		ammoType="arrow",
 		preshot="Standard"
 	}
 
