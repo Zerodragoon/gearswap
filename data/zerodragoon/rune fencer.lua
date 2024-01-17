@@ -146,8 +146,12 @@ function get_sets()
 	sets.midcast['Healing Breeze'] = sets.magic.MidCastCures
 	sets.midcast['Magic Fruit'] = sets.magic.MidCastCures
 	sets.midcast['Wild Carrot'] = sets.magic.MidCastCures
+	sets.midcast['Cure II'] = sets.magic.MidCastCures
 	sets.midcast['Cure III'] = sets.magic.MidCastCures
 	sets.midcast['Cure IV'] = sets.magic.MidCastCures
+	sets.midcast['Curaga II'] = sets.magic.MidCastCures
+	sets.midcast['Curaga III'] = sets.magic.MidCastCures
+	sets.midcast['Curaga IV'] = sets.magic.MidCastCures
 	sets.midcast['Flash'] = sets.magic.MidCastEnmity
 	sets.midcast['Foil'] = sets.magic.MidCastEnmity
 	sets.midcast['Blank Gaze'] = sets.magic.MidCastEnmity
