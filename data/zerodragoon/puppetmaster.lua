@@ -152,9 +152,10 @@ function get_sets()
 	
 	sets.PupDD = set_combine(sets.PupTankBruiser, {
 		main="Ohtas",
-		hands="Mpaca's Gloves",
 		feet="Mpaca's Boots",
-		ear1="Crepuscular Earring"
+		waist="Klouskap Sash +1"
+		ear1="Rimeice Earring",
+		ear2="Karagoz Earring +1",
 	})
 	
 	sets.PupMagic = set_combine(sets.PupDD, {

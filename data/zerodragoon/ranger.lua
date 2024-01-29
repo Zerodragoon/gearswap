@@ -264,6 +264,10 @@ function get_sets()
 	sets.Prime = {
 		ranged="Earp"
 	}
+	
+	sets.PrimeBow = {
+		ranged="Pinaka"
+	}
 
 	Ammo_Set_Names = {
 		bullet = {'Chrono', 'Eradicating', 'Devastating'},

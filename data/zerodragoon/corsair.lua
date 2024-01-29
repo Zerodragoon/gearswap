@@ -417,7 +417,7 @@ function get_sets()
 	sets.precast['Fire Shot'] = sets.QuickDraw
 	
 	--Idle Sets Below
-	Idle_Set_Names = {'DT', 'Refresh'}
+	Idle_Set_Names = {'DT', 'Refresh', 'Cooking'}
 	sets.Idle = {}
 
 	sets.Idle.DT = set_combine(sets.Idle, {
@@ -447,6 +447,22 @@ function get_sets()
 		ear1="Infused Earring",
 		ear2="Telos Earring"}
 		)
+		
+	sets.Idle.Cooking = set_combine(sets.Idle.DT, {
+		main="Debahocho +1",
+		head="Rawhide Mask",							
+		body="Malignance Tabard",
+		hands="Malignance Gloves",
+		legs="Carmine Cuisses +1",
+		feet="Malignance Boots",
+		neck="Loricate Torque +1",
+		ring1="Craftmaster's Ring",
+		ring2="Artificer's Ring",
+		back="Moonlight Cape",
+		ear1="Infused Earring",
+		ear2="Telos Earring"}
+		)
+
 
 	Melee_Set_Names = {'DT', 'DTMax', 'DTAcc', 'DTDps', 'DTTH'}
 	
