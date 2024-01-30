@@ -24,7 +24,7 @@ function get_sets()
 		head="Carmine Mask +1",
 		body="Sacro Breastplate",
 		hands="Leyline Gloves",
-		legs="Rawhide Trousers",
+		legs="Enif Cosciales",
 		feet="Odyssean Greaves",
 		ear1="Loquacious Earring",
 		ear2="Enchanter's Earring +1",
