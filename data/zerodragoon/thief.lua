@@ -22,7 +22,7 @@ function get_sets()
 		head="Carmine Mask +1", --14
 		hands="Leyline Gloves", --6
 		body="Dread Jupon", --7
-		legs="Rawhide Trousers", --5
+		legs="Enif Cosciales", --8
 		feet="Carmine Greaves +1", --8
 		neck="Orunmila's Torque", --5
 		ear1="Loquacious Earring", --2

@@ -32,7 +32,7 @@ function get_sets()
 		head={ name="Herculean Helm"},	--7
 		body="Dread Jupon", --7
 		hands="Leyline Gloves", --8
-		legs="Rawhide Trousers", --5
+		legs="Enif Cosciales", --8
 		feet="Hattori Kyahan +2",
 		neck="Orunmila's Torque", --5
 		ear1="Loquacious Earring", --2
@@ -41,7 +41,7 @@ function get_sets()
 		ring2="Prolix Ring", --2
 		ammo="Sapience Orb", --2
 		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}
-	} --56
+	} --59
 	
 	sets.precast.Utsusemi = set_combine(sets.precast.FastCast,{
 		neck="Magoraga Beads", --10

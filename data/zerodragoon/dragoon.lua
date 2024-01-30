@@ -27,6 +27,7 @@ function get_sets()
 	
 	sets.precast.FastCast = {
 		body="Sacro Breastplate",
+		legs="Enif Cosciales",
 		hands="Leyline Gloves",
 		ear1="Loquacious Earring",
 		ear2="Enchanter's Earring +1",
