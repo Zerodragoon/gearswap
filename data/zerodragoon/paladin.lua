@@ -26,7 +26,7 @@ function get_sets()
 		head="Carmine Mask +1", --14
 		hands="Leyline Gloves", --8
 		body="Sacro Breastplate", --10
-		legs="Eschite Cuisses", --5
+		legs="Enif Cosciales", --8
 		feet="Odyssean Greaves", --10 --Chevalier's Sabatons +3
 		ammo="Sapience Orb", --2
 		neck="Orunmila's Torque", --5
@@ -35,7 +35,7 @@ function get_sets()
 		ring1="Weatherspoon Ring +1", --6 --3
 		ring2="Kishar Ring", --4
 		back={ name="Rudianos's Mantle", augments={'"Fast Cast"+10'}} --10
-	} --78
+	} --81
 	
 	sets.magic.MidCast = {
 		ammo="Staunch Tathlum +1", -- 11
