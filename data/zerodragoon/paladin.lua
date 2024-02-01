@@ -304,7 +304,7 @@ function get_sets()
 	}
 
 	--Idle Sets Below
-	Idle_Set_Names = {'StandardMove', 'Standard', 'Sakpata', 'Magic', 'Annul'}
+	Idle_Set_Names = {'StandardMove', 'StandardMoveHippo', 'Standard', 'Sakpata', 'Magic', 'Annul'}
 	sets.Idle = {}
 	
 	sets.Idle.Standard = set_combine(sets.TP.Standard,{	
@@ -320,6 +320,11 @@ function get_sets()
 		neck="Loricate Torque +1",
 		legs="Carmine Cuisses +1"
 	})
+	
+	sets.Idle.StandardMoveHippo = set_combine(sets.Idle.StandardMove, {
+		feet="Hippomenes Socks +1"
+	})
+	
 	
 	sets.Idle.Sakpata = set_combine(sets.Idle.Standard, {
 		head="Sakpata's Helm",

@@ -365,6 +365,7 @@ function get_sets()
 	sets.Idle.DTAnnul = sets.TP.Annul
 	sets.Idle.DTMove  = set_combine(sets.TP.Standard, {
 		legs="Carmine Cuisses +1",
+		feet="Hippomenes Socks +1",
 		ring2="Defending Ring"
 	})
 	sets.Idle.Regain  = set_combine(sets.TP.Resistance, {
