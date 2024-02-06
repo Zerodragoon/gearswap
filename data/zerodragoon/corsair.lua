@@ -417,7 +417,7 @@ function get_sets()
 	sets.precast['Fire Shot'] = sets.QuickDraw
 	
 	--Idle Sets Below
-	Idle_Set_Names = {'DT', 'Refresh', 'Cooking'}
+	Idle_Set_Names = {'DT', 'Refresh', 'Cooking', 'Fishing'}
 	sets.Idle = {}
 
 	sets.Idle.DT = set_combine(sets.Idle, {
@@ -432,7 +432,8 @@ function get_sets()
 		ring2="Defending Ring",
 		back="Moonlight Cape",
 		ear1="Infused Earring",
-		ear2="Telos Earring"})
+		ear2="Telos Earring"
+	})
 		
 	sets.Idle.Refresh = set_combine(sets.Idle.DT, {
 		head="Rawhide Mask",							
@@ -445,14 +446,14 @@ function get_sets()
 		ring2="Stikini Ring +1",
 		back="Moonlight Cape",
 		ear1="Infused Earring",
-		ear2="Telos Earring"}
-		)
+		ear2="Telos Earring"
+	})
 		
 	sets.Idle.Cooking = set_combine(sets.Idle.DT, {
 		main="Debahocho +1",
 		head="Rawhide Mask",							
 		body="Malignance Tabard",
-		hands="Malignance Gloves",
+		hands="Fisherman's Cuffs",
 		legs="Carmine Cuisses +1",
 		feet="Malignance Boots",
 		neck="Loricate Torque +1",
@@ -460,9 +461,17 @@ function get_sets()
 		ring2="Artificer's Ring",
 		back="Moonlight Cape",
 		ear1="Infused Earring",
-		ear2="Telos Earring"}
-		)
-
+		ear2="Telos Earring"
+	})
+		
+	sets.Idle.Fishing = set_combine(sets.Idle.Cooking, {
+		ranged="Halcyon Rod",
+		body="Fisherman's Tunica",
+		hands="Fisherman's Gloves",
+		legs="Fisherman's Hose",
+		feet="Angler's Boots",
+		waist="Fisherman's Belt"
+	})
 
 	Melee_Set_Names = {'DT', 'DTMax', 'DTAcc', 'DTDps', 'DTTH'}
 	

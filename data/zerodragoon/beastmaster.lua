@@ -299,6 +299,10 @@ function get_sets()
 		ammo="Saline Broth"
 	}
 	
+	sets.MandyJug = {
+		ammo="Aged Humus"
+	}
+	
 	sets.PetReady = {
 		head="Nyame Helm",							
 		body="Nyame Mail",
