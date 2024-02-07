@@ -452,7 +452,7 @@ function get_sets()
 	sets.Idle.Cooking = set_combine(sets.Idle.DT, {
 		main="Debahocho +1",
 		head="Rawhide Mask",							
-		body="Malignance Tabard",
+		body="Culinarian's Smock",
 		hands="Fisherman's Cuffs",
 		legs="Carmine Cuisses +1",
 		feet="Malignance Boots",
