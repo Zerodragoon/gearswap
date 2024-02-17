@@ -120,9 +120,9 @@ function get_sets()
 		ranged="Marsyas"
 	}
 	
-	sets.Instruments.Prime = {
-		ranged="Prime Horn"
-	}
+--	sets.Instruments.Prime = {
+	--	ranged="Prime Horn"
+	--}
 	
 	--Precast
 	sets.precast = {}

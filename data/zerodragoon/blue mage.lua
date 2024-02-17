@@ -385,7 +385,7 @@ function get_sets()
 		ear2="Eabani Earring"
 	})
 
-	Melee_Set_Names = {'DT', 'DTRefresh', 'Learn'}
+	Melee_Set_Names = {'DT', 'DTRefresh', 'Learn', 'Crit'}
 
 	sets.Melee = {  
 		head="Malignance Chapeau",
@@ -417,6 +417,18 @@ function get_sets()
 	
 	sets.Melee.Learn = set_combine(sets.Melee.DT, {
 		hands="Assimilator's Bazubands +2"
+	})
+	
+	sets.Melee.Crit = set_combine(sets.Melee.DT, {
+		head="Blistering Sallet +1",							
+		body="Gleti's Cuirass",
+		hands="Adhemar Wristbands +1",
+		legs="Gleti's Breeches",
+		feet="Gleti's Boots",
+		ear1="Odr Earring",
+		ear2="Mache Earring +1",
+		ring1="Epona's Ring",
+		ring2="Ilabrat Ring",
 	})
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')

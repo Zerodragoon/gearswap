@@ -256,7 +256,7 @@ function get_sets()
 	}
 	
 	--Idle Sets Below
-	Idle_Set_Names = {'Normal', 'Pull'}
+	Idle_Set_Names = {'Normal', 'Pull', 'Fishing'}
 	sets.Idle = {
 		head="Malignance Chapeau",							
 		body="Malignance Tabard",
@@ -275,6 +275,19 @@ function get_sets()
 	sets.Idle.Normal = set_combine(sets.Idle, {})
 	sets.Idle.Pull = set_combine(sets.Idle, {
 		ranged="Halakaala"
+	})
+	
+	sets.Idle.Fishing = set_combine(sets.Idle, {
+		ranged="Lu Sh. F. Rod +1",
+		ammo=empty,
+		head="Tlahtlamah Glasses",
+		body="Fisherman's Smock",
+		hands="Fisherman's Gloves",
+		legs="Fisherman's Hose",
+		feet="Angler's Boots",
+		waist="Fisherman's Belt",
+		ring1="Puffin Ring",
+		ring2="Noddy Ring"
 	})
 
 	Melee_Set_Names = {'DT', 'DblAtt', 'Crit', 'DTFull'}
