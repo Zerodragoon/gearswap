@@ -456,7 +456,7 @@ function get_sets()
 		hands="Fisherman's Cuffs",
 		legs="Carmine Cuisses +1",
 		feet="Malignance Boots",
-		neck="Loricate Torque +1",
+		neck="Culinarian's Torque",
 		ring1="Craftmaster's Ring",
 		ring2="Artificer's Ring",
 		back="Moonlight Cape",
