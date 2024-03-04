@@ -282,9 +282,10 @@ function get_sets()
 		ammo=empty,
 		head="Tlahtlamah Glasses",
 		body="Fisherman's Smock",
-		hands="Fisherman's Gloves",
+		--hands="Fisherman's Gloves",
+		hands="Kachina Gloves",
 		legs="Fisherman's Hose",
-		feet="Angler's Boots",
+		feet="Waders",
 		waist="Fisherman's Belt",
 		ring1="Puffin Ring",
 		ring2="Noddy Ring"
