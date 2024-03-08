@@ -103,7 +103,7 @@ function get_sets()
 		body="Skulker's Vest +2"
 	}
 
-	Hands_Set_Names = {'Twashtar', 'TwashtarTP', 'Tauret', 'Aeneas', 'AeneasTP'}
+	Hands_Set_Names = {'Twashtar', 'TwashtarTP', 'Tauret', 'Aeneas', 'AeneasTP', 'Naegling', 'Karam'}
 
 	sets.Hands = {}	
 
@@ -130,6 +130,16 @@ function get_sets()
 	sets.Hands.Tauret = { 
 		main="Tauret",
 		sub="Gleti's Knife",
+	}
+	
+	sets.Hands.Naegling = { 
+		main="Naegling",
+		sub="Fusetto +2",
+	}
+	
+	sets.Hands.Karam = { 
+		main="Karambit",
+		sub="empty",
 	}
 						
 	-- Physical WS Sets Below
@@ -183,6 +193,22 @@ function get_sets()
 		ammo="Yetshila +1"
 	})
 	
+	sets.precast['Asuran Fists'] = set_combine(sets.PWS, {	
+		head="Gleti's Mask",						
+		body="Nyame Mail",
+		hands="Gleti's Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Gleti's Boots",
+		waist="Fotia Belt",
+		neck="Fotia Forget",
+		ear1="Ishvara Earring",
+		ear2="Sherida Earring",
+		ring1="Regal Ring",
+		ring2="Gere Ring",
+		back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+		ammo="Coiste Bodhar"
+	})
+	
 	sets.precast['Savage Blade'] = set_combine(sets.PWS, {	
 		head="Nyame Helm",						
 		body="Nyame Mail",
@@ -196,7 +222,7 @@ function get_sets()
 		ring1="Ephramad's Ring",
 		ring2="Epaminondas's Ring",
 		back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
-		ammo="Aurgelmir Orb +1"
+		ammo="Coiste Bodhar"
 	})
 
 	-- Magical WS Sets Below
@@ -244,7 +270,7 @@ function get_sets()
 	
 	sets.hastesambawaist = {waist="Sailfi Belt +1"}
 
-	Melee_Set_Names = {'DT', 'DTTH', 'DblAtt', 'Ambush', 'Crit', 'MaxTH'}
+	Melee_Set_Names = {'DT', 'DTTH', 'DblAtt', 'Ambush', 'Crit', 'MaxTH', 'DTFull'}
 
 	sets.Melee = {  
 		head="Skulker's Bonnet +2", --Skulker's Bonnet +3							
@@ -279,6 +305,10 @@ function get_sets()
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
 		feet="Malignance Boots"})
+		
+	sets.Melee.DTFull = set_combine(sets.Melee.DT, {
+		ring1="Moonlight Ring",
+		ring2="Moonlight Ring"})
 
 	sets.Melee.DTTH = set_combine(sets.Melee.DT, {	
 		hands="Plunderer's Armlets +3",
