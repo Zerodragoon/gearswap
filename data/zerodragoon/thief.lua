@@ -200,7 +200,7 @@ function get_sets()
 		legs="Nyame Flanchard",
 		feet="Gleti's Boots",
 		waist="Fotia Belt",
-		neck="Fotia Forget",
+		neck="Fotia Gorget",
 		ear1="Ishvara Earring",
 		ear2="Sherida Earring",
 		ring1="Regal Ring",

@@ -6,6 +6,7 @@ function get_sets()
 	Hands_Index = 1
 	Idle_Index = 1
 	SRODA_Flag = false
+	LOWHP_Flag = false
 	Style_Lock_Id = 6
 
 	--Default Macro Set for PLD
@@ -60,6 +61,19 @@ function get_sets()
 		ear2="Cryptic Earring",
 		back="Earthcry Mantle"
 	}) --105
+	
+		
+	sets.magic.MidCastLowHp = set_combine(sets.magic.MidCastEnmity, {
+		head="Souveran Schaller +1",
+		body="Souveran Cuirass +1",
+		hands="Souveran Handschuhs +1",
+		legs="Souveran Diechlings +1",
+		feet="Souveran Schuhs +1",
+		ring2="Moonlight Ring",
+		ear1="Trux Earring",
+		waist="Platinum Moogle Belt",
+		ammo="Sapience Orb"
+	})
 	
 	sets.magic.MidCastMacc = set_combine(sets.magic.MidCast, {
 		ear1="Crepuscular Earring",
@@ -371,6 +385,8 @@ function midcast(spell)
 		
 		if spell.english:find("Cur") and SRODA_Flag then
 			equip(sets.magic.Sroda)
+		elseif spell.english:find("Cur") and LOWHP_Flag then
+			equip(sets.magic.MidCastLowHp)   
 		end
 	end
 end
@@ -440,7 +456,10 @@ function self_command(command)
 		equip(sets.Idle[Idle_Set_Names[Idle_Index]])
 	elseif command == 'sroda' then
 		add_to_chat(207,'Sroda Set: '..tostring(not SRODA_Flag)..'')
-		SRODA_Flag = not SRODA_Flag
+		SRODA_Flag = not SRODA_Fla
+	elseif command == 'lowhp' then
+		add_to_chat(207,'Lowhp Set: '..tostring(not LOWHP_Flag)..'')
+		LOWHP_Flag = not LOWHP_Flag
 	elseif command == 'forcesets' then
 		if player.status=='Engaged' then
 			equip(sets.TP[TP_Set_Names[TP_Index]]) 
