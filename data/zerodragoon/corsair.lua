@@ -464,7 +464,7 @@ function get_sets()
 		ear2="Telos Earring"
 	})
 
-	Melee_Set_Names = {'DT', 'DTMax', 'DTAcc', 'DTDps', 'DTTH'}
+	Melee_Set_Names = {'DT', 'DTMax', 'DTAcc', 'DTDps', 'SB', 'DTTH'}
 	
 	sets.Melee = {  
 		head="Malignance Chapeau",
@@ -506,6 +506,13 @@ function get_sets()
 		ammo="Perfect Lucky Egg",
 		feet={ name="Herculean Boots", augments={'"Treasure Hunter"+2',}},
 		waist="Chaac Belt"})
+		
+	sets.Melee.SB  = set_combine(sets.Melee.DT, {
+		head="Adhemar Bonnet +1",
+		ring1="Chirich Ring +1",
+		ring2="Chirich Ring +1",
+		feet={ name="Herculean Boots", augments={'Quadruple Attack +3'}},
+		ear2="Digni. Earring"})
 		
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate')
 

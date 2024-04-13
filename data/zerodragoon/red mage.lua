@@ -16,7 +16,7 @@ function get_sets()
 	set_style_lock()
 	
 	--Hands Sets
-	Hands_Set_Names = {'Standard', 'Enspell', 'Naegling', 'Tauret', 'Ceremonial'}
+	Hands_Set_Names = {'Standard', 'Enspell', 'Naegling', 'Tauret', 'Ceremonial', 'Excalibur'}
 
 	sets.Hands = {}	
 
@@ -56,8 +56,13 @@ function get_sets()
 	}
 
 	sets.Hands.Ceremonial = {
-		main = "Ceremonial Dagger",
+		main = "Hedron Dagger",
 		sub = "Ceremonial Dagger",
+	}
+	
+	sets.Hands.Excalibur = { 
+		main="Excalibur",
+    	sub="Machaera +2"
 	}
 
 	--Precast
@@ -154,7 +159,7 @@ function get_sets()
 		main="Contemplator +1",
 		sub="Enki Strap",
 		ranged="Ullr",
-		ammo="empty",
+		ammo=empty,
 		head="Vitiation Chapeau +3",
 		body="Atrophy Tabard +3",
 		hands="Regal Cuffs",
@@ -175,6 +180,24 @@ function get_sets()
 	})
 	
 	sets.midcast['Dia'] = set_combine(sets.midcast.enfeeb, {
+		ammo="Perfect Lucky Egg",
+		body="Volte Jupon",
+		waist="Chaac Belt"
+	})
+	
+	sets.midcast['Dia II'] = set_combine(sets.midcast.enfeeb, {
+		ammo="Perfect Lucky Egg",
+		body="Volte Jupon",
+		waist="Chaac Belt"
+	})
+	
+	sets.midcast['Dia III'] = set_combine(sets.midcast.enfeeb, {
+		ammo="Perfect Lucky Egg",
+		body="Volte Jupon",
+		waist="Chaac Belt"
+	})
+	
+	sets.midcast['Diaga'] = set_combine(sets.midcast.enfeeb, {
 		ammo="Perfect Lucky Egg",
 		body="Volte Jupon",
 		waist="Chaac Belt"

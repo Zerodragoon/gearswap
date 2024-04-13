@@ -201,7 +201,7 @@ function get_sets()
 		waist="Siegel Sash"
 	})
 
-	Hands_Set_Names = {'Aegis', 'Ochain', 'Srivatsa', 'SAegis', 'SSrivatsa', 'Malevolence'}	
+	Hands_Set_Names = {'Aegis', 'Ochain', 'Srivatsa', 'SAegis', 'SSrivatsa', 'Malevolence', 'Excalibur'}	
 
 	sets.Hands = {}	
 
@@ -234,7 +234,12 @@ function get_sets()
 		main={ name="Malevolence", augments={'INT+9','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
 		sub="Srivatsa"
 	}
-			
+	
+	sets.Hands.Excalibur = { 
+		main="Excalibur",
+		sub="Aegis"
+	}
+	
 	--TP Sets Below
 	TP_Set_Names = {'Standard', 'TP', 'Sakpata', 'Magic', 'Annul'}
 
