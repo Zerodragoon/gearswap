@@ -232,7 +232,7 @@ function get_sets()
 		neck="Moonbow Whistle +1",
 		waist="Obstinate Sash",
 		ear1="Regal Earring",
-		ear2="Dignitary's Earring",
+		ear2="Fili Earring +1",
 		ring1="Stikini Ring +1",
 		ring2="Stikini Ring +1",
 		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Damage taken-5%',}}

@@ -298,10 +298,10 @@ function get_sets()
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		neck="Republican Platinum Medal",
-		waist="Windbuffet Belt +1",
+		waist="Sailfi Belt +1",
 		left_ear="Thrud Earring",
 		right_ear="Ishvara Earring",
-		left_ring="Beithir Ring",
+		left_ring="Ephramad's Ring",
 		right_ring="Epaminondas's Ring",
 		back={ name="Rudianos's Mantle", augments={'"Weapon Skill Damage "+10'}}
 	}
@@ -352,6 +352,10 @@ function get_sets()
 	
 	sets.Idle.Magic = sets.TP.Magic
 	sets.Idle.Annul = sets.TP.Annul
+	
+	sets.VolteHarness = {
+		body = "Volte Harness"
+	}
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate;input //shield on')
 
