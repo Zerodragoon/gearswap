@@ -239,7 +239,7 @@ function get_sets()
 		waist="Tellen Belt",
 		ring1="Ilabrat Ring",
 		ring2="Crepuscular Ring",
-		back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','"Store TP"+10','Damage taken-5%',}},
+		back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','"Store TP"+10','AGI+10','Phys. dmg. taken-10%',}},
 		ear1="Crepuscular Earring",
 		ear2="Telos Earring"  
 	}
@@ -336,7 +336,7 @@ function get_sets()
 		waist="Eschan Stone", 
 		ring1="Archon Ring",
 		ring2="Dingir Ring",
-		back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+		back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%'}},
 		ear1="Friomisi Earring",
 		ear2="Ishvara Earring"}
 						
@@ -389,7 +389,7 @@ function get_sets()
 		ear2="Moonshade Earring",
 		ring1="Ephramad's Ring",
 		ring2="Epaminondas's Ring",
-		back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}}
+		back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 	}
 	
 	sets.SavageCap = set_combine(sets.Savage, {	

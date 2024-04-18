@@ -63,7 +63,7 @@ function get_sets()
 		hands="Maxixi Bangles +3",
 		legs="Horos Tights +3",
 		feet="Horos Toe Shoes +3",
-		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
+		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 		ammo="Yamarang",
 		neck="Lissome Necklace",
 		waist="Olseni Belt",
@@ -303,7 +303,7 @@ function get_sets()
 		waist="Sailfi Belt +1",
 		ring1="Gere Ring",
 		ring2="Epona's Ring",
-		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
+		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 		ear1="Sherida Earring",
 		ear2="Telos Earring",
 		ammo="Aurgelmir Orb +1"
@@ -317,7 +317,6 @@ function get_sets()
 		feet="Maculele Toe Shoes +2"})
 		
 	sets.Melee.DTFull = set_combine(sets.Melee.DT, {
-		ring1="Moonlight Ring",
 		ring2="Moonlight Ring"})
 
 	sets.Melee.Crit = set_combine(sets.Melee, {

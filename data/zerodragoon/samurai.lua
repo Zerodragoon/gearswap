@@ -94,7 +94,7 @@ function get_sets()
 		ring1="Epaminondas's Ring",
 		ring2="Ephramad's Ring",
 		--ring2="Niqmaddu Ring"
-		back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+		back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 		ear1="Moonshade Earring", 
 		--ear2="Thrud Earring",
 		ear2="Kasuga Earring +1",
@@ -138,7 +138,7 @@ function get_sets()
 		ear2="Crep. Earring",
 		ring1="Stikini Ring +1",
 		ring2="Metamor. Ring +1",
-		back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+		back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.precast['Sengikori'] = {

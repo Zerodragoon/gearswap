@@ -683,7 +683,7 @@ function get_sets()
 		ear2="Sherida Earring",
 		ring1="Regal Ring",
 		ring2="Mummu Ring",
-		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10',}}
+		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}}
 	}
 
 	sets.Savage = {	
@@ -743,7 +743,7 @@ function get_sets()
 		ear2="Crepuscular Earring",
 		ring1="Chirich Ring +1",
 		ring2="Chirich Ring +1",
-		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+8','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
     }
 
 	sets.Melee.Malig = sets.Melee
