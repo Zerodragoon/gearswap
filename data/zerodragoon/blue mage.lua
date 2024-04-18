@@ -348,7 +348,7 @@ function get_sets()
 		ear2="Ishvara Earring"}
 	
 	--Idle Sets Below
-	Idle_Set_Names = {'Normal', 'Learn', 'MagicDT'}
+	Idle_Set_Names = {'Normal', 'MagicDT'}
 	sets.Idle = {
     	head="Rawhide Mask",							
 		body="Jhakri Robe +2",
@@ -366,11 +366,7 @@ function get_sets()
 	}
 
 	sets.Idle.Normal = set_combine(sets.Idle, {})
-	
-	sets.Idle.Learn = set_combine(sets.Idle, {
-		hands="Assimilator's Bazubands +2"
-	})
-	
+
 	sets.Idle.MagicDT = set_combine(sets.Idle, {
 		head="Nyame Helm",									
 		body="Hashishin Mintan +2",
@@ -385,7 +381,7 @@ function get_sets()
 		ear2="Eabani Earring"
 	})
 
-	Melee_Set_Names = {'DT', 'DTRefresh', 'Learn', 'Crit'}
+	Melee_Set_Names = {'DT', 'DTRefresh', 'Crit'}
 
 	sets.Melee = {  
 		head="Malignance Chapeau",
@@ -414,10 +410,7 @@ function get_sets()
 		ring1="Stikini Ring +1",
 		ring2="Stikini Ring +1",
 		ammo="Staunch Tathlum +1"})
-	
-	sets.Melee.Learn = set_combine(sets.Melee.DT, {
-		hands="Assimilator's Bazubands +2"
-	})
+
 	
 	sets.Melee.Crit = set_combine(sets.Melee.DT, {
 		head="Blistering Sallet +1",							
