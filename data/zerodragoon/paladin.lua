@@ -300,11 +300,17 @@ function get_sets()
 		neck="Republican Platinum Medal",
 		waist="Sailfi Belt +1",
 		left_ear="Thrud Earring",
-		right_ear="Ishvara Earring",
+		right_ear="Moonshade Earring",
 		left_ring="Ephramad's Ring",
 		right_ring="Epaminondas's Ring",
 		back={ name="Rudianos's Mantle", augments={'"Weapon Skill Damage "+10'}}
 	}
+	
+	sets.precast['Knights of Round'] = set_combine(sets.WS,{	
+		ammo="Crepuscular Pebble",
+		neck="Fotia Gorget",
+		ring2="Sroda Ring"
+	}) 
 	
 	sets.WSMagic = {
 		ammo="Aurgelmir Orb +1",
