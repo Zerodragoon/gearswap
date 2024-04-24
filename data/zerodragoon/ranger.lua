@@ -270,8 +270,8 @@ function get_sets()
 	}
 
 	Ammo_Set_Names = {
-		bullet = {'Chrono', 'Eradicating', 'Devastating'},
-		arrow = {'Chrono', 'Yoichi', 'Artemis'},
+		bullet = {'Chrono', 'Eradicating', 'Devastating', 'Bayeux'},
+		arrow = {'Chrono', 'Yoichi', 'Artemis', 'Bayeux'},
 		bolt= {'Quelling', 'Acid'},
 		hauksbokArrow = {'Hauksbok', 'Chrono'},
 		hauksbokBullet = {'Hauksbok', 'Chrono'}
@@ -288,6 +288,9 @@ function get_sets()
 		},
 		Devastating = {
 			ammo="Devastating Bullet"
+		},
+		Bayeux = {
+			ammo="Bayeux Bullet"
 		}
 	}
 
@@ -300,6 +303,9 @@ function get_sets()
 		},
 		Artemis = {
 			ammo="Artemis's Arrow"
+		},
+		Bayeux = {
+			ammo="Bayeux Arrow"
 		}
 	}
 
@@ -499,7 +505,7 @@ function get_sets()
 	sets.Barrage.BarrageAcc = set_combine(sets.Midshot.Acc, sets.Barrage)
 						
 	-- Last Stand Sets Below
-	LS_Set_Names = {'Normal', 'Ikenga', 'Nyame', 'Acc'}
+	LS_Set_Names = {'Normal', 'Ikenga', 'Nyame', 'Trueshot', 'Acc'}
 	sets.LS = {
 		head="Orion Beret +3",	
 		body="Amini Caban +3",		
@@ -519,7 +525,7 @@ function get_sets()
 	sets.LS.Cap = {
 		body="Ikenga's Vest",
 		hands="Ikenga's Gloves",
-		--ring1="Sroda Ring",
+		--ring2="Sroda Ring",
 		ear2="Amini Earring +1"
 	}
 	
@@ -549,7 +555,14 @@ function get_sets()
 		ear2="Beyla Earring"})
 		
 	sets.LS.Acc.Cap = sets.LS.Acc
-		
+	
+	sets.LS.Trueshot =  set_combine(sets.LS, {
+		waist="Tellen Belt",
+		feet="Ikenga's Clogs"
+	})
+	
+	sets.LS.Trueshot.Cap = set_combine(sets.LS.Nyame, sets.LS.Cap)
+	
 	sets.precast['Split Shot'] = sets.LS.Acc
 	sets.precast['Sniper Shot'] = sets.LS.Acc
 	sets.precast['Slug Shot'] = sets.LS.Acc
@@ -836,6 +849,10 @@ function precast(spell)
 			Ammo_Name_Subset = Ammo_Set_Names[weapon_set.ammoType]
 			
 			equip(Ammo_Set_Subset[Ammo_Name_Subset[Ammo_Index]])
+			
+			if Ammo_Name_Subset[4] ~= nil then --Equips Bayeux Bullet/Arrow If Available
+				equip(Ammo_Set_Subset[Ammo_Name_Subset[4]])
+			end
 
 			if spell.name == "Aeolian Edge" or spell.name == "Burning Blade" or spell.name == "Red Lotus Blade"  then
 				equip(sets.Aeolian)
