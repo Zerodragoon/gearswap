@@ -360,6 +360,7 @@ function get_sets()
 	sets.Idle.Annul = sets.TP.Annul
 	
 	sets.Idle.Regain = set_combine(sets.Idle.Magic, {
+		head="Valorous Mask",
 		neck="Rep. Plat. Medal",
 		ring1="Roller's Ring"
 	})
