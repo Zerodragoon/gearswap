@@ -329,7 +329,7 @@ function get_sets()
 	}
 
 	--Idle Sets Below
-	Idle_Set_Names = {'StandardMove', 'StandardMoveHippo', 'Standard', 'Sakpata', 'Magic', 'Annul'}
+	Idle_Set_Names = {'StandardMove', 'StandardMoveHippo', 'Standard', 'Sakpata', 'Magic', 'Annul', 'Regain'}
 	sets.Idle = {}
 	
 	sets.Idle.Standard = set_combine(sets.TP.Standard,{	
@@ -359,8 +359,17 @@ function get_sets()
 	sets.Idle.Magic = sets.TP.Magic
 	sets.Idle.Annul = sets.TP.Annul
 	
+	sets.Idle.Regain = set_combine(sets.Idle.Magic, {
+		neck="Rep. Plat. Medal",
+		ring1="Roller's Ring"
+	})
+	
 	sets.VolteHarness = {
 		body = "Volte Harness"
+	}
+	
+	sets.WingGorget = {
+		neck = "Wing Gorget"
 	}
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate;input //shield on')
