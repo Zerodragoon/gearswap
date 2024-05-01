@@ -368,10 +368,6 @@ function get_sets()
 	sets.VolteHarness = {
 		body = "Volte Harness"
 	}
-	
-	sets.WingGorget = {
-		neck = "Wing Gorget"
-	}
 
 	send_command('wait 5;input //gs c startup;wait 1;input //gs validate;input //shield on')
 

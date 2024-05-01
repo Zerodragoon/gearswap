@@ -140,15 +140,15 @@ function get_sets()
 	}
 	
 	sets.Org = {
-		main="Bronze Dagger"
+		main="Hedron Dagger"
 	}
 	
 	sets.Org2 = {
-		main="Wax Sword",
+		main="Fermion Sword",
 	}
 	
 	sets.Org3 = {
-		main="Claymore",
+		main="Irradiance Blade",
 	}
 	
 	sets.Org4 = {
@@ -156,7 +156,7 @@ function get_sets()
 	}
 	
 	sets.Org5 = {
-		main="Harpoon",
+		main="Mizukage Naginata",
 	}
 	
 	sets.Org6 = {
