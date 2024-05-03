@@ -69,7 +69,7 @@ function get_sets()
 	sets.precast = {}
 	
 	sets.precast.FastCast = { --30
-		ammo="Sapience Orb", --2
+		--ammo="Sapience Orb", --2
 		head={ name="Merlinic Hood", augments={'"Fast Cast"+7','CHR+6','Mag. Acc.+6','"Mag.Atk.Bns."+14',}}, --15
 		body="Vitiation Tabard +3", --13
 		hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+28','"Fast Cast"+7','INT+7',}}, --7

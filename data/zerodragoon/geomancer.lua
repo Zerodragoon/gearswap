@@ -79,7 +79,7 @@ function get_sets()
 		left_ring="Kishar Ring", --4
 		right_ring="Weatherspoon Ring +1", --5 --3
 		back="Perimede Cape", --0 --3
-		ammo="Sapience Orb" --2
+		--ammo="Sapience Orb" --2
 	} --83 --10
 
 	sets.precast.Geomancy = set_combine(sets.precast.FastCast, {
