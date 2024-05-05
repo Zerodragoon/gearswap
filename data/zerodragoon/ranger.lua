@@ -505,10 +505,10 @@ function get_sets()
 	sets.Barrage.BarrageAcc = set_combine(sets.Midshot.Acc, sets.Barrage)
 						
 	-- Last Stand Sets Below
-	LS_Set_Names = {'Normal', 'Ikenga', 'Nyame', 'Trueshot', 'Acc'}
+	LS_Set_Names = {'Normal', 'Amini', 'Nyame', 'Trueshot', 'Acc'}
 	sets.LS = {
 		head="Orion Beret +3",	
-		body="Amini Caban +3",		
+		body="Ikenga's Vest",		
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Amini Bottillons +3",
@@ -524,8 +524,7 @@ function get_sets()
 	
 	sets.LS.Cap = {
 		body="Ikenga's Vest",
-		hands="Ikenga's Gloves",
-		--ring2="Sroda Ring",
+		ring2="Sroda Ring",
 		ear2="Amini Earring +1"
 	}
 	
@@ -537,11 +536,14 @@ function get_sets()
 	
 	sets.LS.Nyame.Cap = set_combine(sets.LS.Nyame, sets.LS.Cap)
 	
-	sets.LS.Ikenga = set_combine(sets.LS, {
-		body="Ikenga's Vest"
+	sets.LS.Amini = set_combine(sets.LS, {
+		body="Amini Caban +3"
 	})
 	
-	sets.LS.Ikenga.Cap = set_combine(sets.LS.Ikenga, sets.LS.Cap)
+	sets.LS.Amini.Cap = set_combine(sets.LS.Amini, {
+		ring2="Sroda Ring",
+		ear2="Amini Earring +1"
+	})
 
 	sets.LS.Acc = set_combine(sets.LS, {
 		hands="Orion Bracers +3",
@@ -561,7 +563,10 @@ function get_sets()
 		feet="Ikenga's Clogs"
 	})
 	
-	sets.LS.Trueshot.Cap = set_combine(sets.LS.Nyame, sets.LS.Cap)
+	sets.LS.Trueshot.Cap = set_combine(sets.LS.Trueshot, {
+		body="Ikenga's Vest",
+		ear2="Amini Earring +1"
+	})
 	
 	sets.precast['Split Shot'] = sets.LS.Acc
 	sets.precast['Sniper Shot'] = sets.LS.Acc
