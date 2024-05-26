@@ -434,7 +434,7 @@ function get_sets()
 		feet="Malignance Boots",
 		waist="Kwahu Kachina Belt +1",	
 		ring1="Regal Ring",
-		ring2="Longshot Ring",			 
+		ring2="Ephramad's Ring",			 
 		ear1="Beyla Earring",
 		ear2="Telos Earring"})
 		
@@ -552,7 +552,7 @@ function get_sets()
 		feet="Malignance Boots",
 		waist="Kwahu Kachina Belt +1",		
 		ring1="Regal Ring",
-		ring2="Longshot Ring",
+		ring2="Ephramad's Ring",
 		ear1="Telos Earring",
 		ear2="Beyla Earring"})
 		

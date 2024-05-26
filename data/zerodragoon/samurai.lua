@@ -270,7 +270,7 @@ function get_sets()
 		feet="Kendatsuba Sune-Ate +1",
 		waist="Yemaya Belt",
 		ring1="Crepuscular Ring",
-		ring2="Longshot Ring",
+		ring2="Ephramad's Ring",
 		ear2="Enervating Earring"
 	})
 
