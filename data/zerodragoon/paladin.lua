@@ -7,7 +7,7 @@ function get_sets()
 	Idle_Index = 1
 	SRODA_Flag = false
 	LOWHP_Flag = false
-	Style_Lock_Id = 6
+	Style_Lock_Id = 33
 
 	--Default Macro Set for PLD
 	send_command('input /macro book 2;wait .1;input /macro set 1;wait .1;wait 0.5;input //gs org')

@@ -802,7 +802,7 @@ function precast(spell)
 		end
 	elseif spell.type == 'WeaponSkill' then
 		if checkWSDistance(spell) then
-			if spell.target.distance > 21.0  then						
+			if spell.target.distance > 25.0  then						
 				add_to_chat(167,''..spell.target.name..' is too far can not use '..spell.name..'!!!. Cancelling WeaponSkill ')                           
 				cancel_spell()
 				return			
