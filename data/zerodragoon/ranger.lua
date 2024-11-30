@@ -629,7 +629,7 @@ function get_sets()
 	}
 	
 	sets.CoronachCap = set_combine(sets.Coronach, {
-		ring1="Sroda Ring",
+		ring2="Sroda Ring",
 		ear2="Amini Earring +1",
 	})
 
