@@ -314,8 +314,9 @@ function get_sets()
 		back={ name="Ogma's Cape", augments={'"Dbl.Atk."+10'}} -- STR +30, Acc +20, Attk +20, Double Attk +10, PDT -10
 	})
 	
-	sets.TP.Regain = set_combine(sets.TP, {
-		head="Turms Cap +1"
+	sets.TP.Regain = set_combine(sets.TP.Magic, {
+		head="Turms Cap +1",
+		neck="Republican Platinum Medal"
 	})
 
 	sets.WS = {
